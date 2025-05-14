@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MJ Granites Export | Premium Granite Products Worldwide</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Base Styles */
+        body {
+            font-family: 'Montserrat', sans-serif;
+            transition: all 0.3s ease;
+            cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="%235CB3C1" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/></svg>'), auto;
+            color: #333;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Playfair Display', serif;
+            color: var(--heading-color);
+        }
+        
+        /* Light Theme (Default) */
+        :root {
+            --bg-color: #E1E8EC; 
+            --text-color: #333333;
+            --heading-color: #2a2a2a;
+            --primary-color: #5CB3C1;
+            --secondary-color: #555555;
+            --accent-color: #F3BA00;
+            --card-bg: #ffffff;
+            --border-color: #d1d9e0;
+        }
+        
+        /* Dark Theme */
+        .dark-theme {
+            --bg-color: #1a2a32;
+            --text-color: #E1E8EC;
+            --heading-color: #ffffff;
+            --primary-color: #5CB3C1;
+            --secondary-color: #cccccc;
+            --accent-color: #F3BA00;
+            --card-bg: #22333c;
+            --border-color: #2d4550;
+        }
+        
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+        }
+        
+        /* Custom Cursor */
+        .cursor-dot {
+            width: 20px;
+            height: 20px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9999;
+            mix-blend-mode: difference;
+            transition: transform 0.1s ease;
+        }
+        
+        .cursor-outline {
+            width: 40px;
+            height: 40px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+            z-index: 9998;
+            mix-blend-mode: difference;
+            transition: all 0.2s ease, width 0.2s ease, height 0.2s ease;
+        }
+        
+        /* Navbar */
+        .navbar {
+            background-color: var(--bg-color) !important;
+            border-bottom: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+        
+        .navbar.scrolled {
+            background-color: rgba(255, 255, 255, 0.9) !important;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        .dark-theme .navbar.scrolled {
+            background-color: rgba(26, 42, 50, 0.9) !important;
+        }
+        
+        .navbar-brand img {
+            height: 50px;
+            filter: var(--filter);
+            transition: all 0.3s ease;
+        }
+        
+        /* Theme Toggle */
+        .btn-theme-toggle {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: none;
+            background-color: var(--primary-color);
+            color: var(--bg-color);
+            border: 1px solid var(--border-color);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+        
+        .btn-theme-toggle:hover {
+            transform: scale(1.1);
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1582268611958-ebfd161ef9cf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80') no-repeat center center;
+            background-size: cover;
+            color: white;
+            padding: 150px 0;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, rgba(92, 179, 193, 0.3) 0%, rgba(243, 186, 0, 0.3) 100%);
+            z-index: 0;
+            opacity: 0.5;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            animation: fadeInUp 1s ease;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            margin-bottom: 2.5rem;
+            animation: fadeInUp 1s ease 0.2s forwards;
+            opacity: 0;
+        }
+        
+        .hero-buttons {
+            animation: fadeInUp 1s ease 0.4s forwards;
+            opacity: 0;
+        }
+        
+        /* Section Titles */
+        .section-title {
+            position: relative;
+            margin-bottom: 40px;
+            color: var(--heading-color);
+            font-weight: 600;
+            animation: fadeInUp 0.8s ease;
+        }
+        
+        .section-title:after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -10px;
+            width: 50px;
+            height: 3px;
+            background-color: var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        
+        .section-title:hover:after {
+            width: 80px;
+        }
+        
+        /* Cards */
+        .card {
+            background-color: var(--card-bg);
+            border-color: var(--border-color);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            margin-bottom: 20px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
+        }
+        
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: all 0.5s ease;
+        }
+        
+        .card:hover .card-img-top {
+            filter: grayscale(0%);
+        }
+        
+        .export-badge {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: var(--accent-color);
+            color: #333;
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-size: 12px;
+            font-weight: bold;
+            transform: translateY(-20px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover .export-badge {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        /* Buttons */
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            color: white;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+        
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--primary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(92, 179, 193, 0.3);
+        }
+        
+        .btn-primary::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255,255,255,0.1);
+            transition: all 0.4s ease;
+        }
+        
+        .btn-primary:hover::before {
+            left: 100%;
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            padding: 10px 25px;
+            border-radius: 30px;
+            font-weight: 500;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(92, 179, 193, 0.3);
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .animate-pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Process Steps */
+        .process-step {
+            position: relative;
+            padding-left: 30px;
+            margin-bottom: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover {
+            transform: translateX(10px);
+        }
+        
+        .process-step:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border: 2px solid var(--primary-color);
+            border-radius: 50%;
+            transition: all 0.3s ease;
+        }
+        
+        .process-step:hover:before {
+            background-color: var(--primary-color);
+        }
+        
+        .process-step:after {
+            content: "";
+            position: absolute;
+            left: 9px;
+            top: 25px;
+            width: 2px;
+            height: 100%;
+            background-color: var(--primary-color);
+        }
+        
+        .process-step:last-child:after {
+            display: none;
+        }
+        
+        /* Testimonials */
+        .testimonial-card {
+            border-left: 4px solid var(--accent-color);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        /* Material Thumbnails */
+        .material-thumbnail {
+            width: 100%;
+            height: 120px;
+            object-fit: cover;
+            filter: grayscale(100%);
+            transition: all 0.5s ease;
+        }
+        
+        .material-thumbnail:hover {
+            filter: grayscale(0%);
+            transform: scale(1.05);
+        }
+        
+        /* Hover Effects */
+        .hover-scale {
+            transition: transform 0.3s ease;
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.05);
+        }
+        
+        .hover-underline {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hover-underline::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--primary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .hover-underline:hover::after {
+            width: 100%;
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            padding: 40px 0;
+            border-top: 1px solid var(--border-color);
+        }
+        
+        footer a {
+            color: var(--text-color);
+            transition: all 0.3s ease;
+        }
+        
+        footer a:hover {
+            color: var(--primary-color);
+            transform: translateX(5px);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-subtitle {
+                font-size: 1.2rem;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Custom Cursor Elements -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Theme Toggle Button -->
+    <button class="btn-theme-toggle" id="themeToggle">
+        <i class="fas fa-moon theme-icon active-theme-icon" id="darkIcon"></i>
+        <i class="fas fa-sun theme-icon" id="lightIcon"></i>
+    </button>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light sticky-top">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">
+                <img src="https://via.placeholder.com/150x50?text=MJ+Granites+Export" alt="MJ Granites Export Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active hover-underline" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline" href="about.html">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline" href="products.html">Products</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline" href="materials.html">Materials</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline" href="gallery.html">Gallery</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link hover-underline" href="contact.html">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="container text-center hero-content">
+            <h1 class="hero-title">Global Granite Exports from India</h1>
+            <p class="hero-subtitle">Premium quality granite products crafted in India, shipped worldwide to 12+ countries</p>
+            <div class="d-flex justify-content-center gap-3 hero-buttons">
+                <a href="products.html" class="btn btn-primary btn-lg px-4 animate-pulse">Explore Products</a>
+                <a href="contact.html" class="btn btn-outline-light btn-lg px-4">Export Inquiry</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <img src="https://images.unsplash.com/photo-1565538810643-b5bdb714032a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" alt="Granite Workshop" class="img-fluid rounded shadow hover-scale" style="filter: grayscale(100%);">
+                </div>
+                <div class="col-lg-6">
+                    <h2 class="section-title">Stonework That Speaks Across Borders</h2>
+                    <p class="lead">MJ Granites Export specializes in crafting world-class granite products for international markets.</p>
+                    <p>Our in-house design team works alongside expert stone sculptors to deliver complex, custom creations — from memorial headstones to modern sculptures — that meet the standards of global clients.</p>
+                    <p>Operating from a fully equipped manufacturing facility, we handle end-to-end export operations: multi-blade block cutting, surface polishing, fine hand carving, safe packaging, and international freight coordination.</p>
+                    <div class="mt-4">
+                        <div class="d-flex mb-2">
+                            <i class="fas fa-globe me-3 text-primary"></i>
+                            <span>Exporting to 12+ countries worldwide</span>
+                        </div>
+                        <div class="d-flex mb-2">
+                            <i class="fas fa-ship me-3 text-primary"></i>
+                            <span>End-to-end export logistics handled in-house</span>
+                        </div>
+                        <div class="d-flex">
+                            <i class="fas fa-award me-3 text-primary"></i>
+                            <span>15+ years of international export experience</span>
+                        </div>
+                    </div>
+                    <a href="about.html" class="btn btn-outline-primary mt-3">Learn More About Us</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Preview Section -->
+    <section id="products" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Granite Product Range</h2>
+            <p class="lead text-center mb-5">Premium granite products crafted for international markets</p>
+            
+            <div class="row g-4">
+                <!-- Product 1 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Memorial Monuments">
+                            <span class="export-badge">EXPORT READY</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Memorial Monuments</h5>
+                            <p class="card-text">Upright headstones, tablets, crosses, photo-etched memorials, all customized for cultural, religious, or national preferences.</p>
+                            <p class="text-muted"><small>Shipped securely to cemeteries, monument companies, and distributors worldwide.</small></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="products.html#memorials" class="btn btn-sm btn-outline-primary hover-underline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Polished Slabs">
+                            <span class="export-badge">EXPORT READY</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Polished Slabs</h5>
+                            <p class="card-text">Premium slabs in glossy, matte, flamed, or honed finishes, exported for countertops, flooring, cladding, and architectural projects.</p>
+                            <p class="text-muted"><small>Available in bulk container shipments for large projects.</small></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="products.html#slabs" class="btn btn-sm btn-outline-primary hover-underline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100">
+                        <div class="position-relative">
+                            <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Custom Sculptures">
+                            <span class="export-badge">EXPORT READY</span>
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Custom Sculptures</h5>
+                            <p class="card-text">Artistic statues, religious icons, garden ornaments, and architectural columns designed for global clients.</p>
+                            <p class="text-muted"><small>Exported with shock-absorbent, moisture-proof packaging for safe arrival.</small></p>
+                        </div>
+                        <div class="card-footer bg-transparent border-top-0">
+                            <a href="products.html#sculptures" class="btn btn-sm btn-outline-primary hover-underline">View Details</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="products.html" class="btn btn-primary btn-lg px-4 animate-pulse">View All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Materials Preview Section -->
+    <section id="materials" class="py-5">
+        <div class="container">
+            <h2 class="section-title">Our Granite Materials</h2>
+            <p class="lead text-center mb-5">Premium granite selection meeting international quality standards</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1596541223131-5a81f50f8b0a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="material-thumbnail card-img-top" alt="Absolute Black">
+                        <div class="card-body">
+                            <h5 class="card-title">Absolute Black</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-dark text-white">In Stock</span>
+                                <small class="text-muted">Export Ready</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1605106703221-9d1327369325?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="material-thumbnail card-img-top" alt="Galaxy Black">
+                        <div class="card-body">
+                            <h5 class="card-title">Galaxy Black</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-dark text-white">In Stock</span>
+                                <small class="text-muted">Export Ready</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="material-thumbnail card-img-top" alt="Moon White">
+                        <div class="card-body">
+                            <h5 class="card-title">Moon White</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-dark text-white">In Stock</span>
+                                <small class="text-muted">Export Ready</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="card">
+                        <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="material-thumbnail card-img-top" alt="Kashmir Gold">
+                        <div class="card-body">
+                            <h5 class="card-title">Kashmir Gold</h5>
+                            <div class="d-flex justify-content-between align-items-center">
+                                <span class="badge bg-dark text-white">In Stock</span>
+                                <small class="text-muted">Export Ready</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-5">
+                <a href="materials.html" class="btn btn-primary btn-lg px-4 animate-pulse">View All Materials</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section class="py-5 bg-light">
+        <div class="container">
+            <h2 class="section-title">Our Export Process</h2>
+            <p class="lead text-center mb-5">From quarry to your destination - seamless international delivery</p>
+            
+            <div class="row">
+                <div class="col-lg-8 mx-auto">
+                    <div class="process-step">
+                        <h4>Material Selection</h4>
+                        <p>We source premium granite blocks directly from quarries, ensuring quality from the first step. Our team selects materials based on your project requirements and international standards.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <h4>Precision Cutting</h4>
+                        <p>Using advanced multi-blade cutting machines, we transform raw blocks into precise dimensions. Our cutting process minimizes waste and maximizes material utilization.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <h4>Surface Finishing</h4>
+                        <p>Each piece undergoes meticulous polishing, honing, or texturing based on specifications. We offer various finishes to meet different climate conditions and usage requirements.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <h4>Quality Inspection</h4>
+                        <p>Every product passes through our 12-point quality check system. We verify dimensions, surface quality, structural integrity, and aesthetic appeal before packaging.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <h4>Export Packaging</h4>
+                        <p>Specialized packaging designed for international shipping. We use shock-absorbent materials, moisture barriers, and reinforced wooden crates for safe ocean/air freight.</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <h4>Global Logistics</h4>
+                        <p>We handle all export documentation, customs clearance, and coordinate with trusted freight partners. Real-time tracking provided until delivery at your destination.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-5">
+        <div class="container">
+            <h2 class="section-title">Global Client Experiences</h2>
+            <p class="lead text-center mb-5">What international buyers say about working with us</p>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 testimonial-card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"MJ Granites has been our trusted supplier for memorial headstones in the UK market for 5 years. Their quality consistency and attention to detail in custom engravings is unmatched."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div>
+                                    <h6 class="mb-0">David Wilson</h6>
+                                    <small class="text-muted">Monument Solutions Ltd., United Kingdom</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 testimonial-card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                            </div>
+                            <p class="card-text">"We've imported over 20 containers of polished slabs from MJ Granites for our high-end projects in Dubai. Their ability to maintain color consistency across large orders is remarkable."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div>
+                                    <h6 class="mb-0">Sarah Al-Maktoum</h6>
+                                    <small class="text-muted">Elite Interiors, UAE</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-4">
+                    <div class="card h-100 testimonial-card">
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star text-warning"></i>
+                                <i class="fas fa-star-half-alt text-warning"></i>
+                            </div>
+                            <p class="card-text">"The temple pillars we ordered arrived in perfect condition despite the long sea voyage to Malaysia. Their packaging team truly understands international shipping challenges."</p>
+                            <div class="d-flex align-items-center mt-3">
+                                <div>
+                                    <h6 class="mb-0">Priya Nathan</h6>
+                                    <small class="text-muted">Sri Maha Mariamman Temple, Malaysia</small>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-5 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-4">Ready to Start Your Granite Export Project?</h2>
+            <p class="lead mb-5">Contact us today for a customized quote and export consultation</p>
+            <div class="d-flex justify-content-center gap-3">
+                <a href="contact.html" class="btn btn-primary btn-lg px-4 animate-pulse">Request a Quote</a>
+                <a href="tel:+919876543210" class="btn btn-outline-primary btn-lg px-4">
+                    <i class="fas fa-phone me-2"></i> Call Us
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-4 mb-lg-0">
+                    <img src="https://via.placeholder.com/150x50?text=MJ+Granites+Export" alt="MJ Granites Export Logo" class="mb-3 hover-scale">
+                    <p>Premium granite products crafted in India, exported worldwide with care and precision.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="text-decoration-none"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-decoration-none"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-decoration-none"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-decoration-none"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="col-lg-2 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Quick Links</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="index.html" class="text-decoration-none hover-underline">Home</a></li>
+                        <li class="mb-2"><a href="about.html" class="text-decoration-none hover-underline">About Us</a></li>
+                        <li class="mb-2"><a href="products.html" class="text-decoration-none hover-underline">Products</a></li>
+                        <li class="mb-2"><a href="materials.html" class="text-decoration-none hover-underline">Materials</a></li>
+                        <li class="mb-2"><a href="gallery.html" class="text-decoration-none hover-underline">Gallery</a></li>
+                        <li class="mb-2"><a href="contact.html" class="text-decoration-none hover-underline">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">Export Services</h5>
+                    <ul class="list-unstyled">
+                        <li class="mb-2"><a href="#" class="text-decoration-none hover-underline">Custom Manufacturing</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none hover-underline">Export Packaging</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none hover-underline">International Shipping</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none hover-underline">Customs Documentation</a></li>
+                        <li class="mb-2"><a href="#" class="text-decoration-none hover-underline">Quality Assurance</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="text-uppercase mb-4">Contact Info</h5>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt me-2 text-primary"></i> No. 45, Industrial Estate, Madurai – Tamil Nadu, India</p>
+                        <p><i class="fas fa-phone me-2 text-primary"></i> +91-98765-43210</p>
+                        <p><i class="fas fa-envelope me-2 text-primary"></i> info@mjgranites.com</p>
+                        <p><i class="fas fa-clock me-2 text-primary"></i> Mon-Sat: 9:00 AM - 6:00 PM IST</p>
+                    </address>
+                </div>
+            </div>
+            <hr class="my-4">
+            <div class="row align-items-center">
+                <div class="col-md-6 text-center text-md-start">
+                    <p class="mb-0">&copy; 2023 MJ Granites Export. All rights reserved.</p>
+                </div>
+                <div class="col-md-6 text-center text-md-end">
+                    <a href="#" class="text-decoration-none me-3 hover-underline">Privacy Policy</a>
+                    <a href="#" class="text-decoration-none hover-underline">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Theme Toggle Script -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            // Custom cursor functionality
+            const cursorDot = document.querySelector('.cursor-dot');
+            const cursorOutline = document.querySelector('.cursor-outline');
+            
+            window.addEventListener('mousemove', function(e) {
+                cursorDot.style.left = e.pageX + 'px';
+                cursorDot.style.top = e.pageY + 'px';
+                
+                cursorOutline.style.left = e.pageX + 'px';
+                cursorOutline.style.top = e.pageY + 'px';
+            });
+            
+            // Cursor hover effects
+            document.querySelectorAll('a, button, .hover-scale, .card, .process-step').forEach(element => {
+                element.addEventListener('mouseenter', function() {
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(1.5)';
+                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(0.5)';
+                    cursorOutline.style.width = '60px';
+                    cursorOutline.style.height = '60px';
+                });
+                
+                element.addEventListener('mouseleave', function() {
+                    cursorDot.style.transform = 'translate(-50%, -50%) scale(1)';
+                    cursorOutline.style.transform = 'translate(-50%, -50%) scale(1)';
+                    cursorOutline.style.width = '40px';
+                    cursorOutline.style.height = '40px';
+                });
+            });
+            
+            // Navbar scroll effect
+            const navbar = document.querySelector('.navbar');
+            window.addEventListener('scroll', function() {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+            });
+            
+            // Theme toggle functionality
+            const themeToggle = document.getElementById('themeToggle');
+            const darkIcon = document.getElementById('darkIcon');
+            const lightIcon = document.getElementById('lightIcon');
+            
+            // Check for saved theme preference or use preferred color scheme
+            const savedTheme = localStorage.getItem('theme');
+            if (savedTheme) {
+                document.body.classList.add(savedTheme);
+                updateIcons(savedTheme);
+            } else if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                document.body.classList.add('dark-theme');
+                updateIcons('dark-theme');
+            }
+            
+            // Update image filters based on theme
+            updateImageFilters();
+            
+            // Toggle theme on button click
+            themeToggle.addEventListener('click', function() {
+                if (document.body.classList.contains('dark-theme')) {
+                    document.body.classList.remove('dark-theme');
+                    localStorage.setItem('theme', '');
+                    updateIcons('');
+                } else {
+                    document.body.classList.add('dark-theme');
+                    localStorage.setItem('theme', 'dark-theme');
+                    updateIcons('dark-theme');
+                }
+                updateImageFilters();
+            });
+            
+            // Update icons based on current theme
+            function updateIcons(theme) {
+                if (theme === 'dark-theme') {
+                    darkIcon.classList.remove('active-theme-icon');
+                    lightIcon.classList.add('active-theme-icon');
+                    document.documentElement.style.setProperty('--filter', 'invert(1)');
+                } else {
+                    lightIcon.classList.remove('active-theme-icon');
+                    darkIcon.classList.add('active-theme-icon');
+                    document.documentElement.style.setProperty('--filter', 'invert(0)');
+                }
+            }
+            
+            // Update image filters based on theme
+            function updateImageFilters() {
+                const isDark = document.body.classList.contains('dark-theme');
+                const images = document.querySelectorAll('img:not(.navbar-brand img)');
+                
+                images.forEach(img => {
+                    if (isDark) {
+                        img.style.filter = 'grayscale(100%) brightness(0.7)';
+                    } else {
+                        img.style.filter = 'grayscale(100%)';
+                    }
+                });
+            }
+            
+            // Smooth scrolling for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth'
+                        });
+                    }
+                });
+            });
+            
+            // Animate elements when they come into view
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.section-title, .card, .process-step, .testimonial-card');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Set initial state for animated elements
+            document.querySelectorAll('.section-title, .card, .process-step, .testimonial-card').forEach(element => {
+                element.style.opacity = '0';
+                element.style.transform = 'translateY(20px)';
+                element.style.transition = 'all 0.6s ease';
+            });
+            
+            // Run once on load
+            animateOnScroll();
+            
+            // Then run on scroll
+            window.addEventListener('scroll', animateOnScroll);
+        });
+    </script>
+</body>
+</html>

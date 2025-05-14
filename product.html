@@ -1,0 +1,611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Export Products - MJ Granites Export</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts - Poppins -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- AOS Animation CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #3a5a78;
+            --secondary-color: #d4af37;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f8f9fa;
+            padding: 0;
+            margin: 0;
+        }
+        
+        .products-section {
+            padding: 60px 0;
+        }
+        
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease;
+        }
+        
+        .section-title.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background-color: var(--secondary-color);
+            bottom: -12px;
+            left: 25%;
+            transform: scaleX(0);
+            transform-origin: left;
+            transition: transform 0.8s ease 0.3s;
+        }
+        
+        .section-title.visible:after {
+            transform: scaleX(1);
+        }
+        
+        .section-intro {
+            font-size: 1rem;
+            line-height: 1.7;
+            margin-bottom: 40px;
+            color: #555;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease 0.2s;
+        }
+        
+        .section-intro.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .product-category-card {
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+            margin-bottom: 25px;
+            transition: all 0.4s ease;
+            background: white;
+            height: 100%;
+            opacity: 0;
+            transform: translateY(50px) scale(0.95);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        /* Scroll Down Animation */
+        .product-category-card.scroll-down {
+            transform: translateY(50px) scale(0.95);
+        }
+        
+        /* Scroll Up Animation */
+        .product-category-card.scroll-up {
+            transform: translateY(-50px) scale(0.95);
+        }
+        
+        .product-category-card.visible {
+            opacity: 1;
+            transform: translateY(0) scale(1);
+        }
+        
+        .product-category-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 12px 35px rgba(0,0,0,0.12);
+        }
+        
+        .category-image-container {
+            height: 200px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .category-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.6s ease, filter 0.4s ease;
+            filter: brightness(0.95);
+        }
+        
+        .product-category-card:hover .category-image {
+            transform: scale(1.08);
+            filter: brightness(1.05);
+        }
+        
+        .category-badge {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 30px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            transform: translateY(-10px);
+            opacity: 0;
+            transition: all 0.5s ease 0.3s;
+        }
+        
+        .product-category-card.visible .category-badge {
+            transform: translateY(0);
+            opacity: 1;
+        }
+        
+        .category-content {
+            padding: 20px;
+            transform: translateY(10px);
+            transition: transform 0.5s ease 0.2s;
+        }
+        
+        .product-category-card.visible .category-content {
+            transform: translateY(0);
+        }
+        
+        .category-title {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 12px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .category-title:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            background-color: var(--secondary-color);
+            bottom: -4px;
+            left: 0;
+            transition: width 0.4s ease;
+        }
+        
+        .product-category-card:hover .category-title:after {
+            width: 100%;
+        }
+        
+        .category-description {
+            color: #555;
+            margin-bottom: 15px;
+            line-height: 1.6;
+            font-size: 0.95rem;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: all 0.5s ease 0.3s;
+        }
+        
+        .product-category-card.visible .category-description {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .feature-list {
+            list-style-type: none;
+            padding-left: 0;
+            margin-bottom: 20px;
+        }
+        
+        .feature-list li {
+            position: relative;
+            padding-left: 22px;
+            margin-bottom: 8px;
+            color: #555;
+            font-size: 0.9rem;
+            opacity: 0;
+            transform: translateX(-20px);
+            transition: all 0.4s ease;
+        }
+        
+        .feature-list li.visible {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        
+        .feature-list li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            color: var(--secondary-color);
+            transition: transform 0.3s ease;
+            font-size: 0.8rem;
+        }
+        
+        .feature-list li:hover:before {
+            transform: scale(1.2);
+        }
+        
+        .btn-outline-primary {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+            transition: all 0.4s ease;
+            transform: translateY(5px);
+            opacity: 0;
+            position: relative;
+            overflow: hidden;
+            font-size: 0.9rem;
+            padding: 6px 15px;
+        }
+        
+        .product-category-card.visible .btn-outline-primary {
+            transform: translateY(0);
+            opacity: 1;
+            transition-delay: 0.5s;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            color: white;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(58, 90, 120, 0.3);
+        }
+        
+        .btn-outline-primary:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn-outline-primary:hover:before {
+            left: 100%;
+        }
+        
+        @media (max-width: 768px) {
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .category-image-container {
+                height: 180px;
+            }
+            
+            .category-content {
+                padding: 18px;
+            }
+            
+            .product-category-card {
+                transform: translateY(30px) scale(0.98);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Products Section -->
+    <section class="products-section">
+        <div class="container">
+            <div class="row text-center mb-4">
+                <div class="col-12">
+                    <h2 class="section-title">Premium Granite Products</h2>
+                    <p class="section-intro">
+                        Crafted with precision from India's finest granite, our products meet international quality standards and are exported worldwide.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <!-- Memorial Monuments Card -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="product-category-card" id="card1">
+                        <div class="category-image-container">
+                            <img src="https://images.unsplash.com/photo-1600566752227-09d5e0b5b6e1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                                 alt="Memorial Monuments" 
+                                 class="category-image">
+                            <div class="category-badge">Bestseller</div>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Memorial Stones</h3>
+                            <p class="category-description">
+                                Elegant granite memorials honoring loved ones with lasting beauty and craftsmanship.
+                            </p>
+                            <ul class="feature-list" id="features1">
+                                <li>Custom engraving available</li>
+                                <li>UV-resistant finishes</li>
+                                <li>Weather-resistant granite</li>
+                                <li>International shipping</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">View Designs</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Granite Countertops Card -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="product-category-card" id="card2">
+                        <div class="category-image-container">
+                            <img src="https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                                 alt="Granite Countertops" 
+                                 class="category-image">
+                            <div class="category-badge">Premium</div>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Kitchen Countertops</h3>
+                            <p class="category-description">
+                                Durable granite surfaces that combine functionality with natural elegance.
+                            </p>
+                            <ul class="feature-list" id="features2">
+                                <li>Heat and scratch resistant</li>
+                                <li>Multiple finish options</li>
+                                <li>Easy maintenance</li>
+                                <li>Custom sizes available</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">Explore Options</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Garden Sculptures Card -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="product-category-card" id="card3">
+                        <div class="category-image-container">
+                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                                 alt="Garden Sculptures" 
+                                 class="category-image">
+                            <div class="category-badge">Custom</div>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Garden Sculptures</h3>
+                            <p class="category-description">
+                                Artistic granite pieces that enhance outdoor spaces with timeless beauty.
+                            </p>
+                            <ul class="feature-list" id="features3">
+                                <li>Hand-carved designs</li>
+                                <li>Weather-resistant</li>
+                                <li>Various granite colors</li>
+                                <li>Custom designs available</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Flooring Tiles Card -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="product-category-card" id="card4">
+                        <div class="category-image-container">
+                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                                 alt="Flooring Tiles" 
+                                 class="category-image">
+                            <div class="category-badge">Durable</div>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Flooring Tiles</h3>
+                            <p class="category-description">
+                                Premium granite flooring that combines durability with natural elegance.
+                            </p>
+                            <ul class="feature-list" id="features4">
+                                <li>Slip-resistant finishes</li>
+                                <li>Multiple size options</li>
+                                <li>Low maintenance</li>
+                                <li>Long-lasting quality</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">See Samples</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wall Cladding Card -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="product-category-card" id="card5">
+                        <div class="category-image-container">
+                            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                                 alt="Wall Cladding" 
+                                 class="category-image">
+                            <div class="category-badge">Modern</div>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Wall Cladding</h3>
+                            <p class="category-description">
+                                Transform spaces with our premium granite wall panels and facades.
+                            </p>
+                            <ul class="feature-list" id="features5">
+                                <li>Contemporary designs</li>
+                                <li>Easy installation</li>
+                                <li>Weather-resistant</li>
+                                <li>Custom thickness</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">View Designs</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Granite Furniture Card -->
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="product-category-card" id="card6">
+                        <div class="category-image-container">
+                            <img src="https://images.unsplash.com/photo-1600566752328-8518a6a6b9c9?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=880&q=80" 
+                                 alt="Granite Furniture" 
+                                 class="category-image">
+                            <div class="category-badge">Luxury</div>
+                        </div>
+                        <div class="category-content">
+                            <h3 class="category-title">Granite Furniture</h3>
+                            <p class="category-description">
+                                Statement pieces that blend functionality with artistic craftsmanship.
+                            </p>
+                            <ul class="feature-list" id="features6">
+                                <li>Tables and benches</li>
+                                <li>Custom designs</li>
+                                <li>Outdoor/indoor use</li>
+                                <li>Premium finishes</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">Explore Collection</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- AOS Animation JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize AOS animation
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true,
+            mirror: false
+        });
+
+        // Scroll direction detection and animations
+        document.addEventListener('DOMContentLoaded', function() {
+            let lastScrollPosition = window.pageYOffset;
+            let ticking = false;
+            
+            // Animate section title and intro
+            const sectionTitle = document.querySelector('.section-title');
+            const sectionIntro = document.querySelector('.section-intro');
+            
+            // Function to check if element is in viewport
+            function isInViewport(element) {
+                const rect = element.getBoundingClientRect();
+                return (
+                    rect.top <= (window.innerHeight || document.documentElement.clientHeight) * 0.75 &&
+                    rect.bottom >= 0
+                );
+            }
+            
+            // Function to handle scroll animations with direction
+            function handleScrollAnimations(scrollDirection) {
+                // Section title and intro
+                if (isInViewport(sectionTitle)) {
+                    sectionTitle.classList.add('visible');
+                    sectionIntro.classList.add('visible');
+                }
+                
+                // Product cards
+                const cards = document.querySelectorAll('.product-category-card:not(.visible)');
+                cards.forEach((card, index) => {
+                    if (isInViewport(card)) {
+                        // Set initial state based on scroll direction
+                        if (scrollDirection === 'down') {
+                            card.classList.add('scroll-down');
+                        } else {
+                            card.classList.add('scroll-up');
+                        }
+                        
+                        // Trigger the animation
+                        setTimeout(() => {
+                            card.classList.add('visible');
+                            
+                            // Animate features one by one
+                            const featureList = card.querySelector('.feature-list');
+                            if (featureList) {
+                                const features = featureList.querySelectorAll('li');
+                                features.forEach((feature, i) => {
+                                    setTimeout(() => {
+                                        feature.classList.add('visible');
+                                    }, i * 150);
+                                });
+                            }
+                        }, index * 150);
+                    }
+                });
+            }
+            
+            // Listen for scroll events with direction detection
+            window.addEventListener('scroll', function() {
+                const currentScrollPosition = window.pageYOffset;
+                
+                // Determine scroll direction
+                let scrollDirection = 'down';
+                if (currentScrollPosition < lastScrollPosition) {
+                    scrollDirection = 'up';
+                }
+                lastScrollPosition = currentScrollPosition;
+                
+                if (!ticking) {
+                    window.requestAnimationFrame(function() {
+                        handleScrollAnimations(scrollDirection);
+                        ticking = false;
+                    });
+                    ticking = true;
+                }
+            });
+            
+            // Initial check
+            handleScrollAnimations('down');
+            
+            // Hover effects for cards
+            const cards = document.querySelectorAll('.product-category-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', () => {
+                    if (card.classList.contains('visible')) {
+                        card.style.transform = 'translateY(-8px) scale(1.02)';
+                        card.style.boxShadow = '0 12px 35px rgba(0,0,0,0.12)';
+                        
+                        // Pop effect for image
+                        const img = card.querySelector('.category-image');
+                        if (img) {
+                            img.style.transform = 'scale(1.08)';
+                            img.style.filter = 'brightness(1.05)';
+                        }
+                        
+                        // Underline effect for title
+                        const title = card.querySelector('.category-title');
+                        if (title) {
+                            title.style.transform = 'translateY(-2px)';
+                        }
+                    }
+                });
+                
+                card.addEventListener('mouseleave', () => {
+                    if (card.classList.contains('visible')) {
+                        card.style.transform = 'translateY(0) scale(1)';
+                        card.style.boxShadow = '0 8px 25px rgba(0,0,0,0.08)';
+                        
+                        // Reset image
+                        const img = card.querySelector('.category-image');
+                        if (img) {
+                            img.style.transform = 'scale(1)';
+                            img.style.filter = 'brightness(0.95)';
+                        }
+                        
+                        // Reset title
+                        const title = card.querySelector('.category-title');
+                        if (title) {
+                            title.style.transform = 'translateY(0)';
+                        }
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
