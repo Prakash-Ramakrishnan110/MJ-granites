@@ -717,10 +717,36 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background-color: rgba(58, 90, 120, 0.9);">
         <div class="container">
-            <a class="navbar-brand" href="#">
-                <img src="https://via.placeholder.com/150x50?text=MJ+Granites+Export" alt="MJ Granites Export Logo">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="images/logo 4.png" alt="MJ Granites Exporter" style="height: 60px; width: 60px; border-radius: 10%; border: 3px solid var(--secondary-color); box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 15px var(--secondary-color); filter: brightness(1.2); animation: glow 1.5s infinite alternate;">
+                <style>
+                    @keyframes glow {
+                        from {
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 5px var(--secondary-color);
+                        }
+                        to {
+                            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2), 0 0 20px var(--secondary-color);
+                        }
+                    }
+                </style>
+                <span class="ms-3 fw-bold" style="font-size: 1.5rem; font-family: 'Playfair Display', serif; background: linear-gradient(to right, #d4af37, #ffffff); -webkit-background-clip: text; -webkit-text-fill-color: transparent; animation: gradient-move 3s infinite;">
+                    MJ Granites Exporter
+                </span>
+                <style>
+                    @keyframes gradient-move {
+                        0% {
+                            background-position: 0% 50%;
+                        }
+                        50% {
+                            background-position: 100% 50%;
+                        }
+                        100% {
+                            background-position: 0% 50%;
+                        }
+                    }
+                </style>
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
@@ -745,9 +771,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#contact">Contact</a>
                     </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="nav-link btn btn-sm btn-outline-light px-3" href="#quote">Get Quote</a>
-                    </li>
+                
                 </ul>
             </div>
         </div>
@@ -1352,6 +1376,7 @@
             </div>
             <div class="copyright">
                 <p>&copy; 2023 MJ Granites Export. All Rights Reserved. | Designed for Global Granite Trade</p>
+                <p>Designed by <a href="https://saakra.com" target="_blank" style="color: #39FF14; text-decoration: none; font-weight: bold; text-transform: uppercase;">Saakra Enterprises Pvt Ltd</a></p>
             </div>
         </div>
     </footer>
