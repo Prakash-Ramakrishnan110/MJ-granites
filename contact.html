@@ -8,10 +8,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+   <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Custom CSS -->
     <style>
         :root {
@@ -26,195 +26,144 @@
             font-family: 'Poppins', sans-serif;
             overflow-x: hidden;
             scroll-behavior: smooth;
+            line-height: 1.6;
         }
         
         h1, h2, h3, h4, h5, .display-font {
             font-family: 'Playfair Display', serif;
+            line-height: 1.3;
         }
         
-        .navbar {
-            background-color: var(--primary-color) !important;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
+        /* Improved spacing */
+        section {
+            padding: 80px 0;
         }
         
-        .navbar.scrolled {
-            padding-top: 5px;
-            padding-bottom: 5px;
-            background-color: rgba(58, 90, 120, 0.95) !important;
+        .section-title {
+            margin-bottom: 40px;
         }
         
-        .navbar-brand img {
-            height: 50px;
-            transition: all 0.3s ease;
-        }
-        
-        .navbar.scrolled .navbar-brand img {
-            height: 40px;
-        }
-        
-        .nav-link {
-            color: white !important;
-            font-weight: 500;
-            margin: 0 10px;
-            position: relative;
-            transition: all 0.3s ease;
-        }
-        
-        .nav-link:hover {
-            color: var(--secondary-color) !important;
-        }
-        
-        .nav-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            background: var(--secondary-color);
-            bottom: 0;
-            left: 0;
-            transition: width 0.3s ease;
-        }
-        
-        .nav-link:hover:after {
-            width: 100%;
-        }
-        
+        /* Enhanced Hero Section */
         .hero-section {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
             color: white;
-            padding: 120px 0 80px;
+            padding: 150px 0 100px;
             text-align: center;
             position: relative;
+            display: flex;
+            align-items: center;
+            min-height: 80vh;
+        }
+        
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
         }
         
         .hero-title {
-            font-size: 2.8rem;
+            font-size: 3.2rem;
             font-weight: 700;
-            margin-bottom: 20px;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            margin-bottom: 25px;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
             line-height: 1.2;
         }
         
-        .btn-primary {
-            background-color: var(--secondary-color);
-            border-color: var(--secondary-color);
-            color: var(--dark-color);
-            font-weight: 600;
-            padding: 12px 30px;
-            margin: 0 10px;
-            border-radius: 30px;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-        }
-        
-        .btn-primary:hover {
-            background-color: #c9a227;
-            border-color: #c9a227;
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .section-title {
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: var(--primary-color);
-            margin-bottom: 30px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .section-title:after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 4px;
-            background-color: var(--secondary-color);
-            bottom: -10px;
-            left: 0;
-        }
-        
-        .section-title.center:after {
-            left: 25%;
-        }
-        
+        /* Enhanced Contact Cards */
         .contact-info-card {
             background: white;
-            border-radius: 10px;
-            padding: 30px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            padding: 40px 30px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             margin-bottom: 30px;
             border-top: 5px solid var(--secondary-color);
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             height: 100%;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+        
+        .contact-info-card:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(212,175,55,0.1) 0%, rgba(58,90,120,0.1) 100%);
+            z-index: -1;
+            opacity: 0;
+            transition: all 0.4s ease;
         }
         
         .contact-info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        
+        .contact-info-card:hover:before {
+            opacity: 1;
         }
         
         .contact-icon {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--secondary-color);
-            margin-bottom: 15px;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
         }
         
+        .contact-info-card:hover .contact-icon {
+            transform: scale(1.2);
+        }
+        
+        /* Enhanced Form Styling */
         .contact-form {
             background: white;
-            border-radius: 10px;
-            padding: 40px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-radius: 12px;
+            padding: 50px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .contact-form:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 5px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--secondary-color), var(--primary-color));
         }
         
         .form-control {
-            height: 50px;
-            border-radius: 5px;
-            border: 1px solid #ddd;
-            margin-bottom: 20px;
-        }
-        
-        textarea.form-control {
-            height: auto;
-            min-height: 150px;
+            height: 55px;
+            border-radius: 8px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 25px;
+            padding: 15px 20px;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
         }
         
         .form-control:focus {
             border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.25rem rgba(58, 90, 120, 0.25);
+            box-shadow: 0 0 0 0.25rem rgba(58, 90, 120, 0.15);
         }
         
-        .map-container {
-            border-radius: 10px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        textarea.form-control {
+            min-height: 180px;
+            resize: vertical;
         }
         
-        .map-container iframe {
-            width: 100%;
-            height: 400px;
-            border: 0;
-        }
-        
-        .office-hours {
-            list-style: none;
-            padding: 0;
-        }
-        
+        /* Enhanced Office Hours */
         .office-hours li {
-            padding: 10px 0;
-            border-bottom: 1px solid #eee;
-            display: flex;
-            justify-content: space-between;
-        }
-        
-        .office-hours li:last-child {
-            border-bottom: none;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(0,0,0,0.05);
         }
         
         .office-day {
@@ -222,48 +171,118 @@
             color: var(--primary-color);
         }
         
-        /* Animation Classes */
+        /* Enhanced Map Section */
+        .map-container {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        
+        .map-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+        }
+        
+        .map-container iframe {
+            width: 100%;
+            height: 100%;
+            min-height: 400px;
+            border: 0;
+        }
+        
+        /* Enhanced FAQ Section */
+        .accordion-button {
+            font-weight: 600;
+            padding: 18px 20px;
+            background-color: rgba(58, 90, 120, 0.05);
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(58, 90, 120, 0.1);
+            color: var(--primary-color);
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(58, 90, 120, 0.1);
+        }
+        
+        /* ======================
+           Enhanced Animations
+           ====================== */
+        /* Fade In Animation */
         .fade-in {
             opacity: 0;
-            transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+            transition: all 0.8s ease;
         }
         
         .fade-in.visible {
             opacity: 1;
         }
         
+        /* Slide Up Animation */
         .slide-up {
-            transform: translateY(30px);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
         
         .slide-up.visible {
+            opacity: 1;
             transform: translateY(0);
         }
         
+        /* Slide Left Animation */
         .slide-left {
-            transform: translateX(-30px);
+            opacity: 0;
+            transform: translateX(-50px);
+            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
         
         .slide-left.visible {
+            opacity: 1;
             transform: translateX(0);
         }
         
+        /* Slide Right Animation */
         .slide-right {
-            transform: translateX(30px);
+            opacity: 0;
+            transform: translateX(50px);
+            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
         
         .slide-right.visible {
+            opacity: 1;
             transform: translateX(0);
         }
         
+        /* Zoom In Animation */
         .zoom-in {
+            opacity: 0;
             transform: scale(0.95);
+            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
         }
         
         .zoom-in.visible {
+            opacity: 1;
             transform: scale(1);
         }
         
+        /* Rotate Animation */
+        .rotate-in {
+            opacity: 0;
+            transform: rotate(-5deg);
+            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+        }
+        
+        .rotate-in.visible {
+            opacity: 1;
+            transform: rotate(0);
+        }
+        
+        /* Animation Delays */
         .delay-1 {
             transition-delay: 0.2s;
         }
@@ -276,107 +295,48 @@
             transition-delay: 0.6s;
         }
         
-        /* Footer */
-        .footer {
-            background-color: var(--primary-color);
-            color: white;
-            padding: 70px 0 20px;
-            position: relative;
-        }
-        
-        .footer:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 10px;
-            background: linear-gradient(90deg, var(--secondary-color) 0%, var(--accent-color) 100%);
-        }
-        
-        .footer-title {
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 20px;
-            position: relative;
-            display: inline-block;
-        }
-        
-        .footer-title:after {
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 2px;
-            background: var(--secondary-color);
-            bottom: -8px;
-            left: 0;
-        }
-        
-        .footer-links a {
-            color: #ccc;
-            display: block;
-            margin-bottom: 10px;
-            text-decoration: none;
-            transition: all 0.3s ease;
-        }
-        
-        .footer-links a:hover {
-            color: var(--secondary-color);
-            padding-left: 5px;
-        }
-        
-        .social-icons a {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            color: white;
-            font-size: 1.2rem;
-            margin-right: 10px;
-            border-radius: 50%;
-            transition: all 0.3s ease;
-        }
-        
-        .social-icons a:hover {
-            background: var(--secondary-color);
-            color: var(--dark-color);
-            transform: translateY(-3px);
-        }
-        
-        .copyright {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            margin-top: 50px;
-            text-align: center;
-            color: #ccc;
-            font-size: 0.9rem;
+        .delay-4 {
+            transition-delay: 0.8s;
         }
         
         /* Responsive adjustments */
-        @media (max-width: 992px) {
+        @media (max-width: 1199.98px) {
+            .hero-title {
+                font-size: 2.8rem;
+            }
+            
+            section {
+                padding: 70px 0;
+            }
+        }
+        
+        @media (max-width: 991.98px) {
+            .hero-section {
+                padding: 120px 0 80px;
+                min-height: auto;
+            }
+            
             .hero-title {
                 font-size: 2.5rem;
             }
             
-            .section-title {
-                font-size: 2rem;
+            .contact-form {
+                padding: 40px;
             }
         }
         
-        @media (max-width: 768px) {
+        @media (max-width: 767.98px) {
             .hero-section {
                 padding: 100px 0 60px;
                 background-attachment: scroll;
             }
             
             .hero-title {
-                font-size: 2rem;
+                font-size: 2.2rem;
             }
             
-            .section-title {
-                font-size: 1.8rem;
+            section {
+                padding: 60px 0;
             }
             
             .contact-form {
@@ -384,95 +344,68 @@
             }
         }
         
-        @media (max-width: 576px) {
+        @media (max-width: 575.98px) {
             .hero-title {
                 font-size: 1.8rem;
             }
             
             .section-title {
-                font-size: 1.5rem;
+                font-size: 1.8rem;
+            }
+            
+            section {
+                padding: 50px 0;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="index.html">
-                <img src="https://via.placeholder.com/150x50?text=MJ+Granites+Export" alt="MJ Granites Export Logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#about">About Us</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#products">Products</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#gallery">Gallery</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html#process">Export Process</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" href="contact.html">Contact</a>
-                    </li>
-                    <li class="nav-item ms-lg-3">
-                        <a class="nav-link btn btn-sm btn-outline-light px-3" href="#quote">Get Quote</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1 class="hero-title animate__animated animate__fadeInDown">Contact Our Export Team</h1>
-            <p class="lead animate__animated animate__fadeInUp animate__delay-1s">We're here to assist with your granite export inquiries, product questions, and shipping requirements.</p>
+            <div class="hero-content animate__animated animate__fadeIn">
+                <h1 class="hero-title slide-up">Contact Our Export Team</h1>
+                <p class="lead slide-up delay-1">We're here to assist with your granite export inquiries, product questions, and shipping requirements.</p>
+                <div class="mt-4 slide-up delay-2">
+                    <a href="#quote" class="btn btn-primary btn-lg me-2">Get Export Quote</a>
+                    <a href="tel:+919876543210" class="btn btn-outline-light btn-lg">Call Now</a>
+                </div>
+            </div>
         </div>
     </section>
 
     <!-- Contact Info Section -->
     <section class="py-5 bg-light">
         <div class="container">
-            <div class="row">
-                <div class="col-md-4 fade-in">
-                    <div class="contact-info-card text-center">
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="contact-info-card zoom-in">
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h3>Our Location</h3>
                         <p>No. 45, Industrial Estate<br>Madurai – Tamil Nadu, India 625020</p>
-                        <a href="#map" class="btn btn-sm btn-primary">View on Map</a>
+                        <a href="#map" class="btn btn-sm btn-primary mt-3">View on Map</a>
                     </div>
                 </div>
-                <div class="col-md-4 fade-in delay-1">
-                    <div class="contact-info-card text-center">
+                <div class="col-md-4">
+                    <div class="contact-info-card zoom-in delay-1">
                         <div class="contact-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <h3>Phone & WhatsApp</h3>
                         <p>+91-98765-43210<br>+91-87654-32109</p>
-                        <a href="tel:+919876543210" class="btn btn-sm btn-primary">Call Now</a>
+                        <a href="tel:+919876543210" class="btn btn-sm btn-primary mt-3">Call Now</a>
                     </div>
                 </div>
-                <div class="col-md-4 fade-in delay-2">
-                    <div class="contact-info-card text-center">
+                <div class="col-md-4">
+                    <div class="contact-info-card zoom-in delay-2">
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h3>Email Us</h3>
                         <p>info@mjgranitesexport.com<br>exports@mjgranitesexport.com</p>
-                        <a href="mailto:info@mjgranitesexport.com" class="btn btn-sm btn-primary">Send Email</a>
+                        <a href="mailto:info@mjgranitesexport.com" class="btn btn-sm btn-primary mt-3">Send Email</a>
                     </div>
                 </div>
             </div>
@@ -483,35 +416,37 @@
     <section class="py-5" id="quote">
         <div class="container">
             <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0 fade-in slide-left">
-                    <h2 class="section-title">Get an Export Quote</h2>
-                    <p>Fill out the form to request a customized quote for your granite export requirements. Our team will respond within 24 hours with pricing, shipping options, and any additional information you need.</p>
-                    
-                    <div class="mt-5">
-                        <h4>Office Hours</h4>
-                        <ul class="office-hours">
-                            <li>
-                                <span class="office-day">Monday - Friday</span>
-                                <span>9:00 AM - 6:00 PM IST</span>
-                            </li>
-                            <li>
-                                <span class="office-day">Saturday</span>
-                                <span>9:00 AM - 2:00 PM IST</span>
-                            </li>
-                            <li>
-                                <span class="office-day">Sunday</span>
-                                <span>Closed</span>
-                            </li>
-                        </ul>
+                <div class="col-lg-6 mb-5 mb-lg-0">
+                    <div class="pe-lg-4 slide-left">
+                        <h2 class="section-title">Get an Export Quote</h2>
+                        <p class="mb-4">Fill out the form to request a customized quote for your granite export requirements. Our team will respond within 24 hours with pricing, shipping options, and any additional information you need.</p>
                         
-                        <div class="mt-4">
-                            <h4>Emergency Export Support</h4>
-                            <p>For urgent export inquiries outside business hours, please call our 24/7 support line: <strong>+91-98765-55555</strong></p>
+                        <div class="bg-white p-4 rounded shadow-sm rotate-in">
+                            <h4 class="mb-3">Office Hours</h4>
+                            <ul class="office-hours">
+                                <li>
+                                    <span class="office-day">Monday - Friday</span>
+                                    <span>9:00 AM - 6:00 PM IST</span>
+                                </li>
+                                <li>
+                                    <span class="office-day">Saturday</span>
+                                    <span>9:00 AM - 2:00 PM IST</span>
+                                </li>
+                                <li>
+                                    <span class="office-day">Sunday</span>
+                                    <span>Closed</span>
+                                </li>
+                            </ul>
+                            
+                            <div class="mt-4 pt-3 border-top">
+                                <h4>Emergency Export Support</h4>
+                                <p class="mb-0">For urgent export inquiries outside business hours, please call our 24/7 support line: <strong>+91-98765-55555</strong></p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="col-lg-6 fade-in slide-right delay-1">
-                    <div class="contact-form">
+                <div class="col-lg-6">
+                    <div class="contact-form slide-right">
                         <form id="exportQuoteForm">
                             <div class="row">
                                 <div class="col-md-6">
@@ -551,7 +486,7 @@
                                 <option>Custom Work</option>
                             </select>
                             <textarea class="form-control" placeholder="Your Message / Project Details" required></textarea>
-                            <button type="submit" class="btn btn-primary w-100">Request Export Quote</button>
+                            <button type="submit" class="btn btn-primary w-100 py-3">Request Export Quote</button>
                         </form>
                     </div>
                 </div>
@@ -562,33 +497,35 @@
     <!-- Map Section -->
     <section class="py-5 bg-light" id="map">
         <div class="container">
-            <h2 class="section-title text-center center fade-in">Our Factory Location</h2>
-            <p class="text-center mb-5 fade-in delay-1">Visit our manufacturing facility in Madurai, India or connect with our export team remotely.</p>
+            <div class="text-center mb-5 fade-in">
+                <h2 class="section-title center">Our Factory Location</h2>
+                <p class="lead">Visit our manufacturing facility in Madurai, India or connect with our export team remotely.</p>
+            </div>
             
-            <div class="row">
-                <div class="col-lg-6 mb-4 mb-lg-0 fade-in">
-                    <div class="map-container">
+            <div class="row g-4">
+                <div class="col-lg-6 fade-in">
+                    <div class="map-container h-100">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15720.598698513413!2d78.11932546977538!3d9.925876300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c58ea0b7e26b%3A0xa6e1a3f9b4a3b7e!2sMadurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1689334567890!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6 fade-in delay-1">
-                    <div class="p-4 bg-white rounded h-100">
-                        <h4>Factory Visit Information</h4>
-                        <p>We welcome international buyers to visit our manufacturing facility in Madurai, Tamil Nadu. Please schedule your visit in advance so we can prepare for your arrival and ensure you have a productive experience.</p>
+                    <div class="p-4 p-lg-5 bg-white rounded h-100 d-flex flex-column justify-content-center">
+                        <h3 class="mb-4">Factory Visit Information</h3>
+                        <p class="mb-4">We welcome international buyers to visit our manufacturing facility in Madurai, Tamil Nadu. Please schedule your visit in advance so we can prepare for your arrival and ensure you have a productive experience.</p>
                         
-                        <h5 class="mt-4">Facility Highlights:</h5>
-                        <ul>
-                            <li>50,000 sq. ft. manufacturing facility</li>
-                            <li>State-of-the-art cutting and polishing equipment</li>
-                            <li>Traditional hand-carving workshop</li>
-                            <li>Quality inspection area</li>
-                            <li>Export packaging department</li>
+                        <h5 class="mb-3">Facility Highlights:</h5>
+                        <ul class="mb-4">
+                            <li class="mb-2">50,000 sq. ft. manufacturing facility</li>
+                            <li class="mb-2">State-of-the-art cutting and polishing equipment</li>
+                            <li class="mb-2">Traditional hand-carving workshop</li>
+                            <li class="mb-2">Quality inspection area</li>
+                            <li class="mb-2">Export packaging department</li>
                             <li>Sample display area with 200+ granite varieties</li>
                         </ul>
                         
-                        <div class="mt-4">
-                            <a href="#" class="btn btn-primary me-2"><i class="fas fa-calendar-alt me-2"></i> Schedule Visit</a>
-                            <a href="#" class="btn btn-outline-primary"><i class="fas fa-download me-2"></i> Download Visitor Guide</a>
+                        <div class="mt-4 pt-3">
+                            <a href="#" class="btn btn-primary me-3 mb-3"><i class="fas fa-calendar-alt me-2"></i> Schedule Visit</a>
+                            <a href="#" class="btn btn-outline-primary mb-3"><i class="fas fa-download me-2"></i> Download Visitor Guide</a>
                         </div>
                     </div>
                 </div>
@@ -596,16 +533,16 @@
         </div>
     </section>
 
-  
-
     <!-- FAQ Section -->
-    <section class="py-5 bg-light">
+    <section class="py-5">
         <div class="container">
-            <h2 class="section-title text-center center fade-in">Export FAQ</h2>
-            <p class="text-center mb-5 fade-in delay-1">Common questions about our granite export process.</p>
+            <div class="text-center mb-5 fade-in">
+                <h2 class="section-title center">Export FAQ</h2>
+                <p class="lead">Common questions about our granite export process.</p>
+            </div>
             
             <div class="row justify-content-center">
-                <div class="col-lg-8 fade-in">
+                <div class="col-lg-9 fade-in delay-1">
                     <div class="accordion" id="faqAccordion">
                         <div class="accordion-item mb-3 border-0 shadow-sm">
                             <h3 class="accordion-header" id="headingOne">
@@ -673,108 +610,35 @@
                         </div>
                     </div>
                     
-                    <div class="text-center mt-5 fade-in delay-1">
-                        <a href="#" class="btn btn-primary">View Full FAQ</a>
+                    <div class="text-center mt-5 fade-in delay-2">
+                        <a href="#" class="btn btn-primary px-4 py-2">View Full FAQ</a>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-  <!-- Footer -->
-    <footer class="footer" id="contact">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-5 mb-lg-0 fade-in">
-                    <h3 class="footer-title">MJ Granites Export</h3>
-                    <p>Premier manufacturer and global exporter of premium granite products, serving clients worldwide with quality craftsmanship and reliable shipping.</p>
-                    <div class="social-icons mt-4">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 fade-in delay-1">
-                    <h3 class="footer-title">Quick Links</h3>
-                    <div class="footer-links">
-                        <a href="#">Home</a>
-                        <a href="#about">About Us</a>
-                        <a href="#products">Products</a>
-                        <a href="#gallery">Gallery</a>
-                        <a href="#process">Export Process</a>
-                        <a href="#testimonials">Testimonials</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 mb-4 mb-md-0 fade-in delay-2">
-                    <h3 class="footer-title">Export Services</h3>
-                    <div class="footer-links">
-                        <a href="#">Shipping Information</a>
-                        <a href="#">Customs Documentation</a>
-                        <a href="#">Packaging Standards</a>
-                        <a href="#">International Warranty</a>
-                        <a href="#">Quality Certificates</a>
-                        <a href="#">Freight Options</a>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-4 fade-in delay-3">
-                    <h3 class="footer-title">Contact Us</h3>
-                    <p><i class="fas fa-map-marker-alt me-2"></i> No. 45, Industrial Estate, Madurai – Tamil Nadu, India 625020</p>
-                    <p><i class="fas fa-phone me-2"></i> +91-98765-43210</p>
-                    <p><i class="fas fa-envelope me-2"></i> info@mjgranitesexport.com</p>
-                    <p><i class="fas fa-clock me-2"></i> Mon-Sat: 9:00 AM - 6:00 PM IST</p>
-                    
-                    <h4 class="footer-title mt-4">Export Inquiry</h4>
-                    <form>
-                        <div class="mb-2">
-                            <input type="email" class="form-control form-control-sm" placeholder="Your Email">
-                        </div>
-                        <button type="submit" class="btn btn-sm btn-outline-light">Get Quote</button>
-                    </form>
-                </div>
-            </div>
-            <div class="copyright">
-                <p>&copy; 2023 MJ Granites Export. All Rights Reserved. | Designed for Global Granite Trade</p>
-            </div>
-        </div>
-    </footer>
-    <!-- Back to Top Button -->
-    <a href="#" class="btn btn-primary btn-lg back-to-top" style="display: none; position: fixed; bottom: 20px; right: 20px; z-index: 99; border-radius: 50%; width: 50px; height: 50px; padding: 0; text-align: center; line-height: 46px;">
-        <i class="fas fa-arrow-up"></i>
-    </a>
-
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                document.querySelector('.navbar').classList.add('scrolled');
-            } else {
-                document.querySelector('.navbar').classList.remove('scrolled');
-            }
-            
-            // Back to top button
-            if (window.scrollY > 300) {
-                document.querySelector('.back-to-top').style.display = 'block';
-            } else {
-                document.querySelector('.back-to-top').style.display = 'none';
-            }
-        });
-        
-        // Scroll animation
+        // Enhanced Scroll Animation
         document.addEventListener('DOMContentLoaded', function() {
-            const animateElements = document.querySelectorAll('.fade-in');
+            const animateElements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right, .zoom-in, .rotate-in');
+            
+            const observerOptions = {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            };
             
             const observer = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
                     if (entry.isIntersecting) {
                         entry.target.classList.add('visible');
+                        observer.unobserve(entry.target);
                     }
                 });
-            }, { threshold: 0.1 });
+            }, observerOptions);
             
             animateElements.forEach(element => {
                 observer.observe(element);
@@ -794,30 +658,38 @@
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
-                    
-                    // Close mobile menu if open
-                    const navbarCollapse = document.querySelector('.navbar-collapse');
-                    if (navbarCollapse.classList.contains('show')) {
-                        navbarCollapse.classList.remove('show');
-                    }
                 }
-            });
-        });
-        
-        // Back to top button
-        document.querySelector('.back-to-top').addEventListener('click', function(e) {
-            e.preventDefault();
-            window.scrollTo({
-                top: 0,
-                behavior: 'smooth'
             });
         });
         
         // Form submission
         document.getElementById('exportQuoteForm').addEventListener('submit', function(e) {
             e.preventDefault();
-            alert('Thank you for your export inquiry! Our team will contact you within 24 hours.');
-            this.reset();
+            
+            // Show loading state
+            const submitBtn = this.querySelector('button[type="submit"]');
+            const originalText = submitBtn.innerHTML;
+            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing...';
+            submitBtn.disabled = true;
+            
+            // Simulate form submission
+            setTimeout(() => {
+                submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>Request Sent!';
+                
+                // Show success message
+                const successAlert = document.createElement('div');
+                successAlert.className = 'alert alert-success mt-3 animate__animated animate__fadeIn';
+                successAlert.innerHTML = '<i class="fas fa-check-circle me-2"></i> Thank you for your export inquiry! Our team will contact you within 24 hours.';
+                this.appendChild(successAlert);
+                
+                // Reset form after delay
+                setTimeout(() => {
+                    this.reset();
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.disabled = false;
+                    successAlert.remove();
+                }, 3000);
+            }, 1500);
         });
     </script>
 </body>
