@@ -24,13 +24,15 @@
             --dark-color: #333;
             --light-color: #f8f9fa;
             --accent-color: #8b5a2b;
+            --card-bg: #ffffff;
+            --card-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.1);
         }
         
         body {
             font-family: 'Montserrat', sans-serif;
             overflow-x: hidden;
             scroll-behavior: smooth;
-            background-color: #f9f9f9;
+            background-color: #f5f7fa;
         }
         
         h1, h2, h3, h4, h5, .display-font {
@@ -52,13 +54,26 @@
             font-size: 2.5rem;
             font-weight: 700;
             color: var(--primary-color);
+            position: relative;
+            display: inline-block;
         }
         
-        .section-title .divider {
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
             width: 80px;
             height: 4px;
             background: var(--secondary-color);
-            margin: 1rem auto;
+            border-radius: 2px;
+        }
+        
+        .section-title .lead {
+            max-width: 700px;
+            margin: 1.5rem auto 0;
+            color: #666;
         }
         
         .gallery-filter {
@@ -74,6 +89,7 @@
             margin: 0 0.5rem;
             position: relative;
             transition: all 0.3s ease;
+            border-radius: 30px;
         }
         
         .filter-btn::after {
@@ -89,22 +105,29 @@
         
         .filter-btn:hover, .filter-btn.active {
             color: var(--primary-color);
+            background: rgba(212, 175, 55, 0.1);
         }
         
-        .filter-btn:hover::after, .filter-btn.active::after {
+        .filter-btn.active::after {
             width: 100%;
             left: 0;
         }
         
+        .gallery-container {
+            margin: -10px; /* Counteract the column padding */
+        }
+        
         .gallery-item {
-            margin-bottom: 30px;
+            margin-bottom: 20px;
+            padding: 10px;
             overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            border-radius: 12px;
             transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
             transform: translateY(30px);
             opacity: 0;
-            background: white;
+            background: var(--card-bg);
+            box-shadow: var(--card-shadow);
+            border: 1px solid rgba(0, 0, 0, 0.05);
         }
         
         .gallery-item.show {
@@ -113,25 +136,29 @@
         }
         
         .gallery-item:hover {
-            transform: translateY(-10px) scale(1.02);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.15);
+            border-color: rgba(212, 175, 55, 0.3);
         }
         
         .gallery-img-container {
             position: relative;
             overflow: hidden;
-            height: 250px;
+            height: 220px;
+            margin-bottom: 15px;
+            border-radius: 8px;
+            background: #f0f0f0;
         }
         
         .gallery-img {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.8s ease;
+            transition: transform 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
         }
         
         .gallery-item:hover .gallery-img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
         
         .gallery-overlay {
@@ -140,12 +167,12 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to bottom, rgba(58,90,120,0.1) 0%, rgba(58,90,120,0.7) 100%);
+            background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.7) 100%);
             opacity: 0;
             transition: opacity 0.5s ease;
             display: flex;
-            align-items: center;
-            justify-content: center;
+            align-items: flex-end;
+            padding: 20px;
         }
         
         .gallery-item:hover .gallery-overlay {
@@ -162,6 +189,13 @@
             transform: translateY(20px);
             opacity: 0;
             transition: all 0.5s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
+        
+        .view-btn:hover {
+            background: #e6c126;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
         }
         
         .gallery-item:hover .view-btn {
@@ -170,18 +204,25 @@
         }
         
         .gallery-info {
-            padding: 1.5rem;
+            padding: 0 0.5rem 0.5rem;
         }
         
         .gallery-info h4 {
             color: var(--primary-color);
             margin-bottom: 0.5rem;
             font-weight: 600;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        
+        .gallery-item:hover .gallery-info h4 {
+            color: var(--secondary-color);
         }
         
         .gallery-info p {
             color: #666;
             margin-bottom: 0;
+            font-size: 0.9rem;
         }
         
         .gallery-badge {
@@ -195,6 +236,25 @@
             font-size: 0.75rem;
             font-weight: 600;
             z-index: 2;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        /* New Card Features */
+        .gallery-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, rgba(58,90,120,0.1) 0%, rgba(212,175,55,0.05) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+            z-index: -1;
+        }
+        
+        .gallery-item:hover::before {
+            opacity: 1;
         }
         
         /* Animations */
@@ -214,7 +274,7 @@
                 transform: translateY(0px);
             }
             50% {
-                transform: translateY(-10px);
+                transform: translateY(-5px);
             }
             100% {
                 transform: translateY(0px);
@@ -224,28 +284,44 @@
         /* Modal Styles */
         .modal-content {
             border: none;
-            border-radius: 10px;
+            border-radius: 15px;
             overflow: hidden;
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.2);
         }
         
         .modal-img {
             width: 100%;
             height: auto;
-            max-height: 70vh;
+            max-height: 60vh;
             object-fit: contain;
         }
         
         .modal-body {
             padding: 2rem;
+            background: #f9f9f9;
         }
         
         .modal-title {
             color: var(--primary-color);
             font-weight: 700;
+            margin-bottom: 1rem;
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .modal-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
         }
         
         .modal-text {
             color: #666;
+            line-height: 1.6;
         }
         
         .close-btn {
@@ -263,20 +339,64 @@
             z-index: 10;
             border: none;
             opacity: 0.9;
+            transition: all 0.3s ease;
         }
         
         .close-btn:hover {
             opacity: 1;
+            transform: rotate(90deg);
+            background: #e6c126;
         }
         
         /* Responsive */
+        @media (max-width: 1200px) {
+            .gallery-img-container {
+                height: 200px;
+            }
+        }
+        
+        @media (max-width: 992px) {
+            .gallery-img-container {
+                height: 180px;
+            }
+            
+            .section-title h2 {
+                font-size: 2.2rem;
+            }
+        }
+        
         @media (max-width: 768px) {
             .section-title h2 {
                 font-size: 2rem;
             }
             
             .gallery-img-container {
+                height: 160px;
+            }
+            
+            .filter-btn {
+                margin: 0.25rem;
+                padding: 0.5rem 1rem;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .gallery-section {
+                padding: 3rem 0;
+            }
+            
+            .gallery-img-container {
                 height: 200px;
+            }
+            
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+            
+            .filter-btn {
+                margin: 0.15rem;
+                padding: 0.4rem 0.8rem;
+                font-size: 0.9rem;
             }
         }
     </style>
@@ -289,7 +409,6 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8 text-center section-title">
                     <h2 class="mb-3">Our Granite Masterpieces</h2>
-                    <div class="divider"></div>
                     <p class="lead">Explore our exquisite collection of granite products crafted with precision and passion.</p>
                 </div>
             </div>
@@ -306,7 +425,7 @@
             
             <div class="row gallery-container">
                 <!-- Item 1 -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="monuments">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 gallery-item" data-category="monuments">
                     <div class="gallery-img-container">
                         <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfe3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                              alt="Elegant Memorial" 
@@ -314,7 +433,7 @@
                         <div class="gallery-overlay">
                             <button class="view-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1600566752355-35792bedcfe3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                     data-title="Elegant Memorial" 
-                                    data-desc="Beautifully crafted granite memorial with intricate carvings, perfect for honoring loved ones.">
+                                    data-desc="Beautifully crafted granite memorial with intricate carvings, perfect for honoring loved ones. This piece features premium black granite with a polished finish that highlights the natural beauty of the stone.">
                                 View Details
                             </button>
                         </div>
@@ -327,7 +446,7 @@
                 </div>
                 
                 <!-- Item 2 -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="sculptures">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 gallery-item" data-category="sculptures">
                     <div class="gallery-img-container">
                         <img src="https://images.unsplash.com/photo-1600566752229-250ed79470f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                              alt="Artistic Sculpture" 
@@ -335,7 +454,7 @@
                         <div class="gallery-overlay">
                             <button class="view-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1600566752229-250ed79470f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                     data-title="Artistic Sculpture" 
-                                    data-desc="Hand-carved granite sculpture showcasing traditional craftsmanship with modern design elements.">
+                                    data-desc="Hand-carved granite sculpture showcasing traditional craftsmanship with modern design elements. Each piece is unique, with natural variations in the gray granite that add character to the artwork.">
                                 View Details
                             </button>
                         </div>
@@ -348,7 +467,7 @@
                 </div>
                 
                 <!-- Item 3 -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="slabs">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 gallery-item" data-category="slabs">
                     <div class="gallery-img-container">
                         <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                              alt="Premium Slab" 
@@ -356,7 +475,7 @@
                         <div class="gallery-overlay">
                             <button class="view-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                     data-title="Premium Slab" 
-                                    data-desc="High-quality granite slab with unique natural patterns, perfect for countertops and flooring.">
+                                    data-desc="High-quality granite slab with unique natural patterns, perfect for countertops and flooring. Available in various finishes including polished, honed, and leathered to suit different design preferences.">
                                 View Details
                             </button>
                         </div>
@@ -364,12 +483,12 @@
                     </div>
                     <div class="gallery-info">
                         <h4>Premium Slab</h4>
-                        <p>120" × 60" × 1.25" | Multicolor Granite</p>
+                        <p>120" × 60" × 1.25" | Multicolor</p>
                     </div>
                 </div>
                 
                 <!-- Item 4 -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="architectural">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 gallery-item" data-category="architectural">
                     <div class="gallery-img-container">
                         <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                              alt="Architectural Column" 
@@ -377,7 +496,7 @@
                         <div class="gallery-overlay">
                             <button class="view-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                     data-title="Architectural Column" 
-                                    data-desc="Classical granite column with intricate detailing, ideal for both structural and decorative purposes.">
+                                    data-desc="Classical granite column with intricate detailing, ideal for both structural and decorative purposes. Crafted from durable white granite that withstands weathering while maintaining its elegant appearance.">
                                 View Details
                             </button>
                         </div>
@@ -385,12 +504,12 @@
                     </div>
                     <div class="gallery-info">
                         <h4>Architectural Column</h4>
-                        <p>96" × 18" diameter | White Granite</p>
+                        <p>96" × 18" diameter | White</p>
                     </div>
                 </div>
                 
                 <!-- Item 5 -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="monuments">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 gallery-item" data-category="monuments">
                     <div class="gallery-img-container">
                         <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                              alt="Family Memorial" 
@@ -398,7 +517,7 @@
                         <div class="gallery-overlay">
                             <button class="view-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                     data-title="Family Memorial" 
-                                    data-desc="Large family memorial with custom engravings and polished finish, designed to withstand generations.">
+                                    data-desc="Large family memorial with custom engravings and polished finish, designed to withstand generations. The premium black granite offers a dignified appearance with excellent durability against the elements.">
                                 View Details
                             </button>
                         </div>
@@ -406,12 +525,12 @@
                     </div>
                     <div class="gallery-info">
                         <h4>Family Memorial</h4>
-                        <p>72" × 36" × 18" | Black Granite</p>
+                        <p>72" × 36" × 18" | Black</p>
                     </div>
                 </div>
                 
                 <!-- Item 6 -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="sculptures">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 gallery-item" data-category="sculptures">
                     <div class="gallery-img-container">
                         <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                              alt="Decorative Fountain" 
@@ -419,7 +538,7 @@
                         <div class="gallery-overlay">
                             <button class="view-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                     data-title="Decorative Fountain" 
-                                    data-desc="Ornate granite fountain with water circulation system, perfect for gardens and outdoor spaces.">
+                                    data-desc="Ornate granite fountain with water circulation system, perfect for gardens and outdoor spaces. The gray granite construction ensures durability while the design creates a peaceful ambiance with the sound of flowing water.">
                                 View Details
                             </button>
                         </div>
@@ -427,12 +546,12 @@
                     </div>
                     <div class="gallery-info">
                         <h4>Decorative Fountain</h4>
-                        <p>60" × 48" × 48" | Gray Granite</p>
+                        <p>60" × 48" × 48" | Gray</p>
                     </div>
                 </div>
                 
                 <!-- Item 7 -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="slabs">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 gallery-item" data-category="slabs">
                     <div class="gallery-img-container">
                         <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                              alt="Kitchen Countertop" 
@@ -440,7 +559,7 @@
                         <div class="gallery-overlay">
                             <button class="view-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                     data-title="Kitchen Countertop" 
-                                    data-desc="Premium granite countertop with polished finish, resistant to heat and scratches.">
+                                    data-desc="Premium granite countertop with polished finish, resistant to heat and scratches. The multicolor granite offers a unique pattern that complements various kitchen styles from modern to traditional.">
                                 View Details
                             </button>
                         </div>
@@ -448,12 +567,12 @@
                     </div>
                     <div class="gallery-info">
                         <h4>Kitchen Countertop</h4>
-                        <p>96" × 26" × 1.25" | Multicolor Granite</p>
+                        <p>96" × 26" × 1.25" | Multicolor</p>
                     </div>
                 </div>
                 
                 <!-- Item 8 -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="architectural">
+                <div class="col-xl-3 col-lg-4 col-md-6 col-sm-6 col-12 gallery-item" data-category="architectural">
                     <div class="gallery-img-container">
                         <img src="https://images.unsplash.com/photo-1631729370902-47dd5aa74df0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                              alt="Granite Flooring" 
@@ -461,7 +580,7 @@
                         <div class="gallery-overlay">
                             <button class="view-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1631729370902-47dd5aa74df0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                     data-title="Granite Flooring" 
-                                    data-desc="Elegant granite flooring tiles with honed finish, providing durability and natural beauty.">
+                                    data-desc="Elegant granite flooring tiles with honed finish, providing durability and natural beauty. The black granite tiles offer a sophisticated look while being slip-resistant and easy to maintain.">
                                 View Details
                             </button>
                         </div>
@@ -469,28 +588,7 @@
                     </div>
                     <div class="gallery-info">
                         <h4>Granite Flooring</h4>
-                        <p>24" × 24" × 0.75" | Black Granite</p>
-                    </div>
-                </div>
-                
-                <!-- Item 9 -->
-                <div class="col-lg-4 col-md-6 gallery-item" data-category="monuments">
-                    <div class="gallery-img-container">
-                        <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             alt="Veteran Memorial" 
-                             class="gallery-img">
-                        <div class="gallery-overlay">
-                            <button class="view-btn" data-bs-toggle="modal" data-bs-target="#galleryModal" data-img="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                    data-title="Veteran Memorial" 
-                                    data-desc="Patriotic granite memorial with flag holder and custom insignia, honoring service members.">
-                                View Details
-                            </button>
-                        </div>
-                        <span class="gallery-badge">Monument</span>
-                    </div>
-                    <div class="gallery-info">
-                        <h4>Veteran Memorial</h4>
-                        <p>42" × 24" × 12" | Gray Granite</p>
+                        <p>24" × 24" × 0.75" | Black</p>
                     </div>
                 </div>
             </div>
@@ -508,6 +606,14 @@
                 <div class="modal-body">
                     <h3 class="modal-title" id="modalTitle"></h3>
                     <p class="modal-text" id="modalDesc"></p>
+                    <div class="mt-4">
+                        <button class="btn btn-outline-secondary me-2">
+                            <i class="fas fa-download me-2"></i>Download Specs
+                        </button>
+                        <button class="btn btn-primary">
+                            <i class="fas fa-envelope me-2"></i>Request Quote
+                        </button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -535,8 +641,12 @@
                     galleryItems.forEach(item => {
                         if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
                             item.style.display = 'block';
+                            // Trigger reflow to restart animation
+                            void item.offsetWidth;
+                            item.classList.add('animate__animated', 'animate__fadeIn');
                         } else {
                             item.style.display = 'none';
+                            item.classList.remove('animate__animated', 'animate__fadeIn');
                         }
                     });
                 });
@@ -560,7 +670,7 @@
             
             // Animate gallery items on scroll
             const animateOnScroll = function() {
-                const galleryItems = document.querySelectorAll('.gallery-item');
+                const galleryItems = document.querySelectorAll('.gallery-item:not(.show)');
                 
                 galleryItems.forEach((item, index) => {
                     const itemPosition = item.getBoundingClientRect().top;
@@ -569,6 +679,7 @@
                     if (itemPosition < screenPosition) {
                         setTimeout(() => {
                             item.classList.add('show');
+                            item.classList.add('animate__animated', 'animate__fadeInUp');
                         }, index * 100);
                     }
                 });
