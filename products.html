@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Granite Products | MJ Granites Export</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Animate.css -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    
+    <style>
+        :root {
+            --primary-color: #3a5a78;
+            --secondary-color: #d4af37;
+            --dark-color: #333;
+            --light-color: #f8f9fa;
+        }
+        
+        body {
+            font-family: 'Montserrat', sans-serif;
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5, .display-font {
+            font-family: 'Lora', serif;
+        }
+        
+        /* Animation Classes */
+        .animate-on-scroll {
+            opacity: 0;
+            transition: all 0.8s ease;
+        }
+        
+        .animate-on-scroll.animated {
+            opacity: 1;
+        }
+        
+        .slide-in-left {
+            transform: translateX(-50px);
+        }
+        
+        .slide-in-right {
+            transform: translateX(50px);
+        }
+        
+        .slide-in-up {
+            transform: translateY(50px);
+        }
+        
+        .slide-in-down {
+            transform: translateY(-50px);
+        }
+        
+        .animated.slide-in-left,
+        .animated.slide-in-right,
+        .animated.slide-in-up,
+        .animated.slide-in-down {
+            transform: translate(0);
+        }
+        
+        /* Hero Section */
+        .product-hero {
+            background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
+                        url('https://img.freepik.com/free-photo/stone-texture-background_1253-1174.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 100px 0;
+            animation: fadeIn 1.5s ease;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Product Showcase */
+        .product-showcase {
+            padding: 80px 0;
+            background-color: #f9f9f9;
+        }
+        
+        .product-card {
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border: none;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            transform: perspective(1000px) rotateY(0deg);
+        }
+        
+        .product-card:hover {
+            transform: perspective(1000px) rotateY(5deg) translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        
+        .product-card img {
+            height: 250px;
+            object-fit: cover;
+            transition: all 0.5s ease;
+        }
+        
+        .product-card:hover img {
+            transform: scale(1.1);
+            filter: brightness(1.05);
+        }
+        
+        .card-body {
+            transition: all 0.3s ease;
+        }
+        
+        .product-card:hover .card-body {
+            background-color: rgba(255,255,255,0.9);
+        }
+        
+        /* Features Section */
+        .features-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .feature-icon {
+            width: 70px;
+            height: 70px;
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-item:hover .feature-icon {
+            transform: rotateY(180deg) scale(1.1);
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        /* Testimonials */
+        .testimonials {
+            padding: 80px 0;
+            background-color: var(--primary-color);
+            color: white;
+        }
+        
+        .testimonial-card {
+            background-color: rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 30px;
+            height: 100%;
+            transition: all 0.3s ease;
+            border: 1px solid transparent;
+        }
+        
+        .testimonial-card:hover {
+            background-color: rgba(255,255,255,0.15);
+            border-color: var(--secondary-color);
+            transform: scale(1.02);
+        }
+        
+        .testimonial-img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .testimonial-card:hover .testimonial-img {
+            transform: scale(1.1);
+            box-shadow: 0 0 20px rgba(212, 175, 55, 0.5);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            padding: 80px 0;
+            background: linear-gradient(rgba(58, 90, 120, 0.9), rgba(58, 90, 120, 0.9)), 
+                        url('https://img.freepik.com/free-photo/stone-texture_1194-5373.jpg');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            animation: pulse 8s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { background-position: 50% 50%; }
+            50% { background-position: 55% 55%; }
+            100% { background-position: 50% 50%; }
+        }
+        
+        /* Color Variety Section */
+        .color-variety-section {
+            padding: 80px 0;
+            background-color: white;
+        }
+        
+        .color-card {
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            height: 100%;
+            border: none;
+            transform-style: preserve-3d;
+        }
+        
+        .color-card:hover {
+            transform: perspective(1000px) rotateY(10deg) translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            z-index: 10;
+        }
+        
+        .color-swatch {
+            height: 150px;
+            width: 100%;
+            transition: all 0.5s ease;
+            transform-origin: center center;
+        }
+        
+        .color-card:hover .color-swatch {
+            transform: scale(1.05) rotateY(5deg);
+            filter: brightness(1.1);
+        }
+        
+        .btn-gold {
+            background-color: var(--secondary-color);
+            color: var(--dark-color);
+            font-weight: 600;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .btn-gold:hover {
+            background-color: transparent;
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .btn-gold:before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+            transition: 0.5s;
+        }
+        
+        .btn-gold:hover:before {
+            left: 100%;
+        }
+        
+        /* Section Headings Animation */
+        .section-heading {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-heading:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 3px;
+            bottom: -10px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.5s ease;
+        }
+        
+        .section-heading:hover:after {
+            width: 100%;
+        }
+        
+        /* Floating Animation for Hero Button */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="product-hero text-center">
+        <div class="container">
+            <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Premium Granite Products</h1>
+            <p class="lead mb-5 animate__animated animate__fadeIn animate__delay-1s">Discover our exquisite collection of handcrafted granite products, exported worldwide from Tamil Nadu, India</p>
+            <a href="#products" class="btn btn-gold btn-lg px-5 floating animate__animated animate__fadeInUp animate__delay-2s">Explore Collection</a>
+        </div>
+    </section>
+
+    <!-- Section 1: Product Showcase -->
+    <section id="products" class="product-showcase">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-primary mb-3 section-heading animate-on-scroll slide-in-up">Our Granite Collection</h2>
+                <p class="lead text-muted animate-on-scroll slide-in-up" style="transition-delay: 0.2s">Each piece is meticulously crafted by skilled artisans using premium quality granite</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card animate-on-scroll slide-in-left">
+                        <img src="https://img.freepik.com/free-photo/granite-texture_1194-6008.jpg" 
+                             class="card-img-top" 
+                             alt="Granite Monuments">
+                        <div class="card-body">
+                            <h3 class="h4">Memorial Monuments</h3>
+                            <p class="card-text">
+                                Timeless granite memorials to honor your loved ones, available in various designs and finishes.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-secondary me-2"></i> Custom engravings</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Weather-resistant</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Lifetime durability</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">View Options</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s">
+                        <img src="https://img.freepik.com/free-photo/stone-texture_1194-5380.jpg" 
+                             class="card-img-top" 
+                             alt="Granite Sculptures">
+                        <div class="card-body">
+                            <h3 class="h4">Artistic Sculptures</h3>
+                            <p class="card-text">
+                                Hand-carved granite sculptures that add elegance to any space, from gardens to lobbies.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-secondary me-2"></i> Custom designs</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Various sizes</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Traditional motifs</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">View Gallery</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card animate-on-scroll slide-in-up" style="transition-delay: 0.4s">
+                        <img src="https://img.freepik.com/free-photo/marble-texture_1194-5369.jpg" 
+                             class="card-img-top" 
+                             alt="Granite Slabs">
+                        <div class="card-body">
+                            <h3 class="h4">Granite Slabs</h3>
+                            <p class="card-text">
+                                Premium quality granite slabs for countertops, flooring, and architectural applications.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-secondary me-2"></i> Multiple finishes</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Various thicknesses</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Standard & custom sizes</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">View Inventory</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3">
+                    <div class="product-card animate-on-scroll slide-in-right">
+                        <img src="https://img.freepik.com/free-photo/stone-texture_1194-5379.jpg" 
+                             class="card-img-top" 
+                             alt="Architectural Granite">
+                        <div class="card-body">
+                            <h3 class="h4">Architectural Elements</h3>
+                            <p class="card-text">
+                                Custom granite elements for buildings, including columns, fountains, and decorative pieces.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-secondary me-2"></i> Structural components</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Decorative features</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Project consultation</li>
+                            </ul>
+                            <a href="#" class="btn btn-outline-primary">Learn More</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 2: Features -->
+    <section class="features-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-primary mb-3 section-heading animate-on-scroll slide-in-up">Why Choose Our Granite Products</h2>
+                <p class="lead text-muted animate-on-scroll slide-in-up" style="transition-delay: 0.2s">We combine traditional craftsmanship with modern quality standards</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="feature-item animate-on-scroll slide-in-left">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-gem"></i>
+                        </div>
+                        <h3>Premium Quality</h3>
+                        <p>
+                            We source only the finest granite from quarries across India, ensuring superior durability and aesthetic appeal.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="feature-item animate-on-scroll slide-in-up" style="transition-delay: 0.1s">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-hands"></i>
+                        </div>
+                        <h3>Handcrafted</h3>
+                        <p>
+                            Each piece is carefully shaped by skilled artisans with generations of stone-working expertise.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="feature-item animate-on-scroll slide-in-up" style="transition-delay: 0.2s">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <h3>Global Standards</h3>
+                        <p>
+                            Our products meet international quality standards for export to markets worldwide.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3 text-center">
+                    <div class="feature-item animate-on-scroll slide-in-right">
+                        <div class="feature-icon mx-auto">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3>Durability</h3>
+                        <p>
+                            Granite products that withstand the test of time, weather, and daily use with minimal maintenance.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 3: Granite Finishes -->
+    <section class="additional-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-primary mb-3 section-heading animate-on-scroll slide-in-up">Granite Finishes & Textures</h2>
+                <p class="lead text-muted animate-on-scroll slide-in-up" style="transition-delay: 0.2s">Explore our wide range of granite finishes to suit every application</p>
+            </div>
+            
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="product-card animate-on-scroll slide-in-left">
+                        <img src="https://img.freepik.com/free-photo/stone-texture_1194-5376.jpg" 
+                             class="card-img-top" 
+                             alt="Polished Granite">
+                        <div class="card-body">
+                            <h3 class="h4">Polished Finish</h3>
+                            <p class="card-text">
+                                High-gloss polished surface that enhances the natural beauty and color of granite.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-secondary me-2"></i> Reflective surface</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Stain-resistant</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Ideal for countertops</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="product-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s">
+                        <img src="https://img.freepik.com/free-photo/stone-texture_1194-5375.jpg" 
+                             class="card-img-top" 
+                             alt="Honed Granite">
+                        <div class="card-body">
+                            <h3 class="h4">Honed Finish</h3>
+                            <p class="card-text">
+                                Smooth, matte surface with a satin-like appearance, perfect for flooring.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-secondary me-2"></i> Non-reflective</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Slip-resistant</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Contemporary look</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4">
+                    <div class="product-card animate-on-scroll slide-in-right">
+                        <img src="https://img.freepik.com/free-photo/stone-texture_1194-5377.jpg" 
+                             class="card-img-top" 
+                             alt="Flamed Granite">
+                        <div class="card-body">
+                            <h3 class="h4">Flamed Finish</h3>
+                            <p class="card-text">
+                                Textured surface created by high-temperature flame treatment for outdoor use.
+                            </p>
+                            <ul class="list-unstyled">
+                                <li><i class="fas fa-check text-secondary me-2"></i> Highly slip-resistant</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Weatherproof</li>
+                                <li><i class="fas fa-check text-secondary me-2"></i> Natural rough texture</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 4: Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3 section-heading animate-on-scroll slide-in-up">What Our Clients Say</h2>
+                <p class="lead animate-on-scroll slide-in-up" style="transition-delay: 0.2s">Trusted by clients across the globe</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="testimonial-card animate-on-scroll slide-in-left">
+                        <div class="text-center mb-4">
+                            <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg" 
+                                 class="testimonial-img" 
+                                 alt="Client testimonial">
+                        </div>
+                        <p class="mb-4">
+                            "The granite memorial we ordered is absolutely beautiful. The craftsmanship exceeded our expectations and it arrived perfectly packaged."
+                        </p>
+                        <h4 class="h5 mb-1">Sarah Johnson</h4>
+                        <p class="text-secondary">Memorial Park, USA</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s">
+                        <div class="text-center mb-4">
+                            <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" 
+                                 class="testimonial-img" 
+                                 alt="Client testimonial">
+                        </div>
+                        <p class="mb-4">
+                            "We've been importing granite slabs for 5 years. Their quality consistency and reliable shipping make them our preferred supplier."
+                        </p>
+                        <h4 class="h5 mb-1">Michael Chen</h4>
+                        <p class="text-secondary">Luxury Homes, Australia</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="testimonial-card animate-on-scroll slide-in-right">
+                        <div class="text-center mb-4">
+                            <img src="https://img.freepik.com/free-photo/portrait-beautiful-young-woman-standing-grey-wall_231208-10760.jpg" 
+                                 class="testimonial-img" 
+                                 alt="Client testimonial">
+                        </div>
+                        <p class="mb-4">
+                            "The custom granite fountain they created for our hotel lobby has become the centerpiece of our property. Exceptional workmanship!"
+                        </p>
+                        <h4 class="h5 mb-1">Aisha Al-Farsi</h4>
+                        <p class="text-secondary">Five Star Resorts, UAE</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 5: Color Variety -->
+    <section class="color-variety-section">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold text-primary mb-3 section-heading animate-on-scroll slide-in-up">Granite Color Varieties</h2>
+                <p class="lead text-muted animate-on-scroll slide-in-up" style="transition-delay: 0.2s">Explore our extensive selection of granite colors to match your design vision</p>
+            </div>
+            
+            <div class="row">
+                <!-- Card 1 -->
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <div class="color-card animate-on-scroll slide-in-left">
+                        <div class="color-swatch" style="background: linear-gradient(to right, #2c3e50, #4ca1af);"></div>
+                        <div class="card-body">
+                            <h3 class="h5">Absolute Black</h3>
+                            <p class="card-text small">
+                                Deep black granite with minimal grain pattern.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 2 -->
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <div class="color-card animate-on-scroll slide-in-up" style="transition-delay: 0.1s">
+                        <div class="color-swatch" style="background: linear-gradient(to right, #8e0e00, #1f1c18);"></div>
+                        <div class="card-body">
+                            <h3 class="h5">Imperial Red</h3>
+                            <p class="card-text small">
+                                Rich red with black and gray mineral deposits.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 3 -->
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <div class="color-card animate-on-scroll slide-in-up" style="transition-delay: 0.2s">
+                        <div class="color-swatch" style="background: linear-gradient(to right, #bdc3c7, #2c3e50);"></div>
+                        <div class="card-body">
+                            <h3 class="h5">Steel Grey</h3>
+                            <p class="card-text small">
+                                Sophisticated gray with subtle variations.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 4 -->
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <div class="color-card animate-on-scroll slide-in-up" style="transition-delay: 0.3s">
+                        <div class="color-swatch" style="background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);"></div>
+                        <div class="card-body">
+                            <h3 class="h5">Kashmir Gold</h3>
+                            <p class="card-text small">
+                                Warm golden tones with dramatic veining.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 5 -->
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <div class="color-card animate-on-scroll slide-in-up" style="transition-delay: 0.4s">
+                        <div class="color-swatch" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364);"></div>
+                        <div class="card-body">
+                            <h3 class="h5">Blue Pearl</h3>
+                            <p class="card-text small">
+                                Deep blue with shimmering silver flecks.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Card 6 -->
+                <div class="col-md-4 col-lg-2 mb-4">
+                    <div class="color-card animate-on-scroll slide-in-right">
+                        <div class="color-swatch" style="background: linear-gradient(to right, #556270, #4ecdc4);"></div>
+                        <div class="card-body">
+                            <h3 class="h5">Emerald Pearl</h3>
+                            <p class="card-text small">
+                                Greenish-gray with iridescent highlights.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section 6: CTA -->
+    <section class="cta-section">
+        <div class="container text-center">
+            <h2 class="display-5 fw-bold mb-4 animate-on-scroll slide-in-up">Ready to Order Your Granite Products?</h2>
+            <p class="lead mb-5 animate-on-scroll slide-in-up" style="transition-delay: 0.2s">
+                Contact us today for a customized quote. Our export specialists will guide you through the entire process.
+            </p>
+            <div class="d-flex justify-content-center gap-3 animate-on-scroll slide-in-up" style="transition-delay: 0.4s">
+                <a href="contact.html" class="btn btn-gold btn-lg px-5">Contact Us</a>
+                <a href="quote.html" class="btn btn-outline-light btn-lg px-5">Get Quote</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Intersection Observer for Scroll Animations -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('.animate-on-scroll');
+            
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('animated');
+                        observer.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1
+            });
+            
+            animateElements.forEach(element => {
+                observer.observe(element);
+            });
+            
+            // Add hover effect to all cards
+            const cards = document.querySelectorAll('.product-card, .color-card, .testimonial-card');
+            cards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'translateY(-10px)';
+                    this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.2)';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                    this.style.boxShadow = '';
+                });
+            });
+        });
+    </script>
+</body>
+</html>
