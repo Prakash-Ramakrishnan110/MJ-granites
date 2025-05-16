@@ -511,12 +511,12 @@
                 <div class="col-lg-2 col-md-6 footer-col animate-in delay-1">
                     <h3 class="footer-title">Quick Links</h3>
                     <div class="footer-links">
-                        <a href="#">Home</a>
-                        <a href="#about">About Us</a>
-                        <a href="#products">Products</a>
-                        <a href="#gallery">Gallery</a>
-                        <a href="#process">Export Process</a>
-                        <a href="#testimonials">Testimonials</a>
+                        <a href="index.php">Home</a>
+                        <a href="about.php">About Us</a>
+                        <a href="products.php">Products</a>
+                        <a href="gallery.php">Gallery</a>
+                        <a href="process.php">Export Process</a>
+                        <a href="contact.php">contact</a>
                     </div>
                 </div>
                 

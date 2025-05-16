@@ -215,7 +215,7 @@
     </style>
 </head>
 <body>
-
+     <?php include "header.php"; ?>
     <!-- Hero Section -->
     <section class="product-hero">
         <div class="container text-center">
@@ -615,7 +615,7 @@
             </div>
         </div>
     </section>
-
+     <?php include "footer.php"; ?>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>

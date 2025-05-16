@@ -508,7 +508,7 @@
     </style>
 </head>
 <body>
-    
+     <?php include "header.php"; ?>
 
     <!-- Hero Section -->
     <section class="process-hero">
@@ -851,7 +851,7 @@
             </div>
         </div>
     </div>
-
+     <?php include "footer.php"; ?>
     <!-- Add similar modals for other process steps -->
     <!-- For brevity, I've included just two examples -->
 

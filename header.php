@@ -432,17 +432,17 @@
       <div class="collapse navbar-collapse" id="navbarNav">
         <ul class="navbar-nav ms-auto">
           <li class="nav-item">
-            <a class="nav-link nav-link-custom active" href="index1.html">Home
+            <a class="nav-link nav-link-custom active" href="index.php">Home
               <span class="nav-tooltip">Welcome Page</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="about.html">About
+            <a class="nav-link nav-link-custom" href="about.php">About
               <span class="nav-tooltip">Our Story</span>
             </a>
           </li>
           <li class="nav-item dropdown">
-            <a class="nav-link nav-link-custom dropdown-toggle" href="products.html" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link nav-link-custom dropdown-toggle" href="products.php" id="productsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
               Products
               <span class="nav-tooltip">Our Offerings</span>
             </a>
@@ -455,17 +455,17 @@
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="gallery.html">Gallery
+            <a class="nav-link nav-link-custom" href="gallery.php">Gallery
               <span class="nav-tooltip">Our Work</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="process.html">Process
+            <a class="nav-link nav-link-custom" href="process.php">Process
               <span class="nav-tooltip">How We Work</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link nav-link-custom" href="contact.html">Contact
+            <a class="nav-link nav-link-custom" href="contact.php">Contact
               <span class="nav-tooltip">Get In Touch</span>
             </a>
           </li>

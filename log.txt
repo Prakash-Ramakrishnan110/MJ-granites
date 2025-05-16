@@ -1,0 +1,12 @@
+Form reached PHP
+Array
+(
+    [name] => Boopathikannan Natarajan
+    [email] => boopathikannan069@gmail.com
+    [phone] => 06379674726
+    [company] => None
+    [destination] => United States
+    [product_interest] => Granite Slabs
+    [message] => testing
+)
+Mail sent successfully

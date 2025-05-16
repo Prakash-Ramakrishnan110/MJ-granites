@@ -562,6 +562,7 @@
     </style>
 </head>
 <body>
+     <?php include "header.php"; ?>
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
@@ -813,7 +814,7 @@
             </div>
         </section>
     </div>
-
+     <?php include "footer.php"; ?>
     <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>

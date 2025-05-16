@@ -624,7 +624,7 @@
     </style>
 </head>
 <body>
-   
+    <?php include "header.php"; ?>
 
     <!-- Hero Carousel -->
     <div id="heroCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="180000">
@@ -1177,7 +1177,7 @@
         </div>
     </div>
 </section>
-
+ <?php include "footer.php"; ?>
 <style>
     /* Quote Section Styles */
     .quote-section {

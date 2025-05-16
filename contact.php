@@ -525,6 +525,7 @@
     </style>
 </head>
 <body>
+     <?php include "header.php"; ?>
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="pattern-dots"></div>
@@ -613,47 +614,61 @@
                 </div>
                 <div class="col-lg-6">
                     <div class="contact-form slide-right">
-                        <form id="exportQuoteForm">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Your Name" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="email" class="form-control" placeholder="Your Email" required>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <input type="tel" class="form-control" placeholder="Phone Number">
-                                </div>
-                                <div class="col-md-6">
-                                    <input type="text" class="form-control" placeholder="Company Name">
-                                </div>
-                            </div>
-                            <select class="form-control" required>
-                                <option value="" disabled selected>Country of Destination</option>
-                                <option>United States</option>
-                                <option>United Kingdom</option>
-                                <option>Germany</option>
-                                <option>France</option>
-                                <option>UAE</option>
-                                <option>Australia</option>
-                                <option>Canada</option>
-                                <option>Other</option>
-                            </select>
-                            <select class="form-control" required>
-                                <option value="" disabled selected>Product Interest</option>
-                                <option>Granite Slabs</option>
-                                <option>Granite Countertops</option>
-                                <option>Granite Tiles</option>
-                                <option>Granite Monuments</option>
-                                <option>Granite Sculptures</option>
-                                <option>Granite Columns</option>
-                                <option>Custom Work</option>
-                            </select>
-                            <textarea class="form-control" placeholder="Your Message / Project Details" required></textarea>
-                            <button type="submit" class="btn btn-primary w-100 py-3">Request Export Quote</button>
-                        </form>
+                       <form id="exportQuoteForm" method="POST" action="send_mail.php">
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" name="name" class="form-control" placeholder="Your Name" required>
+        </div>
+        <div class="col-md-6">
+            <input type="email" name="email" class="form-control" placeholder="Your Email" required>
+        </div>
+    </div>
+
+    <div class="row mt-3">
+        <div class="col-md-6">
+            <input type="tel" name="phone" class="form-control" placeholder="Phone Number">
+        </div>
+        <div class="col-md-6">
+            <input type="text" name="company" class="form-control" placeholder="Company Name">
+        </div>
+    </div>
+
+    <div class="mt-3">
+        <select name="destination" class="form-control" required>
+            <option value="" disabled selected>Country of Destination</option>
+            <option>United States</option>
+            <option>United Kingdom</option>
+            <option>Germany</option>
+            <option>France</option>
+            <option>UAE</option>
+            <option>Australia</option>
+            <option>Canada</option>
+            <option>Other</option>
+        </select>
+    </div>
+
+    <div class="mt-3">
+        <select name="product_interest" class="form-control" required>
+            <option value="" disabled selected>Product Interest</option>
+            <option>Granite Slabs</option>
+            <option>Granite Countertops</option>
+            <option>Granite Tiles</option>
+            <option>Granite Monuments</option>
+            <option>Granite Sculptures</option>
+            <option>Granite Columns</option>
+            <option>Custom Work</option>
+        </select>
+    </div>
+
+    <div class="mt-3">
+        <textarea name="message" class="form-control" placeholder="Your Message / Project Details" rows="5" required></textarea>
+    </div>
+
+    <div class="mt-4">
+        <button type="submit" class="btn btn-primary w-100 py-3">Request Export Quote</button>
+    </div>
+</form>
+
                     </div>
                 </div>
             </div>
@@ -783,7 +798,7 @@
             </div>
         </div>
     </section>
-
+     <?php include "footer.php"; ?>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- Custom JS -->
@@ -843,35 +858,6 @@
             });
         });
         
-        // Form submission
-        document.getElementById('exportQuoteForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Show loading state
-            const submitBtn = this.querySelector('button[type="submit"]');
-            const originalText = submitBtn.innerHTML;
-            submitBtn.innerHTML = '<span class="spinner-border spinner-border-sm me-2" role="status" aria-hidden="true"></span>Processing...';
-            submitBtn.disabled = true;
-            
-            // Simulate form submission
-            setTimeout(() => {
-                submitBtn.innerHTML = '<i class="fas fa-check me-2"></i>Request Sent!';
-                
-                // Show success message
-                const successAlert = document.createElement('div');
-                successAlert.className = 'alert alert-success mt-3 animate__animated animate__fadeIn';
-                successAlert.innerHTML = '<i class="fas fa-check-circle me-2"></i> Thank you for your export inquiry! Our team will contact you within 24 hours.';
-                this.appendChild(successAlert);
-                
-                // Reset form after delay
-                setTimeout(() => {
-                    this.reset();
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.disabled = false;
-                    successAlert.remove();
-                }, 3000);
-            }, 1500);
-        });
         
         // Add hover effect to all cards
         const cards = document.querySelectorAll('.card, .contact-info-card, .factory-info-card');
