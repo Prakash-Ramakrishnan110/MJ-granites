@@ -10,14 +10,14 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
-   <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
     <!-- Custom CSS -->
     <style>
         :root {
             --primary-color: #3a5a78;
             --secondary-color: #d4af37;
-            --dark-color: #333;
+            --dark-color: #e8e8e8;
             --light-color: #f8f9fa;
             --accent-color: #8b5a2b;
         }
@@ -27,20 +27,42 @@
             overflow-x: hidden;
             scroll-behavior: smooth;
             line-height: 1.6;
+            color: #444;
         }
         
         h1, h2, h3, h4, h5, .display-font {
             font-family: 'Playfair Display', serif;
             line-height: 1.3;
+            color: var(--dark-color);
         }
         
         /* Improved spacing */
         section {
             padding: 80px 0;
+            position: relative;
+            overflow: hidden;
         }
         
         .section-title {
             margin-bottom: 40px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+            transition: all 0.5s ease;
+        }
+        
+        .section-title:hover:after {
+            width: 100px;
+            background: var(--primary-color);
         }
         
         /* Enhanced Hero Section */
@@ -61,6 +83,8 @@
         .hero-content {
             max-width: 800px;
             margin: 0 auto;
+            position: relative;
+            z-index: 2;
         }
         
         .hero-title {
@@ -69,6 +93,25 @@
             margin-bottom: 25px;
             text-shadow: 2px 2px 8px rgba(0,0,0,0.6);
             line-height: 1.2;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .hero-title:after {
+            content: '';
+            position: absolute;
+            bottom: -15px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 3px;
+            background: var(--secondary-color);
+            transition: all 0.5s ease;
+        }
+        
+        .hero-title:hover:after {
+            width: 120px;
+            background: white;
         }
         
         /* Enhanced Contact Cards */
@@ -85,6 +128,13 @@
             position: relative;
             overflow: hidden;
             z-index: 1;
+            transform: translateY(20px);
+            opacity: 0;
+        }
+        
+        .contact-info-card.visible {
+            transform: translateY(0);
+            opacity: 1;
         }
         
         .contact-info-card:before {
@@ -114,10 +164,12 @@
             color: var(--secondary-color);
             margin-bottom: 20px;
             transition: all 0.3s ease;
+            display: inline-block;
         }
         
         .contact-info-card:hover .contact-icon {
-            transform: scale(1.2);
+            transform: scale(1.2) rotate(5deg);
+            color: var(--primary-color);
         }
         
         /* Enhanced Form Styling */
@@ -128,6 +180,14 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             position: relative;
             overflow: hidden;
+            transform: scale(0.95);
+            opacity: 0;
+            transition: all 0.6s ease;
+        }
+        
+        .contact-form.visible {
+            transform: scale(1);
+            opacity: 1;
         }
         
         .contact-form:before {
@@ -161,9 +221,22 @@
         }
         
         /* Enhanced Office Hours */
+        .office-hours {
+            list-style: none;
+            padding: 0;
+        }
+        
         .office-hours li {
             padding: 12px 0;
             border-bottom: 1px solid rgba(0,0,0,0.05);
+            display: flex;
+            justify-content: space-between;
+            transition: all 0.3s ease;
+        }
+        
+        .office-hours li:hover {
+            background: rgba(212, 175, 55, 0.05);
+            padding-left: 10px;
         }
         
         .office-day {
@@ -178,10 +251,17 @@
             box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
             height: 100%;
+            transform: translateX(-20px);
+            opacity: 0;
+        }
+        
+        .map-container.visible {
+            transform: translateX(0);
+            opacity: 1;
         }
         
         .map-container:hover {
-            transform: translateY(-5px);
+            transform: translateY(-5px) scale(1.01);
             box-shadow: 0 15px 35px rgba(0,0,0,0.15);
         }
         
@@ -192,16 +272,75 @@
             border: 0;
         }
         
+        /* Factory Info Card */
+        .factory-info-card {
+            padding: 40px;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            height: 100%;
+            transform: translateX(20px);
+            opacity: 0;
+            transition: all 0.6s ease;
+        }
+        
+        .factory-info-card.visible {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        
+        .factory-info-card:hover {
+            box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+        }
+        
+        .factory-info-card ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .factory-info-card ul li {
+            padding: 8px 0;
+            position: relative;
+            padding-left: 25px;
+            transition: all 0.3s ease;
+        }
+        
+        .factory-info-card ul li:before {
+            content: '\f00c';
+            font-family: 'Font Awesome 6 Free';
+            font-weight: 900;
+            position: absolute;
+            left: 0;
+            top: 8px;
+            color: var(--secondary-color);
+            transition: all 0.3s ease;
+        }
+        
+        .factory-info-card ul li:hover {
+            padding-left: 30px;
+        }
+        
+        .factory-info-card ul li:hover:before {
+            color: var(--primary-color);
+            transform: scale(1.2);
+        }
+        
         /* Enhanced FAQ Section */
+        .accordion {
+            --bs-accordion-border-color: rgba(58, 90, 120, 0.1);
+        }
+        
         .accordion-button {
             font-weight: 600;
             padding: 18px 20px;
             background-color: rgba(58, 90, 120, 0.05);
+            transition: all 0.3s ease;
         }
         
         .accordion-button:not(.collapsed) {
             background-color: rgba(58, 90, 120, 0.1);
             color: var(--primary-color);
+            box-shadow: inset 0 -1px 0 rgba(58, 90, 120, 0.1);
         }
         
         .accordion-button:focus {
@@ -209,94 +348,74 @@
             border-color: rgba(58, 90, 120, 0.1);
         }
         
-        /* ======================
-           Enhanced Animations
-           ====================== */
-        /* Fade In Animation */
-        .fade-in {
+        .accordion-button:hover {
+            background-color: rgba(58, 90, 120, 0.08);
+        }
+        
+        .accordion-button:after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%233a5a78'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+            transition: all 0.3s ease;
+        }
+        
+        .accordion-button:not(.collapsed):after {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23d4af37'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+        }
+        
+        .accordion-item {
+            margin-bottom: 15px;
+            border-radius: 8px !important;
+            overflow: hidden;
             opacity: 0;
-            transition: all 0.8s ease;
+            transform: translateY(20px);
+            transition: all 0.5s ease;
         }
         
-        .fade-in.visible {
-            opacity: 1;
-        }
-        
-        /* Slide Up Animation */
-        .slide-up {
-            opacity: 0;
-            transform: translateY(50px);
-            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
-        }
-        
-        .slide-up.visible {
+        .accordion-item.visible {
             opacity: 1;
             transform: translateY(0);
         }
         
-        /* Slide Left Animation */
-        .slide-left {
-            opacity: 0;
-            transform: translateX(-50px);
-            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+        .accordion-body {
+            padding: 20px;
         }
         
-        .slide-left.visible {
-            opacity: 1;
-            transform: translateX(0);
+        /* Button Enhancements */
+        .btn {
+            font-weight: 500;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         
-        /* Slide Right Animation */
-        .slide-right {
-            opacity: 0;
-            transform: translateX(50px);
-            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
         }
         
-        .slide-right.visible {
-            opacity: 1;
-            transform: translateX(0);
+        .btn-primary:hover {
+            background-color: #2d475f;
+            border-color: #2d475f;
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(58, 90, 120, 0.3);
         }
         
-        /* Zoom In Animation */
-        .zoom-in {
-            opacity: 0;
-            transform: scale(0.95);
-            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
+        .btn-outline-light:hover {
+            color: var(--dark-color);
         }
         
-        .zoom-in.visible {
-            opacity: 1;
-            transform: scale(1);
-        }
-        
-        /* Rotate Animation */
-        .rotate-in {
-            opacity: 0;
-            transform: rotate(-5deg);
-            transition: all 0.8s cubic-bezier(0.215, 0.61, 0.355, 1);
-        }
-        
-        .rotate-in.visible {
-            opacity: 1;
-            transform: rotate(0);
-        }
-        
-        /* Animation Delays */
-        .delay-1 {
-            transition-delay: 0.2s;
-        }
-        
-        .delay-2 {
-            transition-delay: 0.4s;
-        }
-        
-        .delay-3 {
-            transition-delay: 0.6s;
-        }
-        
-        .delay-4 {
-            transition-delay: 0.8s;
+        /* Background Patterns */
+        .pattern-dots {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: radial-gradient(rgba(58, 90, 120, 0.1) 1px, transparent 1px);
+            background-size: 15px 15px;
+            z-index: -1;
+            opacity: 0.5;
         }
         
         /* Responsive adjustments */
@@ -308,12 +427,17 @@
             section {
                 padding: 70px 0;
             }
+            
+            .contact-form {
+                padding: 40px;
+            }
         }
         
         @media (max-width: 991.98px) {
             .hero-section {
                 padding: 120px 0 80px;
                 min-height: auto;
+                background-attachment: scroll;
             }
             
             .hero-title {
@@ -321,14 +445,18 @@
             }
             
             .contact-form {
-                padding: 40px;
+                padding: 35px;
+            }
+            
+            .factory-info-card,
+            .map-container {
+                margin-bottom: 30px;
             }
         }
         
         @media (max-width: 767.98px) {
             .hero-section {
                 padding: 100px 0 60px;
-                background-attachment: scroll;
             }
             
             .hero-title {
@@ -342,6 +470,14 @@
             .contact-form {
                 padding: 30px;
             }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .contact-info-card {
+                padding: 30px 20px;
+            }
         }
         
         @media (max-width: 575.98px) {
@@ -350,11 +486,40 @@
             }
             
             .section-title {
-                font-size: 1.8rem;
+                font-size: 1.6rem;
             }
             
             section {
                 padding: 50px 0;
+            }
+            
+            .contact-form {
+                padding: 25px 20px;
+            }
+            
+            .btn-lg {
+                padding: 8px 16px;
+                font-size: 1rem;
+            }
+            
+            .hero-section .btn {
+                display: block;
+                width: 100%;
+                margin-bottom: 10px;
+            }
+            
+            .hero-section .btn:last-child {
+                margin-bottom: 0;
+            }
+        }
+        
+        @media (max-width: 400px) {
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .section-title {
+                font-size: 1.4rem;
             }
         }
     </style>
@@ -362,6 +527,7 @@
 <body>
     <!-- Hero Section -->
     <section class="hero-section">
+        <div class="pattern-dots"></div>
         <div class="container">
             <div class="hero-content animate__animated animate__fadeIn">
                 <h1 class="hero-title slide-up">Contact Our Export Team</h1>
@@ -509,17 +675,17 @@
                     </div>
                 </div>
                 <div class="col-lg-6 fade-in delay-1">
-                    <div class="p-4 p-lg-5 bg-white rounded h-100 d-flex flex-column justify-content-center">
+                    <div class="factory-info-card">
                         <h3 class="mb-4">Factory Visit Information</h3>
                         <p class="mb-4">We welcome international buyers to visit our manufacturing facility in Madurai, Tamil Nadu. Please schedule your visit in advance so we can prepare for your arrival and ensure you have a productive experience.</p>
                         
                         <h5 class="mb-3">Facility Highlights:</h5>
                         <ul class="mb-4">
-                            <li class="mb-2">50,000 sq. ft. manufacturing facility</li>
-                            <li class="mb-2">State-of-the-art cutting and polishing equipment</li>
-                            <li class="mb-2">Traditional hand-carving workshop</li>
-                            <li class="mb-2">Quality inspection area</li>
-                            <li class="mb-2">Export packaging department</li>
+                            <li>50,000 sq. ft. manufacturing facility</li>
+                            <li>State-of-the-art cutting and polishing equipment</li>
+                            <li>Traditional hand-carving workshop</li>
+                            <li>Quality inspection area</li>
+                            <li>Export packaging department</li>
                             <li>Sample display area with 200+ granite varieties</li>
                         </ul>
                         
@@ -544,7 +710,7 @@
             <div class="row justify-content-center">
                 <div class="col-lg-9 fade-in delay-1">
                     <div class="accordion" id="faqAccordion">
-                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <div class="accordion-item">
                             <h3 class="accordion-header" id="headingOne">
                                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
                                     What documents do you provide for customs clearance?
@@ -557,7 +723,7 @@
                             </div>
                         </div>
                         
-                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <div class="accordion-item">
                             <h3 class="accordion-header" id="headingTwo">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
                                     What are your shipping terms?
@@ -570,7 +736,7 @@
                             </div>
                         </div>
                         
-                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <div class="accordion-item">
                             <h3 class="accordion-header" id="headingThree">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
                                     How do you package granite for international shipping?
@@ -583,7 +749,7 @@
                             </div>
                         </div>
                         
-                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <div class="accordion-item">
                             <h3 class="accordion-header" id="headingFour">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
                                     What is your typical lead time for exports?
@@ -596,7 +762,7 @@
                             </div>
                         </div>
                         
-                        <div class="accordion-item mb-3 border-0 shadow-sm">
+                        <div class="accordion-item">
                             <h3 class="accordion-header" id="headingFive">
                                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive">
                                     Do you offer installation services overseas?
@@ -624,11 +790,11 @@
     <script>
         // Enhanced Scroll Animation
         document.addEventListener('DOMContentLoaded', function() {
-            const animateElements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right, .zoom-in, .rotate-in');
+            const animateElements = document.querySelectorAll('.fade-in, .slide-up, .slide-left, .slide-right, .zoom-in, .rotate-in, .contact-info-card, .contact-form, .map-container, .factory-info-card, .accordion-item');
             
             const observerOptions = {
                 threshold: 0.1,
-                rootMargin: '0px 0px -100px 0px'
+                rootMargin: '0px 0px -50px 0px'
             };
             
             const observer = new IntersectionObserver((entries) => {
@@ -642,6 +808,12 @@
             
             animateElements.forEach(element => {
                 observer.observe(element);
+            });
+            
+            // Add staggered animation for accordion items
+            const accordionItems = document.querySelectorAll('.accordion-item');
+            accordionItems.forEach((item, index) => {
+                item.style.transitionDelay = `${index * 0.1}s`;
             });
         });
         
@@ -658,6 +830,15 @@
                         top: targetElement.offsetTop - 80,
                         behavior: 'smooth'
                     });
+                    
+                    // Add pulse animation to target section
+                    if (targetId === '#map') {
+                        const mapContainer = document.querySelector('.map-container');
+                        mapContainer.classList.add('animate__animated', 'animate__pulse');
+                        setTimeout(() => {
+                            mapContainer.classList.remove('animate__animated', 'animate__pulse');
+                        }, 1000);
+                    }
                 }
             });
         });
@@ -690,6 +871,17 @@
                     successAlert.remove();
                 }, 3000);
             }, 1500);
+        });
+        
+        // Add hover effect to all cards
+        const cards = document.querySelectorAll('.card, .contact-info-card, .factory-info-card');
+        cards.forEach(card => {
+            card.addEventListener('mouseenter', () => {
+                card.classList.add('shadow-lg');
+            });
+            card.addEventListener('mouseleave', () => {
+                card.classList.remove('shadow-lg');
+            });
         });
     </script>
 </body>

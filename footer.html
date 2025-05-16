@@ -8,24 +8,32 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
     <style>
         /* Footer Styles */
         :root {
-            --primary-color: #3a5a78;
+            --primary-color: #1a2a3a;
             --secondary-color: #d4af37;
-            --dark-color: #333;
+            --dark-color: #222;
             --light-color: #f8f9fa;
             --accent-color: #8b5a2b;
+            --text-color: #e0e0e0;
+            --text-muted: #aaa;
+        }
+        
+        body {
+            font-family: 'Poppins', sans-serif;
         }
         
         .footer {
             background-color: var(--primary-color);
-            color: white;
+            color: var(--text-color);
             padding: 70px 0 20px;
             position: relative;
             overflow: hidden;
+            font-size: 0.95rem;
+            line-height: 1.6;
         }
         
         .footer:before {
@@ -34,206 +42,201 @@
             top: 0;
             left: 0;
             width: 100%;
-            height: 10px;
+            height: 4px;
             background: linear-gradient(90deg, var(--secondary-color) 0%, var(--accent-color) 100%);
             transform-origin: left;
             transform: scaleX(0);
-            animation: scaleIn 1.5s ease-out forwards;
+            animation: scaleIn 1s ease-out forwards 0.5s;
         }
         
         .footer-title {
-            font-size: 1.3rem;
+            font-size: 1.4rem;
             font-weight: 600;
-            margin-bottom: 20px;
+            margin-bottom: 25px;
             position: relative;
             display: inline-block;
             font-family: 'Playfair Display', serif;
+            color: white;
+            letter-spacing: 0.5px;
         }
         
         .footer-title:after {
             content: '';
             position: absolute;
-            width: 50%;
-            height: 2px;
+            width: 50px;
+            height: 3px;
             background: var(--secondary-color);
-            bottom: -8px;
+            bottom: -10px;
             left: 0;
+            border-radius: 3px;
             transform-origin: left;
             transform: scaleX(0);
-            transition: transform 0.5s ease;
+            transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
         
-        .footer-title:hover:after {
+        .footer-col:hover .footer-title:after {
             transform: scaleX(1);
         }
         
+        .footer p {
+            color: var(--text-muted);
+            margin-bottom: 1.5rem;
+        }
+        
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        
         .footer-links a {
-            color: #ccc;
-            display: block;
-            margin-bottom: 10px;
+            color: var(--text-muted);
             text-decoration: none;
-            transition: all 0.3s ease;
+            transition: all 0.4s ease;
             position: relative;
-            overflow: hidden;
+            padding-left: 0;
+            width: fit-content;
         }
         
         .footer-links a:before {
-            content: '';
+            content: '→';
             position: absolute;
-            width: 100%;
-            height: 1px;
-            bottom: 0;
-            left: -100%;
-            background: var(--secondary-color);
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--secondary-color);
+            opacity: 0;
             transition: all 0.3s ease;
         }
         
         .footer-links a:hover {
             color: var(--secondary-color);
-            padding-left: 10px;
+            padding-left: 18px;
         }
         
         .footer-links a:hover:before {
+            opacity: 1;
             left: 0;
+        }
+        
+        .social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 20px;
         }
         
         .social-icons a {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 40px;
-            height: 40px;
-            background: rgba(255,255,255,0.1);
-            color: white;
-            font-size: 1.2rem;
-            margin-right: 10px;
+            width: 38px;
+            height: 38px;
+            background: rgba(255,255,255,0.08);
+            color: var(--text-color);
+            font-size: 1rem;
             border-radius: 50%;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             position: relative;
             overflow: hidden;
         }
         
-        .social-icons a:before {
+        .social-icons a:after {
             content: '';
             position: absolute;
             width: 100%;
             height: 100%;
-            background: var(--secondary-color);
+            background: linear-gradient(135deg, var(--secondary-color) 0%, var(--accent-color) 100%);
             top: 0;
             left: -100%;
-            transition: all 0.3s ease;
-            z-index: -1;
+            transition: all 0.4s ease;
+            z-index: 0;
             border-radius: 50%;
+        }
+        
+        .social-icons a i {
+            position: relative;
+            z-index: 1;
+            transition: transform 0.3s ease;
         }
         
         .social-icons a:hover {
             color: var(--dark-color);
-            transform: translateY(-5px) rotate(5deg);
+            transform: translateY(-3px);
         }
         
-        .social-icons a:hover:before {
+        .social-icons a:hover:after {
             left: 0;
         }
         
-        .copyright {
-            border-top: 1px solid rgba(255,255,255,0.1);
-            padding-top: 20px;
-            margin-top: 50px;
-            text-align: center;
-            color: #ccc;
-            font-size: 0.9rem;
-            position: relative;
-            overflow: hidden;
+        .social-icons a:hover i {
+            transform: scale(1.2) rotate(10deg);
         }
         
-        .copyright:before {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            background: var(--secondary-color);
-            top: -1px;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: width 1.5s ease;
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
         
-        .copyright.in-view:before {
-            width: 100%;
-        }
-        
-        .copyright p {
-            transform: translateY(20px);
-            opacity: 0;
-            transition: all 0.6s ease;
-        }
-        
-        .copyright.in-view p {
-            transform: translateY(0);
-            opacity: 1;
-        }
-        
-        .copyright p:first-child {
-            transition-delay: 0.2s;
-        }
-        
-        .copyright p:last-child {
-            transition-delay: 0.4s;
-        }
-        
-        .copyright a {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .copyright a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -2px;
-            left: 0;
-            background-color: #39FF14;
-            transition: width 0.3s ease;
-        }
-        
-        .copyright a:hover:after {
-            width: 100%;
+        .contact-info p {
+            display: flex;
+            align-items: flex-start;
+            margin: 0;
+            color: var(--text-muted);
+            transition: all 0.3s ease;
         }
         
         .contact-info i {
             color: var(--secondary-color);
-            margin-right: 10px;
-            width: 20px;
+            margin-right: 12px;
+            margin-top: 3px;
+            min-width: 16px;
             text-align: center;
             transition: all 0.3s ease;
         }
         
+        .contact-info p:hover {
+            color: white;
+        }
+        
         .contact-info p:hover i {
-            transform: scale(1.2) rotate(10deg);
+            transform: scale(1.2);
             color: white;
         }
         
         .newsletter-form .form-control {
-            background: rgba(255,255,255,0.1);
-            border: none;
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.1);
             color: white;
+            padding: 8px 15px;
+            font-size: 0.9rem;
+            height: 42px;
+            margin-bottom: 12px;
             transition: all 0.3s ease;
         }
         
+        .newsletter-form .form-control::placeholder {
+            color: var(--text-muted);
+        }
+        
         .newsletter-form .form-control:focus {
-            background: rgba(255,255,255,0.2);
-            box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.25);
+            background: rgba(255,255,255,0.15);
+            border-color: var(--secondary-color);
+            box-shadow: 0 0 0 0.25rem rgba(212, 175, 55, 0.15);
+            color: white;
         }
         
         .newsletter-form .btn {
             background: var(--secondary-color);
             color: var(--dark-color);
             font-weight: 600;
+            padding: 8px 20px;
+            border: none;
             position: relative;
             overflow: hidden;
             z-index: 1;
-            transition: all 0.3s ease;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            width: 100%;
         }
         
         .newsletter-form .btn:before {
@@ -243,42 +246,112 @@
             left: -100%;
             width: 100%;
             height: 100%;
-            background: var(--accent-color);
-            transition: all 0.3s ease;
+            background: linear-gradient(to right, var(--accent-color), var(--secondary-color));
+            transition: all 0.4s ease;
             z-index: -1;
         }
         
         .newsletter-form .btn:hover {
             color: white;
             transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
         }
         
         .newsletter-form .btn:hover:before {
             left: 0;
         }
         
-        /* Animation classes */
-        .fade-in {
-            opacity: 0;
-            transform: translateY(30px);
-            transition: all 0.6s ease;
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 25px;
+            margin-top: 50px;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
         }
         
-        .fade-in.in-view {
+        .copyright p {
+            margin-bottom: 5px;
+        }
+        
+        .copyright a {
+            color: var(--secondary-color);
+            text-decoration: none;
+            font-weight: 500;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        
+        .copyright a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -2px;
+            left: 0;
+            background-color: var(--secondary-color);
+            transition: width 0.3s ease;
+        }
+        
+        .copyright a:hover {
+            color: white;
+        }
+        
+        .copyright a:hover:after {
+            width: 100%;
+        }
+        
+        /* Back to top button */
+        .back-to-top {
+            display: none;
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 99;
+            background: var(--secondary-color);
+            color: var(--dark-color);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 50px;
+            font-size: 18px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .back-to-top:hover {
+            transform: translateY(-5px) scale(1.1);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            color: var(--primary-color);
+        }
+        
+        /* Animation classes */
+        .animate-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        
+        .animate-in.show {
             opacity: 1;
             transform: translateY(0);
         }
         
         .delay-1 {
-            transition-delay: 0.2s;
+            transition-delay: 0.1s;
         }
         
         .delay-2 {
-            transition-delay: 0.4s;
+            transition-delay: 0.2s;
         }
         
         .delay-3 {
-            transition-delay: 0.6s;
+            transition-delay: 0.3s;
+        }
+        
+        .delay-4 {
+            transition-delay: 0.4s;
         }
         
         /* Keyframe animations */
@@ -289,7 +362,7 @@
         
         @keyframes float {
             0% { transform: translateY(0px); }
-            50% { transform: translateY(-10px); }
+            50% { transform: translateY(-8px); }
             100% { transform: translateY(0px); }
         }
         
@@ -299,65 +372,120 @@
             100% { transform: scale(1); }
         }
         
-        /* Back to top button animation */
-        .back-to-top {
-            display: none;
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 99;
-            background: var(--secondary-color);
-            color: var(--dark-color);
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            text-align: center;
-            line-height: 50px;
-            font-size: 20px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            transition: all 0.3s ease;
-            animation: float 3s ease-in-out infinite;
-        }
-        
-        .back-to-top:hover {
-            animation: none;
-            transform: scale(1.1) translateY(-5px);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.3);
-        }
-        
-        /* Particle effect */
-        .particle {
-            position: absolute;
-            background: rgba(212, 175, 55, 0.6);
-            border-radius: 50%;
-            pointer-events: none;
-        }
-        
-        /* Sparkle effect */
-        .sparkle {
-            position: absolute;
-            width: 4px;
-            height: 4px;
-            background-color: var(--secondary-color);
-            border-radius: 50%;
-            pointer-events: none;
-            opacity: 0;
+        @keyframes sparkle {
+            0% { transform: scale(0); opacity: 0; }
+            50% { transform: scale(1.2); opacity: 1; }
+            100% { transform: scale(0); opacity: 0; }
         }
         
         /* Responsive adjustments */
-        @media (max-width: 768px) {
+        @media (max-width: 992px) {
             .footer {
-                text-align: center;
+                padding: 50px 0 20px;
+            }
+            
+            .footer-col {
+                margin-bottom: 30px;
+            }
+            
+            .footer-title {
+                font-size: 1.3rem;
+                margin-bottom: 20px;
             }
             
             .footer-title:after {
-                left: 25%;
-                width: 50%;
+                left: 50%;
+                transform: translateX(-50%) scaleX(0);
+                width: 40px;
+            }
+            
+            .footer-col:hover .footer-title:after {
+                transform: translateX(-50%) scaleX(1);
+            }
+            
+            .footer-links {
+                align-items: center;
+            }
+            
+            .footer-links a {
+                width: auto;
             }
             
             .social-icons {
                 justify-content: center;
-                margin-bottom: 20px;
+            }
+            
+            .contact-info {
+                align-items: center;
+                text-align: center;
+            }
+            
+            .contact-info p {
+                justify-content: center;
+            }
+            
+            .newsletter-form {
+                max-width: 350px;
+                margin: 0 auto;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .footer {
+                text-align: center;
+                padding: 40px 0 20px;
+            }
+            
+            .footer-col {
+                margin-bottom: 30px;
+            }
+            
+            .footer-title {
+                font-size: 1.2rem;
+            }
+            
+            .footer p {
+                font-size: 0.9rem;
+            }
+            
+            .back-to-top {
+                width: 45px;
+                height: 45px;
+                line-height: 45px;
+                font-size: 16px;
+                bottom: 20px;
+                right: 20px;
+            }
+        }
+        
+        @media (max-width: 576px) {
+            .footer {
+                padding: 30px 0 15px;
+            }
+            
+            .footer-title {
+                font-size: 1.1rem;
+                margin-bottom: 15px;
+            }
+            
+            .footer-links {
+                gap: 8px;
+            }
+            
+            .footer-links a {
+                font-size: 0.9rem;
+            }
+            
+            .social-icons a {
+                width: 36px;
+                height: 36px;
+                font-size: 0.9rem;
+            }
+            
+            .copyright {
+                font-size: 0.8rem;
+                padding-top: 20px;
+                margin-top: 30px;
             }
         }
     </style>
@@ -368,18 +496,19 @@
     <footer class="footer" id="contact">
         <div class="container">
             <div class="row">
-                <div class="col-lg-4 mb-5 mb-lg-0 fade-in">
+                <div class="col-lg-4 col-md-6 footer-col animate-in">
                     <h3 class="footer-title">MJ Granites Export</h3>
                     <p>Premier manufacturer and global exporter of premium granite products, serving clients worldwide with quality craftsmanship and reliable shipping.</p>
-                    <div class="social-icons mt-4">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                        <a href="#"><i class="fab fa-pinterest"></i></a>
+                    <div class="social-icons">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                        <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-2 col-md-4 mb-4 mb-md-0 fade-in delay-1">
+                
+                <div class="col-lg-2 col-md-6 footer-col animate-in delay-1">
                     <h3 class="footer-title">Quick Links</h3>
                     <div class="footer-links">
                         <a href="#">Home</a>
@@ -390,7 +519,8 @@
                         <a href="#testimonials">Testimonials</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 mb-4 mb-md-0 fade-in delay-2">
+                
+                <div class="col-lg-3 col-md-6 footer-col animate-in delay-2">
                     <h3 class="footer-title">Export Services</h3>
                     <div class="footer-links">
                         <a href="#">Shipping Information</a>
@@ -401,7 +531,8 @@
                         <a href="#">Freight Options</a>
                     </div>
                 </div>
-                <div class="col-lg-3 col-md-4 fade-in delay-3">
+                
+                <div class="col-lg-3 col-md-6 footer-col animate-in delay-3">
                     <h3 class="footer-title">Contact Us</h3>
                     <div class="contact-info">
                         <p><i class="fas fa-map-marker-alt"></i> No. 45, Industrial Estate, Madurai – Tamil Nadu, India 625020</p>
@@ -413,21 +544,22 @@
                     <h4 class="footer-title mt-4">Export Inquiry</h4>
                     <form class="newsletter-form">
                         <div class="mb-2">
-                            <input type="email" class="form-control form-control-sm" placeholder="Your Email" required>
+                            <input type="email" class="form-control" placeholder="Your Email" required>
                         </div>
-                        <button type="submit" class="btn btn-sm">Get Quote</button>
+                        <button type="submit" class="btn">Get Quote</button>
                     </form>
                 </div>
             </div>
-            <div class="copyright">
+            
+            <div class="copyright animate-in delay-4">
                 <p>&copy; 2025 MJ Granites Export. All Rights Reserved.</p>
-                <p>Designed by <a href="https://saakra.com" target="_blank" style="color: #39FF14; text-decoration: none; font-weight: bold; text-transform: uppercase;">Saakra Enterprises Pvt Ltd</a></p>
+                <p>Designed by <a href="https://saakra.com" target="_blank">Saakra Enterprises Pvt Ltd</a></p>
             </div>
         </div>
     </footer>
 
     <!-- Back to Top Button -->
-    <a href="#" class="back-to-top">
+    <a href="#" class="back-to-top" aria-label="Back to top">
         <i class="fas fa-arrow-up"></i>
     </a>
 
@@ -448,35 +580,17 @@
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    entry.target.classList.add('in-view');
+                    entry.target.classList.add('show');
+                    
+                    // Add sparkle effect to the copyright section
                     if (entry.target.classList.contains('copyright')) {
-                        // Add particle effect when copyright comes into view
-                        createParticles(entry.target);
                         createSparkles(entry.target);
-                        
-                        // Add pulse animation to the copyright text
-                        gsap.to(entry.target.querySelectorAll('p'), {
-                            y: 0,
-                            opacity: 1,
-                            stagger: 0.2,
-                            duration: 0.8,
-                            ease: "back.out(1.7)"
-                        });
-                        
-                        // Special animation for the Saakra link
-                        const saakraLink = entry.target.querySelector('a');
-                        gsap.from(saakraLink, {
-                            scale: 0.8,
-                            color: '#d4af37',
-                            duration: 1.5,
-                            ease: "elastic.out(1, 0.5)"
-                        });
                     }
                 }
             });
         }, observerOptions);
 
-        document.querySelectorAll('.fade-in, .copyright').forEach(el => {
+        document.querySelectorAll('.animate-in').forEach(el => {
             observer.observe(el);
         });
 
@@ -485,6 +599,12 @@
             const backToTop = document.querySelector('.back-to-top');
             if (window.scrollY > 300) {
                 backToTop.style.display = 'block';
+                gsap.from(backToTop, {
+                    y: 20,
+                    opacity: 0,
+                    duration: 0.4,
+                    ease: "back.out(1.7)"
+                });
             } else {
                 backToTop.style.display = 'none';
             }
@@ -495,36 +615,41 @@
             e.preventDefault();
             gsap.to(window, {
                 scrollTo: 0,
-                duration: 1,
+                duration: 0.8,
                 ease: "power2.inOut"
             });
         });
         
         // Newsletter form submission with animation
-        document.querySelector('.newsletter-form').addEventListener('submit', function(e) {
+        document.querySelector('.newsletter-form')?.addEventListener('submit', function(e) {
             e.preventDefault();
             const email = this.querySelector('input').value;
             const btn = this.querySelector('button');
             
             // Animate button on submit
             gsap.to(btn, {
-                scale: 1.1,
-                y: -5,
-                duration: 0.3,
-                yoyo: true,
-                repeat: 1,
-                ease: "power1.inOut",
+                keyframes: [
+                    { scale: 1.05, y: -3, duration: 0.2 },
+                    { scale: 1, y: 0, duration: 0.2 }
+                ],
                 onComplete: () => {
                     // Show success message
                     const successMsg = document.createElement('div');
-                    successMsg.innerHTML = `<p class="text-success mt-2 animate__animated animate__fadeIn">Thank you! We'll contact you soon at ${email}</p>`;
+                    successMsg.innerHTML = `<p class="text-success mt-2" style="font-size:0.9rem;">Thank you! We'll contact you soon.</p>`;
                     this.appendChild(successMsg);
+                    
+                    gsap.from(successMsg, {
+                        y: 10,
+                        opacity: 0,
+                        duration: 0.4
+                    });
                     
                     // Remove message after 5 seconds
                     setTimeout(() => {
                         gsap.to(successMsg, {
                             opacity: 0,
-                            duration: 0.5,
+                            y: -10,
+                            duration: 0.3,
                             onComplete: () => successMsg.remove()
                         });
                     }, 5000);
@@ -537,78 +662,41 @@
         // Hover animation for footer titles
         document.querySelectorAll('.footer-title').forEach(title => {
             title.addEventListener('mouseenter', () => {
-                gsap.to(title.querySelector(':after'), {
-                    scaleX: 1,
-                    duration: 0.5,
-                    ease: "elastic.out(1, 0.5)"
+                gsap.to(title, {
+                    keyframes: [
+                        { y: -2, duration: 0.2 },
+                        { y: 0, duration: 0.2 }
+                    ]
                 });
             });
         });
         
-        // Particle effect function
-        function createParticles(element) {
-            const colors = ['rgba(212, 175, 55, 0.8)', 'rgba(139, 90, 43, 0.8)', 'rgba(255, 255, 255, 0.6)'];
-            
-            for (let i = 0; i < 15; i++) {
-                const particle = document.createElement('div');
-                particle.classList.add('particle');
-                
-                // Random properties
-                const size = Math.random() * 5 + 2;
-                const posX = Math.random() * element.offsetWidth;
-                const posY = Math.random() * 10;
-                const color = colors[Math.floor(Math.random() * colors.length)];
-                const duration = Math.random() * 3 + 2;
-                
-                // Set initial styles
-                particle.style.width = `${size}px`;
-                particle.style.height = `${size}px`;
-                particle.style.left = `${posX}px`;
-                particle.style.top = `${-posY}px`;
-                particle.style.background = color;
-                particle.style.opacity = '0';
-                
-                element.appendChild(particle);
-                
-                // Animate particle
-                gsap.to(particle, {
-                    y: posY + 10,
-                    x: posX + (Math.random() - 0.5) * 20,
-                    opacity: 1,
-                    duration: duration,
-                    delay: Math.random() * 0.5,
-                    ease: "sine.inOut",
-                    onComplete: () => {
-                        particle.remove();
-                    }
-                });
-            }
-        }
-        
         // Sparkle effect function for copyright section
         function createSparkles(element) {
-            const sparkleCount = 10;
+            const sparkleCount = 8;
             const colors = ['#d4af37', '#39FF14', '#ffffff'];
             
             for (let i = 0; i < sparkleCount; i++) {
                 const sparkle = document.createElement('div');
-                sparkle.classList.add('sparkle');
                 
                 // Random properties
-                const size = Math.random() * 3 + 2;
+                const size = Math.random() * 4 + 2;
                 const posX = Math.random() * element.offsetWidth;
                 const posY = Math.random() * element.offsetHeight;
                 const color = colors[Math.floor(Math.random() * colors.length)];
-                const delay = Math.random() * 1;
-                const duration = Math.random() * 0.5 + 0.5;
+                const delay = Math.random() * 0.5;
                 
                 // Set initial styles
+                sparkle.style.position = 'absolute';
                 sparkle.style.width = `${size}px`;
                 sparkle.style.height = `${size}px`;
                 sparkle.style.left = `${posX}px`;
                 sparkle.style.top = `${posY}px`;
                 sparkle.style.backgroundColor = color;
+                sparkle.style.borderRadius = '50%';
                 sparkle.style.boxShadow = `0 0 ${size*2}px ${size/2}px ${color}`;
+                sparkle.style.opacity = '0';
+                sparkle.style.pointerEvents = 'none';
                 
                 element.appendChild(sparkle);
                 
@@ -616,10 +704,8 @@
                 gsap.to(sparkle, {
                     opacity: 1,
                     scale: 1.5,
-                    duration: duration,
+                    duration: 0.6,
                     delay: delay,
-                    yoyo: true,
-                    repeat: 1,
                     ease: "power1.inOut",
                     onComplete: () => {
                         sparkle.remove();
@@ -629,16 +715,15 @@
             
             // Create continuous sparkles on the Saakra link
             const saakraLink = element.querySelector('a');
-            setInterval(() => {
-                if (saakraLink) {
+            if (saakraLink) {
+                setInterval(() => {
                     createLinkSparkle(saakraLink);
-                }
-            }, 1000);
+                }, 1500);
+            }
         }
         
         function createLinkSparkle(link) {
             const sparkle = document.createElement('div');
-            sparkle.classList.add('sparkle');
             
             // Position within the link
             const linkRect = link.getBoundingClientRect();
@@ -646,13 +731,17 @@
             const posY = Math.random() * linkRect.height;
             
             // Set styles
+            sparkle.style.position = 'absolute';
             sparkle.style.width = '3px';
             sparkle.style.height = '3px';
             sparkle.style.left = `${posX}px`;
             sparkle.style.top = `${posY}px`;
             sparkle.style.backgroundColor = '#39FF14';
+            sparkle.style.borderRadius = '50%';
             sparkle.style.boxShadow = '0 0 6px 1.5px #39FF14';
-            sparkle.style.zIndex = '10';
+            sparkle.style.opacity = '0';
+            sparkle.style.pointerEvents = 'none';
+            sparkle.style.zIndex = '1';
             
             link.appendChild(sparkle);
             
@@ -660,8 +749,7 @@
             gsap.to(sparkle, {
                 opacity: 1,
                 scale: 2,
-                duration: 0.5,
-                yoyo: true,
+                duration: 0.6,
                 ease: "power1.inOut",
                 onComplete: () => {
                     sparkle.remove();
@@ -669,26 +757,15 @@
             });
         }
         
-        // Animate social icons on page load
-        document.querySelectorAll('.social-icons a').forEach((icon, index) => {
-            gsap.from(icon, {
-                y: 20,
-                opacity: 0,
-                duration: 0.5,
-                delay: 0.8 + (index * 0.1),
-                ease: "back.out(1.7)"
-            });
-        });
-        
         // Add pulse animation to copyright text periodically
         setInterval(() => {
-            const copyright = document.querySelector('.copyright.in-view');
+            const copyright = document.querySelector('.copyright.show');
             if (copyright) {
-                gsap.to(copyright.querySelectorAll('p'), {
-                    scale: 1.02,
-                    duration: 0.5,
-                    yoyo: true,
-                    repeat: 1,
+                gsap.to(copyright, {
+                    keyframes: [
+                        { scale: 1.01, duration: 0.5 },
+                        { scale: 1, duration: 0.5 }
+                    ],
                     ease: "power1.inOut"
                 });
             }
