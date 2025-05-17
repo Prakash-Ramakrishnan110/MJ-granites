@@ -12,8 +12,8 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <style>
         :root {
-            --primary-color: #5a3e36;
-            --secondary-color: #c19a6b;
+            --primary-color: #3a5a78;
+            --secondary-color: #d4af37;
             --dark-color: #333;
             --light-color: #f8f9fa;
             --card-title-color: #3A5A78;
@@ -165,7 +165,7 @@
         }
         
         .highlight-box p {
-            color:;
+            color: #333;
         }
         
         /* Granite Types Section */
