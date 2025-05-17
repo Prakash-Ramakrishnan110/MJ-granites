@@ -38,7 +38,6 @@
             font-family: 'Lora', serif;
         }
         
-       
         /* Hero Section */
         .process-hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
@@ -144,7 +143,7 @@
         }
         
         .card-body p {
-            color: #666;
+            color: #000000;
             line-height: 1.6;
         }
         
@@ -194,7 +193,7 @@
         }
         
         .icon-card p {
-            color: #666;
+            color: #000000;
             line-height: 1.6;
             transition: all 0.3s ease;
         }
@@ -505,17 +504,79 @@
                 font-size: 0.8rem;
             }
         }
+
+        /* Card Title Color */
+        .process-card h3,
+        .process-card h5,
+        .icon-card h3 {
+            color: #3A5A78 !important; /* Your specified title color */
+        }
+        
+        /* Card Content Color */
+        .process-card .card-text,
+        .icon-card p {
+            color: #000000 !important; /* Pure black for content */
+        }
+
+        /* Consistent styling for all cards */
+        .process-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            height: 100%;
+            background: white;
+        }
+        
+        .process-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+        
+        .card-img-container {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s ease;
+        }
+        
+        .process-card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+        }
+        
+        .h5 {
+            color: #333;
+            margin-bottom: 0.75rem;
+            font-size: 1.25rem;
+            font-weight: 600;
+        }
+        
+        .card-text {
+            color: #666;
+            font-size: 0.95rem;
+            line-height: 1.5;
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body>
-     <?php include "header.php"; ?>
+    <?php include "header.php"; ?>
 
     <!-- Hero Section -->
     <section class="process-hero">
         <div class="container" data-aos="fade-up" data-aos-duration="800">
             <h1 class="display-4 fw-bold mb-4">Our Manufacturing Process</h1>
             <p class="lead mb-5">Discover how we transform raw granite into exquisite works of art through traditional craftsmanship and modern techniques</p>
-            <a href="#material" class="btn btn-gold btn-lg px-5 animate__animated animate__pulse animate__infinite">Explore Process</a>
+            <a href="#material" class="btn btn-gold btn-lg px-5 animate_animated animatepulse animate_infinite">Explore Process</a>
         </div>
     </section>
 
@@ -528,11 +589,14 @@
             </div>
             
             <div class="row">
+                <!-- Card 1 - Quarry Selection -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="process-card" data-bs-toggle="modal" data-bs-target="#quarryModal">
-                        <img src="https://img.freepik.com/free-photo/beautiful-shot-stone-quarry-mountains_181624-20660.jpg" 
-                             class="card-img-top" 
-                             alt="Granite Quarry">
+                    <div class="process-card">
+                        <div class="card-img-container">
+                            <img src="https://img.freepik.com/free-photo/beautiful-shot-stone-quarry-mountains_181624-20660.jpg" 
+                                 class="card-img-top" 
+                                 alt="Granite Quarry">
+                        </div>
                         <div class="card-body">
                             <h3 class="h5">Quarry Selection</h3>
                             <p class="card-text">
@@ -542,11 +606,14 @@
                     </div>
                 </div>
                 
+                <!-- Card 2 - Block Inspection -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="process-card" data-bs-toggle="modal" data-bs-target="#blockModal">
-                        <img src="https://img.freepik.com/free-photo/stone-blocks-quarry_1150-6608.jpg" 
-                             class="card-img-top" 
-                             alt="Granite Blocks">
+                    <div class="process-card">
+                        <div class="card-img-container">
+                            <img src="https://img.freepik.com/free-photo/stone-blocks-quarry_1150-6608.jpg" 
+                                 class="card-img-top" 
+                                 alt="Granite Blocks">
+                        </div>
                         <div class="card-body">
                             <h3 class="h5">Block Inspection</h3>
                             <p class="card-text">
@@ -556,11 +623,14 @@
                     </div>
                 </div>
                 
+                <!-- Card 3 - Quality Testing -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="process-card" data-bs-toggle="modal" data-bs-target="#testingModal">
-                        <img src="https://img.freepik.com/free-photo/worker-checking-quality-stone_23-2149256763.jpg" 
-                             class="card-img-top" 
-                             alt="Quality Testing">
+                    <div class="process-card">
+                        <div class="card-img-container">
+                            <img src="https://img.freepik.com/free-photo/worker-checking-quality-stone_23-2149256763.jpg" 
+                                 class="card-img-top" 
+                                 alt="Quality Testing">
+                        </div>
                         <div class="card-body">
                             <h3 class="h5">Quality Testing</h3>
                             <p class="card-text">
@@ -755,7 +825,7 @@
                 Contact our team for a detailed explanation or to schedule a virtual factory tour.
             </p>
             <div class="d-flex justify-content-center gap-3">
-                <a href="contact.html" class="btn btn-gold btn-lg px-5 animate__animated animate__pulse animate__infinite">Contact Us</a>
+                <a href="contact.html" class="btn btn-gold btn-lg px-5 animate_animated animatepulse animate_infinite">Contact Us</a>
                 <a href="virtual-tour.html" class="btn btn-outline-light btn-lg px-5">Virtual Tour</a>
             </div>
         </div>
@@ -851,9 +921,8 @@
             </div>
         </div>
     </div>
-     <?php include "footer.php"; ?>
-    <!-- Add similar modals for other process steps -->
-    <!-- For brevity, I've included just two examples -->
+    
+    <?php include "footer.php"; ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

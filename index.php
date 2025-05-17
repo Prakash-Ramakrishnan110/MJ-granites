@@ -621,10 +621,12 @@
                 font-size: 0.9rem;
             }
         }
+
+        
     </style>
 </head>
 <body>
-    <?php include "header.php"; ?>
+   
 
     <!-- Hero Carousel -->
     <div id="heroCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="180000">
@@ -755,133 +757,127 @@
         </div>
     </div>
 </section>
-
-            <!-- Excellence Cards -->
-            <div class="row g-4 mb-5">
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-1" data-animation="fadeInUp">
-                        <div class="card-body p-4 text-center">
-                            <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
-                                <i class="fas fa-globe fa-2x"></i>
-                            </div>
-                            <h3 class="h4">Global Reach</h3>
-                            <p class="text-muted mb-0">
-                                Exporting to US, UK, Europe, Australia, and Middle East with reliable logistics
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-2" data-animation="fadeInUp">
-                        <div class="card-body p-4 text-center">
-                            <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
-                                <i class="fas fa-hammer fa-2x"></i>
-                            </div>
-                            <h3 class="h4">Traditional Craftsmanship</h3>
-                            <p class="text-muted mb-0">
-                                Centuries-old techniques combined with modern precision
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-3" data-animation="fadeInUp">
-                        <div class="card-body p-4 text-center">
-                            <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
-                                <i class="fas fa-award fa-2x"></i>
-                            </div>
-                            <h3 class="h4">Quality Assurance</h3>
-                            <p class="text-muted mb-0">
-                                Rigorous quality checks at every production stage
-                            </p>
-                        </div>
-                    </div>
-                </div>
+<!-- Excellence Cards - Responsive 4 Column Layout -->
+<div class="row g-4 mb-5">
+    <h2 class="display-5 fw-bold text-primary mb-3 text-center">Our Process</h2>
+    
+    <!-- Card 1 - Global Presence -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-1" data-animation="fadeInUp">
+            <div class="card-img-container">
+                <img src="https://img.freepik.com/free-photo/earth-planet-close-up-view_23-2151001742.jpg" class="card-img-top" alt="Global business network">
             </div>
-
-            <!-- Product Highlights -->
-            <div class="row g-4">
-                <div class="col-12">
-                    <h3 class="text-center mb-5 animate-section" data-animation="fadeInUp">Our Premium Granite Products</h3>
+            <div class="card-body p-4 text-center d-flex flex-column">
+                <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                    <i class="fas fa-globe fa-2x"></i>
                 </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card product-card h-100 border-0 overflow-hidden animate-section delay-1" data-animation="fadeInUp">
-                        <div class="card-img-top position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfe3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 class="img-fluid" 
-                                 alt="Granite Monuments">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-sm btn-outline-light card-overlay-btn glow-on-hover">View Details</a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title text-hover-secondary">Monuments</h4>
-                            <p class="card-text text-muted">
-                                Memorials that honor legacies with timeless elegance
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card product-card h-100 border-0 overflow-hidden animate-section delay-2" data-animation="fadeInUp">
-                        <div class="card-img-top position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1600566752229-250ed79470f5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 class="img-fluid" 
-                                 alt="Granite Sculptures">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-sm btn-outline-light card-overlay-btn glow-on-hover">View Details</a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title text-hover-secondary">Sculptures</h4>
-                            <p class="card-text text-muted">
-                                Artistic creations hand-carved by master craftsmen
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card product-card h-100 border-0 overflow-hidden animate-section delay-3" data-animation="fadeInUp">
-                        <div class="card-img-top position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 class="img-fluid" 
-                                 alt="Granite Slabs">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-sm btn-outline-light card-overlay-btn glow-on-hover">View Details</a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title text-hover-secondary">Slabs</h4>
-                            <p class="card-text text-muted">
-                                Premium quality granite slabs for architectural projects
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <div class="card product-card h-100 border-0 overflow-hidden animate-section delay-1" data-animation="fadeInUp">
-                        <div class="card-img-top position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 class="img-fluid" 
-                                 alt="Architectural Granite">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-sm btn-outline-light card-overlay-btn glow-on-hover">View Details</a>
-                            </div>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title text-hover-secondary">Architectural</h4>
-                            <p class="card-text text-muted">
-                                Custom granite elements for luxury spaces
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                <h3 class="h4">Worldwide Network</h3>
+                <p class="text-muted mb-0 flex-grow-1">
+                    Serving clients across 6 continents with localized support teams and distribution centers in key markets.
+                </p>
             </div>
         </div>
-    </section>
+    </div>
+
+    <!-- Card 2 - Craftsmanship -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-2" data-animation="fadeInUp">
+            <div class="card-img-container">
+                <img src="https://img.freepik.com/free-photo/close-up-hands-carpenter_23-2149348873.jpg" class="card-img-top" alt="Expert craftsmanship">
+            </div>
+            <div class="card-body p-4 text-center d-flex flex-column">
+                <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                    <i class="fas fa-hammer fa-2x"></i>
+                </div>
+                <h3 class="h4">Master Craftsmanship</h3>
+                <p class="text-muted mb-0 flex-grow-1">
+                    Our artisans with 15+ years experience combine traditional techniques with modern precision.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 3 - Quality Assurance -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-3" data-animation="fadeInUp">
+            <div class="card-img-container">
+                <img src="https://img.freepik.com/free-photo/quality-control-inspector-checking-product_23-2149630604.jpg" class="card-img-top" alt="Quality inspection">
+            </div>
+            <div class="card-body p-4 text-center d-flex flex-column">
+                <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                    <i class="fas fa-award fa-2x"></i>
+                </div>
+                <h3 class="h4">Quality Guaranteed</h3>
+                <p class="text-muted mb-0 flex-grow-1">
+                    Every product undergoes 17-point inspection process with ISO 9001 certified standards.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Card 4 - Sustainable Materials -->
+    <div class="col-sm-6 col-lg-3">
+        <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-4" data-animation="fadeInUp">
+            <div class="card-img-container">
+                <img src="https://img.freepik.com/free-photo/stacked-wooden-boards_23-2148174062.jpg" class="card-img-top" alt="Sustainable materials">
+            </div>
+            <div class="card-body p-4 text-center d-flex flex-column">
+                <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                    <i class="fas fa-leaf fa-2x"></i>
+                </div>
+                <h3 class="h4">Eco-Friendly Materials</h3>
+                <p class="text-muted mb-0 flex-grow-1">
+                    Responsibly sourced materials with FSC certification and sustainable production methods.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<style>
+    /* Custom CSS for perfect alignment */
+    .card-img-container {
+        height: 200px;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .card-img-top {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+        transition: transform 0.3s ease;
+    }
+    
+    .card:hover .card-img-top {
+        transform: scale(1.05);
+    }
+    
+    .card-body {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .flex-grow-1 {
+        flex-grow: 1;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 767.98px) {
+        .card-img-container {
+            height: 160px;
+        }
+    }
+</style>
+           
+
+      
 
     <!-- Explore Our Creations Section -->
-    <section class="creations-section py-5 bg-white">
+   <section class="creations-section py-5 bg-white">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center animate-section" data-animation="fadeInUp">
@@ -898,9 +894,7 @@
                             <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                  class="img-fluid" 
                                  alt="Elegant Memorial">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-sm btn-outline-light card-overlay-btn glow-on-hover">View Details</a>
-                            </div>
+                            
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Elegant Memorials</h4>
@@ -921,9 +915,7 @@
                             <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                  class="img-fluid" 
                                  alt="Granite Sculpture">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-sm btn-outline-light card-overlay-btn glow-on-hover">View Details</a>
-                            </div>
+                            
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Artistic Sculptures</h4>
@@ -944,9 +936,7 @@
                             <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                  class="img-fluid" 
                                  alt="Granite Countertop">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-sm btn-outline-light card-overlay-btn glow-on-hover">View Details</a>
-                            </div>
+                            
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Luxury Countertops</h4>
@@ -968,9 +958,7 @@
                             <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                  class="img-fluid" 
                                  alt="Granite Flooring">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-sm btn-outline-light card-overlay-btn glow-on-hover">View Details</a>
-                            </div>
+
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Premium Flooring</h4>
@@ -991,9 +979,7 @@
                             <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                  class="img-fluid" 
                                  alt="Granite Fountain">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-sm btn-outline-light card-overlay-btn glow-on-hover">View Details</a>
-                            </div>
+                            
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Decorative Fountains</h4>
@@ -1014,9 +1000,7 @@
                             <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
                                  class="img-fluid" 
                                  alt="Granite Columns">
-                            <div class="card-overlay">
-                                <a href="#" class="btn btn-sm btn-outline-light card-overlay-btn glow-on-hover">View Details</a>
-                            </div>
+                           
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Architectural Columns</h4>
@@ -1177,7 +1161,7 @@
         </div>
     </div>
 </section>
- <?php include "footer.php"; ?>
+
 <style>
     /* Quote Section Styles */
     .quote-section {
