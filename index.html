@@ -34,16 +34,12 @@
             font-family: 'Montserrat', sans-serif;
             overflow-x: hidden;
             scroll-behavior: smooth;
-            padding-top: 56px;
         }
         
         h1, h2, h3, h4, h5, .display-font {
             font-family: 'Lora', serif;
         }
         
-    
-        /* Navbar */
-
         /* Hero Section */
         .hero-section {
             height: 90vh;
@@ -567,6 +563,65 @@
             background: var(--secondary-color);
         }
         
+        /* Custom CSS for perfect alignment */
+        .card-img-container {
+            height: 200px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .card-img-top {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            transition: transform 0.3s ease;
+        }
+        
+        .card:hover .card-img-top {
+            transform: scale(1.05);
+        }
+        
+        .card-body {
+            display: flex;
+            flex-direction: column;
+        }
+        
+        .flex-grow-1 {
+            flex-grow: 1;
+        }
+        
+        /* Remove all transition effects */
+        .carousel-item {
+            transition: none;
+        }
+        
+        /* Remove fade effect */
+        .carousel-fade .carousel-item {
+            opacity: 1;
+        }
+        
+        /* Remove floating animations */
+        .floating {
+            animation: none;
+        }
+        
+        /* Remove glow effects */
+        .glow-on-hover {
+            animation: none;
+        }
+        .glow-on-hover::before {
+            display: none;
+        }
+        
+        /* Remove parallax effect */
+        .parallax-bg {
+            background-attachment: scroll;
+        }
+        
+        /* Responsive adjustments */
         @media (max-width: 992px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -600,6 +655,10 @@
             .parallax-bg {
                 background-attachment: scroll;
             }
+            
+            .card-img-container {
+                height: 160px;
+            }
         }
         
         @media (max-width: 576px) {
@@ -621,263 +680,364 @@
                 font-size: 0.9rem;
             }
         }
-
         
+        /* Quote Section Styles */
+        .quote-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2a4466 100%);
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .quote-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
+            opacity: 0.05;
+            z-index: 0;
+        }
+        
+        .z-index-1 {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .quote-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
+            height: 100%;
+            border: none;
+        }
+        
+        .quote-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+        }
+        
+        .card-img-wrapper {
+            position: relative;
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .img-scale {
+            transition: transform 0.8s ease;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .quote-card:hover .img-scale {
+            transform: scale(1.1);
+        }
+        
+        .img-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(to bottom, rgba(58,90,120,0.1) 0%, rgba(58,90,120,0.7) 100%);
+            opacity: 0;
+            transition: opacity 0.5s ease;
+        }
+        
+        .quote-card:hover .img-overlay {
+            opacity: 1;
+        }
+        
+        .icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background: rgba(212, 175, 55, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: -50px auto 20px;
+            border: 3px solid var(--secondary-color);
+            color: var(--secondary-color);
+            font-size: 30px;
+            transition: all 0.3s ease;
+        }
+        
+        .quote-card:hover .icon-wrapper {
+            background: var(--secondary-color);
+            color: white;
+            transform: rotate(360deg) scale(1.1);
+        }
+        
+        .divider {
+            width: 80px;
+            height: 4px;
+            background: var(--secondary-color);
+        }
+        
+        .btn-hover-grow .btn-text {
+            display: inline-block;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-hover-grow .btn-icon {
+            display: inline-block;
+            transform: translateX(-10px);
+            opacity: 0;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-hover-grow:hover {
+            transform: translateY(-3px);
+        }
+        
+        .btn-hover-grow:hover .btn-text {
+            transform: translateX(-5px);
+        }
+        
+        .btn-hover-grow:hover .btn-icon {
+            transform: translateX(5px);
+            opacity: 1;
+        }
+        
+        .glow-on-hover {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .glow-on-hover::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--secondary-color);
+            z-index: -1;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            border-radius: inherit;
+        }
+        
+        .glow-on-hover:hover::before {
+            opacity: 0.3;
+            animation: glow 1.5s infinite alternate;
+        }
+        
+        @keyframes glow {
+            from {
+                box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
+            }
+            to {
+                box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
+            }
+        }
+        
+        /* Particle Animation */
+        .particle {
+            position: absolute;
+            background: rgba(255,255,255,0.1);
+            border-radius: 50%;
+        }
+        
+        .particle-1 {
+            width: 150px;
+            height: 150px;
+            top: -50px;
+            right: -50px;
+            animation: float 15s infinite linear;
+        }
+        
+        .particle-2 {
+            width: 100px;
+            height: 100px;
+            bottom: 20%;
+            left: 10%;
+            animation: float 12s infinite linear reverse;
+        }
+        
+        .particle-3 {
+            width: 200px;
+            height: 200px;
+            bottom: -50px;
+            right: 20%;
+            animation: float 20s infinite linear;
+        }
     </style>
 </head>
 <body>
-   
-
     <!-- Hero Carousel -->
     <div id="heroCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="180000">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-    </div>
-    
-    <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div class="carousel-item active hero-section" style="background-image: url('https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-            <div class="container h-100 d-flex align-items-center">
-                <div class="hero-content">
-                    <h1 class="hero-title">From Earth to Art — Granite Redefined</h1>
-                    <p class="hero-subtitle">We transform raw granite into timeless creations and export them worldwide, honoring tradition and inspiring modern design.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#products" class="hero-btn hero-btn-primary btn">Explore Collection</a>
-                        <a href="#contact" class="hero-btn hero-btn-outline btn btn-outline-light">Contact Us</a>
-                    </div>
-                </div>
-            </div>
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
         </div>
         
-        <!-- Slide 2 -->
-        <div class="carousel-item hero-section" style="background-image: url('https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-            <div class="container h-100 d-flex align-items-center">
-                <div class="hero-content">
-                    <h1 class="hero-title">Custom Sculptures & Monuments</h1>
-                    <p class="hero-subtitle">Intricately carved by skilled artisans, our products are crafted in India and shipped across continents, carrying craftsmanship, emotion, and legacy to every corner of the globe.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#gallery" class="hero-btn hero-btn-primary btn">View Gallery</a>
-                        <a href="#process" class="hero-btn hero-btn-outline btn btn-outline-light">Our Process</a>
+        <div class="carousel-inner">
+            <!-- Slide 1 -->
+            <div class="carousel-item active hero-section" style="background-image: url('https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="hero-content">
+                        <h1 class="hero-title">From Earth to Art — Granite Redefined</h1>
+                        <p class="hero-subtitle">We transform raw granite into timeless creations and export them worldwide, honoring tradition and inspiring modern design.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#products" class="hero-btn hero-btn-primary btn">Explore Collection</a>
+                            <a href="#contact" class="hero-btn hero-btn-outline btn btn-outline-light">Contact Us</a>
+                        </div>
                     </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Slide 3 -->
-        <div class="carousel-item hero-section" style="background-image: url('https://images.unsplash.com/photo-1631729370902-47dd5aa74df0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
-            <div class="container h-100 d-flex align-items-center">
-                <div class="hero-content">
-                    <h1 class="hero-title">Global Exports, Local Excellence</h1>
-                    <p class="hero-subtitle">We specialize in international exports, delivering premium granite products with secure packaging, seamless logistics, and on-time delivery to clients worldwide.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#quote" class="hero-btn hero-btn-primary btn">Get a Quote</a>
-                        <a href="#testimonials" class="hero-btn hero-btn-outline btn btn-outline-light">Client Stories</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-
-<style>
-    /* Remove all transition effects */
-    .carousel-item {
-        transition: none;
-    }
-    
-    /* Remove fade effect */
-    .carousel-fade .carousel-item {
-        opacity: 1;
-    }
-    
-    /* Remove floating animations */
-    .floating {
-        animation: none;
-    }
-    
-    /* Remove glow effects */
-    .glow-on-hover {
-        animation: none;
-    }
-    .glow-on-hover::before {
-        display: none;
-    }
-    
-    /* Remove parallax effect */
-    .parallax-bg {
-        background-attachment: scroll;
-    }
-</style>
-
-<script>
-    // Initialize carousel with 3 minute interval and no animation
-    document.addEventListener('DOMContentLoaded', function() {
-        var heroCarousel = document.getElementById('heroCarousel');
-        var carousel = new bootstrap.Carousel(heroCarousel, {
-            interval: 180000, // 3 minutes in milliseconds
-            wrap: true,
-            pause: false
-        });
-    });
-</script>
-
-   <!-- Intro Section -->
-<section class="intro-section py-3 py-md-5 bg-light">
-    <div class="container">
-        <div class="row align-items-center mb-4 mb-md-5" id="intro-section">
-            <!-- Text Content - Order changes on mobile -->
-            <div class="col-lg-6 order-2 order-lg-1 animate-section" data-animation="slideInFromLeft">
-                <h2 class="display-4 fw-bold text-primary mb-3 mb-md-4">Welcome to <span class="text-secondary gradient-text">MJ Granites Export</span></h2>
-                <p class="lead text-muted mb-3 mb-md-4">
-                    Based in Tamil Nadu, India, MJ Granites Export is a premier manufacturer and global exporter of granite monuments, sculptures, slabs, and architectural designs. We combine traditional techniques with advanced machinery to deliver world-class products to customers in the US, UK, Europe, Australia, the Middle East, and beyond.
-                </p>
-                <div class="d-flex flex-wrap gap-2 gap-md-3">
-                    <a href="#products" class="btn btn-primary btn-lg px-3 px-md-4 btn-hover-grow glow-on-hover">Our Products</a>
-                    <a href="#contact" class="btn btn-outline-primary btn-lg px-3 px-md-4 btn-hover-grow glow-on-hover">Contact Us</a>
                 </div>
             </div>
             
-            <!-- Image - Order changes on mobile -->
-            <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0 img-hover-zoom tilt-effect animate-section" data-animation="slideInFromRight">
-                <img src="images/logo 4.png" 
-                     alt="Granite Factory" 
-                     class="img-fluid rounded shadow-lg w-100">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Excellence Cards - Responsive 4 Column Layout -->
-<div class="row g-4 mb-5">
-    <h2 class="display-5 fw-bold text-primary mb-3 text-center">Our Process</h2>
-    
-    <!-- Card 1 - Global Presence -->
-    <div class="col-sm-6 col-lg-3">
-        <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-1" data-animation="fadeInUp">
-            <div class="card-img-container">
-                <img src="https://img.freepik.com/free-photo/earth-planet-close-up-view_23-2151001742.jpg" class="card-img-top" alt="Global business network">
-            </div>
-            <div class="card-body p-4 text-center d-flex flex-column">
-                <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
-                    <i class="fas fa-globe fa-2x"></i>
+            <!-- Slide 2 -->
+            <div class="carousel-item hero-section" style="background-image: url('https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Custom Sculptures & Monuments</h1>
+                        <p class="hero-subtitle">Intricately carved by skilled artisans, our products are crafted in India and shipped across continents, carrying craftsmanship, emotion, and legacy to every corner of the globe.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#gallery" class="hero-btn hero-btn-primary btn">View Gallery</a>
+                            <a href="#process" class="hero-btn hero-btn-outline btn btn-outline-light">Our Process</a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="h4">Worldwide Network</h3>
-                <p class="text-muted mb-0 flex-grow-1">
-                    Serving clients across 6 continents with localized support teams and distribution centers in key markets.
-                </p>
             </div>
-        </div>
-    </div>
-
-    <!-- Card 2 - Craftsmanship -->
-    <div class="col-sm-6 col-lg-3">
-        <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-2" data-animation="fadeInUp">
-            <div class="card-img-container">
-                <img src="https://img.freepik.com/free-photo/close-up-hands-carpenter_23-2149348873.jpg" class="card-img-top" alt="Expert craftsmanship">
-            </div>
-            <div class="card-body p-4 text-center d-flex flex-column">
-                <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
-                    <i class="fas fa-hammer fa-2x"></i>
+            
+            <!-- Slide 3 -->
+            <div class="carousel-item hero-section" style="background-image: url('https://images.unsplash.com/photo-1631729370902-47dd5aa74df0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Global Exports, Local Excellence</h1>
+                        <p class="hero-subtitle">We specialize in international exports, delivering premium granite products with secure packaging, seamless logistics, and on-time delivery to clients worldwide.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#quote" class="hero-btn hero-btn-primary btn">Get a Quote</a>
+                            <a href="#testimonials" class="hero-btn hero-btn-outline btn btn-outline-light">Client Stories</a>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="h4">Master Craftsmanship</h3>
-                <p class="text-muted mb-0 flex-grow-1">
-                    Our artisans with 15+ years experience combine traditional techniques with modern precision.
-                </p>
             </div>
         </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
 
-    <!-- Card 3 - Quality Assurance -->
-    <div class="col-sm-6 col-lg-3">
-        <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-3" data-animation="fadeInUp">
-            <div class="card-img-container">
-                <img src="https://img.freepik.com/free-photo/quality-control-inspector-checking-product_23-2149630604.jpg" class="card-img-top" alt="Quality inspection">
-            </div>
-            <div class="card-body p-4 text-center d-flex flex-column">
-                <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
-                    <i class="fas fa-award fa-2x"></i>
+    <!-- Intro Section -->
+    <section class="intro-section py-3 py-md-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center mb-4 mb-md-5" id="intro-section">
+                <!-- Text Content - Order changes on mobile -->
+                <div class="col-lg-6 order-2 order-lg-1 animate-section" data-animation="slideInFromLeft">
+                    <h2 class="display-4 fw-bold text-primary mb-3 mb-md-4">Welcome to <span class="text-secondary gradient-text">MJ Granites Export</span></h2>
+                    <p class="lead text-muted mb-3 mb-md-4">
+                        Based in Tamil Nadu, India, MJ Granites Export is a premier manufacturer and global exporter of granite monuments, sculptures, slabs, and architectural designs. We combine traditional techniques with advanced machinery to deliver world-class products to customers in the US, UK, Europe, Australia, the Middle East, and beyond.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 gap-md-3">
+                        <a href="#products" class="btn btn-primary btn-lg px-3 px-md-4 btn-hover-grow glow-on-hover">Our Products</a>
+                        <a href="#contact" class="btn btn-outline-primary btn-lg px-3 px-md-4 btn-hover-grow glow-on-hover">Contact Us</a>
+                    </div>
                 </div>
-                <h3 class="h4">Quality Guaranteed</h3>
-                <p class="text-muted mb-0 flex-grow-1">
-                    Every product undergoes 17-point inspection process with ISO 9001 certified standards.
-                </p>
-            </div>
-        </div>
-    </div>
-
-    <!-- Card 4 - Sustainable Materials -->
-    <div class="col-sm-6 col-lg-3">
-        <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-4" data-animation="fadeInUp">
-            <div class="card-img-container">
-                <img src="https://img.freepik.com/free-photo/stacked-wooden-boards_23-2148174062.jpg" class="card-img-top" alt="Sustainable materials">
-            </div>
-            <div class="card-body p-4 text-center d-flex flex-column">
-                <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
-                    <i class="fas fa-leaf fa-2x"></i>
+                
+                <!-- Image - Order changes on mobile -->
+                <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0 img-hover-zoom tilt-effect animate-section" data-animation="slideInFromRight">
+                    <img src="images/logo 4.png" 
+                         alt="Granite Factory" 
+                         class="img-fluid rounded shadow-lg w-100">
                 </div>
-                <h3 class="h4">Eco-Friendly Materials</h3>
-                <p class="text-muted mb-0 flex-grow-1">
-                    Responsibly sourced materials with FSC certification and sustainable production methods.
-                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Excellence Cards - Responsive 4 Column Layout -->
+    <div class="container">
+        <div class="row g-4 mb-5">
+            <h2 class="display-5 fw-bold text-primary mb-3 text-center">Our Process</h2>
+            
+            <!-- Card 1 - Global Presence -->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-1" data-animation="fadeInUp">
+                    <div class="card-img-container">
+                        <img src="https://img.freepik.com/free-photo/earth-planet-close-up-view_23-2151001742.jpg" class="card-img-top" alt="Global business network">
+                    </div>
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                            <i class="fas fa-globe fa-2x"></i>
+                        </div>
+                        <h3 class="h4">Worldwide Network</h3>
+                        <p class="text-muted mb-0 flex-grow-1">
+                            Serving clients across 6 continents with localized support teams and distribution centers in key markets.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 2 - Craftsmanship -->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-2" data-animation="fadeInUp">
+                    <div class="card-img-container">
+                        <img src="https://img.freepik.com/free-photo/close-up-hands-carpenter_23-2149348873.jpg" class="card-img-top" alt="Expert craftsmanship">
+                    </div>
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                            <i class="fas fa-hammer fa-2x"></i>
+                        </div>
+                        <h3 class="h4">Master Craftsmanship</h3>
+                        <p class="text-muted mb-0 flex-grow-1">
+                            Our artisans with 15+ years experience combine traditional techniques with modern precision.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 3 - Quality Assurance -->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-3" data-animation="fadeInUp">
+                    <div class="card-img-container">
+                        <img src="https://img.freepik.com/free-photo/quality-control-inspector-checking-product_23-2149630604.jpg" class="card-img-top" alt="Quality inspection">
+                    </div>
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                            <i class="fas fa-award fa-2x"></i>
+                        </div>
+                        <h3 class="h4">Quality Guaranteed</h3>
+                        <p class="text-muted mb-0 flex-grow-1">
+                            Every product undergoes 17-point inspection process with ISO 9001 certified standards.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Card 4 - Sustainable Materials -->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-4" data-animation="fadeInUp">
+                    <div class="card-img-container">
+                        <img src="https://img.freepik.com/free-photo/stacked-wooden-boards_23-2148174062.jpg" class="card-img-top" alt="Sustainable materials">
+                    </div>
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                            <i class="fas fa-leaf fa-2x"></i>
+                        </div>
+                        <h3 class="h4">Eco-Friendly Materials</h3>
+                        <p class="text-muted mb-0 flex-grow-1">
+                            Responsibly sourced materials with FSC certification and sustainable production methods.
+                        </p>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
-<style>
-    /* Custom CSS for perfect alignment */
-    .card-img-container {
-        height: 200px;
-        overflow: hidden;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-    
-    .card-img-top {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        object-position: center;
-        transition: transform 0.3s ease;
-    }
-    
-    .card:hover .card-img-top {
-        transform: scale(1.05);
-    }
-    
-    .card-body {
-        display: flex;
-        flex-direction: column;
-    }
-    
-    .flex-grow-1 {
-        flex-grow: 1;
-    }
-    
-    /* Responsive adjustments */
-    @media (max-width: 767.98px) {
-        .card-img-container {
-            height: 160px;
-        }
-    }
-</style>
-           
-
-      
 
     <!-- Explore Our Creations Section -->
-   <section class="creations-section py-5 bg-white">
+    <section class="creations-section py-5 bg-white">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center animate-section" data-animation="fadeInUp">
@@ -1023,411 +1183,149 @@
     </section>
 
     <!-- Get an Export Quote Section -->
-    <!-- Quote Section with Animations -->
-<section class="quote-section py-5 bg-primary position-relative" id="quote">
-    <div class="container position-relative z-index-1">
-        <!-- Animated Background Elements -->
-        <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden">
-            <div class="particle particle-1"></div>
-            <div class="particle particle-2"></div>
-            <div class="particle particle-3"></div>
-        </div>
-        
-        <div class="row justify-content-center mb-5">
-            <div class="col-lg-8 text-center">
-                <h2 class="display-5 fw-bold text-white mb-3 animate__animated animate__fadeInDown">Get an Export Quote</h2>
-                <div class="divider mx-auto bg-secondary mb-4 animate__animated animate__fadeInLeft"></div>
-                <p class="lead text-white-50 mb-0 animate__animated animate__fadeIn animate__delay-1s">
-                    Request a customized quote for your granite export needs. Our team will provide competitive pricing and shipping solutions tailored to your requirements.
-                </p>
+    <section class="quote-section py-5 bg-primary position-relative" id="quote">
+        <div class="container position-relative z-index-1">
+            <!-- Animated Background Elements -->
+            <div class="position-absolute top-0 start-0 w-100 h-100 overflow-hidden">
+                <div class="particle particle-1"></div>
+                <div class="particle particle-2"></div>
+                <div class="particle particle-3"></div>
             </div>
-        </div>
-
-        <div class="row g-4">
-            <!-- Standard Export Card -->
-            <div class="col-md-4">
-                <div class="quote-card shadow animate__animated animate__fadeInUp animate__fast" data-animation-delay="0.2s">
-                    <div class="card-img-wrapper overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             class="card-img-top img-scale" 
-                             alt="Standard Export">
-                        <div class="img-overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <div class="icon-wrapper mx-auto animate__animated animate__zoomIn animate__delay-1s">
-                            <i class="fas fa-box-open"></i>
-                        </div>
-                        <h3 class="h4 text-center mb-3 animate__animated animate__fadeIn animate__delay-1s">Standard Export</h3>
-                        <p class="text-muted mb-4 animate__animated animate__fadeIn animate__delay-1s">
-                            Ideal for smaller orders or individual pieces. Includes secure packaging, documentation, and door-to-port shipping.
-                        </p>
-                        <ul class="list-unstyled mb-4 animate__animated animate__fadeIn animate__delay-1s">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Competitive FOB pricing</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Wooden crate packaging</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> All export documentation</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Port-to-port shipping</li>
-                        </ul>
-                        <div class="text-center animate__animated animate__fadeIn animate__delay-2s">
-                            <a href="#contact" class="btn btn-primary btn-hover-grow glow-on-hover">
-                                <span class="btn-text">Request Quote</span>
-                                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Container Export Card -->
-            <div class="col-md-4">
-                <div class="quote-card shadow animate__animated animate__fadeInUp animate__fast" data-animation-delay="0.4s">
-                    <div class="card-img-wrapper overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             class="card-img-top img-scale" 
-                             alt="Container Export">
-                        <div class="img-overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <div class="icon-wrapper mx-auto animate__animated animate__zoomIn animate__delay-1s">
-                            <i class="fas fa-shipping-fast"></i>
-                        </div>
-                        <h3 class="h4 text-center mb-3 animate__animated animate__fadeIn animate__delay-1s">Container Export</h3>
-                        <p class="text-muted mb-4 animate__animated animate__fadeIn animate__delay-1s">
-                            Cost-effective solution for larger orders. Full container load (FCL) with optimized packing for maximum efficiency.
-                        </p>
-                        <ul class="list-unstyled mb-4 animate__animated animate__fadeIn animate__delay-1s">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> 20ft or 40ft container options</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Specialized shock-absorbent packaging</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Customs clearance assistance</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Door-to-door delivery available</li>
-                        </ul>
-                        <div class="text-center animate__animated animate__fadeIn animate__delay-2s">
-                            <a href="#contact" class="btn btn-primary btn-hover-grow glow-on-hover">
-                                <span class="btn-text">Request Quote</span>
-                                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Custom Solution Card -->
-            <div class="col-md-4">
-                <div class="quote-card shadow animate__animated animate__fadeInUp animate__fast" data-animation-delay="0.6s">
-                    <div class="card-img-wrapper overflow-hidden">
-                        <img src="https://images.unsplash.com/photo-1631729370902-47dd5aa74df0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                             class="card-img-top img-scale" 
-                             alt="Custom Solution">
-                        <div class="img-overlay"></div>
-                    </div>
-                    <div class="card-body">
-                        <div class="icon-wrapper mx-auto animate__animated animate__zoomIn animate__delay-1s">
-                            <i class="fas fa-cogs"></i>
-                        </div>
-                        <h3 class="h4 text-center mb-3 animate__animated animate__fadeIn animate__delay-1s">Custom Solution</h3>
-                        <p class="text-muted mb-4 animate__animated animate__fadeIn animate__delay-1s">
-                            Tailored export solutions for unique requirements including oversized pieces, special handling, or urgent shipments.
-                        </p>
-                        <ul class="list-unstyled mb-4 animate__animated animate__fadeIn animate__delay-1s">
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Project-specific logistics</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Heavy lift and oversize cargo</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Air freight options</li>
-                            <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> White-glove installation services</li>
-                        </ul>
-                        <div class="text-center animate__animated animate__fadeIn animate__delay-2s">
-                            <a href="#contact" class="btn btn-primary btn-hover-grow glow-on-hover">
-                                <span class="btn-text">Request Quote</span>
-                                <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="row mt-5">
-            <div class="col-12 text-center">
-                <div class="bg-white p-4 p-lg-5 rounded shadow-sm animate__animated animate__zoomIn animate__delay-2s">
-                    <h3 class="mb-4">Need a Custom Export Solution?</h3>
-                    <div class="divider mx-auto bg-primary mb-4"></div>
-                    <p class="lead text-muted mb-4">
-                        Our export specialists can create a tailored shipping plan for your specific granite requirements, no matter the size or destination.
-                    </p>
-                    <a href="#contact" class="btn btn-primary btn-lg px-5 btn-hover-grow glow-on-hover">
-                        <span class="btn-text">Contact Our Export Team</span>
-                        <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* Quote Section Styles */
-    .quote-section {
-        background: linear-gradient(135deg, var(--primary-color) 0%, #2a4466 100%);
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .quote-section::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: url('https://www.transparenttextures.com/patterns/concrete-wall.png');
-        opacity: 0.05;
-        z-index: 0;
-    }
-    
-    .z-index-1 {
-        position: relative;
-        z-index: 1;
-    }
-    
-    .quote-card {
-        background: white;
-        border-radius: 12px;
-        overflow: hidden;
-        transition: all 0.5s cubic-bezier(0.25, 0.8, 0.25, 1);
-        height: 100%;
-        border: none;
-    }
-    
-    .quote-card:hover {
-        transform: translateY(-10px) scale(1.02);
-        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
-    }
-    
-    .card-img-wrapper {
-        position: relative;
-        height: 200px;
-        overflow: hidden;
-    }
-    
-    .img-scale {
-        transition: transform 0.8s ease;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-    
-    .quote-card:hover .img-scale {
-        transform: scale(1.1);
-    }
-    
-    .img-overlay {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: linear-gradient(to bottom, rgba(58,90,120,0.1) 0%, rgba(58,90,120,0.7) 100%);
-        opacity: 0;
-        transition: opacity 0.5s ease;
-    }
-    
-    .quote-card:hover .img-overlay {
-        opacity: 1;
-    }
-    
-    .icon-wrapper {
-        width: 80px;
-        height: 80px;
-        background: rgba(212, 175, 55, 0.1);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: -50px auto 20px;
-        border: 3px solid var(--secondary-color);
-        color: var(--secondary-color);
-        font-size: 30px;
-        transition: all 0.3s ease;
-    }
-    
-    .quote-card:hover .icon-wrapper {
-        background: var(--secondary-color);
-        color: white;
-        transform: rotate(360deg) scale(1.1);
-    }
-    
-    .divider {
-        width: 80px;
-        height: 4px;
-        background: var(--secondary-color);
-    }
-    
-    .btn-hover-grow {
-        transition: all 0.3s ease;
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .btn-hover-grow .btn-text {
-        display: inline-block;
-        transition: all 0.3s ease;
-    }
-    
-    .btn-hover-grow .btn-icon {
-        display: inline-block;
-        transform: translateX(-10px);
-        opacity: 0;
-        transition: all 0.3s ease;
-    }
-    
-    .btn-hover-grow:hover {
-        transform: translateY(-3px);
-    }
-    
-    .btn-hover-grow:hover .btn-text {
-        transform: translateX(-5px);
-    }
-    
-    .btn-hover-grow:hover .btn-icon {
-        transform: translateX(5px);
-        opacity: 1;
-    }
-    
-    .glow-on-hover {
-        position: relative;
-        z-index: 1;
-    }
-    
-    .glow-on-hover::before {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: var(--secondary-color);
-        z-index: -1;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-        border-radius: inherit;
-    }
-    
-    .glow-on-hover:hover::before {
-        opacity: 0.3;
-        animation: glow 1.5s infinite alternate;
-    }
-    
-    @keyframes glow {
-        from {
-            box-shadow: 0 0 5px rgba(212, 175, 55, 0.5);
-        }
-        to {
-            box-shadow: 0 0 20px rgba(212, 175, 55, 0.8);
-        }
-    }
-    
-    /* Particle Animation */
-    .particle {
-        position: absolute;
-        background: rgba(255,255,255,0.1);
-        border-radius: 50%;
-    }
-    
-    .particle-1 {
-        width: 150px;
-        height: 150px;
-        top: -50px;
-        right: -50px;
-        animation: float 15s infinite linear;
-    }
-    
-    .particle-2 {
-        width: 100px;
-        height: 100px;
-        bottom: 20%;
-        left: 10%;
-        animation: float 12s infinite linear reverse;
-    }
-    
-    .particle-3 {
-        width: 200px;
-        height: 200px;
-        bottom: -50px;
-        right: 20%;
-        animation: float 20s infinite linear;
-    }
-    
-    @keyframes float {
-        0% {
-            transform: translateY(0) rotate(0deg);
-        }
-        50% {
-            transform: translateY(-50px) rotate(180deg);
-        }
-        100% {
-            transform: translateY(0) rotate(360deg);
-        }
-    }
-</style>
-
-<script>
-    // Intersection Observer for scroll animations
-    document.addEventListener('DOMContentLoaded', function() {
-        const animateElements = document.querySelectorAll('[class*="animate__"]');
-        
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const animationClass = entry.target.getAttribute('class').match(/animate__\w+/)[0];
-                    entry.target.classList.add(animationClass);
-                    
-                    // Remove observer after animation
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, {
-            threshold: 0.1
-        });
-
-        animateElements.forEach(element => {
-            observer.observe(element);
-        });
-
-        // Add hover tilt effect to cards
-        const cards = document.querySelectorAll('.quote-card');
-        cards.forEach(card => {
-            card.addEventListener('mousemove', (e) => {
-                const x = e.clientX - card.getBoundingClientRect().left;
-                const y = e.clientY - card.getBoundingClientRect().top;
-                
-                const centerX = card.offsetWidth / 2;
-                const centerY = card.offsetHeight / 2;
-                
-                const angleX = (y - centerY) / 20;
-                const angleY = (centerX - x) / 20;
-                
-                card.style.transform = `perspective(1000px) rotateX(${angleX}deg) rotateY(${angleY}deg) scale(1.02)`;
-            });
             
-            card.addEventListener('mouseleave', () => {
-                card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) scale(1)';
-            });
-        });
-    });
-</script>
+            <div class="row justify-content-center mb-5">
+                <div class="col-lg-8 text-center">
+                    <h2 class="display-5 fw-bold text-white mb-3 animate__animated animate__fadeInDown">Get an Export Quote</h2>
+                    <div class="divider mx-auto bg-secondary mb-4 animate__animated animate__fadeInLeft"></div>
+                    <p class="lead text-white-50 mb-0 animate__animated animate__fadeIn animate__delay-1s">
+                        Request a customized quote for your granite export needs. Our team will provide competitive pricing and shipping solutions tailored to your requirements.
+                    </p>
+                </div>
+            </div>
+
+            <div class="row g-4">
+                <!-- Standard Export Card -->
+                <div class="col-md-4">
+                    <div class="quote-card shadow animate__animated animate__fadeInUp animate__fast" data-animation-delay="0.2s">
+                        <div class="card-img-wrapper overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 class="card-img-top img-scale" 
+                                 alt="Standard Export">
+                            <div class="img-overlay"></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="icon-wrapper mx-auto animate__animated animate__zoomIn animate__delay-1s">
+                                <i class="fas fa-box-open"></i>
+                            </div>
+                            <h3 class="h4 text-center mb-3 animate__animated animate__fadeIn animate__delay-1s">Standard Export</h3>
+                            <p class="text-muted mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                                Ideal for smaller orders or individual pieces. Includes secure packaging, documentation, and door-to-port shipping.
+                            </p>
+                            <ul class="list-unstyled mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Competitive FOB pricing</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Wooden crate packaging</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> All export documentation</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Port-to-port shipping</li>
+                            </ul>
+                            <div class="text-center animate__animated animate__fadeIn animate__delay-2s">
+                                <a href="#contact" class="btn btn-primary btn-hover-grow glow-on-hover">
+                                    <span class="btn-text">Request Quote</span>
+                                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Container Export Card -->
+                <div class="col-md-4">
+                    <div class="quote-card shadow animate__animated animate__fadeInUp animate__fast" data-animation-delay="0.4s">
+                        <div class="card-img-wrapper overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 class="card-img-top img-scale" 
+                                 alt="Container Export">
+                            <div class="img-overlay"></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="icon-wrapper mx-auto animate__animated animate__zoomIn animate__delay-1s">
+                                <i class="fas fa-shipping-fast"></i>
+                            </div>
+                            <h3 class="h4 text-center mb-3 animate__animated animate__fadeIn animate__delay-1s">Container Export</h3>
+                            <p class="text-muted mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                                Cost-effective solution for larger orders. Full container load (FCL) with optimized packing for maximum efficiency.
+                            </p>
+                            <ul class="list-unstyled mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> 20ft or 40ft container options</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Specialized shock-absorbent packaging</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Customs clearance assistance</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Door-to-door delivery available</li>
+                            </ul>
+                            <div class="text-center animate__animated animate__fadeIn animate__delay-2s">
+                                <a href="#contact" class="btn btn-primary btn-hover-grow glow-on-hover">
+                                    <span class="btn-text">Request Quote</span>
+                                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Custom Solution Card -->
+                <div class="col-md-4">
+                    <div class="quote-card shadow animate__animated animate__fadeInUp animate__fast" data-animation-delay="0.6s">
+                        <div class="card-img-wrapper overflow-hidden">
+                            <img src="https://images.unsplash.com/photo-1631729370902-47dd5aa74df0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                                 class="card-img-top img-scale" 
+                                 alt="Custom Solution">
+                            <div class="img-overlay"></div>
+                        </div>
+                        <div class="card-body">
+                            <div class="icon-wrapper mx-auto animate__animated animate__zoomIn animate__delay-1s">
+                                <i class="fas fa-cogs"></i>
+                            </div>
+                            <h3 class="h4 text-center mb-3 animate__animated animate__fadeIn animate__delay-1s">Custom Solution</h3>
+                            <p class="text-muted mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                                Tailored export solutions for unique requirements including oversized pieces, special handling, or urgent shipments.
+                            </p>
+                            <ul class="list-unstyled mb-4 animate__animated animate__fadeIn animate__delay-1s">
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Project-specific logistics</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Heavy lift and oversize cargo</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Air freight options</li>
+                                <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> White-glove installation services</li>
+                            </ul>
+                            <div class="text-center animate__animated animate__fadeIn animate__delay-2s">
+                                <a href="#contact" class="btn btn-primary btn-hover-grow glow-on-hover">
+                                    <span class="btn-text">Request Quote</span>
+                                    <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-5">
+                <div class="col-12 text-center">
+                    <div class="bg-white p-4 p-lg-5 rounded shadow-sm animate__animated animate__zoomIn animate__delay-2s">
+                        <h3 class="mb-4">Need a Custom Export Solution?</h3>
+                        <div class="divider mx-auto bg-primary mb-4"></div>
+                        <p class="lead text-muted mb-4">
+                            Our export specialists can create a tailored shipping plan for your specific granite requirements, no matter the size or destination.
+                        </p>
+                        <a href="#contact" class="btn btn-primary btn-lg px-5 btn-hover-grow glow-on-hover">
+                            <span class="btn-text">Contact Our Export Team</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     
     <!-- Custom JS -->
     <script>
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            if (window.scrollY > 50) {
-                document.querySelector('.navbar').classList.add('scrolled');
-            } else {
-                document.querySelector('.navbar').classList.remove('scrolled');
-            }
-        });
-
         // Initialize carousel with 5 second interval
         var heroCarousel = document.getElementById('heroCarousel')
         var carousel = new bootstrap.Carousel(heroCarousel, {
