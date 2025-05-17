@@ -16,6 +16,7 @@
             --secondary-color: #c19a6b;
             --dark-color: #333;
             --light-color: #f8f9fa;
+            --card-title-color: #3A5A78;
         }
         
         * {
@@ -26,7 +27,7 @@
         }
         
         body {
-            background-color: #f5f5f5;
+            background-color: #ffffff;
             color: #333;
             line-height: 1.6;
             overflow-x: hidden;
@@ -36,15 +37,16 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
+            background-color: white;
         }
         
         /* Hero Section */
         .hero-section {
-            background: linear-gradient(rgba(90, 62, 54, 0.8), rgba(90, 62, 54, 0.8)), 
+            background: linear-gradient(rgba(16, 53, 85, 0.9), rgba(16, 53, 85, 0.8)), 
                         url('https://img.freepik.com/free-photo/beautiful-shot-black-marble-texture-background_181624-23358.jpg');
             background-size: cover;
             background-position: center;
-            color: white;
+            color: rgb(11, 64, 89);
             padding: 100px 20px;
             text-align: center;
             margin-bottom: 40px;
@@ -71,12 +73,16 @@
         .section {
             margin-bottom: 60px;
             overflow: hidden;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
         .section-title {
             font-size: 2.5rem;
             font-weight: 700;
-            color: var(--primary-color);
+            color: var(--card-title-color);
             margin-bottom: 30px;
             position: relative;
             display: inline-block;
@@ -87,7 +93,7 @@
             position: absolute;
             width: 50%;
             height: 4px;
-            background-color: var(--secondary-color);
+            background-color: var(--card-title-color);
             bottom: -10px;
             left: 0;
         }
@@ -95,7 +101,7 @@
         .section-content {
             font-size: 1.1rem;
             line-height: 1.8;
-            color: #555;
+            color: #3A5A78;
             margin-bottom: 20px;
         }
         
@@ -121,7 +127,7 @@
             border-radius: 10px;
             padding: 30px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            border-top: 5px solid var(--secondary-color);
+            border-top: 5px solid var();
             transition: all 0.3s ease;
             transform: translateY(20px);
             opacity: 0;
@@ -147,15 +153,19 @@
         
         .highlight-icon {
             font-size: 2.5rem;
-            color: var(--secondary-color);
+            color: var(--card-title-color);
             margin-bottom: 20px;
         }
         
         .highlight-title {
             font-size: 1.3rem;
             font-weight: 600;
-            color: var(--primary-color);
+            color: var(--card-title-color);
             margin-bottom: 15px;
+        }
+        
+        .highlight-box p {
+            color:;
         }
         
         /* Granite Types Section */
@@ -211,12 +221,13 @@
         
         .granite-info {
             padding: 20px;
+            background-color: white;
         }
         
         .granite-name {
             font-size: 1.2rem;
             font-weight: 600;
-            color: var(--primary-color);
+            color: var(--card-title-color);
             margin-bottom: 5px;
         }
         
@@ -227,11 +238,19 @@
             display: block;
         }
         
+        .granite-info p {
+            color: #333;
+        }
+        
         /* History Timeline */
         .timeline {
             position: relative;
             max-width: 1000px;
             margin: 40px auto;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
         }
         
         .timeline:before {
@@ -239,8 +258,8 @@
             position: absolute;
             width: 4px;
             background-color: var(--secondary-color);
-            top: 0;
-            bottom: 0;
+            top: 60px;
+            bottom: 60px;
             left: 50%;
             margin-left: -2px;
         }
@@ -301,13 +320,17 @@
             margin-bottom: 10px;
         }
         
+        .timeline-content p {
+            color: #333;
+        }
+        
         /* Quarry Section */
         .quarry-section {
-            background: linear-gradient(rgba(90, 62, 54, 0.9), rgba(90, 62, 54, 0.9)), 
+            background: linear-gradient(rgba(16, 53, 85, 0.9), rgba(17, 72, 92, 0.9)), 
                         url('https://img.freepik.com/free-photo/granite-quarry-mountains_1398-4829.jpg');
             background-size: cover;
             background-position: center;
-            color: white;
+            color: rgb(16, 75, 95);
             padding: 80px 20px;
             border-radius: 10px;
             margin: 60px 0;
@@ -325,6 +348,10 @@
             max-width: 800px;
             margin: 0 auto;
             text-align: center;
+            background-color: rgba(24, 87, 101, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            backdrop-filter: blur(5px);
         }
         
         /* Values Section */
@@ -353,6 +380,8 @@
         .value-card:nth-child(4) { animation-delay: 0.4s; }
         .value-card:nth-child(5) { animation-delay: 0.5s; }
         .value-card:nth-child(6) { animation-delay: 0.6s; }
+        .value-card:nth-child(7) { animation-delay: 0.7s; }
+        .value-card:nth-child(8) { animation-delay: 0.8s; }
         
         .value-card:hover {
             transform: translateY(-10px) scale(1.03);
@@ -376,9 +405,13 @@
         .value-title {
             font-size: 1.3rem;
             font-weight: 600;
-            color: var(--primary-color);
+            color: var(--card-title-color);
             margin-bottom: 15px;
             transition: all 0.3s ease;
+        }
+        
+        .value-card p {
+            color: #333;
         }
         
         /* Process Section */
@@ -411,6 +444,8 @@
         .process-step:nth-child(4) { animation-delay: 0.4s; }
         .process-step:nth-child(5) { animation-delay: 0.5s; }
         .process-step:nth-child(6) { animation-delay: 0.6s; }
+        .process-step:nth-child(7) { animation-delay: 0.7s; }
+        .process-step:nth-child(8) { animation-delay: 0.8s; }
         
         .process-step:hover {
             transform: translateY(-10px) scale(1.03);
@@ -427,6 +462,16 @@
             line-height: 40px;
             font-weight: 600;
             margin-bottom: 15px;
+        }
+        
+        .process-step h3 {
+            color: var(--card-title-color);
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+        }
+        
+        .process-step p {
+            color: #333;
         }
         
         /* Keyframe Animations */
@@ -572,44 +617,7 @@
     </section>
 
     <div class="container">
-        <!-- Our Story Section -->
-        <section class="section" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="section-title">Our Granite Legacy</h2>
-            <div class="about-content-section">
-                <p class="section-content">
-                    Since 1987, MJ Granites has been at the forefront of India's granite industry, transforming raw stone into exquisite architectural elements. Our journey began in the granite-rich region of South India, where we established our first quarrying operations. Today, we operate 12 quarries across India, each yielding distinct granite varieties prized worldwide.
-                </p>
-                <p class="section-content">
-                    What sets us apart is our vertical integration - from quarry to finished product. We control every step of the process, ensuring the highest quality standards while maintaining competitive pricing. Our 150,000 sq. ft. processing facility houses the most advanced stone fabrication technology from Italy and Germany.
-                </p>
-                
-                <div class="highlight-container">
-                    <div class="highlight-box">
-                        <div class="highlight-icon">
-                            <i class="fas fa-mountain"></i>
-                        </div>
-                        <h3 class="highlight-title">Quarry Ownership</h3>
-                        <p>Direct access to 12 premium granite quarries across India</p>
-                    </div>
-                    
-                    <div class="highlight-box">
-                        <div class="highlight-icon">
-                            <i class="fas fa-industry"></i>
-                        </div>
-                        <h3 class="highlight-title">Modern Facility</h3>
-                        <p>150,000 sq. ft. processing plant with Italian machinery</p>
-                    </div>
-                    
-                    <div class="highlight-box">
-                        <div class="highlight-icon">
-                            <i class="fas fa-award"></i>
-                        </div>
-                        <h3 class="highlight-title">Quality Certifications</h3>
-                        <p>ISO 9001:2015 certified processes with 15 quality checks</p>
-                    </div>
-                </div>
-            </div>
-        </section>
+        
 
         <!-- Granite Types Section -->
         <section class="section" data-aos="fade-up" data-aos-duration="800">
@@ -667,49 +675,6 @@
             </div>
         </section>
 
-        <!-- Our History Timeline -->
-        <section class="section" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="section-title">Our Granite Journey</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">1987</div>
-                        <p>Founded with first granite quarry in Andhra Pradesh</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">1995</div>
-                        <p>Established processing facility with Italian cutting technology</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2003</div>
-                        <p>Began international exports to Middle East markets</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2012</div>
-                        <p>Expanded to 8 quarries across South India</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2018</div>
-                        <p>Implemented sustainable quarrying initiatives</p>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-year">2023</div>
-                        <p>Launched premium granite collection for global markets</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- Manufacturing Process Section -->
         <section class="section" data-aos="fade-up" data-aos-duration="800">
             <h2 class="section-title">Our Craftsmanship Process</h2>
@@ -718,40 +683,58 @@
             </p>
             
             <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <h3 class="value-title">Quarry Selection</h3>
-                    <p>Geologists identify premium granite blocks</p>
+                <!-- First Row -->
+                <div style="display: flex; justify-content: space-between; gap: 20px;">
+                    <div class="process-step">
+                        <i class="fas fa-hammer" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Quarry Selection</h3>
+                        <p>Geologists identify premium granite blocks</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-cut" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Block Cutting</h3>
+                        <p>Diamond wire saws extract massive blocks</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-border-all" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Slab Production</h3>
+                        <p>Gang saws cut blocks into slabs</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-brush" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Surface Polishing</h3>
+                        <p>Automated polishing for mirror finish</p>
+                    </div>
                 </div>
                 
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <h3 class="value-title">Block Cutting</h3>
-                    <p>Diamond wire saws extract massive blocks</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <h3 class="value-title">Slab Production</h3>
-                    <p>Gang saws cut blocks into slabs</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <h3 class="value-title">Surface Polishing</h3>
-                    <p>Automated polishing for mirror finish</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">5</div>
-                    <h3 class="value-title">Quality Inspection</h3>
-                    <p>15-point quality control check</p>
-                </div>
-                
-                <div class="process-step">
-                    <div class="step-number">6</div>
-                    <h3 class="value-title">Packaging</h3>
-                    <p>Custom crating for international shipping</p>
+                <!-- Second Row -->
+                <div style="display: flex; justify-content: space-between; gap: 20px;">
+                    <div class="process-step">
+                        <i class="fas fa-search" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Quality Inspection</h3>
+                        <p>15-point quality control check</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-box" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Packaging</h3>
+                        <p>Custom crating for international shipping</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-ship" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Global Shipping</h3>
+                        <p>Climate-controlled transportation</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-check-circle" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Final Approval</h3>
+                        <p>Customer inspection and sign-off</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -811,10 +794,28 @@
                     <h3 class="value-title">Partnership</h3>
                     <p>Collaborating on your vision</p>
                 </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3 class="value-title">Quality Assurance</h3>
+                    <p>Rigorous testing for every slab</p>
+                </div>
+                
+                <div class="value-card">
+                    <div class="value-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="value-title">Innovation</h3>
+                    <p>Pioneering stone fabrication techniques</p>
+                </div>
             </div>
         </section>
     </div>
-     <?php include "footer.php"; ?>
+    
+    <?php include "footer.php"; ?>
+    
     <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
