@@ -226,368 +226,444 @@
     </section>
 
     <!-- Product Showcase -->
-    <section id="products" class="bg-light-gray">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold section-heading">Our Granite Collection</h2>
-                <p class="lead text-muted">Each piece is meticulously crafted by skilled artisans using premium quality granite</p>
+   <section id="products" class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3" style="color: #3a5a78;">Our Granite Collection</h2>
+            <p class="lead" style="color: #555555; max-width: 700px; margin: 0 auto;">
+                Each piece is meticulously crafted by skilled artisans using premium quality granite
+            </p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <!-- Card 1 -->
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="card-img-container" style="aspect-ratio: 4/3; overflow: hidden;">
+                        <img src="images/product-img1.jpg" 
+                             class="w-100 h-100" 
+                             alt="Granite Monuments"
+                             style="object-fit: cover; object-position: center;">
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-3" style="color: #3a5a78;">Memorial Monuments</h3>
+                        <p class="mb-3" style="color: #555555; line-height: 1.6;">
+                            Timeless granite memorials to honor your loved ones, available in various designs and finishes.
+                        </p>
+                        <ul class="list-unstyled mb-4" style="flex: 1;">
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Custom engravings</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Weather-resistant</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Lifetime durability</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary align-self-start mt-auto" style="border-color: #3a5a78; color: #3a5a78;">View Options</a>
+                    </div>
+                </div>
             </div>
             
-            <div class="row g-4">
-                <!-- Card 1 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="product-card">
-                        <div class="card-img-container">
-                            <img src="images/product-img1.jpg" 
-                                 alt="Granite Monuments">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Memorial Monuments</h3>
-                            <p class="card-text">
-                                Timeless granite memorials to honor your loved ones, available in various designs and finishes.
-                            </p>
-                            <ul class="list-unstyled mb-3">
-                                <li><i class="fas fa-check text-secondary me-2"></i> Custom engravings</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Weather-resistant</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Lifetime durability</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-primary align-self-start">View Options</a>
-                        </div>
+            <!-- Card 2 -->
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="card-img-container" style="aspect-ratio: 4/3; overflow: hidden;">
+                        <img src="images/product-img2.jpg" 
+                             class="w-100 h-100" 
+                             alt="Granite Sculptures"
+                             style="object-fit: cover; object-position: center;">
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-3" style="color: #3a5a78;">Artistic Sculptures</h3>
+                        <p class="mb-3" style="color: #555555; line-height: 1.6;">
+                            Hand-carved granite sculptures that add elegance to any space, from gardens to lobbies.
+                        </p>
+                        <ul class="list-unstyled mb-4" style="flex: 1;">
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Custom designs</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Various sizes</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Traditional motifs</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary align-self-start mt-auto" style="border-color: #3a5a78; color: #3a5a78;">View Gallery</a>
                     </div>
                 </div>
-                
-                <!-- Card 2 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="product-card">
-                        <div class="card-img-container">
-                            <img src="images/product-img2.jpg" 
-                                 alt="Granite Sculptures">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Artistic Sculptures</h3>
-                            <p class="card-text">
-                                Hand-carved granite sculptures that add elegance to any space, from gardens to lobbies.
-                            </p>
-                            <ul class="list-unstyled mb-3">
-                                <li><i class="fas fa-check text-secondary me-2"></i> Custom designs</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Various sizes</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Traditional motifs</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-primary align-self-start">View Gallery</a>
-                        </div>
+            </div>
+            
+            <!-- Card 3 -->
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="card-img-container" style="aspect-ratio: 4/3; overflow: hidden;">
+                        <img src="images/product-img3.jpg" 
+                             class="w-100 h-100" 
+                             alt="Granite Slabs"
+                             style="object-fit: cover; object-position: center;">
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-3" style="color: #3a5a78;">Granite Slabs</h3>
+                        <p class="mb-3" style="color: #555555; line-height: 1.6;">
+                            Premium quality granite slabs for countertops, flooring, and architectural applications.
+                        </p>
+                        <ul class="list-unstyled mb-4" style="flex: 1;">
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Multiple finishes</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Various thicknesses</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Standard & custom sizes</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary align-self-start mt-auto" style="border-color: #3a5a78; color: #3a5a78;">View Inventory</a>
                     </div>
                 </div>
-                
-                <!-- Card 3 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="product-card">
-                        <div class="card-img-container">
-                            <img src="images/product-img3.jpg" 
-                                 alt="Granite Slabs">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Granite Slabs</h3>
-                            <p class="card-text">
-                                Premium quality granite slabs for countertops, flooring, and architectural applications.
-                            </p>
-                            <ul class="list-unstyled mb-3">
-                                <li><i class="fas fa-check text-secondary me-2"></i> Multiple finishes</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Various thicknesses</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Standard & custom sizes</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-primary align-self-start">View Inventory</a>
-                        </div>
+            </div>
+            
+            <!-- Card 4 -->
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="product-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="card-img-container" style="aspect-ratio: 4/3; overflow: hidden;">
+                        <img src="images/product-img4.png" 
+                             class="w-100 h-100" 
+                             alt="Architectural Granite"
+                             style="object-fit: cover; object-position: center;">
                     </div>
-                </div>
-                
-                <!-- Card 4 -->
-                <div class="col-md-6 col-lg-3">
-                    <div class="product-card">
-                        <div class="card-img-container">
-                            <img src="images/product-img4.png" 
-                                 alt="Architectural Granite">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Architectural Elements</h3>
-                            <p class="card-text">
-                                Custom granite elements for buildings, including columns, fountains, and decorative pieces.
-                            </p>
-                            <ul class="list-unstyled mb-3">
-                                <li><i class="fas fa-check text-secondary me-2"></i> Structural components</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Decorative features</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Project consultation</li>
-                            </ul>
-                            <a href="#" class="btn btn-outline-primary align-self-start">Learn More</a>
-                        </div>
+                    <div class="card-body p-4 d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-3" style="color: #3a5a78;">Architectural Elements</h3>
+                        <p class="mb-3" style="color: #555555; line-height: 1.6;">
+                            Custom granite elements for buildings, including columns, fountains, and decorative pieces.
+                        </p>
+                        <ul class="list-unstyled mb-4" style="flex: 1;">
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Structural components</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Decorative features</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Project consultation</li>
+                        </ul>
+                        <a href="#" class="btn btn-outline-primary align-self-start mt-auto" style="border-color: #3a5a78; color: #3a5a78;">Learn More</a>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-
+    </div>
+</section>
     <!-- Features Section -->
-    <section class="features-section">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold section-heading">Why Choose Our Granite Products</h2>
-                <p class="lead text-muted">We combine traditional craftsmanship with modern quality standards</p>
+    <section class="features-section py-5" style="background-color: #ffffff;">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3" style="color: #3a5a78;">Why Choose Our Granite Products</h2>
+            <p class="lead" style="color: #555555; max-width: 700px; margin: 0 auto;">
+                We combine traditional craftsmanship with modern quality standards
+            </p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <!-- Premium Quality -->
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="feature-item h-100 p-4 text-center" 
+                     style="background: #f8f9fa; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <div class="feature-icon mb-4" 
+                         style="width: 80px; height: 80px; margin: 0 auto; background: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <i class="fas fa-gem" style="font-size: 1.75rem; color: #3a5a78;"></i>
+                    </div>
+                    <h3 class="h5 mb-3" style="color: #3a5a78;">Premium Quality</h3>
+                    <p style="color: #555555; line-height: 1.6; margin-bottom: 0;">
+                        We source only the finest granite from quarries across India, ensuring superior durability and aesthetic appeal.
+                    </p>
+                </div>
             </div>
             
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="feature-item p-4 h-100">
-                        <div class="feature-icon">
-                            <i class="fas fa-gem"></i>
-                        </div>
-                        <h3>Premium Quality</h3>
-                        <p>
-                            We source only the finest granite from quarries across India, ensuring superior durability and aesthetic appeal.
-                        </p>
+            <!-- Handcrafted -->
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="feature-item h-100 p-4 text-center" 
+                     style="background: #f8f9fa; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <div class="feature-icon mb-4" 
+                         style="width: 80px; height: 80px; margin: 0 auto; background: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <i class="fas fa-hands" style="font-size: 1.75rem; color: #3a5a78;"></i>
                     </div>
+                    <h3 class="h5 mb-3" style="color: #3a5a78;">Handcrafted</h3>
+                    <p style="color: #555555; line-height: 1.6; margin-bottom: 0;">
+                        Each piece is carefully shaped by skilled artisans with generations of stone-working expertise.
+                    </p>
                 </div>
-                
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="feature-item p-4 h-100">
-                        <div class="feature-icon">
-                            <i class="fas fa-hands"></i>
-                        </div>
-                        <h3>Handcrafted</h3>
-                        <p>
-                            Each piece is carefully shaped by skilled artisans with generations of stone-working expertise.
-                        </p>
+            </div>
+            
+            <!-- Global Standards -->
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="feature-item h-100 p-4 text-center" 
+                     style="background: #f8f9fa; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <div class="feature-icon mb-4" 
+                         style="width: 80px; height: 80px; margin: 0 auto; background: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <i class="fas fa-globe" style="font-size: 1.75rem; color: #3a5a78;"></i>
                     </div>
+                    <h3 class="h5 mb-3" style="color: #3a5a78;">Global Standards</h3>
+                    <p style="color: #555555; line-height: 1.6; margin-bottom: 0;">
+                        Our products meet international quality standards for export to markets worldwide.
+                    </p>
                 </div>
-                
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="feature-item p-4 h-100">
-                        <div class="feature-icon">
-                            <i class="fas fa-globe"></i>
-                        </div>
-                        <h3>Global Standards</h3>
-                        <p>
-                            Our products meet international quality standards for export to markets worldwide.
-                        </p>
+            </div>
+            
+            <!-- Durability -->
+            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                <div class="feature-item h-100 p-4 text-center" 
+                     style="background: #f8f9fa; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.05); transition: all 0.3s ease;">
+                    <div class="feature-icon mb-4" 
+                         style="width: 80px; height: 80px; margin: 0 auto; background: #ffffff; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                        <i class="fas fa-shield-alt" style="font-size: 1.75rem; color: #3a5a78;"></i>
                     </div>
-                </div>
-                
-                <div class="col-md-6 col-lg-3 text-center">
-                    <div class="feature-item p-4 h-100">
-                        <div class="feature-icon">
-                            <i class="fas fa-shield-alt"></i>
-                        </div>
-                        <h3>Durability</h3>
-                        <p>
-                            Granite products that withstand the test of time, weather, and daily use with minimal maintenance.
-                        </p>
-                    </div>
+                    <h3 class="h5 mb-3" style="color: #3a5a78;">Durability</h3>
+                    <p style="color: #555555; line-height: 1.6; margin-bottom: 0;">
+                        Granite products that withstand the test of time, weather, and daily use with minimal maintenance.
+                    </p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Granite Finishes -->
-    <section class="bg-light-gray">
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold section-heading">Granite Finishes & Textures</h2>
-                <p class="lead text-muted">Explore our wide range of granite finishes to suit every application</p>
+ <section class="py-5" style="background-color: #f8f9fa;">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3" style="color: #3a5a78;">Granite Finishes & Textures</h2>
+            <p class="lead" style="color: #555555; max-width: 700px; margin: 0 auto;">
+                Explore our wide range of granite finishes to suit every application
+            </p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <!-- Polished Finish -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="product-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="card-img-container" style="aspect-ratio: 4/3; overflow: hidden;">
+                        <img src="images/product-img5.jpg" 
+                             class="w-100 h-100" 
+                             alt="Polished Granite"
+                             style="object-fit: cover; object-position: center;">
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-3" style="color: #3a5a78;">Polished Finish</h3>
+                        <p class="mb-3" style="color: #555555; line-height: 1.6;">
+                            High-gloss polished surface that enhances the natural beauty and color of granite.
+                        </p>
+                        <ul class="list-unstyled mb-0" style="flex: 1;">
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Reflective surface</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Stain-resistant</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Ideal for countertops</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="product-card h-100">
-                        <div class="card-img-container">
-                            <img src="images/product-img5.jpg" 
-                                 alt="Polished Granite">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Polished Finish</h3>
-                            <p class="card-text">
-                                High-gloss polished surface that enhances the natural beauty and color of granite.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-secondary me-2"></i> Reflective surface</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Stain-resistant</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Ideal for countertops</li>
-                            </ul>
-                        </div>
+            <!-- Honed Finish -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="product-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="card-img-container" style="aspect-ratio: 4/3; overflow: hidden;">
+                        <img src="images/product-img6.jpg" 
+                             class="w-100 h-100" 
+                             alt="Honed Granite"
+                             style="object-fit: cover; object-position: center;">
+                    </div>
+                    <div class="card-body p-4 d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-3" style="color: #3a5a78;">Honed Finish</h3>
+                        <p class="mb-3" style="color: #555555; line-height: 1.6;">
+                            Smooth, matte surface with a satin-like appearance, perfect for flooring.
+                        </p>
+                        <ul class="list-unstyled mb-0" style="flex: 1;">
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Non-reflective</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Slip-resistant</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Contemporary look</li>
+                        </ul>
                     </div>
                 </div>
-                
-                <div class="col-md-4">
-                    <div class="product-card h-100">
-                        <div class="card-img-container">
-                            <img src="images/product-img6.jpg" 
-                                 alt="Honed Granite">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Honed Finish</h3>
-                            <p class="card-text">
-                                Smooth, matte surface with a satin-like appearance, perfect for flooring.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-secondary me-2"></i> Non-reflective</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Slip-resistant</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Contemporary look</li>
-                            </ul>
-                        </div>
+            </div>
+            
+            <!-- Flamed Finish -->
+            <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="product-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="card-img-container" style="aspect-ratio: 4/3; overflow: hidden;">
+                        <img src="images/product-img6 (2).jpg" 
+                             class="w-100 h-100" 
+                             alt="Flamed Granite"
+                             style="object-fit: cover; object-position: center;">
                     </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="product-card h-100">
-                        <div class="card-img-container">
-                            <img src="images/product-img6 (2).jpg" 
-                                 alt="Flamed Granite">
-                        </div>
-                        <div class="card-body">
-                            <h3 class="card-title">Flamed Finish</h3>
-                            <p class="card-text">
-                                Textured surface created by high-temperature flame treatment for outdoor use.
-                            </p>
-                            <ul class="list-unstyled">
-                                <li><i class="fas fa-check text-secondary me-2"></i> Highly slip-resistant</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Weatherproof</li>
-                                <li><i class="fas fa-check text-secondary me-2"></i> Natural rough texture</li>
-                            </ul>
-                        </div>
+                    <div class="card-body p-4 d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-3" style="color: #3a5a78;">Flamed Finish</h3>
+                        <p class="mb-3" style="color: #555555; line-height: 1.6;">
+                            Textured surface created by high-temperature flame treatment for outdoor use.
+                        </p>
+                        <ul class="list-unstyled mb-0" style="flex: 1;">
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Highly slip-resistant</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Weatherproof</li>
+                            <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Natural rough texture</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- Testimonials -->
-    <section style="background-color: var(--primary-color); color: white;"></section>
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold section-heading">What Our Clients Say</h2>
-                <p class="lead">Trusted by clients across the globe</p>
-            </div>
-            
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="testimonial-card h-100" style="color: #333;">
-                        <p class="mb-4" style="color: #555;">
+   <section class="py-5" style="background-color: #3a5a78; color: white;">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3">What Our Clients Say</h2>
+            <p class="lead" style="opacity: 0.9;">Trusted by clients across the globe</p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <!-- Testimonial 1 -->
+            <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="testimonial-card h-100 p-4" 
+                     style="background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div class="mb-4" style="position: relative;">
+                        <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: -15px; left: -10px; opacity: 0.1;">
+                            <path d="M0 30V20C0 8.9543 8.9543 0 20 0H40V10C40 21.0457 31.0457 30 20 30H0Z" fill="#3a5a78"/>
+                        </svg>
+                        <p class="mb-0" style="color: #555555; line-height: 1.7; position: relative;">
                             "The granite memorial we ordered is absolutely beautiful. The craftsmanship exceeded our expectations and it arrived perfectly packaged."
                         </p>
-                        <h4 class="h5 mb-1" style="color: #222;">Sarah Johnson</h4>
-                        <p class="text-secondary" style="color: #666;">Memorial Park, USA</p>
+                    </div>
+                    <div>
+                        <h4 class="h5 mb-1" style="color: #3a5a78;">Sarah Johnson</h4>
+                        <p class="mb-0" style="color: #777;">Memorial Park, USA</p>
                     </div>
                 </div>
-                
-                <div class="col-md-4">
-                    <div class="testimonial-card h-100" style="color: #333;">
-                        <p class="mb-4" style="color: #555;">
-                            "We've been importing granite slabs for 5 years. Their quality consistency and reliable shipping make them our preferred supplier."
-                        </p>
-                        <h4 class="h5 mb-1" style="color: #222;">Michael Chen</h4>
-                        <p class="text-secondary" style="color: #666;">Luxury Homes, Australia</p>
-                    </div>
-                </div>
-                
-                <div class="col-md-4">
-                    <div class="testimonial-card h-100" style="color: #333;">
-                        <p class="mb-4" style="color: #555;">
-                            "The custom granite fountain they created for our hotel lobby has become the centerpiece of our property. Exceptional workmanship!"
-                        </p>
-                        <h4 class="h5 mb-1" style="color: #222;">Aisha Al-Farsi</h4>
-                        <p class="text-secondary" style="color: #666;">Five Star Resorts, UAE</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Color Variety -->
-    <section>
-        <div class="container">
-            <div class="text-center mb-5">
-                <h2 class="display-5 fw-bold section-heading">Granite Color Varieties</h2>
-                <p class="lead text-muted">Explore our extensive selection of granite colors to match your design vision</p>
             </div>
             
-            <div class="row g-4">
-                <!-- Color 1 -->
-                <div class="col-md-4 col-lg-2">
-                    <div class="color-card h-100">
-                        <div class="color-swatch" style="background: linear-gradient(to right, #2c3e50, #4ca1af);"></div>
-                        <div class="card-body text-center">
-                            <h3 class="h5">Absolute Black</h3>
-                            <p class="card-text small">
-                                Deep black granite with minimal grain pattern.
-                            </p>
-                        </div>
+            <!-- Testimonial 2 -->
+            <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="testimonial-card h-100 p-4" 
+                     style="background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div class="mb-4" style="position: relative;">
+                        <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: -15px; left: -10px; opacity: 0.1;">
+                            <path d="M0 30V20C0 8.9543 8.9543 0 20 0H40V10C40 21.0457 31.0457 30 20 30H0Z" fill="#3a5a78"/>
+                        </svg>
+                        <p class="mb-0" style="color: #555555; line-height: 1.7; position: relative;">
+                            "We've been importing granite slabs for 5 years. Their quality consistency and reliable shipping make them our preferred supplier."
+                        </p>
+                    </div>
+                    <div>
+                        <h4 class="h5 mb-1" style="color: #3a5a78;">Michael Chen</h4>
+                        <p class="mb-0" style="color: #777;">Luxury Homes, Australia</p>
                     </div>
                 </div>
-                
-                <!-- Color 2 -->
-                <div class="col-md-4 col-lg-2">
-                    <div class="color-card h-100">
-                        <div class="color-swatch" style="background: linear-gradient(to right, #8e0e00, #1f1c18);"></div>
-                        <div class="card-body text-center">
-                            <h3 class="h5">Imperial Red</h3>
-                            <p class="card-text small">
-                                Rich red with black and gray mineral deposits.
-                            </p>
-                        </div>
+            </div>
+            
+            <!-- Testimonial 3 -->
+            <div class="col-xl-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="testimonial-card h-100 p-4" 
+                     style="background: white; border-radius: 8px; box-shadow: 0 4px 12px rgba(0,0,0,0.1);">
+                    <div class="mb-4" style="position: relative;">
+                        <svg width="40" height="30" viewBox="0 0 40 30" fill="none" xmlns="http://www.w3.org/2000/svg" style="position: absolute; top: -15px; left: -10px; opacity: 0.1;">
+                            <path d="M0 30V20C0 8.9543 8.9543 0 20 0H40V10C40 21.0457 31.0457 30 20 30H0Z" fill="#3a5a78"/>
+                        </svg>
+                        <p class="mb-0" style="color: #555555; line-height: 1.7; position: relative;">
+                            "The custom granite fountain they created for our hotel lobby has become the centerpiece of our property. Exceptional workmanship!"
+                        </p>
                     </div>
-                </div>
-                
-                <!-- Color 3 -->
-                <div class="col-md-4 col-lg-2">
-                    <div class="color-card h-100">
-                        <div class="color-swatch" style="background: linear-gradient(to right, #bdc3c7, #2c3e50);"></div>
-                        <div class="card-body text-center">
-                            <h3 class="h5">Steel Grey</h3>
-                            <p class="card-text small">
-                                Sophisticated gray with subtle variations.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Color 4 -->
-                <div class="col-md-4 col-lg-2">
-                    <div class="color-card h-100">
-                        <div class="color-swatch" style="background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);"></div>
-                        <div class="card-body text-center">
-                            <h3 class="h5">Kashmir Gold</h3>
-                            <p class="card-text small">
-                                Warm golden tones with dramatic veining.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Color 5 -->
-                <div class="col-md-4 col-lg-2">
-                    <div class="color-card h-100">
-                        <div class="color-swatch" style="background: linear-gradient(to right, #0f2027, #203a43, #2c5364);"></div>
-                        <div class="card-body text-center">
-                            <h3 class="h5">Blue Pearl</h3>
-                            <p class="card-text small">
-                                Deep blue with shimmering silver flecks.
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Color 6 -->
-                <div class="col-md-4 col-lg-2">
-                    <div class="color-card h-100">
-                        <div class="color-swatch" style="background: linear-gradient(to right, #556270, #4ecdc4);"></div>
-                        <div class="card-body text-center">
-                            <h3 class="h5">Emerald Pearl</h3>
-                            <p class="card-text small">
-                                Greenish-gray with iridescent highlights.
-                            </p>
-                        </div>
+                    <div>
+                        <h4 class="h5 mb-1" style="color: #3a5a78;">Aisha Al-Farsi</h4>
+                        <p class="mb-0" style="color: #777;">Five Star Resorts, UAE</p>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
+
+    <!-- Color Variety -->
+    <section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3" style="color: #3a5a78;">Granite Color Varieties</h2>
+            <p class="lead" style="color: #555555; max-width: 700px; margin: 0 auto;">
+                Explore our extensive selection of granite colors to match your design vision
+            </p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <!-- Absolute Black -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #2c3e50, #4ca1af);"></div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Absolute Black</h3>
+                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
+                            Deep black granite with minimal grain pattern.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Imperial Red -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #8e0e00, #1f1c18);"></div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Imperial Red</h3>
+                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
+                            Rich red with black and gray mineral deposits.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Steel Grey -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #bdc3c7, #2c3e50);"></div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Steel Grey</h3>
+                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
+                            Sophisticated gray with subtle variations.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kashmir Gold -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="250">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);"></div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Kashmir Gold</h3>
+                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
+                            Warm golden tones with dramatic veining.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blue Pearl -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #0f2027, #203a43, #2c5364);"></div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Blue Pearl</h3>
+                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
+                            Deep blue with shimmering silver flecks.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Emerald Pearl -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #556270, #4ecdc4);"></div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Emerald Pearl</h3>
+                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
+                            Greenish-gray with iridescent highlights.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
     <!-- CTA Section -->
     <section style="background: linear-gradient(rgba(58, 90, 120, 0.9), rgba(58, 90, 120, 0.9)), 
