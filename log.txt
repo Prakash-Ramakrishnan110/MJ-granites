@@ -10,3 +10,15 @@ Array
     [message] => testing
 )
 Mail sent successfully
+Form reached PHP
+Array
+(
+    [name] => testing
+    [email] => team@saakra
+    [phone] => 0000000000
+    [company] => backend
+    [destination] => Other
+    [product_interest] => Granite Monuments
+    [message] => for testing 
+)
+Mail sent successfully

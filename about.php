@@ -364,6 +364,7 @@
     </style>
 </head>
 <body>
+    <?php include 'header.php'; ?>
     <!-- About Content Section -->
     <section class="about-section">
         <div class="container">
@@ -838,7 +839,7 @@
             </div>
         </div>
     </section>
-
+    <?php include 'footer.php'; ?>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS Animation JS -->

@@ -23,8 +23,8 @@ require 'PHPMailer/SMTP.php';
 require 'PHPMailer/Exception.php';
 
 // Gmail SMTP credentials
-$gmailUsername = 'boopathikannan069@gmail.com';
-$gmailAppPassword = 'sdyl sbwt jtzl jire'; // Use app password, not your login password
+$gmailUsername = 'mjgranitesexporters@gmail.com';
+$gmailAppPassword = 'jglk hcqa dhde gjmd'; // Use app password, not your login password
 
 // Sanitize form data
 $name = htmlspecialchars($_POST['name']);
@@ -52,7 +52,7 @@ try {
 
     // Set email headers
     $mail->setFrom($gmailUsername, 'Mail');
-    $mail->addAddress('boopathikannan069@gmail.com'); // Receiver's email
+    $mail->addAddress('mjgranitesexporters@gmail.com'); // Receiver's email
 
     $mail->isHTML(true);
     $mail->Subject = 'New Export Quote Request from Website';

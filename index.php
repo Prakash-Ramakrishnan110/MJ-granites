@@ -7,6 +7,12 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap 5 CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<!-- Bootstrap 5 JS Bundle (includes Popper) -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
     
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -870,7 +876,7 @@
 </head>
 <body>
     <!-- Navigation Bar -->
-     
+     <?php include 'header.php'; ?>
     <!-- Hero Carousel -->
     <div id="heroCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="180000">
         <div class="carousel-indicators">
@@ -1322,6 +1328,7 @@
             </div>
         </div>
     </section>
+    <?php include 'footer.php'; ?>
 
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
@@ -1329,11 +1336,13 @@
     <!-- Custom JS -->
     <script>
         // Initialize carousel with 5 second interval
-        var heroCarousel = document.getElementById('heroCarousel')
+        document.addEventListener('DOMContentLoaded', function () {
+        var heroCarousel = document.getElementById('heroCarousel');
         var carousel = new bootstrap.Carousel(heroCarousel, {
-            interval: 5000,
-            wrap: true,
-            pause: false
+        interval: 5000, // 1 second
+        wrap: true,
+        pause: false
+          });
         });
 
         // Hero content animations on slide change

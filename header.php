@@ -24,7 +24,7 @@
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             background-color: var(--light-color);
-            padding-top: 80px; /* Space for fixed header */
+            padding-top: 70px; /* Space for fixed header */
         }
         
         /* Header styles */
@@ -145,7 +145,25 @@
             color: var(--secondary-color);
             transform: scale(1.1);
         }
-        
+        .brand-name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      background: linear-gradient(to right, var(--secondary-color), #fff);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-left: 15px;
+      animation: textGlow 3s infinite alternate;
+      text-shadow: 3px 3px 8px rgba(199, 199, 3, 0.6);
+      transition: all 0.3s ease;
+    }
+
+    @keyframes textGlow {
+      0% { text-shadow: 3px 3px 8px rgba(199, 199, 3, 0.6); }
+      100% { text-shadow: 3px 3px 15px rgba(255, 215, 0, 0.8), 0 0 20px rgba(255, 215, 0, 0.4); }
+    }
+
         /* Responsive styles */
         @media (max-width: 768px) {
             .header-container {
@@ -205,9 +223,10 @@
         <div class="header-container">
             <div class="logo">
                 <!-- Logo with neon effect - can be image or text -->
-                <img src="" alt="Company Logo">
+                <img src="images/logo 4.png" alt="Company Logo">
                 <!-- Alternative text logo with neon effect -->
                 <!-- <span class="logo-text">MY LOGO</span> -->
+                <span class="brand-name">MJ Granites Exporter</span>
             </div>
             
             <div class="menu-toggle" id="mobile-menu">
@@ -216,12 +235,12 @@
             
             <nav id="main-nav">
                 <ul>
-                    <li><a href="#" class="active">Home</a></li>
-                    <li><a href="#">About</a></li>
-                    <li><a href="#">Products</a></li>
-                    <li><a href="#">Gallery</a></li>
-                    <li><a href="#">Process</a></li>
-                    <li><a href="#">Contact</a></li>
+                    <li><a href="index.php" class="active">Home</a></li>
+                    <li><a href="about.php">About</a></li>
+                    <li><a href="products.php">Products</a></li>
+                    <li><a href="gallery.php">Gallery</a></li>
+                    <li><a href="process.php">Process</a></li>
+                    <li><a href="contact.php">Contact</a></li>
                 </ul>
             </nav>
         </div>
