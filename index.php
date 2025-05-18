@@ -974,7 +974,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-1" data-animation="fadeInUp">
                     <div class="card-img-container">
-                        <img src="https://img.freepik.com/free-photo/earth-planet-close-up-view_23-2151001742.jpg" class="card-img-top" alt="Global business network">
+                        <img src="images/home-world wide.jpg" class="card-img-top" alt="Global business network">
                     </div>
                     <div class="card-body p-4 text-center d-flex flex-column">
                         <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
@@ -992,7 +992,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-2" data-animation="fadeInUp">
                     <div class="card-img-container">
-                        <img src="https://img.freepik.com/free-photo/close-up-hands-carpenter_23-2149348873.jpg" class="card-img-top" alt="Expert craftsmanship">
+                        <img src="images/home-craft manship.jpg" class="card-img-top" alt="Expert craftsmanship">
                     </div>
                     <div class="card-body p-4 text-center d-flex flex-column">
                         <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
@@ -1010,7 +1010,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-3" data-animation="fadeInUp">
                     <div class="card-img-container">
-                        <img src="https://img.freepik.com/free-photo/quality-control-inspector-checking-product_23-2149630604.jpg" class="card-img-top" alt="Quality inspection">
+                        <img src="images/home-Quality guaranted.jpg" class="card-img-top" alt="Quality inspection">
                     </div>
                     <div class="card-body p-4 text-center d-flex flex-column">
                         <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
@@ -1028,7 +1028,7 @@
             <div class="col-sm-6 col-lg-3">
                 <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-4" data-animation="fadeInUp">
                     <div class="card-img-container">
-                        <img src="https://img.freepik.com/free-photo/stacked-wooden-boards_23-2148174062.jpg" class="card-img-top" alt="Sustainable materials">
+                        <img src="images/home-eco friendly.jpg" class="card-img-top" alt="Sustainable materials">
                     </div>
                     <div class="card-body p-4 text-center d-flex flex-column">
                         <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
@@ -1058,11 +1058,11 @@
                 <!-- Row 1 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card h-100 border-0 overflow-hidden animate-section delay-1" data-animation="fadeInUp">
-                        <div class="card-img-top position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 class="img-fluid" 
-                                 alt="Elegant Memorial">
-                            
+                        <div class="card-img-container">
+                            <img src="images/home-elegant memoriles.jpg" 
+                                 class="card-img-top"
+                                 alt="Elegant Memorial"
+                                 style="object-fit:cover; width:100%; height:100%;">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Elegant Memorials</h4>
@@ -1071,7 +1071,6 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-primary">Custom Designs</span>
-                                <small class="text-muted">Starting at $1,200</small>
                             </div>
                         </div>
                     </div>
@@ -1079,11 +1078,11 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card h-100 border-0 overflow-hidden animate-section delay-2" data-animation="fadeInUp">
-                        <div class="card-img-top position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 class="img-fluid" 
-                                 alt="Granite Sculpture">
-                            
+                        <div class="card-img-container">
+                            <img src="images/home-artistic sculptures.jpg" 
+                                 class="card-img-top"
+                                 alt="Granite Sculpture"
+                                 style="object-fit:cover; width:100%; height:100%;">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Artistic Sculptures</h4>
@@ -1092,7 +1091,6 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-primary">Handcrafted</span>
-                                <small class="text-muted">Starting at $2,500</small>
                             </div>
                         </div>
                     </div>
@@ -1100,11 +1098,11 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card h-100 border-0 overflow-hidden animate-section delay-3" data-animation="fadeInUp">
-                        <div class="card-img-top position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 class="img-fluid" 
-                                 alt="Granite Countertop">
-                            
+                        <div class="card-img-container">
+                            <img src="images/home-luxury countertops.jpg" 
+                                 class="card-img-top"
+                                 alt="Granite Countertop"
+                                 style="object-fit:cover; width:100%; height:100%;">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Luxury Countertops</h4>
@@ -1113,7 +1111,6 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-primary">Kitchen & Bath</span>
-                                <small class="text-muted">Starting at $85/sq.ft</small>
                             </div>
                         </div>
                     </div>
@@ -1122,11 +1119,11 @@
                 <!-- Row 2 -->
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card h-100 border-0 overflow-hidden animate-section delay-1" data-animation="fadeInUp">
-                        <div class="card-img-top position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 class="img-fluid" 
-                                 alt="Granite Flooring">
-
+                        <div class="card-img-container">
+                            <img src="images/home-preminum flooring.jpg" 
+                                 class="card-img-top"
+                                 alt="Granite Flooring"
+                                 style="object-fit:cover; width:100%; height:100%;">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Premium Flooring</h4>
@@ -1135,7 +1132,6 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-primary">Various Finishes</span>
-                                <small class="text-muted">Starting at $35/sq.ft</small>
                             </div>
                         </div>
                     </div>
@@ -1143,11 +1139,11 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card h-100 border-0 overflow-hidden animate-section delay-2" data-animation="fadeInUp">
-                        <div class="card-img-top position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 class="img-fluid" 
-                                 alt="Granite Fountain">
-                            
+                        <div class="card-img-container">
+                            <img src="images/home-decortive fountains.jpg" 
+                                 class="card-img-top"
+                                 alt="Granite Fountain"
+                                 style="object-fit:cover; width:100%; height:100%;">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Decorative Fountains</h4>
@@ -1156,7 +1152,6 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-primary">Custom Sizes</span>
-                                <small class="text-muted">Starting at $3,800</small>
                             </div>
                         </div>
                     </div>
@@ -1164,11 +1159,11 @@
 
                 <div class="col-md-6 col-lg-4">
                     <div class="card product-card h-100 border-0 overflow-hidden animate-section delay-3" data-animation="fadeInUp">
-                        <div class="card-img-top position-relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
-                                 class="img-fluid" 
-                                 alt="Granite Columns">
-                           
+                        <div class="card-img-container">
+                            <img src="images/home-architectural columns.jpg" 
+                                 class="card-img-top"
+                                 alt="Granite Columns"
+                                 style="object-fit:cover; width:100%; height:100%;">
                         </div>
                         <div class="card-body">
                             <h4 class="card-title text-hover-secondary">Architectural Columns</h4>
@@ -1177,7 +1172,6 @@
                             </p>
                             <div class="d-flex justify-content-between align-items-center">
                                 <span class="badge bg-primary">Structural & Decorative</span>
-                                <small class="text-muted">Starting at $1,500</small>
                             </div>
                         </div>
                     </div>
