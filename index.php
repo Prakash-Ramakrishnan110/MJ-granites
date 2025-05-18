@@ -1209,7 +1209,7 @@
                 <div class="col-md-4">
                     <div class="quote-card shadow animate__animated animate__fadeInUp animate__fast" data-animation-delay="0.2s">
                         <div class="card-img-wrapper overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                            <img src="images/home-standard export.jpg" 
                                  class="card-img-top img-scale" 
                                  alt="Standard Export">
                             <div class="img-overlay"></div>
@@ -1242,7 +1242,7 @@
                 <div class="col-md-4">
                     <div class="quote-card shadow animate__animated animate__fadeInUp animate__fast" data-animation-delay="0.4s">
                         <div class="card-img-wrapper overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                            <img src="images/home-container export.jpg" 
                                  class="card-img-top img-scale" 
                                  alt="Container Export">
                             <div class="img-overlay"></div>
@@ -1275,7 +1275,7 @@
                 <div class="col-md-4">
                     <div class="quote-card shadow animate__animated animate__fadeInUp animate__fast" data-animation-delay="0.6s">
                         <div class="card-img-wrapper overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1631729370902-47dd5aa74df0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" 
+                            <img src="images/home-custom solution.jpg" 
                                  class="card-img-top img-scale" 
                                  alt="Custom Solution">
                             <div class="img-overlay"></div>
