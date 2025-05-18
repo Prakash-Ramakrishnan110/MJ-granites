@@ -879,7 +879,7 @@
         
         <div class="carousel-inner">
             <!-- Slide 1 -->
-            <div class="carousel-item active hero-section" style="background-image: url('https://images.unsplash.com/photo-1605106702734-205df224ecce?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+            <div class="carousel-item active hero-section" style="background-image: url('images/home-nav-img1.jpg')">
                 <div class="container h-100 d-flex align-items-center">
                     <div class="hero-content">
                         <h1 class="hero-title">From Earth to Art — Granite Redefined</h1>

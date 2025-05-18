@@ -32,6 +32,7 @@
             font-family: 'Montserrat', sans-serif;
             padding-top: 56px;
             overflow-x: hidden;
+            color: #444;
         }
         
         h1, h2, h3, h4, h5, .display-font {
@@ -41,13 +42,20 @@
         /* Hero Section */
         .process-hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://img.freepik.com/free-photo/stone-texture-background_53876-95209.jpg');
+                url('images/process-hero.jpg');
             background-size: cover;
-            background-position: center;
+            background-position: center center;
+            background-repeat: no-repeat;
             color: white;
             padding: 120px 0 100px;
             text-align: center;
             position: relative;
+            width: 100%;
+            height: 430px;
+            min-height: 300px;
+            max-height: 500px;
+            display: flex;
+            align-items: center;
         }
         
         .process-hero .container {
@@ -78,6 +86,7 @@
             position: relative;
             display: inline-block;
             padding-bottom: 15px;
+            color: var(--primary-color);
         }
         
         .section-header h2:after {
@@ -94,6 +103,7 @@
         .section-header p {
             max-width: 700px;
             margin: 20px auto 0;
+            color: #666;
         }
         
         /* Process Cards */
@@ -102,34 +112,31 @@
             border-radius: 12px;
             overflow: hidden;
             box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             height: 100%;
             margin-bottom: 30px;
-            cursor: pointer;
-            transform: translateY(30px);
-            opacity: 0;
             background: white;
-        }
-        
-        .process-card.animated {
+            transition: all 0.4s ease;
             transform: translateY(0);
-            opacity: 1;
         }
         
         .process-card:hover {
-            transform: translateY(-10px) scale(1.02);
+            transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        
+        .process-card .card-img-container {
+            overflow: hidden;
         }
         
         .process-card img {
             height: 220px;
             object-fit: cover;
-            transition: transform 0.5s ease;
             width: 100%;
+            transition: transform 0.5s ease;
         }
         
         .process-card:hover img {
-            transform: scale(1.1);
+            transform: scale(1.05);
         }
         
         .card-body {
@@ -140,10 +147,15 @@
             color: var(--primary-color);
             margin-bottom: 15px;
             font-weight: 600;
+            transition: color 0.3s ease;
+        }
+        
+        .process-card:hover .card-body h3 {
+            color: var(--secondary-color);
         }
         
         .card-body p {
-            color: #000000;
+            color: #666;
             line-height: 1.6;
         }
         
@@ -155,51 +167,43 @@
             text-align: center;
             height: 100%;
             box-shadow: 0 10px 20px rgba(0,0,0,0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.4s ease;
             cursor: pointer;
-            transform: translateY(30px);
-            opacity: 0;
-        }
-        
-        .icon-card.animated {
+            border: 1px solid rgba(0,0,0,0.05);
             transform: translateY(0);
-            opacity: 1;
         }
         
         .icon-card:hover {
-            transform: translateY(-10px) scale(1.03);
+            transform: translateY(-10px);
             box-shadow: 0 15px 30px rgba(0,0,0,0.15);
-            background: linear-gradient(135deg, var(--primary-color), #2c4762);
-            color: white;
-        }
-        
-        .icon-card:hover .process-icon,
-        .icon-card:hover h3 {
-            color: white;
+            border-color: rgba(212, 175, 55, 0.3);
         }
         
         .process-icon {
             font-size: 3rem;
             color: var(--secondary-color);
             margin-bottom: 25px;
-            transition: all 0.3s ease;
+            transition: transform 0.3s ease;
+        }
+        
+        .icon-card:hover .process-icon {
+            transform: scale(1.1);
         }
         
         .icon-card h3 {
             font-size: 1.3rem;
             margin-bottom: 15px;
             color: var(--primary-color);
-            transition: all 0.3s ease;
+            transition: color 0.3s ease;
+        }
+        
+        .icon-card:hover h3 {
+            color: var(--secondary-color);
         }
         
         .icon-card p {
-            color: #000000;
+            color: #666;
             line-height: 1.6;
-            transition: all 0.3s ease;
-        }
-        
-        .icon-card:hover p {
-            color: rgba(255,255,255,0.9);
         }
         
         /* Modal Styles */
@@ -292,10 +296,12 @@
             padding: 12px 30px;
             border-radius: 50px;
             border: 2px solid var(--secondary-color);
-            transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         
         .btn-gold:hover {
@@ -309,10 +315,12 @@
             border: 2px solid white;
             padding: 12px 30px;
             border-radius: 50px;
-            transition: all 0.3s ease;
             text-transform: uppercase;
             letter-spacing: 1px;
             font-size: 0.9rem;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
         }
         
         .btn-outline-light:hover {
@@ -322,76 +330,49 @@
             box-shadow: 0 10px 20px rgba(0,0,0,0.1);
         }
         
-        /* Footer */
-        footer {
-            background-color: #1a2a3a;
-            color: white;
-            padding: 70px 0 30px;
-        }
-        
-        footer h3 {
-            font-size: 1.3rem;
-            margin-bottom: 25px;
-            position: relative;
-            padding-bottom: 10px;
-        }
-        
-        footer h3:after {
-            content: '';
-            position: absolute;
-            width: 50px;
-            height: 3px;
-            background-color: var(--secondary-color);
-            bottom: 0;
-            left: 0;
-        }
-        
-        footer p, footer li {
-            opacity: 0.8;
-            transition: all 0.3s ease;
-        }
-        
-        footer a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        footer a:hover {
-            color: var(--secondary-color);
-        }
-        
-        footer ul li {
-            margin-bottom: 10px;
-        }
-        
-        footer .contact-info i {
-            width: 20px;
-            text-align: center;
-            margin-right: 10px;
-            color: var(--secondary-color);
-        }
-        
-        footer hr {
-            border-color: rgba(255,255,255,0.1);
-            margin: 40px 0;
-        }
-        
         /* Animation Classes */
-        .animate-pop-in {
-            animation: popIn 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+        .animate-slide-up {
+            animation: slideUp 0.8s ease forwards;
         }
         
-        @keyframes popIn {
-            0% {
-                transform: scale(0.8);
+        .animate-slide-left {
+            animation: slideLeft 0.8s ease forwards;
+        }
+        
+        .animate-slide-right {
+            animation: slideRight 0.8s ease forwards;
+        }
+        
+        @keyframes slideUp {
+            from {
                 opacity: 0;
+                transform: translateY(50px);
             }
-            80% {
-                transform: scale(1.05);
-            }
-            100% {
-                transform: scale(1);
+            to {
                 opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes slideLeft {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        
+        @keyframes slideRight {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
             }
         }
         
@@ -403,6 +384,10 @@
             
             .process-card img {
                 height: 200px;
+            }
+            
+            .icon-card {
+                padding: 35px 25px;
             }
         }
         
@@ -425,6 +410,10 @@
             
             .cta-section h2 {
                 font-size: 2.2rem;
+            }
+            
+            .icon-card {
+                padding: 30px 20px;
             }
         }
         
@@ -450,7 +439,7 @@
             }
             
             .icon-card {
-                padding: 30px 20px;
+                padding: 25px 15px;
             }
             
             .cta-section {
@@ -461,12 +450,8 @@
                 font-size: 2rem;
             }
             
-            footer {
-                padding: 50px 0 25px;
-            }
-            
-            footer .col-lg-4 {
-                margin-bottom: 30px;
+            .btn-gold, .btn-outline-light {
+                padding: 10px 25px;
             }
         }
         
@@ -503,68 +488,16 @@
                 padding: 10px 20px;
                 font-size: 0.8rem;
             }
-        }
-
-        /* Card Title Color */
-        .process-card h3,
-        .process-card h5,
-        .icon-card h3 {
-            color: #3A5A78 !important; /* Your specified title color */
-        }
-        
-        /* Card Content Color */
-        .process-card .card-text,
-        .icon-card p {
-            color: #000000 !important; /* Pure black for content */
-        }
-
-        /* Consistent styling for all cards */
-        .process-card {
-            border: 1px solid #e9ecef;
-            border-radius: 8px;
-            overflow: hidden;
-            transition: all 0.3s ease;
-            height: 100%;
-            background: white;
-        }
-        
-        .process-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .card-img-container {
-            height: 200px;
-            overflow: hidden;
-        }
-        
-        .card-img-top {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.4s ease;
-        }
-        
-        .process-card:hover .card-img-top {
-            transform: scale(1.05);
-        }
-        
-        .card-body {
-            padding: 1.5rem;
-        }
-        
-        .h5 {
-            color: #333;
-            margin-bottom: 0.75rem;
-            font-size: 1.25rem;
-            font-weight: 600;
-        }
-        
-        .card-text {
-            color: #666;
-            font-size: 0.95rem;
-            line-height: 1.5;
-            margin-bottom: 0;
+            
+            .d-flex.justify-content-center.gap-3 {
+                flex-direction: column;
+                gap: 15px !important;
+                align-items: center;
+            }
+            
+            .process-card, .icon-card {
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
@@ -574,9 +507,9 @@
     <!-- Hero Section -->
     <section class="process-hero">
         <div class="container" data-aos="fade-up" data-aos-duration="800">
-            <h1 class="display-4 fw-bold mb-4">Our Manufacturing Process</h1>
-            <p class="lead mb-5">Discover how we transform raw granite into exquisite works of art through traditional craftsmanship and modern techniques</p>
-            <a href="#material" class="btn btn-gold btn-lg px-5 animate_animated animatepulse animate_infinite">Explore Process</a>
+            <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Our Manufacturing Process</h1>
+            <p class="lead mb-5 animate__animated animate__fadeIn animate__delay-1s">Discover how we transform raw granite into exquisite works of art through traditional craftsmanship and modern techniques</p>
+            <a href="#material" class="btn btn-gold btn-lg px-5 animate__animated animate__fadeInUp animate__delay-1s">Explore Process</a>
         </div>
     </section>
 
@@ -584,18 +517,19 @@
     <section id="material" class="process-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="display-5 fw-bold text-primary mb-3">1. Material Selection</h2>
-                <p class="lead text-muted">The foundation of quality begins with selecting the perfect stone</p>
+                <h2 class="display-5 fw-bold mb-3">1. Material Selection</h2>
+                <p class="lead">The foundation of quality begins with selecting the perfect stone</p>
             </div>
             
             <div class="row">
                 <!-- Card 1 - Quarry Selection -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="process-card">
-                        <div class="card-img-container">
-                            <img src="https://img.freepik.com/free-photo/beautiful-shot-stone-quarry-mountains_181624-20660.jpg" 
+                    <div class="process-card" data-bs-toggle="modal" data-bs-target="#quarryModal">
+                        <div class="card-img-container" style="aspect-ratio: 4/3; background: #eee;">
+                            <img src="images/process-img1.jpg" 
                                  class="card-img-top" 
-                                 alt="Granite Quarry">
+                                 alt="Granite Quarry"
+                                 style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
                         </div>
                         <div class="card-body">
                             <h3 class="h5">Quarry Selection</h3>
@@ -608,11 +542,12 @@
                 
                 <!-- Card 2 - Block Inspection -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="process-card">
-                        <div class="card-img-container">
-                            <img src="https://img.freepik.com/free-photo/stone-blocks-quarry_1150-6608.jpg" 
+                    <div class="process-card" data-bs-toggle="modal" data-bs-target="#blockModal">
+                        <div class="card-img-container" style="aspect-ratio: 4/3; background: #eee;">
+                            <img src="images/process-img2.jpg" 
                                  class="card-img-top" 
-                                 alt="Granite Blocks">
+                                 alt="Granite Blocks"
+                                 style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
                         </div>
                         <div class="card-body">
                             <h3 class="h5">Block Inspection</h3>
@@ -625,11 +560,12 @@
                 
                 <!-- Card 3 - Quality Testing -->
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="process-card">
-                        <div class="card-img-container">
-                            <img src="https://img.freepik.com/free-photo/worker-checking-quality-stone_23-2149256763.jpg" 
+                    <div class="process-card" data-bs-toggle="modal" data-bs-target="#testingModal">
+                        <div class="card-img-container" style="aspect-ratio: 4/3; background: #eee;">
+                            <img src="images/process-img3.jpg" 
                                  class="card-img-top" 
-                                 alt="Quality Testing">
+                                 alt="Quality Testing"
+                                 style="width:100%; height:100%; object-fit:cover; object-position:center; display:block;">
                         </div>
                         <div class="card-body">
                             <h3 class="h5">Quality Testing</h3>
@@ -647,8 +583,8 @@
     <section id="production" class="process-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="display-5 fw-bold text-primary mb-3">2. Production Process</h2>
-                <p class="lead text-muted">Where raw stone transforms into beautiful products</p>
+                <h2 class="display-5 fw-bold mb-3">2. Production Process</h2>
+                <p class="lead">Where raw stone transforms into beautiful products</p>
             </div>
             
             <div class="row">
@@ -707,16 +643,18 @@
     <section id="quality" class="process-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="display-5 fw-bold text-primary mb-3">3. Quality Control</h2>
-                <p class="lead text-muted">Ensuring every piece meets our exacting standards</p>
+                <h2 class="display-5 fw-bold mb-3">3. Quality Control</h2>
+                <p class="lead">Ensuring every piece meets our exacting standards</p>
             </div>
             
             <div class="row">
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="process-card" data-bs-toggle="modal" data-bs-target="#inspectionModal">
-                        <img src="https://img.freepik.com/free-photo/worker-checking-quality-stone_23-2149256763.jpg" 
-                             class="card-img-top" 
-                             alt="Visual Inspection">
+                        <div class="card-img-container">
+                            <img src="images/process-img4.jpg" 
+                                 class="card-img-top" 
+                                 alt="Visual Inspection">
+                        </div>
                         <div class="card-body">
                             <h3 class="h5">Visual Inspection</h3>
                             <p class="card-text">
@@ -728,9 +666,11 @@
                 
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="process-card" data-bs-toggle="modal" data-bs-target="#measurementModal">
-                        <img src="https://img.freepik.com/free-photo/engineer-using-digital-caliper-measure-metal-pipe-dimension_1150-26358.jpg" 
-                             class="card-img-top" 
-                             alt="Precision Measurement">
+                        <div class="card-img-container">
+                            <img src="images/process-img5.jpg" 
+                                 class="card-img-top" 
+                                 alt="Precision Measurement">
+                        </div>
                         <div class="card-body">
                             <h3 class="h5">Precision Measurement</h3>
                             <p class="card-text">
@@ -742,9 +682,11 @@
                 
                 <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="process-card" data-bs-toggle="modal" data-bs-target="#testingModal2">
-                        <img src="https://img.freepik.com/free-photo/close-up-scientist-hand-holding-test-tube_23-2149190612.jpg" 
-                             class="card-img-top" 
-                             alt="Durability Testing">
+                        <div class="card-img-container">
+                            <img src="images/process-img6.jpg" 
+                                 class="card-img-top" 
+                                 alt="Durability Testing">
+                        </div>
                         <div class="card-body">
                             <h3 class="h5">Durability Testing</h3>
                             <p class="card-text">
@@ -761,8 +703,8 @@
     <section id="shipping" class="process-section">
         <div class="container">
             <div class="section-header" data-aos="fade-up">
-                <h2 class="display-5 fw-bold text-primary mb-3">4. Packaging & Shipping</h2>
-                <p class="lead text-muted">Safe delivery to destinations worldwide</p>
+                <h2 class="display-5 fw-bold mb-3">4. Packaging & Shipping</h2>
+                <p class="lead">Safe delivery to destinations worldwide</p>
             </div>
             
             <div class="row">
@@ -825,103 +767,12 @@
                 Contact our team for a detailed explanation or to schedule a virtual factory tour.
             </p>
             <div class="d-flex justify-content-center gap-3">
-                <a href="contact.html" class="btn btn-gold btn-lg px-5 animate_animated animatepulse animate_infinite">Contact Us</a>
+                <a href="contact.html" class="btn btn-gold btn-lg px-5">Contact Us</a>
                 <a href="virtual-tour.html" class="btn btn-outline-light btn-lg px-5">Virtual Tour</a>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-5">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <h3 class="h4 mb-3">MJ Granites Export</h3>
-                    <p>
-                        Premium granite products manufacturer and exporter based in Tamil Nadu, India. Serving clients worldwide since 1995.
-                    </p>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h3 class="h4 mb-3">Quick Links</h3>
-                    <ul class="list-unstyled">
-                        <li class="mb-2"><a href="index.html" class="text-white">Home</a></li>
-                        <li class="mb-2"><a href="products.html" class="text-white">Products</a></li>
-                        <li class="mb-2"><a href="gallery.html" class="text-white">Gallery</a></li>
-                        <li class="mb-2"><a href="process.html" class="text-white">Process</a></li>
-                        <li class="mb-2"><a href="contact.html" class="text-white">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-4 mb-4">
-                    <h3 class="h4 mb-3">Contact Info</h3>
-                    <ul class="list-unstyled contact-info">
-                        <li class="mb-2"><i class="fas fa-map-marker-alt me-2"></i> 123 Granite Street, Tamil Nadu, India</li>
-                        <li class="mb-2"><i class="fas fa-phone me-2"></i> +91 98765 43210</li>
-                        <li class="mb-2"><i class="fas fa-envelope me-2"></i> info@mjgranitesexport.com</li>
-                    </ul>
-                </div>
-            </div>
-            <hr class="my-4">
-            <div class="text-center">
-                <p class="mb-0">&copy; 2023 MJ Granites Export. All rights reserved.</p>
-            </div>
-        </div>
-    </footer>
-
-    <!-- Process Modals -->
-    <!-- Quarry Modal -->
-    <div class="modal fade process-modal" id="quarryModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content animate-pop-in">
-                <div class="modal-header">
-                    <h5 class="modal-title">Quarry Selection Process</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="https://img.freepik.com/free-photo/beautiful-shot-stone-quarry-mountains_181624-20660.jpg" class="img-fluid" alt="Granite Quarry">
-                    <h4>Selecting the Finest Granite Sources</h4>
-                    <p>Our quarry selection process involves:</p>
-                    <ul>
-                        <li>Geological surveys to identify premium granite deposits</li>
-                        <li>Testing for color consistency across large blocks</li>
-                        <li>Evaluating structural integrity and mineral composition</li>
-                        <li>Ensuring ethical and sustainable quarrying practices</li>
-                    </ul>
-                    <p>We maintain long-term relationships with quarries across India to guarantee consistent quality.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Cutting Modal -->
-    <div class="modal fade process-modal" id="cuttingModal" tabindex="-1" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content animate-pop-in">
-                <div class="modal-header">
-                    <h5 class="modal-title">Precision Cutting Process</h5>
-                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <img src="https://img.freepik.com/free-photo/worker-cutting-stone-with-machine_23-2149256761.jpg" class="img-fluid" alt="Granite Cutting">
-                    <h4>Transforming Raw Blocks</h4>
-                    <p>Our cutting process features:</p>
-                    <ul>
-                        <li>Diamond-tipped saws for precise cuts</li>
-                        <li>Computer-guided cutting for complex shapes</li>
-                        <li>Minimal material waste through optimized cutting patterns</li>
-                        <li>Regular blade maintenance for clean cuts</li>
-                    </ul>
-                    <p>This stage transforms massive granite blocks into workable pieces for further refinement.</p>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    
     <?php include "footer.php"; ?>
 
     <!-- Bootstrap JS -->
@@ -938,51 +789,53 @@
             easing: 'ease-out-quart'
         });
         
-        // Navbar scroll effect
-        window.addEventListener('scroll', function() {
-            const navbar = document.querySelector('.navbar');
-            if (window.scrollY > 50) {
-                navbar.classList.add('scrolled');
-            } else {
-                navbar.classList.remove('scrolled');
+        // Add scroll animations
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateElements = document.querySelectorAll('[data-aos]');
+            
+            function checkScroll() {
+                animateElements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const windowHeight = window.innerHeight;
+                    
+                    if (elementPosition < windowHeight - 100) {
+                        element.classList.add('aos-animate');
+                    }
+                });
             }
+            
+            // Check on initial load
+            checkScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', checkScroll);
         });
         
-        // Animate cards on scroll
-        function animateCardsOnScroll() {
-            const cards = document.querySelectorAll('.process-card, .icon-card');
-            const windowHeight = window.innerHeight;
-            
-            cards.forEach((card, index) => {
-                const cardPosition = card.getBoundingClientRect().top;
-                if (cardPosition < windowHeight - 100) {
-                    setTimeout(() => {
-                        card.classList.add('animated');
-                    }, index * 100);
-                }
+        // Add hover effects to cards
+        const processCards = document.querySelectorAll('.process-card');
+        processCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
             });
-        }
-        
-        // Initial check
-        animateCardsOnScroll();
-        
-        // Check on scroll
-        window.addEventListener('scroll', animateCardsOnScroll);
-        
-        // Modal animations
-        document.addEventListener('DOMContentLoaded', function() {
-            var processModals = document.querySelectorAll('.process-modal');
             
-            processModals.forEach(function(modal) {
-                modal.addEventListener('show.bs.modal', function() {
-                    var modalContent = this.querySelector('.modal-content');
-                    modalContent.classList.add('animate-pop-in');
-                });
-                
-                modal.addEventListener('hidden.bs.modal', function() {
-                    var modalContent = this.querySelector('.modal-content');
-                    modalContent.classList.remove('animate-pop-in');
-                });
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.08)';
+            });
+        });
+        
+        // Add hover effects to icon cards
+        const iconCards = document.querySelectorAll('.icon-card');
+        iconCards.forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                this.style.transform = 'translateY(-10px)';
+                this.style.boxShadow = '0 15px 30px rgba(0,0,0,0.15)';
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                this.style.transform = 'translateY(0)';
+                this.style.boxShadow = '0 10px 20px rgba(0,0,0,0.08)';
             });
         });
     </script>
