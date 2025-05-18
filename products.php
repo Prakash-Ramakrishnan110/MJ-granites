@@ -34,7 +34,7 @@
         /* Hero Section */
         .product-hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                        url('https://img.freepik.com/free-photo/stone-texture-background_1253-1174.jpg');
+                        url('images/product-hero.jpg');
             background-size: cover;
             background-position: center;
             color: white;
@@ -238,7 +238,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="product-card">
                         <div class="card-img-container">
-                            <img src="https://img.freepik.com/free-photo/black-marble-texture-background_53876-63572.jpg" 
+                            <img src="images/product-img1.jpg" 
                                  alt="Granite Monuments">
                         </div>
                         <div class="card-body">
@@ -260,7 +260,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="product-card">
                         <div class="card-img-container">
-                            <img src="https://img.freepik.com/free-photo/sculpture-texture_1194-5378.jpg" 
+                            <img src="images/product-img2.jpg" 
                                  alt="Granite Sculptures">
                         </div>
                         <div class="card-body">
@@ -282,7 +282,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="product-card">
                         <div class="card-img-container">
-                            <img src="https://img.freepik.com/free-photo/marble-texture-background_53876-95293.jpg" 
+                            <img src="images/product-img3.jpg" 
                                  alt="Granite Slabs">
                         </div>
                         <div class="card-body">
@@ -304,7 +304,7 @@
                 <div class="col-md-6 col-lg-3">
                     <div class="product-card">
                         <div class="card-img-container">
-                            <img src="https://img.freepik.com/free-photo/stone-texture-background_53876-95294.jpg" 
+                            <img src="images/product-img4.png" 
                                  alt="Architectural Granite">
                         </div>
                         <div class="card-body">
@@ -397,7 +397,7 @@
                 <div class="col-md-4">
                     <div class="product-card h-100">
                         <div class="card-img-container">
-                            <img src="https://img.freepik.com/free-photo/polished-marble-texture_1194-5370.jpg" 
+                            <img src="images/product-img5.jpg" 
                                  alt="Polished Granite">
                         </div>
                         <div class="card-body">
@@ -417,7 +417,7 @@
                 <div class="col-md-4">
                     <div class="product-card h-100">
                         <div class="card-img-container">
-                            <img src="https://img.freepik.com/free-photo/matte-stone-texture_1194-5372.jpg" 
+                            <img src="images/product-img6.jpg" 
                                  alt="Honed Granite">
                         </div>
                         <div class="card-body">
@@ -437,7 +437,7 @@
                 <div class="col-md-4">
                     <div class="product-card h-100">
                         <div class="card-img-container">
-                            <img src="https://img.freepik.com/free-photo/rough-stone-texture_1194-5371.jpg" 
+                            <img src="images/product-img6 (2).jpg" 
                                  alt="Flamed Granite">
                         </div>
                         <div class="card-body">
@@ -458,7 +458,7 @@
     </section>
 
     <!-- Testimonials -->
-  <section style="background-color: var(--primary-color); color: white;">
+    <section style="background-color: var(--primary-color); color: white;"></section>
         <div class="container">
             <div class="text-center mb-5">
                 <h2 class="display-5 fw-bold section-heading">What Our Clients Say</h2>
@@ -468,9 +468,6 @@
             <div class="row g-4">
                 <div class="col-md-4">
                     <div class="testimonial-card h-100" style="color: #333;">
-                        <img src="https://img.freepik.com/free-photo/portrait-smiling-young-woman-looking-camera_23-2148336665.jpg" 
-                             class="testimonial-img" 
-                             alt="Client testimonial">
                         <p class="mb-4" style="color: #555;">
                             "The granite memorial we ordered is absolutely beautiful. The craftsmanship exceeded our expectations and it arrived perfectly packaged."
                         </p>
@@ -481,9 +478,6 @@
                 
                 <div class="col-md-4">
                     <div class="testimonial-card h-100" style="color: #333;">
-                        <img src="https://img.freepik.com/free-photo/young-bearded-man-with-striped-shirt_273609-5677.jpg" 
-                             class="testimonial-img" 
-                             alt="Client testimonial">
                         <p class="mb-4" style="color: #555;">
                             "We've been importing granite slabs for 5 years. Their quality consistency and reliable shipping make them our preferred supplier."
                         </p>
@@ -494,9 +488,6 @@
                 
                 <div class="col-md-4">
                     <div class="testimonial-card h-100" style="color: #333;">
-                        <img src="https://img.freepik.com/free-photo/young-beautiful-woman-pink-warm-sweater-natural-look-smiling-portrait-isolated-long-hair_285396-896.jpg" 
-                             class="testimonial-img" 
-                             alt="Client testimonial">
                         <p class="mb-4" style="color: #555;">
                             "The custom granite fountain they created for our hotel lobby has become the centerpiece of our property. Exceptional workmanship!"
                         </p>
