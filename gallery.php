@@ -42,7 +42,7 @@
         /* Hero Section */
         .hero-section {
             background: linear-gradient(rgba(16, 53, 85, 0.9), rgba(16, 53, 85, 0.8)), 
-                        url('https://img.freepik.com/free-photo/beautiful-shot-black-marble-texture-background_181624-23358.jpg');
+                        url('im');
             background-size: cover;
             background-position: center;
             color: rgb(11, 64, 89);
