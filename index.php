@@ -23,7 +23,7 @@
     
     <style>
         :root {
-            --primary-color: #3a5a78;
+           --primary-color: #3a5a78;
             --secondary-color: #d4af37;
             --dark-color: #333;
             --light-color: #f8f9fa;
@@ -879,7 +879,7 @@
         
         <div class="carousel-inner">
             <!-- Slide 1 -->
-            <div class="carousel-item active hero-section" style="background-image: url('images/home-nav-img1.jpg')">
+            <div class="carousel-item active hero-section" style="background-image: url('images/home-nave-img1.jpg')">
                 <div class="container h-100 d-flex align-items-center">
                     <div class="hero-content">
                         <h1 class="hero-title">From Earth to Art — Granite Redefined</h1>
@@ -893,7 +893,7 @@
             </div>
             
             <!-- Slide 2 -->
-            <div class="carousel-item hero-section" style="background-image: url('https://images.unsplash.com/photo-1631729371254-42c2892f0e6e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+            <div class="carousel-item hero-section" style="background-image: url('images/home-nav-img2.jpg')">
                 <div class="container h-100 d-flex align-items-center">
                     <div class="hero-content">
                         <h1 class="hero-title">Custom Sculptures & Monuments</h1>
@@ -907,7 +907,7 @@
             </div>
             
             <!-- Slide 3 -->
-            <div class="carousel-item hero-section" style="background-image: url('https://images.unsplash.com/photo-1631729370902-47dd5aa74df0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')">
+            <div class="carousel-item hero-section" style="background-image: url('images/home-nav-img3.jpg')">
                 <div class="container h-100 d-flex align-items-center">
                     <div class="hero-content">
                         <h1 class="hero-title">Global Exports, Local Excellence</h1>

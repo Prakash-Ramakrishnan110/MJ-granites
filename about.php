@@ -460,7 +460,7 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
                     <div class="granite-overlay">
-                        <img src="https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Granite Manufacturing Facility" class="img-fluid feature-img">
+                        <img src="images/about-our export operations.jpg" alt="Granite Manufacturing Facility" class="img-fluid feature-img">
                     </div>
                 </div>
             </div>
@@ -513,7 +513,7 @@
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="granite-overlay mt-4 mt-lg-0">
-                        <img src="https://images.unsplash.com/photo-1452868195396-89c1af3b1b2e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Granite Export Packaging" class="img-fluid feature-img">
+                        <img src="images/about-global reach.jpg" alt="Granite Export Packaging" class="img-fluid feature-img">
                     </div>
                 </div>
             </div>
@@ -537,7 +537,7 @@
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="600">
                     <div class="card product-card">
                         <div class="image-container">
-                            <img src="https://images.unsplash.com/photo-1595437193395-6d730eccf4c1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Black Galaxy Granite">
+                            <img src="images/about- black.jpg" class="card-img-top" alt="Black Galaxy Granite">
                             <div class="image-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -552,7 +552,7 @@
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                     <div class="card product-card">
                         <div class="image-container">
-                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Imperial White Granite">
+                            <img src="images/about-imperial white.jpg" class="card-img-top" alt="Imperial White Granite">
                             <div class="image-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -567,7 +567,7 @@
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
                     <div class="card product-card">
                         <div class="image-container">
-                            <img src="https://images.unsplash.com/photo-1600210492493-0946911123ea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="card-img-top" alt="Ruby Red Granite">
+                            <img src="images/about-red.jpg" class="card-img-top" alt="Ruby Red Granite">
                             <div class="image-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -584,7 +584,7 @@
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="600">
                     <div class="card product-card">
                         <div class="image-container">
-                            <img src="https://images.unsplash.com/photo-1600566752225-3f089a6d9c1e?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Emerald Pearl Granite">
+                            <img src="images/about- emerald pearl.jpg" class="card-img-top" alt="Emerald Pearl Granite">
                             <div class="image-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -599,7 +599,7 @@
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="150">
                     <div class="card product-card">
                         <div class="image-container">
-                            <img src="https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" class="card-img-top" alt="Tan Brown Granite">
+                            <img src="images/about-tan brown.jpg" class="card-img-top" alt="Tan Brown Granite">
                             <div class="image-overlay"></div>
                         </div>
                         <div class="card-body">
@@ -614,7 +614,7 @@
                 <div class="col-md-4 mb-4" data-aos="zoom-in" data-aos-duration="600" data-aos-delay="300">
                     <div class="card product-card">
                         <div class="image-container">
-                            <img src="https://images.unsplash.com/photo-1600566752355-35792bedcfea?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1974&q=80" class="card-img-top" alt="Absolute Black Granite">
+                            <img src="images/about-absolute black.jpg" class="card-img-top" alt="Absolute Black Granite">
                             <div class="image-overlay"></div>
                         </div>
                         <div class="card-body">

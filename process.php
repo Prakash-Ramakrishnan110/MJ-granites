@@ -42,7 +42,7 @@
         /* Hero Section */
         .process-hero {
             background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), 
-                url('images/process-hero.jpg');
+                url('images/product-hero.jpg');
             background-size: cover;
             background-position: center center;
             background-repeat: no-repeat;

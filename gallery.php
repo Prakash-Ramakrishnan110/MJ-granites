@@ -628,7 +628,7 @@
             
             <div class="granite-grid">
                 <div class="granite-card">
-                    <img src="https://img.freepik.com/free-photo/black-galaxy-granite-texture-background_53876-147085.jpg" alt="Black Galaxy Granite" class="granite-img">
+                    <img src="images/gallery-img1.jpg" alt="Black Galaxy Granite" class="granite-img">
                     <div class="granite-info">
                         <h3 class="granite-name">Black Galaxy</h3>
                         <span class="granite-origin">Andhra Pradesh, India</span>
@@ -637,7 +637,7 @@
                 </div>
                 
                 <div class="granite-card">
-                    <img src="https://img.freepik.com/free-photo/white-marble-texture-background_53876-95229.jpg" alt="Imperial White Granite" class="granite-img">
+                    <img src="images/gallery-img2.jpg" alt="Imperial White Granite" class="granite-img">
                     <div class="granite-info">
                         <h3 class="granite-name">Imperial White</h3>
                         <span class="granite-origin">Rajasthan, India</span>
@@ -646,7 +646,7 @@
                 </div>
                 
                 <div class="granite-card">
-                    <img src="https://img.freepik.com/free-photo/red-granite-texture-background_53876-147088.jpg" alt="Ruby Red Granite" class="granite-img">
+                    <img src="images/gallery-img3.jpg" alt="Ruby Red Granite" class="granite-img">
                     <div class="granite-info">
                         <h3 class="granite-name">Ruby Red</h3>
                         <span class="granite-origin">Tamil Nadu, India</span>
@@ -655,7 +655,7 @@
                 </div>
                 
                 <div class="granite-card">
-                    <img src="https://img.freepik.com/free-photo/green-marble-texture-background_53876-95227.jpg" alt="Emerald Pearl Granite" class="granite-img">
+                    <img src="images/gallery-img4.jpg" alt="Emerald Pearl Granite" class="granite-img">
                     <div class="granite-info">
                         <h3 class="granite-name">Emerald Pearl</h3>
                         <span class="granite-origin">Karnataka, India</span>
