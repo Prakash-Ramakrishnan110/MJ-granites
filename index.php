@@ -869,6 +869,8 @@
     </style>
 </head>
 <body>
+    <!-- Navigation Bar -->
+     
     <!-- Hero Carousel -->
     <div id="heroCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="180000">
         <div class="carousel-indicators">
