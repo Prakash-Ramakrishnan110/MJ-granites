@@ -37,7 +37,6 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 20px;
-            background-color: white;
         }
         
         /* Hero Section */
@@ -386,7 +385,7 @@
         .value-card:hover {
             transform: translateY(-10px) scale(1.03);
             box-shadow: 0 15px 30px rgba(0,0,0,0.1);
-            background-color: var(--primary-color);
+            background-color: var(--secondary-color);
             color: white;
         }
         
@@ -610,15 +609,13 @@
      <?php include "header.php"; ?>
     <!-- Hero Section -->
     <section class="hero-section">
-        <div class="container">
+        <div class="container" style="background-color: white;">
             <h1 class="hero-title">MJ Granites</h1>
             <p class="hero-subtitle">Premium natural stone solutions crafted from India's finest granite quarries</p>
         </div>
     </section>
 
     <div class="container">
-        
-
         <!-- Granite Types Section -->
         <section class="section" data-aos="fade-up" data-aos-duration="800">
             <h2 class="section-title">Our Signature Granites</h2>
@@ -813,8 +810,8 @@
             </div>
         </section>
     </div>
-    
-    <?php include "footer.php"; ?>
+         <?php include "footer.php"; ?>
+   
     
     <!-- AOS Animation Library JS -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
