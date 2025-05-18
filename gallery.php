@@ -39,14 +39,77 @@
             padding: 20px;
         }
         
-
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(rgba(16, 53, 85, 0.9), rgba(16, 53, 85, 0.8)), 
+                        url('https://img.freepik.com/free-photo/beautiful-shot-black-marble-texture-background_181624-23358.jpg');
+            background-size: cover;
+            background-position: center;
+            color: rgb(11, 64, 89);
+            padding: 100px 20px;
+            text-align: center;
+            margin-bottom: 40px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 20px;
+            animation: fadeInDown 1s ease-out;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 400;
+            max-width: 800px;
+            margin: 0 auto 30px;
+            animation: fadeInUp 1s ease-out 0.3s both;
+        }
+        
+        /* Section Styling */
+        .section {
+            margin-bottom: 60px;
+            overflow: hidden;
+            background-color: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: var(--card-title-color);
+            margin-bottom: 30px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 50%;
+            height: 4px;
+            background-color: var(--card-title-color);
+            bottom: -10px;
+            left: 0;
+        }
+        
+        .section-content {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #3A5A78;
+            margin-bottom: 20px;
+        }
         
         /* About Content Section */
         .about-content-section {
             background-color: white;
             padding: 60px;
             border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(37, 170, 185, 0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
             margin-bottom: 60px;
         }
         
@@ -62,7 +125,7 @@
             background-color: white;
             border-radius: 10px;
             padding: 30px;
-            box-shadow: 0 10px 30px rgba(190, 57, 57, 0.08);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
             border-top: 5px solid var();
             transition: all 0.3s ease;
             transform: translateY(20px);
@@ -84,7 +147,7 @@
         
         .highlight-box:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 40px rgb(25, 114, 121);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
         }
         
         .highlight-icon {
@@ -116,7 +179,7 @@
             background-color: white;
             border-radius: 10px;
             overflow: hidden;
-            box-shadow: 0 5px 15px rgba(23, 170, 210, 0.05);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
             transition: all 0.3s ease;
             transform: scale(0.95);
             opacity: 0;
@@ -141,7 +204,7 @@
         
         .granite-card:hover {
             transform: translateY(-10px) scale(1);
-            box-shadow: 0 15px 30px rgba(26, 130, 171, 0.1);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.1);
         }
         
         .granite-img {
@@ -545,279 +608,60 @@
 <body>
      <?php include "header.php"; ?>
     <!-- Hero Section -->
-<<<<<<< HEAD
     <section class="hero-section">
         <div class="container" style="background-color: white;">
             <h1 class="hero-title">MJ Granites</h1>
             <p class="hero-subtitle">Premium natural stone solutions crafted from India's finest granite quarries</p>
         </div>
     </section>
-=======
-    <!-- Hero Section with Inline CSS -->
-<section class="hero-section" style="
-    background: linear-gradient(rgba(24, 87, 141, 0.9), rgba(25, 86, 140, 0.8)), 
-                url('https://img.freepik.com/free-photo/beautiful-shot-black-marble-texture-background_181624-23358.jpg');
-    background-size: cover;
-    background-position: center;
-    color: rgb(11, 76, 106);
-    padding: 100px 20px;
-    text-align: center;
-    margin-bottom: 40px;
-    position: relative;
-    overflow: hidden;
-">
-    <div class="container">
-        <h1 class="hero-title" style="
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 20px;
-            animation: fadeInDown 1s ease-out;
-        ">MJ Granites</h1>
-        <p class="hero-subtitle" style="
-            font-size: 1.5rem;
-            font-weight: 400;
-            max-width: 800px;
-            margin: 0 auto 30px;
-            animation: fadeInUp 1s ease-out 0.3s both;
-        ">Premium natural stone solutions crafted from India's finest granite quarries</p>
-    </div>
-</section>
-
-<!-- Section with Inline CSS -->
-<div class="section" style="
-    margin-bottom: 60px;
-    overflow: hidden;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-">
-    
-</div>
-
-<!-- For the section-title underline effect -->
-<style>
-    .section-title:after {
-        content: '';
-        position: absolute;
-        width: 50%;
-        height: 4px;
-        background-color: #3A5A78;
-        bottom: -10px;
-        left: 0;
-    }
-</style>
->>>>>>> 7370552 (Your message here)
 
     <div class="container">
         <!-- Granite Types Section -->
-        <<section class="section" data-aos="fade-up" data-aos-duration="800" style="
-    margin-bottom: 60px;
-    overflow: hidden;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-">
-   <div style="width: 100%; text-align: center;">
-    <h2 class="section-title" style="
-        font-size: 2.5rem;
-        font-weight: 700;
-        color: #3A5A78;
-        margin: 0 auto 30px;
-        position: relative;
-        display: inline-block;
-        text-align: center;
-    ">Our Signature Granites
-        <span style="
-            content: '';
-            position: absolute;
-            width: 50%;
-            height: 4px;
-            background-color: #d4af37;
-            bottom: -10px;
-            left: 25%;
-        "></span>
-    </h2>
-</div>
-    
-    <p class="section-content" style="
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: #3A5A78;
-        margin-bottom: 20px;
-    ">
-        Discover the unique characteristics of our most sought-after granite varieties, each with its own story from quarry to your space.
-    </p>
-    
-    <div class="granite-grid" style="
-        display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-        gap: 30px;
-        margin-top: 40px;
-    ">
-        <!-- Granite Card 1 -->
-        <div class="granite-card" style="
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        ">
-            <img src="images/gallery-img1.jpg" alt="Black Galaxy Granite" class="granite-img" style="
-                width: 100%;
-                height: 220px;
-                object-fit: cover;
-                display: block;
-            ">
-            <div class="granite-info" style="
-                padding: 20px;
-                background: white;
-            ">
-                <h3 class="granite-name" style="
-                    font-size: 1.4rem;
-                    color: #3A5A78;
-                    margin-bottom: 5px;
-                ">Black Galaxy</h3>
-                <span class="granite-origin" style="
-                    display: block;
-                    color: #6c757d;
-                    font-size: 0.9rem;
-                    margin-bottom: 10px;
-                ">Andhra Pradesh, India</span>
-                <p style="
-                    color: #495057;
-                    line-height: 1.6;
-                    margin: 0;
-                ">Premium black granite with golden star-like speckles, ideal for luxury countertops and flooring.</p>
+        <section class="section" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="section-title">Our Signature Granites</h2>
+            <p class="section-content">
+                Discover the unique characteristics of our most sought-after granite varieties, each with its own story from quarry to your space.
+            </p>
+            
+            <div class="granite-grid">
+                <div class="granite-card">
+                    <img src="images/gallery-img1.jpg" alt="Black Galaxy Granite" class="granite-img">
+                    <div class="granite-info">
+                        <h3 class="granite-name">Black Galaxy</h3>
+                        <span class="granite-origin">Andhra Pradesh, India</span>
+                        <p>Premium black granite with golden star-like speckles, ideal for luxury countertops and flooring.</p>
+                    </div>
+                </div>
+                
+                <div class="granite-card">
+                    <img src="images/gallery-img2.jpg" alt="Imperial White Granite" class="granite-img">
+                    <div class="granite-info">
+                        <h3 class="granite-name">Imperial White</h3>
+                        <span class="granite-origin">Rajasthan, India</span>
+                        <p>Elegant white background with dramatic gray veining, perfect for contemporary designs.</p>
+                    </div>
+                </div>
+                
+                <div class="granite-card">
+                    <img src="images/gallery-img3.jpg" alt="Ruby Red Granite" class="granite-img">
+                    <div class="granite-info">
+                        <h3 class="granite-name">Ruby Red</h3>
+                        <span class="granite-origin">Tamil Nadu, India</span>
+                        <p>Vibrant red stone with unique mineral patterns for bold architectural statements.</p>
+                    </div>
+                </div>
+                
+                <div class="granite-card">
+                    <img src="images/gallery-img4.jpg" alt="Emerald Pearl Granite" class="granite-img">
+                    <div class="granite-info">
+                        <h3 class="granite-name">Emerald Pearl</h3>
+                        <span class="granite-origin">Karnataka, India</span>
+                        <p>Unique green-blue stone with pearlescent flecks that shimmer in different lighting.</p>
+                    </div>
+                </div>
             </div>
-        </div>
-        
-        <!-- Granite Card 2 -->
-        <div class="granite-card" style="
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        ">
-            <img src="images/gallery-img2.jpg" alt="Imperial White Granite" class="granite-img" style="
-                width: 100%;
-                height: 220px;
-                object-fit: cover;
-                display: block;
-            ">
-            <div class="granite-info" style="
-                padding: 20px;
-                background: white;
-            ">
-                <h3 class="granite-name" style="
-                    font-size: 1.4rem;
-                    color: #3A5A78;
-                    margin-bottom: 5px;
-                ">Imperial White</h3>
-                <span class="granite-origin" style="
-                    display: block;
-                    color: #6c757d;
-                    font-size: 0.9rem;
-                    margin-bottom: 10px;
-                ">Rajasthan, India</span>
-                <p style="
-                    color: #495057;
-                    line-height: 1.6;
-                    margin: 0;
-                ">Elegant white background with dramatic gray veining, perfect for contemporary designs.</p>
-            </div>
-        </div>
-        
-        <!-- Granite Card 3 -->
-        <div class="granite-card" style="
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        ">
-            <img src="images/gallery-img3.jpg" alt="Ruby Red Granite" class="granite-img" style="
-                width: 100%;
-                height: 220px;
-                object-fit: cover;
-                display: block;
-            ">
-            <div class="granite-info" style="
-                padding: 20px;
-                background: white;
-            ">
-                <h3 class="granite-name" style="
-                    font-size: 1.4rem;
-                    color: #3A5A78;
-                    margin-bottom: 5px;
-                ">Ruby Red</h3>
-                <span class="granite-origin" style="
-                    display: block;
-                    color: #6c757d;
-                    font-size: 0.9rem;
-                    margin-bottom: 10px;
-                ">Tamil Nadu, India</span>
-                <p style="
-                    color: #495057;
-                    line-height: 1.6;
-                    margin: 0;
-                ">Vibrant red stone with unique mineral patterns for bold architectural statements.</p>
-            </div>
-        </div>
-        
-        <!-- Granite Card 4 -->
-        <div class="granite-card" style="
-            border-radius: 8px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        ">
-            <img src="images/gallery-img4.jpg" alt="Emerald Pearl Granite" class="granite-img" style="
-                width: 100%;
-                height: 220px;
-                object-fit: cover;
-                display: block;
-            ">
-            <div class="granite-info" style="
-                padding: 20px;
-                background: white;
-            ">
-                <h3 class="granite-name" style="
-                    font-size: 1.4rem;
-                    color: #3A5A78;
-                    margin-bottom: 5px;
-                ">Emerald Pearl</h3>
-                <span class="granite-origin" style="
-                    display: block;
-                    color: #6c757d;
-                    font-size: 0.9rem;
-                    margin-bottom: 10px;
-                ">Karnataka, India</span>
-                <p style="
-                    color: #495057;
-                    line-height: 1.6;
-                    margin: 0;
-                ">Unique green-blue stone with pearlescent flecks that shimmer in different lighting.</p>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
-<!-- For hover effects and section title underline -->
-<style>
-    .granite-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-    .section-title:after {
-        content: '';
-        position: absolute;
-        width: 50%;
-        height: 4px;
-        background-color: #3A5A78;
-        bottom: -10px;
-        left: 0;
-    }
-</style>
         <!-- Quarry Section -->
         <section class="quarry-section" id="quarry-section">
             <div class="quarry-content">
@@ -829,407 +673,142 @@
         </section>
 
         <!-- Manufacturing Process Section -->
-        <section class="section" data-aos="fade-up" data-aos-duration="800" style="
-    margin-bottom: 60px;
-    overflow: hidden;
-    background-color: white;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-">
-    <div style="width: 100%; text-align: center;">
-        <h2 class="section-title" style="
-            font-size: 2.5rem;
-            font-weight: 700;
-            color: #3A5A78;
-            margin: 0 auto 30px;
-            position: relative;
-            display: inline-block;
-            text-align: center;
-        ">Our Craftsmanship Process
-            <span style="
-                content: '';
-                position: absolute;
-                width: 50%;
-                height: 4px;
-                background-color: #3A5A78;
-                bottom: -10px;
-                left: 25%;
-            "></span>
-        </h2>
-    </div>
-    
-    <p class="section-content" style="
-        font-size: 1.1rem;
-        line-height: 1.8;
-        color: #3A5A78;
-        margin-bottom: 40px;
-        text-align: center;
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-    ">
-        Every slab of MJ Granite undergoes a meticulous 12-step process to ensure perfection in every piece.
-    </p>
-    
-    <div class="process-steps" style="max-width: 1200px; margin: 0 auto;">
-        <!-- First Row -->
-        <div style="
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-            margin-bottom: 30px;
-        ">
-            <div class="process-step" style="
-                flex: 1;
-                min-width: 200px;
-                max-width: 250px;
-                text-align: center;
-                padding: 25px 15px;
-                background: #f8f9fa;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-            ">
-                <i class="fas fa-hammer" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                <h3 class="value-title" style="
-                    font-size: 1.3rem;
-                    color: #3A5A78;
-                    margin-bottom: 10px;
-                ">Quarry Selection</h3>
-                <p style="color: #6c757d; line-height: 1.5; margin: 0;">Geologists identify premium granite blocks</p>
-            </div>
+        <section class="section" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="section-title">Our Craftsmanship Process</h2>
+            <p class="section-content">
+                Every slab of MJ Granite undergoes a meticulous 12-step process to ensure perfection in every piece.
+            </p>
             
-            <div class="process-step" style="
-                flex: 1;
-                min-width: 200px;
-                max-width: 250px;
-                text-align: center;
-                padding: 25px 15px;
-                background: #f8f9fa;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-            ">
-                <i class="fas fa-cut" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                <h3 class="value-title" style="
-                    font-size: 1.3rem;
-                    color: #3A5A78;
-                    margin-bottom: 10px;
-                ">Block Cutting</h3>
-                <p style="color: #6c757d; line-height: 1.5; margin: 0;">Diamond wire saws extract massive blocks</p>
+            <div class="process-steps">
+                <!-- First Row -->
+                <div style="display: flex; justify-content: space-between; gap: 20px;">
+                    <div class="process-step">
+                        <i class="fas fa-hammer" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Quarry Selection</h3>
+                        <p>Geologists identify premium granite blocks</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-cut" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Block Cutting</h3>
+                        <p>Diamond wire saws extract massive blocks</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-border-all" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Slab Production</h3>
+                        <p>Gang saws cut blocks into slabs</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-brush" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Surface Polishing</h3>
+                        <p>Automated polishing for mirror finish</p>
+                    </div>
+                </div>
+                
+                <!-- Second Row -->
+                <div style="display: flex; justify-content: space-between; gap: 20px;">
+                    <div class="process-step">
+                        <i class="fas fa-search" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Quality Inspection</h3>
+                        <p>15-point quality control check</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-box" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Packaging</h3>
+                        <p>Custom crating for international shipping</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-ship" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Global Shipping</h3>
+                        <p>Climate-controlled transportation</p>
+                    </div>
+                    
+                    <div class="process-step">
+                        <i class="fas fa-check-circle" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                        <h3 class="value-title">Final Approval</h3>
+                        <p>Customer inspection and sign-off</p>
+                    </div>
+                </div>
             </div>
-            
-            <div class="process-step" style="
-                flex: 1;
-                min-width: 200px;
-                max-width: 250px;
-                text-align: center;
-                padding: 25px 15px;
-                background: #f8f9fa;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-            ">
-                <i class="fas fa-border-all" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                <h3 class="value-title" style="
-                    font-size: 1.3rem;
-                    color: #3A5A78;
-                    margin-bottom: 10px;
-                ">Slab Production</h3>
-                <p style="color: #6c757d; line-height: 1.5; margin: 0;">Gang saws cut blocks into slabs</p>
-            </div>
-            
-            <div class="process-step" style="
-                flex: 1;
-                min-width: 200px;
-                max-width: 250px;
-                text-align: center;
-                padding: 25px 15px;
-                background: #f8f9fa;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-            ">
-                <i class="fas fa-brush" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                <h3 class="value-title" style="
-                    font-size: 1.3rem;
-                    color: #3A5A78;
-                    margin-bottom: 10px;
-                ">Surface Polishing</h3>
-                <p style="color: #6c757d; line-height: 1.5; margin: 0;">Automated polishing for mirror finish</p>
-            </div>
-        </div>
-        
-        <!-- Second Row -->
-        <div style="
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 20px;
-        ">
-            <div class="process-step" style="
-                flex: 1;
-                min-width: 200px;
-                max-width: 250px;
-                text-align: center;
-                padding: 25px 15px;
-                background: #f8f9fa;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-            ">
-                <i class="fas fa-search" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                <h3 class="value-title" style="
-                    font-size: 1.3rem;
-                    color: #3A5A78;
-                    margin-bottom: 10px;
-                ">Quality Inspection</h3>
-                <p style="color: #6c757d; line-height: 1.5; margin: 0;">15-point quality control check</p>
-            </div>
-            
-            <div class="process-step" style="
-                flex: 1;
-                min-width: 200px;
-                max-width: 250px;
-                text-align: center;
-                padding: 25px 15px;
-                background: #f8f9fa;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-            ">
-                <i class="fas fa-box" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                <h3 class="value-title" style="
-                    font-size: 1.3rem;
-                    color: #3A5A78;
-                    margin-bottom: 10px;
-                ">Packaging</h3>
-                <p style="color: #6c757d; line-height: 1.5; margin: 0;">Custom crating for international shipping</p>
-            </div>
-            
-            <div class="process-step" style="
-                flex: 1;
-                min-width: 200px;
-                max-width: 250px;
-                text-align: center;
-                padding: 25px 15px;
-                background: #f8f9fa;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-            ">
-                <i class="fas fa-ship" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                <h3 class="value-title" style="
-                    font-size: 1.3rem;
-                    color: #3A5A78;
-                    margin-bottom: 10px;
-                ">Global Shipping</h3>
-                <p style="color: #6c757d; line-height: 1.5; margin: 0;">Climate-controlled transportation</p>
-            </div>
-            
-            <div class="process-step" style="
-                flex: 1;
-                min-width: 200px;
-                max-width: 250px;
-                text-align: center;
-                padding: 25px 15px;
-                background: #f8f9fa;
-                border-radius: 8px;
-                transition: all 0.3s ease;
-            ">
-                <i class="fas fa-check-circle" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                <h3 class="value-title" style="
-                    font-size: 1.3rem;
-                    color: #3A5A78;
-                    margin-bottom: 10px;
-                ">Final Approval</h3>
-                <p style="color: #6c757d; line-height: 1.5; margin: 0;">Customer inspection and sign-off</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- For hover effects -->
-<style>
-    .process-step:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        background: white !important;
-    }
-</style>
+        </section>
 
         <!-- Our Values Section -->
-       <section class="philosophy-section py-5 py-md-6" data-aos="fade-up" data-aos-duration="800">
-    <div class="container">
-        <div class="row mb-5">
-            <div class="col-lg-8 mx-auto text-center">
-                <h2 class="section-title">Our Stone Philosophy</h2>
-                <p class="section-subtitle">
-                    These principles guide our work with natural stone, from quarry to your project.
-                </p>
-            </div>
-        </div>
-        
-        <div class="row g-4">
-            <!-- Value 1 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                <div class="value-card h-100">
+        <section class="section" data-aos="fade-up" data-aos-duration="800">
+            <h2 class="section-title">Our Stone Philosophy</h2>
+            <p class="section-content">
+                These principles guide our work with natural stone, from quarry to your project.
+            </p>
+            
+            <div class="values-grid">
+                <div class="value-card">
                     <div class="value-icon">
                         <i class="fas fa-gem"></i>
                     </div>
                     <h3 class="value-title">Natural Beauty</h3>
-                    <p class="value-text">Preserving each stone's unique character</p>
+                    <p>Preserving each stone's unique character</p>
                 </div>
-            </div>
-            
-            <!-- Value 2 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="150">
-                <div class="value-card h-100">
+                
+                <div class="value-card">
                     <div class="value-icon">
                         <i class="fas fa-ruler-combined"></i>
                     </div>
                     <h3 class="value-title">Precision</h3>
-                    <p class="value-text">Exacting standards in every cut</p>
+                    <p>Exacting standards in every cut</p>
                 </div>
-            </div>
-            
-            <!-- Value 3 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                <div class="value-card h-100">
+                
+                <div class="value-card">
                     <div class="value-icon">
                         <i class="fas fa-leaf"></i>
                     </div>
                     <h3 class="value-title">Sustainability</h3>
-                    <p class="value-text">Responsible quarry management</p>
+                    <p>Responsible quarry management</p>
                 </div>
-            </div>
-            
-            <!-- Value 4 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="250">
-                <div class="value-card h-100">
+                
+                <div class="value-card">
                     <div class="value-icon">
                         <i class="fas fa-history"></i>
                     </div>
                     <h3 class="value-title">Durability</h3>
-                    <p class="value-text">Stone that lasts generations</p>
+                    <p>Stone that lasts generations</p>
                 </div>
-            </div>
-            
-            <!-- Value 5 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                <div class="value-card h-100">
+                
+                <div class="value-card">
                     <div class="value-icon">
                         <i class="fas fa-palette"></i>
                     </div>
                     <h3 class="value-title">Variety</h3>
-                    <p class="value-text">50+ granite types and finishes</p>
+                    <p>50+ granite types and finishes</p>
                 </div>
-            </div>
-            
-            <!-- Value 6 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="350">
-                <div class="value-card h-100">
+                
+                <div class="value-card">
                     <div class="value-icon">
                         <i class="fas fa-handshake"></i>
                     </div>
                     <h3 class="value-title">Partnership</h3>
-                    <p class="value-text">Collaborating on your vision</p>
+                    <p>Collaborating on your vision</p>
                 </div>
-            </div>
-            
-            <!-- Value 7 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
-                <div class="value-card h-100">
+                
+                <div class="value-card">
                     <div class="value-icon">
                         <i class="fas fa-certificate"></i>
                     </div>
                     <h3 class="value-title">Quality Assurance</h3>
-                    <p class="value-text">Rigorous testing for every slab</p>
+                    <p>Rigorous testing for every slab</p>
                 </div>
-            </div>
-            
-            <!-- Value 8 -->
-            <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="450">
-                <div class="value-card h-100">
+                
+                <div class="value-card">
                     <div class="value-icon">
                         <i class="fas fa-lightbulb"></i>
                     </div>
                     <h3 class="value-title">Innovation</h3>
-                    <p class="value-text">Pioneering stone fabrication techniques</p>
+                    <p>Pioneering stone fabrication techniques</p>
                 </div>
             </div>
-        </div>
-    </div>
-</section>
-
-<style>
-    /* Philosophy Section Styles */
-    .philosophy-section {
-        background-color: white;
-    }
-    
-    .section-title {
-        color: #3A5A78;
-        font-size: 2.5rem;
-        font-weight: 700;
-        margin-bottom: 15px;
-    }
-    
-    .section-subtitle {
-        color: #666;
-        font-size: 1.1rem;
-    }
-    
-    .value-card {
-        background-color: white;
-        border-radius: 10px;
-        padding: 30px 25px;
-        text-align: center;
-        box-shadow: 0 5px 15px rgba(27, 113, 124, 0.05);
-        transition: all 0.3s ease;
-        border-top: 3px solid #d4af37;
-        height: 100%;
-    }
-    
-    .value-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 10px 25px rgba(255, 21, 21, 0.1);
-    }
-    
-    .value-icon {
-        font-size: 2rem;
-        color: #d4af37;
-        margin-bottom: 20px;
-    }
-    
-    .value-title {
-        color: #3A5A78;
-        font-size: 1.2rem;
-        font-weight: 600;
-        margin-bottom: 10px;
-    }
-    
-    .value-text {
-        color: #666;
-        font-size: 0.95rem;
-        line-height: 1.6;
-        margin-bottom: 0;
-    }
-    
-    @media (max-width: 768px) {
-        .section-title {
-            font-size: 2rem;
-        }
-        
-        .value-card {
-            padding: 25px 20px;
-        }
-        
-        .value-icon {
-            font-size: 1.8rem;
-            margin-bottom: 15px;
-        }
-        
-        .value-title {
-            font-size: 1.1rem;
-        }
-    }
-</style>
+        </section>
     </div>
          <?php include "footer.php"; ?>
    

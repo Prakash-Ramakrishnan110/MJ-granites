@@ -878,404 +878,178 @@
     <!-- Navigation Bar -->
      <?php include 'header.php'; ?>
     <!-- Hero Carousel -->
-   <div id="heroCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="180000">
-    <div class="carousel-indicators">
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
-        <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
-    </div>
-    
-    <div class="carousel-inner">
-        <!-- Slide 1 -->
-        <div class="carousel-item active hero-section" style="background-image: linear-gradient(rgba(58, 90, 120, 0.7), rgba(58, 90, 120, 0.7)), url('images/home-nave-img1.jpg')">
-            <div class="container h-100 d-flex align-items-center">
-                <div class="hero-content" data-aos="fade-up" data-aos-duration="800">
-                    <h1 class="hero-title">From Earth to Art — Granite Redefined</h1>
-                    <p class="hero-subtitle">We transform raw granite into timeless creations and export them worldwide, honoring tradition and inspiring modern design.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#products" class="hero-btn btn cta-btn">Explore Collection</a>
-                        <a href="#contact" class="hero-btn btn btn-outline-light">Contact Us</a>
-                    </div>
-                </div>
-            </div>
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="false" data-bs-interval="180000">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1"></button>
+            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2"></button>
         </div>
         
-        <!-- Slide 2 -->
-        <div class="carousel-item hero-section" style="background-image: linear-gradient(rgba(58, 90, 120, 0.7), rgba(58, 90, 120, 0.7)), url('images/home-nav-img2.jpg')">
-            <div class="container h-100 d-flex align-items-center">
-                <div class="hero-content" data-aos="fade-up" data-aos-duration="800" data-aos-delay="200">
-                    <h1 class="hero-title">Custom Sculptures & Monuments</h1>
-                    <p class="hero-subtitle">Intricately carved by skilled artisans, our products are crafted in India and shipped across continents, carrying craftsmanship, emotion, and legacy globally.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#gallery" class="hero-btn btn cta-btn">View Gallery</a>
-                        <a href="#process" class="hero-btn btn btn-outline-light">Our Process</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Slide 3 -->
-        <div class="carousel-item hero-section" style="background-image: linear-gradient(rgba(58, 90, 120, 0.7), rgba(58, 90, 120, 0.7)), url('images/home-nav-img3.jpg')">
-            <div class="container h-100 d-flex align-items-center">
-                <div class="hero-content" data-aos="fade-up" data-aos-duration="800" data-aos-delay="300">
-                    <h1 class="hero-title">Global Exports, Local Excellence</h1>
-                    <p class="hero-subtitle">We specialize in international exports, delivering premium granite products with secure packaging and seamless logistics worldwide.</p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="#quote" class="hero-btn btn cta-btn">Get a Quote</a>
-                        <a href="#testimonials" class="hero-btn btn btn-outline-light">Client Stories</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    
-    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-    </button>
-</div>
-
-<style>
-    /* Hero Carousel Styles */
-    .hero-section {
-        height: 90vh;
-        min-height: 600px;
-        background-size: cover;
-        background-position: center;
-        background-repeat: no-repeat;
-        position: relative;
-    }
-    
-    .hero-content {
-        max-width: 700px;
-        color: white;
-        padding: 30px;
-        background-color: rgba(0,0,0,0.3);
-        border-radius: 10px;
-        backdrop-filter: blur(5px);
-    }
-    
-    .hero-title {
-        font-size: 2.8rem;
-        font-weight: 700;
-        margin-bottom: 20px;
-        color: white;
-        text-shadow: 1px 1px 3px rgba(0,0,0,0.3);
-    }
-    
-    .hero-subtitle {
-        font-size: 1.2rem;
-        margin-bottom: 30px;
-        line-height: 1.6;
-        color: rgba(255,255,255,0.9);
-    }
-    
-    .hero-btn {
-        padding: 12px 30px;
-        border-radius: 30px;
-        font-weight: 600;
-        text-transform: uppercase;
-        letter-spacing: 1px;
-        transition: all 0.3s ease;
-    }
-    
-    .cta-btn {
-        background-color: #d4af37;
-        color: white;
-        border: none;
-    }
-    
-    .cta-btn:hover {
-        background-color: #e8c252;
-        transform: translateY(-3px);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-    }
-    
-    .btn-outline-light {
-        border: 2px solid white;
-        color: white;
-    }
-    
-    .btn-outline-light:hover {
-        background-color: white;
-        color: var(--primary-color);
-    }
-    
-    .carousel-indicators button {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        margin: 0 8px;
-        background-color: rgba(255,255,255,0.5);
-        border: none;
-    }
-    
-    .carousel-indicators .active {
-        background-color: #d4af37;
-    }
-    
-    .carousel-control-prev,
-    .carousel-control-next {
-        width: 5%;
-        opacity: 1;
-    }
-    
-    .carousel-control-prev-icon,
-    .carousel-control-next-icon {
-        width: 2.5rem;
-        height: 2.5rem;
-        background-color: rgba(212, 175, 55, 0.8);
-        border-radius: 50%;
-        background-size: 60%;
-    }
-    
-    @media (max-width: 768px) {
-        .hero-title {
-            font-size: 2rem;
-        }
-        
-        .hero-subtitle {
-            font-size: 1rem;
-        }
-        
-        .hero-section {
-            height: 80vh;
-            min-height: 500px;
-        }
-        
-        .hero-content {
-            padding: 20px;
-        }
-        
-        .hero-btn {
-            padding: 10px 20px;
-            font-size: 0.9rem;
-        }
-    }
-</style>
-
-    <!-- Intro Section -->
-   <section class="intro-section py-5 py-md-6 bg-light">
-    <div class="container">
-        <div class="row align-items-center" id="intro-section">
-            <!-- Text Content -->
-            <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-duration="800">
-               <h2 class="section-title mb-4" style="font-size: 2.5rem; font-weight: 700;">
-    <span style="background: linear-gradient(to right, #3A5A78, #6B8E9D); -webkit-background-clip: text; background-clip: text; color: transparent;">
-        Welcome to <br>MJ Granites Export
-    </span>
-</h2>
-
-                <p class="about-content mb-4">
-                    Based in Tamil Nadu, India, MJ Granites Export is a premier manufacturer and global exporter of granite monuments, sculptures, slabs, and architectural designs. We combine traditional techniques with advanced machinery to deliver world-class products to customers worldwide.
-                </p>
-                <div class="d-flex flex-wrap gap-3">
-                    <a href="#products" class="btn cta-btn px-4 py-3">
-                        <i class="fas fa-box-open me-2"></i> Our Products
-                    </a>
-                    <a href="#contact" class="btn btn-outline-primary px-4 py-3 border-2">
-                        <i class="fas fa-envelope me-2"></i> Contact Us
-                    </a>
-                </div>
-                
-                <!-- Stats Row -->
-                <div class="row mt-5">
-                    <div class="col-4" data-aos="fade-up" data-aos-delay="100">
-                        <div class="stat-box text-center">
-                            <div class="stat-number">25+</div>
-                            <div class="stat-label">Years</div>
+        <div class="carousel-inner">
+            <!-- Slide 3 -->
+            <div class="carousel-item hero-section" style="background-image: url('images/home-nav-img3.jpg')">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Global Exports, Local Excellence</h1>
+                        <p class="hero-subtitle">We specialize in international exports, delivering premium granite products with secure packaging, seamless logistics, and on-time delivery to clients worldwide.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#quote" class="hero-btn hero-btn-primary btn">Get a Quote</a>
+                            <a href="#testimonials" class="hero-btn hero-btn-outline btn btn-outline-light">Client Stories</a>
                         </div>
                     </div>
-                    <div class="col-4" data-aos="fade-up" data-aos-delay="200">
-                        <div class="stat-box text-center">
-                            <div class="stat-number">50+</div>
-                            <div class="stat-label">Countries</div>
-                        </div>
-                    </div>
-                    <div class="col-4" data-aos="fade-up" data-aos-delay="300">
-                        <div class="stat-box text-center">
-                            <div class="stat-number">1200+</div>
-                            <div class="stat-label">Projects</div>
+                </div>
+            </div>
+            <!-- Slide 1 -->
+            <div class="carousel-item active hero-section" style="background-image: url('images/home-nave-img1.jpg')">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="hero-content">
+                        <h1 class="hero-title">From Earth to Art — Granite Redefined</h1>
+                        <p class="hero-subtitle">We transform raw granite into timeless creations and export them worldwide, honoring tradition and inspiring modern design.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#products" class="hero-btn hero-btn-primary btn">Explore Collection</a>
+                            <a href="#contact" class="hero-btn hero-btn-outline btn btn-outline-light">Contact Us</a>
                         </div>
                     </div>
                 </div>
             </div>
             
-            <!-- Image -->
-            <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0" data-aos="fade-left" data-aos-duration="800" data-aos-delay="200">
-                <div class="granite-overlay rounded-4 overflow-hidden shadow-lg">
+            <!-- Slide 2 -->
+            <div class="carousel-item hero-section" style="background-image: url('images/home-nav-img2.jpg')">
+                <div class="container h-100 d-flex align-items-center">
+                    <div class="hero-content">
+                        <h1 class="hero-title">Custom Sculptures & Monuments</h1>
+                        <p class="hero-subtitle">Intricately carved by skilled artisans, our products are crafted in India and shipped across continents, carrying craftsmanship, emotion, and legacy to every corner of the globe.</p>
+                        <div class="d-flex flex-wrap gap-3">
+                            <a href="#gallery" class="hero-btn hero-btn-primary btn">View Gallery</a>
+                            <a href="#process" class="hero-btn hero-btn-outline btn btn-outline-light">Our Process</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        
+        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- Intro Section -->
+    <section class="intro-section py-3 py-md-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center mb-4 mb-md-5" id="intro-section">
+                <!-- Text Content - Order changes on mobile -->
+                <div class="col-lg-6 order-2 order-lg-1 animate-section" data-animation="slideInFromLeft">
+                    <h2 class="display-4 fw-bold  mb-3 mb-md-4" style="color:#3a5a78">Welcome to <span class="text-secondary gradient-text">MJ Granites Export</span></h2>
+                    <p class="lead text-muted mb-3 mb-md-4">
+                        Based in Tamil Nadu, India, MJ Granites Export is a premier manufacturer and global exporter of granite monuments, sculptures, slabs, and architectural designs. We combine traditional techniques with advanced machinery to deliver world-class products to customers in the US, UK, Europe, Australia, the Middle East, and beyond.
+                    </p>
+                    <div class="d-flex flex-wrap gap-2 gap-md-3">
+                        <a href="#products" class="btn btn-primary btn-lg px-3 px-md-4 btn-hover-grow glow-on-hover">Our Products</a>
+                        <a href="#contact" class="btn btn-outline-primary btn-lg px-3 px-md-4 btn-hover-grow glow-on-hover">Contact Us</a>
+                    </div>
+                </div>
+                
+                <!-- Image - Order changes on mobile -->
+                <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0 img-hover-zoom tilt-effect animate-section" data-animation="slideInFromRight">
                     <img src="images/logo 4.png" 
-                         alt="MJ Granites Export" 
-                         class="img-fluid w-100 feature-img">
+                         alt="Granite Factory" 
+                         class="img-fluid rounded shadow-lg w-100">
                 </div>
             </div>
         </div>
-    </div>
-</section>
-
-<style>
-    /* Intro Section Styles */
-    .intro-section {
-        position: relative;
-        overflow: hidden;
-    }
-    
-    .text-gradient {
-        background: linear-gradient(90deg, #3a5a78 0%, #d4af37 100%);
-        -webkit-background-clip: text;
-        background-clip: text;
-        -webkit-text-fill-color: transparent;
-        font-weight: 700;
-    }
-    
-    .granite-overlay:after {
-        background: linear-gradient(135deg, rgba(58, 90, 120, 0.1) 0%, rgba(212, 175, 55, 0.1) 100%);
-    }
-    
-    .stat-box {
-        background: white;
-        padding: 15px;
-        border-radius: 10px;
-        box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-        transition: transform 0.3s ease;
-    }
-    
-    .stat-box:hover {
-        transform: translateY(-5px);
-    }
-    
-    .stat-number {
-        font-size: 1.8rem;
-        font-weight: 700;
-        color: var(--primary-color);
-        line-height: 1;
-    }
-    
-    .stat-label {
-        font-size: 0.9rem;
-        color: #666;
-        font-weight: 500;
-    }
-    
-    .btn-outline-primary {
-        border-color: var(--primary-color);
-        color: var(--primary-color);
-        font-weight: 600;
-    }
-    
-    .btn-outline-primary:hover {
-        background-color: var(--primary-color);
-        color: white;
-    }
-    
-    .border-2 {
-        border-width: 2px !important;
-    }
-    
-    @media (max-width: 768px) {
-        .intro-section {
-            padding: 60px 0;
-        }
-        
-        .stat-number {
-            font-size: 1.5rem;
-        }
-        
-        .stat-label {
-            font-size: 0.8rem;
-        }
-    }
-</style>
+    </section>
 
     <!-- Excellence Cards - Responsive 4 Column Layout -->
     <div class="container">
-    <div class="row g-4 mb-5">
-        <h2 class="display-5 fw-bold mb-3 text-center" style="color: #3A5A78;">Our Process</h2>
-        
-        <!-- Card 1 - Global Presence -->
-        <div class="col-sm-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-1" data-animation="fadeInUp">
-                <div class="card-img-container">
-                    <img src="https://img.freepik.com/free-photo/earth-planet-close-up-view_23-2151001742.jpg" class="card-img-top" alt="Global business network">
-                </div>
-                <div class="card-body p-4 text-center d-flex flex-column">
-                    <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
-                        <i class="fas fa-globe fa-2x"></i>
+        <div class="row g-4 mb-5">
+            <h2 class="display-5 fw-bold mb-3 text-center"style="color:#3a5a78" >Our Process</h2>
+            
+            <!-- Card 1 - Global Presence -->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-1" data-animation="fadeInUp">
+                    <div class="card-img-container">
+                        <img src="https://img.freepik.com/free-photo/earth-planet-close-up-view_23-2151001742.jpg" class="card-img-top" alt="Global business network">
                     </div>
-                    <h3 class="h4" style="color: #3A5A78;">Worldwide Network</h3>
-                    <p class="text-muted mb-0 flex-grow-1">
-                        Serving clients across 6 continents with localized support teams and distribution centers in key markets.
-                    </p>
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                            <i class="fas fa-globe fa-2x"></i>
+                        </div>
+                        <h3 class="h4" style="color:#3a5a78">Worldwide Network</h3>
+                        <p class="text-muted mb-0 flex-grow-1">
+                            Serving clients across 6 continents with localized support teams and distribution centers in key markets.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Card 2 - Craftsmanship -->
-        <div class="col-sm-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-2" data-animation="fadeInUp">
-                <div class="card-img-container">
-                    <img src="https://img.freepik.com/free-photo/close-up-hands-carpenter_23-2149348873.jpg" class="card-img-top" alt="Expert craftsmanship">
-                </div>
-                <div class="card-body p-4 text-center d-flex flex-column">
-                    <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
-                        <i class="fas fa-hammer fa-2x"></i>
+            <!-- Card 2 - Craftsmanship -->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-2" data-animation="fadeInUp">
+                    <div class="card-img-container">
+                        <img src="https://img.freepik.com/free-photo/close-up-hands-carpenter_23-2149348873.jpg" class="card-img-top" alt="Expert craftsmanship">
                     </div>
-                    <h3 class="h4" style="color: #3A5A78;">Master Craftsmanship</h3>
-                    <p class="text-muted mb-0 flex-grow-1">
-                        Our artisans with 15+ years experience combine traditional techniques with modern precision.
-                    </p>
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                            <i class="fas fa-hammer fa-2x"></i>
+                        </div>
+                        <h3 class="h4" style="color:#3a5a78">Master Craftsmanship</h3>
+                        <p class="text-muted mb-0 flex-grow-1">
+                            Our artisans with 15+ years experience combine traditional techniques with modern precision.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Card 3 - Quality Assurance -->
-        <div class="col-sm-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-3" data-animation="fadeInUp">
-                <div class="card-img-container">
-                    <img src="https://img.freepik.com/free-photo/quality-control-inspector-checking-product_23-2149630604.jpg" class="card-img-top" alt="Quality inspection">
-                </div>
-                <div class="card-body p-4 text-center d-flex flex-column">
-                    <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
-                        <i class="fas fa-award fa-2x"></i>
+            <!-- Card 3 - Quality Assurance -->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-3" data-animation="fadeInUp">
+                    <div class="card-img-container">
+                        <img src="https://img.freepik.com/free-photo/quality-control-inspector-checking-product_23-2149630604.jpg" class="card-img-top" alt="Quality inspection">
                     </div>
-                    <h3 class="h4" style="color: #3A5A78;">Quality Guaranteed</h3>
-                    <p class="text-muted mb-0 flex-grow-1">
-                        Every product undergoes 17-point inspection process with ISO 9001 certified standards.
-                    </p>
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                            <i class="fas fa-award fa-2x"></i>
+                        </div>
+                        <h3 class="h4" style="color:#3a5a78">Quality Guaranteed</h3>
+                        <p class="text-muted mb-0 flex-grow-1">
+                            Every product undergoes 17-point inspection process with ISO 9001 certified standards.
+                        </p>
+                    </div>
                 </div>
             </div>
-        </div>
 
-        <!-- Card 4 - Sustainable Materials -->
-        <div class="col-sm-6 col-lg-3">
-            <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-4" data-animation="fadeInUp">
-                <div class="card-img-container">
-                    <img src="https://img.freepik.com/free-photo/stacked-wooden-boards_23-2148174062.jpg" class="card-img-top" alt="Sustainable materials">
-                </div>
-                <div class="card-body p-4 text-center d-flex flex-column">
-                    <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
-                        <i class="fas fa-leaf fa-2x"></i>
+            <!-- Card 4 - Sustainable Materials -->
+            <div class="col-sm-6 col-lg-3">
+                <div class="card h-100 border-0 shadow-sm hover-top excellence-card animate-section delay-4" data-animation="fadeInUp">
+                    <div class="card-img-container">
+                        <img src="https://img.freepik.com/free-photo/stacked-wooden-boards_23-2148174062.jpg" class="card-img-top" alt="Sustainable materials">
                     </div>
-                    <h3 class="h4" style="color: #3A5A78;">Eco-Friendly Materials</h3>
-                    <p class="text-muted mb-0 flex-grow-1">
-                        Responsibly sourced materials with FSC certification and sustainable production methods.
-                    </p>
+                    <div class="card-body p-4 text-center d-flex flex-column">
+                        <div class="icon-lg bg-primary bg-opacity-10 text-primary rounded-circle mb-4 mx-auto">
+                            <i class="fas fa-leaf fa-2x"></i>
+                        </div>
+                        <h3 class="h4" style="color:#3a5a78">Eco-Friendly Materials</h3>
+                        <p class="text-muted mb-0 flex-grow-1">
+                            Responsibly sourced materials with FSC certification and sustainable production methods.
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
-</div>
 
     <!-- Explore Our Creations Section -->
     <section class="creations-section py-5 bg-white">
         <div class="container">
             <div class="row justify-content-center mb-5">
                 <div class="col-lg-8 text-center animate-section" data-animation="fadeInUp">
-                    <h2 class="display-5 fw-bold mb-3" style="color: #3A5A78;">Explore Our Creations</h2>
+                    <h2 class="display-5 fw-bold mb-3" style="color:#3a5a78">Explore Our Creations</h2>
                     <p class="lead text-muted">Discover our exquisite granite masterpieces crafted with precision and passion, blending traditional artistry with modern techniques.</p>
                 </div>
             </div>
@@ -1291,7 +1065,7 @@
                             
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title" style="color: #3A5A78;">Elegant Memorials</h4>
+                            <h4 class="card-title text-hover-secondary">Elegant Memorials</h4>
                             <p class="card-text text-muted">
                                 Timeless granite memorials that honor loved ones with dignified beauty and lasting quality.
                             </p>
@@ -1312,7 +1086,7 @@
                             
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title" style="color: #3A5A78;">Artistic Sculptures</h4>
+                            <h4 class="card-title text-hover-secondary">Artistic Sculptures</h4>
                             <p class="card-text text-muted">
                                 Hand-carved granite sculptures that transform spaces with their artistic presence and natural elegance.
                             </p>
@@ -1333,7 +1107,7 @@
                             
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title" style="color: #3A5A78;">Luxury Countertops</h4>
+                            <h4 class="card-title text-hover-secondary">Luxury Countertops</h4>
                             <p class="card-text text-muted">
                                 Premium granite countertops that combine durability with sophisticated natural patterns.
                             </p>
@@ -1355,7 +1129,7 @@
 
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title" style="color: #3A5A78;">Premium Flooring</h4>
+                            <h4 class="card-title text-hover-secondary">Premium Flooring</h4>
                             <p class="card-text text-muted">
                                 Elegant granite flooring tiles that bring natural beauty and exceptional durability to any space.
                             </p>
@@ -1376,7 +1150,7 @@
                             
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title" style="color: #3A5A78;">Decorative Fountains</h4>
+                            <h4 class="card-title text-hover-secondary">Decorative Fountains</h4>
                             <p class="card-text text-muted">
                                 Stunning granite water features that create serene focal points for gardens and outdoor spaces.
                             </p>
@@ -1397,7 +1171,7 @@
                            
                         </div>
                         <div class="card-body">
-                            <h4 class="card-title" style="color: #3A5A78;">Architectural Columns</h4>
+                            <h4 class="card-title text-hover-secondary">Architectural Columns</h4>
                             <p class="card-text text-muted">
                                 Grand granite columns that add classical elegance and structural beauty to any property.
                             </p>
