@@ -596,9 +596,9 @@
                 <div class="col-lg-3 col-md-6 footer-col animate-in delay-3">
                     <h3 class="footer-title">Contact Us</h3>
                     <div class="contact-info">
-                        <p><i class="fas fa-map-marker-alt"></i> No. 45, Industrial Estate, Madurai – Tamil Nadu, India 625020</p>
-                        <p><i class="fas fa-phone"></i> +91-98765-43210</p>
-                        <p><i class="fas fa-envelope"></i> info@mjgranitesexport.com</p>
+                        <p><i class="fas fa-map-marker-alt"></i> Sankari, Salem – Tamil Nadu, India 637301</p>
+                        <p><i class="fas fa-phone"></i> +91-88070-89774</p>
+                        <p><i class="fas fa-envelope"></i> mjgranitesexporters@gmail.com</p>
                         <p><i class="fas fa-clock"></i> Mon-Sat: 9:00 AM - 6:00 PM IST</p>
                     </div>
                     
