@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Us - MJ Granites Export</title>
+    <link rel="icon" type="image/png" href="images/logo 4.png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -834,7 +835,7 @@
                 <div class="col-lg-8 mx-auto" data-aos="zoom-in">
                     <h2 class="cta-title">Ready to Elevate Your Project With Premium Granite?</h2>
                     <p class="mb-4">Contact our export team today to discuss your requirements, request samples, or get a quote for your international order.</p>
-                    <button class="btn cta-btn">Request a Quote <i class="fas fa-arrow-right ms-2"></i></button>
+                    <a href="contact.php"><button class="btn cta-btn">Request a Quote <i class="fas fa-arrow-right ms-2"></i></button></a>
                 </div>
             </div>
         </div>

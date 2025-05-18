@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MJ Granites Exporter - Premium Stone Solutions</title>
+    <link rel="icon" type="image/png" href="images/logo 4.png">
     <style>
         /* ===== BASE STYLES ===== */
         * {

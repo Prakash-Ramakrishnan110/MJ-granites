@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Contact Us - MJ Granites Export | Global Granite Exporters</title>
+    <link rel="icon" type="image/png" href="images/logo 4.png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
@@ -534,7 +535,7 @@
                 <p class="lead slide-up delay-1">We're here to assist with your granite export inquiries, product questions, and shipping requirements.</p>
                 <div class="mt-4 slide-up delay-2">
                     <a href="#quote" class="btn btn-primary btn-lg me-2">Get Export Quote</a>
-                    <a href="tel:+919876543210" class="btn btn-outline-light btn-lg">Call Now</a>
+                    <a href="tel:+918807089774" class="btn btn-outline-light btn-lg">Call Now</a>
                 </div>
             </div>
         </div>
@@ -550,7 +551,7 @@
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
                         <h3>Our Location</h3>
-                        <p>No. 45, Industrial Estate<br>Madurai – Tamil Nadu, India 625020</p>
+                        <p>Sankari<br>Salem – Tamil Nadu, India 637301</p>
                         <a href="#map" class="btn btn-sm btn-primary mt-3">View on Map</a>
                     </div>
                 </div>
@@ -560,8 +561,8 @@
                             <i class="fas fa-phone-alt"></i>
                         </div>
                         <h3>Phone & WhatsApp</h3>
-                        <p>+91-98765-43210<br>+91-87654-32109</p>
-                        <a href="tel:+919876543210" class="btn btn-sm btn-primary mt-3">Call Now</a>
+                        <p>+91-88070-89774</p>
+                        <a href="tel:+918807089774" class="btn btn-sm btn-primary mt-3">Call Now</a>
                     </div>
                 </div>
                 <div class="col-md-4">
@@ -570,8 +571,8 @@
                             <i class="fas fa-envelope"></i>
                         </div>
                         <h3>Email Us</h3>
-                        <p>info@mjgranitesexport.com<br>exports@mjgranitesexport.com</p>
-                        <a href="mailto:info@mjgranitesexport.com" class="btn btn-sm btn-primary mt-3">Send Email</a>
+                        <p>mjgranitesexporters@gmail.com</p>
+                        <a href="mailto:mjgranitesexporters@gmail.com" class="btn btn-sm btn-primary mt-3">Send Email</a>
                     </div>
                 </div>
             </div>
@@ -606,7 +607,7 @@
                             
                             <div class="mt-4 pt-3 border-top">
                                 <h4>Emergency Export Support</h4>
-                                <p class="mb-0">For urgent export inquiries outside business hours, please call our 24/7 support line: <strong>+91-98765-55555</strong></p>
+                                <p class="mb-0">For urgent export inquiries outside business hours, please call our 24/7 support line: <strong>+91-88070-89774</strong></p>
                             </div>
                         </div>
                     </div>
@@ -685,7 +686,7 @@
             <div class="row g-4">
                 <div class="col-lg-6 fade-in">
                     <div class="map-container h-100">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15720.598698513413!2d78.11932546977538!3d9.925876300000002!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b00c58ea0b7e26b%3A0xa6e1a3f9b4a3b7e!2sMadurai%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1689334567890!5m2!1sen!2sin" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                        <iframe src="https://www.google.com/maps?q=Sankari,Salem,Tamil Nadu&output=embed" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     </div>
                 </div>
                 <div class="col-lg-6 fade-in delay-1">
@@ -702,11 +703,6 @@
                             <li>Export packaging department</li>
                             <li>Sample display area with 200+ granite varieties</li>
                         </ul>
-                        
-                        <div class="mt-4 pt-3">
-                            <a href="#" class="btn btn-primary me-3 mb-3"><i class="fas fa-calendar-alt me-2"></i> Schedule Visit</a>
-                            <a href="#" class="btn btn-outline-primary mb-3"><i class="fas fa-download me-2"></i> Download Visitor Guide</a>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -790,9 +786,9 @@
                         </div>
                     </div>
                     
-                    <div class="text-center mt-5 fade-in delay-2">
+                    <!-- <div class="text-center mt-5 fade-in delay-2">
                         <a href="#" class="btn btn-primary px-4 py-2">View Full FAQ</a>
-                    </div>
+                    </div> -->
                 </div>
             </div>
         </div>

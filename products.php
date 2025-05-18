@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Premium Granite Products | MJ Granites Export</title>
-    
+    <link rel="icon" type="image/png" href="images/logo 4.png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -221,7 +221,7 @@
         <div class="container text-center">
             <h1 class="display-4 fw-bold mb-4">Premium Granite Products</h1>
             <p class="lead mb-5">Discover our exquisite collection of handcrafted granite products, exported worldwide from Tamil Nadu, India</p>
-            <a href="#products" class="btn btn-gold btn-lg px-5">Explore Collection</a>
+            <a href="#products" class="btn btn-primary btn-lg px-5">Explore Collection</a>
         </div>
     </section>
 
@@ -256,7 +256,6 @@
                             <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Weather-resistant</li>
                             <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Lifetime durability</li>
                         </ul>
-                        <a href="#" class="btn btn-outline-primary align-self-start mt-auto" style="border-color: #3a5a78; color: #3a5a78;">View Options</a>
                     </div>
                 </div>
             </div>
@@ -281,7 +280,6 @@
                             <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Various sizes</li>
                             <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Traditional motifs</li>
                         </ul>
-                        <a href="#" class="btn btn-outline-primary align-self-start mt-auto" style="border-color: #3a5a78; color: #3a5a78;">View Gallery</a>
                     </div>
                 </div>
             </div>
@@ -306,7 +304,6 @@
                             <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Various thicknesses</li>
                             <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Standard & custom sizes</li>
                         </ul>
-                        <a href="#" class="btn btn-outline-primary align-self-start mt-auto" style="border-color: #3a5a78; color: #3a5a78;">View Inventory</a>
                     </div>
                 </div>
             </div>
@@ -331,7 +328,6 @@
                             <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Decorative features</li>
                             <li class="mb-2" style="color: #555555;"><i class="fas fa-check me-2" style="color: #3a5a78;"></i> Project consultation</li>
                         </ul>
-                        <a href="#" class="btn btn-outline-primary align-self-start mt-auto" style="border-color: #3a5a78; color: #3a5a78;">Learn More</a>
                     </div>
                 </div>
             </div>
@@ -677,8 +673,8 @@
                 Contact us today for a customized quote. Our export specialists will guide you through the entire process.
             </p>
             <div class="d-flex justify-content-center gap-3">
-                <a href="contact.html" class="btn btn-gold btn-lg px-5">Contact Us</a>
-                <a href="quote.html" class="btn btn-outline-light btn-lg px-5">Get Quote</a>
+                <a href="contact.php" class="btn btn-gold btn-lg px-5">Contact Us</a>
+                <a href="contact.php" class="btn btn-outline-light btn-lg px-5">Get Quote</a>
             </div>
         </div>
     </section>

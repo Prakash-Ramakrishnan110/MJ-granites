@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MJ Granites Export - Premium Granite Products Worldwide</title>
-    
+    <link rel="icon" type="image/png" href="images/logo 4.png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Bootstrap 5 CSS -->
@@ -12,8 +12,6 @@
 
 <!-- Bootstrap 5 JS Bundle (includes Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
@@ -893,8 +891,8 @@
                         <h1 class="hero-title">Global Exports, Local Excellence</h1>
                         <p class="hero-subtitle">We specialize in international exports, delivering premium granite products with secure packaging, seamless logistics, and on-time delivery to clients worldwide.</p>
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="#quote" class="hero-btn hero-btn-primary btn">Get a Quote</a>
-                            <a href="#testimonials" class="hero-btn hero-btn-outline btn btn-outline-light">Client Stories</a>
+                            <a href="contact.php" class="hero-btn hero-btn-primary btn">Get a Quote</a>
+                            <a href="contact.php" class="hero-btn hero-btn-outline btn btn-outline-light">Client Stories</a>
                         </div>
                     </div>
                 </div>
@@ -906,8 +904,8 @@
                         <h1 class="hero-title">From Earth to Art — Granite Redefined</h1>
                         <p class="hero-subtitle">We transform raw granite into timeless creations and export them worldwide, honoring tradition and inspiring modern design.</p>
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="#products" class="hero-btn hero-btn-primary btn">Explore Collection</a>
-                            <a href="#contact" class="hero-btn hero-btn-outline btn btn-outline-light">Contact Us</a>
+                            <a href="products.php" class="hero-btn hero-btn-primary btn">Explore Collection</a>
+                            <a href="contact.php" class="hero-btn hero-btn-outline btn btn-outline-light">Contact Us</a>
                         </div>
                     </div>
                 </div>
@@ -920,8 +918,8 @@
                         <h1 class="hero-title">Custom Sculptures & Monuments</h1>
                         <p class="hero-subtitle">Intricately carved by skilled artisans, our products are crafted in India and shipped across continents, carrying craftsmanship, emotion, and legacy to every corner of the globe.</p>
                         <div class="d-flex flex-wrap gap-3">
-                            <a href="#gallery" class="hero-btn hero-btn-primary btn">View Gallery</a>
-                            <a href="#process" class="hero-btn hero-btn-outline btn btn-outline-light">Our Process</a>
+                            <a href="gallery.php" class="hero-btn hero-btn-primary btn">View Gallery</a>
+                            <a href="process.php" class="hero-btn hero-btn-outline btn btn-outline-light">Our Process</a>
                         </div>
                     </div>
                 </div>
@@ -950,8 +948,8 @@
                         Based in Tamil Nadu, India, MJ Granites Export is a premier manufacturer and global exporter of granite monuments, sculptures, slabs, and architectural designs. We combine traditional techniques with advanced machinery to deliver world-class products to customers in the US, UK, Europe, Australia, the Middle East, and beyond.
                     </p>
                     <div class="d-flex flex-wrap gap-2 gap-md-3">
-                        <a href="#products" class="btn btn-primary btn-lg px-3 px-md-4 btn-hover-grow glow-on-hover">Our Products</a>
-                        <a href="#contact" class="btn btn-outline-primary btn-lg px-3 px-md-4 btn-hover-grow glow-on-hover">Contact Us</a>
+                        <a href="products.php" class="btn btn-primary btn-lg px-3 px-md-4 btn-hover-grow glow-on-hover">Our Products</a>
+                        <a href="contact.php" class="btn btn-outline-primary btn-lg px-3 px-md-4 btn-hover-grow glow-on-hover">Contact Us</a>
                     </div>
                 </div>
                 
@@ -1179,7 +1177,7 @@
             </div>
 
             <div class="text-center mt-5 animate-section" data-animation="fadeInUp">
-                <a href="#gallery" class="btn btn-primary btn-lg px-5 btn-hover-grow glow-on-hover">View Full Gallery</a>
+                <a href="gallery.php" class="btn btn-primary btn-lg px-5 btn-hover-grow glow-on-hover">View Full Gallery</a>
             </div>
         </div>
     </section>
@@ -1229,7 +1227,7 @@
                                 <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Port-to-port shipping</li>
                             </ul>
                             <div class="text-center animate__animated animate__fadeIn animate__delay-2s">
-                                <a href="#contact" class="btn btn-primary btn-hover-grow glow-on-hover">
+                                <a href="contact.php" class="btn btn-primary btn-hover-grow glow-on-hover">
                                     <span class="btn-text">Request Quote</span>
                                     <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
                                 </a>
@@ -1262,7 +1260,7 @@
                                 <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> Door-to-door delivery available</li>
                             </ul>
                             <div class="text-center animate__animated animate__fadeIn animate__delay-2s">
-                                <a href="#contact" class="btn btn-primary btn-hover-grow glow-on-hover">
+                                <a href="contact.php" class="btn btn-primary btn-hover-grow glow-on-hover">
                                     <span class="btn-text">Request Quote</span>
                                     <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
                                 </a>
@@ -1275,7 +1273,7 @@
                 <div class="col-md-4">
                     <div class="quote-card shadow animate__animated animate__fadeInUp animate__fast" data-animation-delay="0.6s">
                         <div class="card-img-wrapper overflow-hidden">
-                            <img src="images/home-custom solution.jpg" 
+                            <img src="images/home-custom solutions.jpg" 
                                  class="card-img-top img-scale" 
                                  alt="Custom Solution">
                             <div class="img-overlay"></div>
@@ -1295,7 +1293,7 @@
                                 <li class="mb-2"><i class="fas fa-check-circle text-primary me-2"></i> White-glove installation services</li>
                             </ul>
                             <div class="text-center animate__animated animate__fadeIn animate__delay-2s">
-                                <a href="#contact" class="btn btn-primary btn-hover-grow glow-on-hover">
+                                <a href="contact.php" class="btn btn-primary btn-hover-grow glow-on-hover">
                                     <span class="btn-text">Request Quote</span>
                                     <span class="btn-icon"><i class="fas fa-arrow-right"></i></span>
                                 </a>
@@ -1313,7 +1311,7 @@
                         <p class="lead text-muted mb-4">
                             Our export specialists can create a tailored shipping plan for your specific granite requirements, no matter the size or destination.
                         </p>
-                        <a href="#contact" class="btn btn-primary btn-lg px-5 btn-hover-grow glow-on-hover">
+                        <a href="contact.php" class="btn btn-primary btn-lg px-5 btn-hover-grow glow-on-hover">
                             <span class="btn-text">Contact Our Export Team</span>
                             <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
                         </a>

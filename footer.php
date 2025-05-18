@@ -301,6 +301,54 @@
             width: 100%;
         }
         
+        /* Company Logo Styles */
+        .footer-logo {
+            max-width: 100px;
+            margin-bottom: 20px;
+            transition: all 0.4s ease;
+            
+        }
+        
+        .footer-logo:hover {
+            transform: translateY(-3px);
+            opacity: 1;
+            filter: brightness(1) invert(0) drop-shadow(0 0 8px rgba(212, 175, 55, 0.6));
+        }
+        
+        /* Saakra Company Animation */
+        .copyright a {
+            display: inline-block;
+            transform-origin: center;
+        }
+        
+        .copyright a:hover {
+            animation: companyPulse 1.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        }
+        
+        @keyframes companyPulse {
+            0% {
+                transform: scale(1);
+                color: var(--secondary-color);
+            }
+            25% {
+                transform: scale(1.1);
+                color: white;
+                text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+            }
+            50% {
+                transform: scale(0.95);
+                color: var(--secondary-color);
+            }
+            75% {
+                transform: scale(1.05);
+                color: white;
+            }
+            100% {
+                transform: scale(1);
+                color: var(--secondary-color);
+            }
+        }
+        
         /* Back to top button */
         .back-to-top {
             display: none;
@@ -428,6 +476,11 @@
                 max-width: 350px;
                 margin: 0 auto;
             }
+            
+            .footer-logo {
+                margin: 0 auto 20px;
+                display: block;
+            }
         }
         
         @media (max-width: 768px) {
@@ -455,6 +508,10 @@
                 font-size: 16px;
                 bottom: 20px;
                 right: 20px;
+            }
+            
+            .footer-logo {
+                max-width: 150px;
             }
         }
         
@@ -487,6 +544,10 @@
                 padding-top: 20px;
                 margin-top: 30px;
             }
+            
+            .footer-logo {
+                max-width: 130px;
+            }
         }
     </style>
 </head>
@@ -497,7 +558,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 footer-col animate-in">
-                    <h3 class="footer-title">MJ Granites Export</h3>
+                    <img src="images/logo 4.png" alt="MJ Granites Export Logo" class="footer-logo"> <span class="brand-name">MJ Granites Exporter</span>
                     <p>Premier manufacturer and global exporter of premium granite products, serving clients worldwide with quality craftsmanship and reliable shipping.</p>
                     <div class="social-icons">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -586,6 +647,16 @@
                     if (entry.target.classList.contains('copyright')) {
                         createSparkles(entry.target);
                     }
+                    
+                    // Add animation to logo
+                    if (entry.target.querySelector('.footer-logo')) {
+                        gsap.from(entry.target.querySelector('.footer-logo'), {
+                            y: 20,
+                            opacity: 0,
+                            duration: 0.8,
+                            ease: "back.out(1.7)"
+                        });
+                    }
                 }
             });
         }, observerOptions);
@@ -668,6 +739,16 @@
                         { y: 0, duration: 0.2 }
                     ]
                 });
+            });
+        });
+        
+        // Logo hover animation
+        document.querySelector('.footer-logo')?.addEventListener('mouseenter', function() {
+            gsap.to(this, {
+                keyframes: [
+                    { y: -3, duration: 0.2 },
+                    { y: 0, duration: 0.2 }
+                ]
             });
         });
         

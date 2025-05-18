@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Our Process | MJ Granites Export</title>
-    
+    <link rel="icon" type="image/png" href="images/logo 4.png">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
@@ -509,7 +509,7 @@
         <div class="container" data-aos="fade-up" data-aos-duration="800">
             <h1 class="display-4 fw-bold mb-4 animate__animated animate__fadeInDown">Our Manufacturing Process</h1>
             <p class="lead mb-5 animate__animated animate__fadeIn animate__delay-1s">Discover how we transform raw granite into exquisite works of art through traditional craftsmanship and modern techniques</p>
-            <a href="#material" class="btn btn-gold btn-lg px-5 animate__animated animate__fadeInUp animate__delay-1s">Explore Process</a>
+            <a href="#material" class="btn btn-primary btn-lg px-5 animate__animated animate__fadeInUp animate__delay-1s">Explore Process</a>
         </div>
     </section>
 
@@ -800,8 +800,8 @@
                 Contact our team for a detailed explanation or to schedule a virtual factory tour.
             </p>
             <div class="d-flex justify-content-center gap-3">
-                <a href="contact.html" class="btn btn-gold btn-lg px-5">Contact Us</a>
-                <a href="virtual-tour.html" class="btn btn-outline-light btn-lg px-5">Virtual Tour</a>
+                <a href="contact.php" class="btn btn-gold btn-lg px-5">Contact Us</a>
+                <a href="gallery.php" class="btn btn-outline-light btn-lg px-5">Virtual Tour</a>
             </div>
         </div>
     </section>
