@@ -280,6 +280,9 @@
             font-weight: 500;
             position: relative;
             transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
         
         .copyright a:after {
@@ -300,13 +303,27 @@
         .copyright a:hover:after {
             width: 100%;
         }
+
+        /* Saakra logo styles */
+        .copyright-logo {
+            height: 30px;
+            width: auto;
+            transition: all 0.4s ease;
+            filter: grayscale(100%) brightness(1.5);
+            opacity: 0.7;
+        }
+        
+        .copyright a:hover .copyright-logo {
+            filter: grayscale(0%) brightness(1);
+            opacity: 1;
+            transform: translateY(-2px);
+        }
         
         /* Company Logo Styles */
         .footer-logo {
             max-width: 100px;
             margin-bottom: 20px;
             transition: all 0.4s ease;
-            
         }
         
         .footer-logo:hover {
@@ -548,6 +565,15 @@
             .footer-logo {
                 max-width: 130px;
             }
+
+            .copyright-logo {
+                height: 16px;
+            }
+            
+            .copyright a {
+                flex-wrap: wrap;
+                justify-content: center;
+            }
         }
     </style>
 </head>
@@ -614,7 +640,10 @@
             
             <div class="copyright animate-in delay-4">
                 <p>&copy; 2025 MJ Granites Export. All Rights Reserved.</p>
-                <p>Designed by <a href="https://saakra.com" target="_blank">Saakra Enterprises Pvt Ltd</a></p>
+                <p>Designed by <a href="https://saakra.com" target="_blank">
+                    <img src="images/saakralogo.png" alt="Saakra Enterprises Logo" class="copyright-logo">
+                    Saakra Enterprises Pvt Ltd
+                </a></p>
             </div>
         </div>
     </footer>
