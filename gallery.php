@@ -474,36 +474,7 @@
             color: #333;
         }
         
-        /* Image Gallery */
-        .image-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 20px;
-            margin-top: 30px;
-        }
-        
-        .gallery-item {
-            overflow: hidden;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            transition: all 0.3s ease;
-        }
-        
-        .gallery-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.3s ease;
-        }
-        
-        .gallery-item:hover {
-            box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-        }
-        
-        .gallery-item:hover img {
-            transform: scale(1.05);
-        }
-        
+       
         /* Keyframe Animations */
         @keyframes fadeInUp {
             from {
@@ -539,6 +510,20 @@
         }
         
         /* Responsive Adjustments */
+        @media (max-width: 1200px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .hero-section {
+                padding: 90px 20px;
+            }
+            
+            .about-content-section {
+                padding: 50px;
+            }
+        }
+        
         @media (max-width: 992px) {
             .hero-title {
                 font-size: 2.5rem;
@@ -548,6 +533,10 @@
                 font-size: 1.3rem;
             }
             
+            .section-title {
+                font-size: 2.2rem;
+            }
+            
             .about-content-section {
                 padding: 40px;
             }
@@ -555,11 +544,24 @@
             .highlight-container, .values-grid {
                 grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             }
+            
+            .granite-grid {
+                grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            }
+            
+            .process-steps {
+                gap: 25px;
+            }
+            
+            .process-step {
+                min-width: 220px;
+                padding: 25px;
+            }
         }
         
         @media (max-width: 768px) {
             .hero-section {
-                padding: 80px 20px;
+                padding: 70px 20px;
             }
             
             .hero-title {
@@ -570,12 +572,16 @@
                 font-size: 1.1rem;
             }
             
+            .section {
+                padding: 25px;
+            }
+            
             .section-title {
                 font-size: 2rem;
             }
             
-            .about-content-section {
-                padding: 30px;
+            .section-content {
+                font-size: 1rem;
             }
             
             .timeline:before {
@@ -596,12 +602,21 @@
                 left: 19px !important;
             }
             
+            .quarry-section {
+                padding: 60px 20px;
+            }
+            
             .process-steps {
                 gap: 20px;
             }
             
             .process-step {
-                min-width: 100%;
+                min-width: calc(50% - 20px);
+                padding: 20px;
+            }
+            
+            .image-gallery {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             }
         }
         
@@ -618,12 +633,12 @@
                 font-size: 1rem;
             }
             
-            .section-title {
-                font-size: 1.6rem;
+            .section {
+                padding: 20px;
             }
             
-            .section-content {
-                font-size: 1rem;
+            .section-title {
+                font-size: 1.6rem;
             }
             
             .highlight-box, .value-card, .granite-card {
@@ -633,7 +648,120 @@
             .highlight-title, .value-title {
                 font-size: 1.1rem;
             }
+            
+            .granite-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .process-steps {
+                flex-direction: column;
+                gap: 15px;
+            }
+            
+            .process-step {
+                min-width: 100%;
+                max-width: 100%;
+            }
+            
+            .image-gallery {
+                grid-template-columns: 1fr;
+            }
+            
+            .gallery-item img {
+                height: 200px;
+            }
+            
+            .quarry-section {
+                padding: 50px 15px;
+                margin: 40px 0;
+            }
+            
+            .quarry-content {
+                padding: 20px;
+            }
         }
+        
+        @media (max-width: 400px) {
+            .hero-title {
+                font-size: 1.6rem;
+            }
+            
+            .section-title {
+                font-size: 1.4rem;
+            }
+            
+            .highlight-container, .values-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .highlight-box, .value-card {
+                padding: 15px;
+            }
+            
+            .granite-info {
+                padding: 15px;
+            }
+        }
+        /* Add this to your existing CSS */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+.gallery-item .granite-name {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(58, 90, 120, 0.8);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    font-weight: 600;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .granite-name {
+    transform: translateY(0);
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(calc(-100% - var(--gap)));
+    }
+}
+
+/* Pause animation on hover */
+.marquee:hover .marquee-inner {
+    animation-play-state: paused;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .marquee-item {
+        flex: 0 0 200px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 576px) {
+    .marquee-item {
+        flex: 0 0 160px;
+        height: 120px;
+    }
+    
+    .marquee-item span {
+        font-size: 0.9rem;
+        padding: 5px;
+    }
+}
     </style>
 </head>
 <body>
@@ -713,57 +841,53 @@
             
             <div class="process-steps">
                 <!-- First Row -->
-                <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
-                    <div class="process-step">
-                        <i class="fas fa-hammer" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                        <h3 class="value-title">Quarry Selection</h3>
-                        <p>Geologists identify premium granite blocks</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <i class="fas fa-cut" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                        <h3 class="value-title">Block Cutting</h3>
-                        <p>Diamond wire saws extract massive blocks</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <i class="fas fa-border-all" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                        <h3 class="value-title">Slab Production</h3>
-                        <p>Gang saws cut blocks into slabs</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <i class="fas fa-brush" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                        <h3 class="value-title">Surface Polishing</h3>
-                        <p>Automated polishing for mirror finish</p>
-                    </div>
+                <div class="process-step">
+                    <i class="fas fa-hammer" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                    <h3 class="value-title">Quarry Selection</h3>
+                    <p>Geologists identify premium granite blocks</p>
+                </div>
+                
+                <div class="process-step">
+                    <i class="fas fa-cut" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                    <h3 class="value-title">Block Cutting</h3>
+                    <p>Diamond wire saws extract massive blocks</p>
+                </div>
+                
+                <div class="process-step">
+                    <i class="fas fa-border-all" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                    <h3 class="value-title">Slab Production</h3>
+                    <p>Gang saws cut blocks into slabs</p>
+                </div>
+                
+                <div class="process-step">
+                    <i class="fas fa-brush" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                    <h3 class="value-title">Surface Polishing</h3>
+                    <p>Automated polishing for mirror finish</p>
                 </div>
                 
                 <!-- Second Row -->
-                <div style="display: flex; justify-content: space-between; gap: 20px; flex-wrap: wrap;">
-                    <div class="process-step">
-                        <i class="fas fa-search" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                        <h3 class="value-title">Quality Inspection</h3>
-                        <p>15-point quality control check</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <i class="fas fa-box" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                        <h3 class="value-title">Packaging</h3>
-                        <p>Custom crating for international shipping</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <i class="fas fa-ship" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                        <h3 class="value-title">Global Shipping</h3>
-                        <p>Climate-controlled transportation</p>
-                    </div>
-                    
-                    <div class="process-step">
-                        <i class="fas fa-check-circle" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
-                        <h3 class="value-title">Final Approval</h3>
-                        <p>Customer inspection and sign-off</p>
-                    </div>
+                <div class="process-step">
+                    <i class="fas fa-search" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                    <h3 class="value-title">Quality Inspection</h3>
+                    <p>15-point quality control check</p>
+                </div>
+                
+                <div class="process-step">
+                    <i class="fas fa-box" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                    <h3 class="value-title">Packaging</h3>
+                    <p>Custom crating for international shipping</p>
+                </div>
+                
+                <div class="process-step">
+                    <i class="fas fa-ship" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                    <h3 class="value-title">Global Shipping</h3>
+                    <p>Climate-controlled transportation</p>
+                </div>
+                
+                <div class="process-step">
+                    <i class="fas fa-check-circle" style="font-size: 40px; color: #c8a97e; margin: 15px 0;"></i>
+                    <h3 class="value-title">Final Approval</h3>
+                    <p>Customer inspection and sign-off</p>
                 </div>
             </div>
         </section>
@@ -841,55 +965,241 @@
                 </div>
             </div>
         </section>
-
-        <!-- Granite Image Gallery Section -->
-        <section class="section" data-aos="fade-up" data-aos-duration="800">
-            <h2 class="section-title">Our Gallery</h2>
+  <!-- Granite Image Gallery Section -->
+<section class="section" data-aos="fade-up" data-aos-duration="800">
+    <h2 class="section-title">Our Gallery</h2>
+    
+    <div class="gallery-container" style="overflow: hidden; white-space: nowrap; position: relative; padding: 20px 0;">
+        <div class="gallery-track" style="display: inline-block; animation: runGallery 20s linear infinite;">
+            <!-- Gallery Items with Names -->
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/g-1.png" alt="Black Galaxy Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Black Galaxy</div>
+            </div>
             
-            <div class="image-gallery">
-                <!-- Image 1 -->
-                <div class="gallery-item">
-                    <img src="images/g-1.png" alt="Granite Sample 1">
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/g-10.jpg" alt="Imperial White Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Imperial White</div>
+            </div>
+            
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/g-3.png" alt="Ruby Red Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Ruby Red</div>
+            </div>
+            
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/g-11.jpg" alt="Emerald Pearl Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Emerald Pearl</div>
+            </div>
+            
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/g-5.png" alt="Absolute Black Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Absolute Black</div>
+            </div>
+            
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/g-6.png" alt="Kashmir White Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Kashmir White</div>
+            </div>
+            
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/g-7.png" alt="Steel Grey Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Steel Grey</div>
+            </div>
+            
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/g-8.png" alt="Tan Brown Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Tan Brown</div>
+            </div>
+            
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/g-9.png" alt="Blue Pearl Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Blue Pearl</div>
+            </div>
+            
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/gallery-himalayan granites.jpg" alt="Himalayan Blue Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Himalayan Blue</div>
+            </div>
+
+            <!-- Duplicate items for seamless looping -->
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/g-1.png" alt="Black Galaxy Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Black Galaxy</div>
+            </div>
+            
+            <div class="gallery-item" style="display: inline-block; margin: 0 15px; vertical-align: top; position: relative; width: 220px;">
+                <img src="images/g-10.jpg" alt="Imperial White Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; transition: all 0.3s;">
+                <div class="granite-name" style="position: absolute; bottom: 0; left: 0; right: 0; background: rgba(0,0,0,0.7); color: white; padding: 8px; text-align: center; opacity: 0; transition: opacity 0.3s; border-radius: 0 0 8px 8px; font-weight: bold;">Imperial White</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Marquee Animation Section -->
+<section class="section" data-aos="fade-up" data-aos-duration="800">
+    <h2 class="section-title">Our Granites Collections</h2>
+    <p class="section-content">
+        Discover our most popular granite selections that architects and designers love
+    </p>
+    
+    <div class="marquee-container">
+        <!-- First Marquee (Left to Right) -->
+        <div class="marquee">
+            <div class="marquee-inner">
+                <div class="marquee-item">
+                    <img src="images/gallery-classic black.jpg" alt="Classic Black">
+                    <span>Classic Black</span>
                 </div>
-                
-                <!-- Image 2 -->
-                <div class="gallery-item">
-                    <img src="images/g-10.jpg" alt="Granite Sample 2">
+                <div class="marquee-item">
+                    <img src="images/gallery- snow white.jpg" alt="Snow White">
+                    <span>Snow White</span>
                 </div>
-                
-                <!-- Image 3 -->
-                <div class="gallery-item">
-                    <img src="images/g-3.png" alt="Granite Sample 3">
+                <div class="marquee-item">
+                    <img src="images/gallery-golden oak.jpg" alt="Golden Oak">
+                    <span>Golden Oak</span>
                 </div>
-                
-                <!-- Image 4 -->
-                <div class="gallery-item">
-                    <img src="images/g-11.jpg" alt="Granite Sample 4">
+                <div class="marquee-item">
+                    <img src="images/gallery-emerled green.jpg" alt="Steel Grey">
+                    <span>Emerled Green</span>
                 </div>
-                
-                <!-- Image 5 -->
-                <div class="gallery-item">
-                    <img src="images/g-5.png" alt="Granite Sample 5">
+                <div class="marquee-item">
+                    <img src="images/gallery-ruby red .jpg" alt="Ruby Red">
+                    <span>Ruby Red</span>
                 </div>
-                
-                <!-- Image 6 -->
-                <div class="gallery-item">
-                    <img src="images/g-6.png" alt="Granite Sample 6">
+                <!-- Duplicate items for seamless looping -->
+                <div class="marquee-item">
+                    <img src="images/gallery-classic black.jpg" alt="Classic Black">
+                    <span>Classic Black</span>
                 </div>
-                
-                <!-- Image 7 -->
-                <div class="gallery-item">
-                    <img src="images/g-7.png" alt="Granite Sample 3">
+                <div class="marquee-item">
+                    <img src="images/gallery- snow white.jpg" alt="Snow White">
+                    <span>Snow White</span>
                 </div>
-                
-                <!-- Image 8 -->
-                <div class="gallery-item">
-                    <img src="images/g-8.png" alt="Granite Sample 4">
+                <div class="marquee-item">
+                    <img src="images/gallery-golden oak.jpg" alt="Golden Oak">
+                    <span>Golden Oak</span>
                 </div>
             </div>
-        </section>
+        </div>
+        
+        <!-- Second Marquee (Right to Left) -->
+        <div class="marquee marquee-reverse">
+            <div class="marquee-inner">
+                <div class="marquee-item">
+                    <img src="images/gallery-ocean blue.jpg" alt="Ocean Blue">
+                    <span>Ocean Blue</span>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery-emerled green.jpg" alt="Emerald Green">
+                    <span>Emerald Green</span>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery-autumn brown.jpg" alt="Autumn Brown">
+                    <span>Autumn Brown</span>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery-silver wave.jpg" alt="Silver Wave">
+                    <span>Silver Wave</span>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery-cosmic blaclk.jpg" alt="Cosmic Black">
+                    <span>Cosmic Black</span>
+                </div>
+                <!-- Duplicate items for seamless looping -->
+                <div class="marquee-item">
+                    <img src="images/gallery-ocean blue.jpg" alt="Ocean Blue">
+                    <span>Ocean Blue</span>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery-emerled green.jpg" alt="Emerald Green">
+                    <span>Emerald Green</span>
+                </div>
+                <div class="marquee-item">
+                    <img src="images/gallery-autumn brown.jpg" alt="Autumn Brown">
+                    <span>Autumn Brown</span>
+                </div>
+            </div>
+        </div>
     </div>
+</section>
+
+<style>
+    /* Gallery Animation */
+    @keyframes runGallery {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
     
+    .gallery-container:hover .gallery-track {
+        animation-play-state: paused;
+    }
+    
+    .gallery-item:hover .granite-name {
+        opacity: 1;
+    }
+    
+    .gallery-item:hover img {
+        transform: scale(1.05);
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    }
+    
+    /* Marquee Animation */
+    .marquee-container {
+        margin: 20px 0;
+    }
+    
+    .marquee {
+        overflow: hidden;
+        white-space: nowrap;
+        margin: 20px 0;
+    }
+    
+    .marquee-inner {
+        display: inline-block;
+        white-space: nowrap;
+        animation: marquee 25s linear infinite;
+    }
+    
+    .marquee-reverse .marquee-inner {
+        animation: marqueeReverse 25s linear infinite;
+    }
+    
+    .marquee-item {
+        display: inline-block;
+        margin: 0 20px;
+        text-align: center;
+        vertical-align: top;
+        width: 200px;
+    }
+    
+    .marquee-item img {
+        width: 100%;
+        height: 120px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 8px;
+    }
+    
+    .marquee-item span {
+        display: block;
+        font-weight: bold;
+    }
+    
+    @keyframes marquee {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    @keyframes marqueeReverse {
+        0% { transform: translateX(-50%); }
+        100% { transform: translateX(0); }
+    }
+    
+    .marquee:hover .marquee-inner {
+        animation-play-state: paused;
+    }
+</style>
     <?php include "footer.php"; ?>
     
     <!-- AOS Animation Library JS -->
@@ -938,6 +1248,37 @@
             // Add scroll event listener
             window.addEventListener('scroll', handleScroll);
         });
+        // Enhanced Marquee Animation with Pause on Hover
+document.querySelectorAll('.marquee').forEach(marquee => {
+    const inner = marquee.querySelector('.marquee-inner');
+    const items = inner.querySelectorAll('.marquee-item');
+    const itemWidth = items[0].offsetWidth;
+    const gap = parseInt(window.getComputedStyle(inner).getPropertyValue('gap')) || 20;
+    
+    // Calculate total width needed for seamless looping
+    const totalWidth = Array.from(items).reduce((acc, item) => acc + item.offsetWidth + gap, 0);
+    inner.style.width = `${totalWidth}px`;
+    
+    // Clone items for seamless looping
+    if (items.length < 10) {
+        const cloneCount = Math.ceil(marquee.offsetWidth / (itemWidth + gap)) + 1;
+        for (let i = 0; i < cloneCount; i++) {
+            items.forEach(item => {
+                const clone = item.cloneNode(true);
+                inner.appendChild(clone);
+            });
+        }
+    }
+    
+    // Pause animation on hover
+    marquee.addEventListener('mouseenter', () => {
+        inner.style.animationPlayState = 'paused';
+    });
+    
+    marquee.addEventListener('mouseleave', () => {
+        inner.style.animationPlayState = 'running';
+    });
+});
     </script>
 </body>
 </html>

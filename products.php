@@ -334,6 +334,7 @@
         </div>
     </div>
 </section>
+
     <!-- Features Section -->
     <section class="features-section py-5" style="background-color: #ffffff;">
     <div class="container">
@@ -494,8 +495,395 @@
     </div>
 </section>
 
-    <!-- Testimonials -->
-   <section class="py-5" style="background-color: #3a5a78; color: white;">
+    
+
+    <!-- Granite Varieties Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3" style="color: #3a5a78;">Granite Varieties</h2>
+            <p class="lead" style="color: #555555; max-width: 700px; margin: 0 auto;">
+                Explore our premium granite selections with competitive pricing
+            </p>
+        </div>
+        
+        <div class="row g-4 justify-content-center">
+            <!-- Absolute Black -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px;">
+                        <img src="images/Product -Absolute Black.jpg"Absolute Black Granite" class="img-fluid h-100 w-100" style="object-fit: cover;">
+                    </div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Absolute Black</h3>
+                        <p class="mb-2 small" style="color: #555555; line-height: 1.5;">
+                            Deep black granite with minimal grain pattern.
+                        </p>
+                        <p class="mb-0 fw-bold" style="color: #3a5a78;">$12.50/sq. in.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Imperial Red -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px;">
+                        <img src="images/Product-Imperial Red.jpg" alt="Imperial Red Granite" class="img-fluid h-100 w-100" style="object-fit: cover;">
+                    </div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Imperial Red</h3>
+                        <p class="mb-2 small" style="color: #555555; line-height: 1.5;">
+                            Rich red with black and gray mineral deposits.
+                        </p>
+                        <p class="mb-0 fw-bold" style="color: #3a5a78;">$14.75/sq. in.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Steel Grey -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px;">
+                        <img src="images/Product-Steel Grey (2).jpg" alt="Steel Grey Granite" class="img-fluid h-100 w-100" style="object-fit: cover;">
+                    </div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Steel Grey</h3>
+                        <p class="mb-2 small" style="color: #555555; line-height: 1.5;">
+                            Sophisticated gray with subtle variations.
+                        </p>
+                        <p class="mb-0 fw-bold" style="color: #3a5a78;">$11.25/sq. in.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Kashmir Gold -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="250">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px;">
+                        <img src="images/Product-Kashmir Gold.jpg" alt="Kashmir Gold Granite" class="img-fluid h-100 w-100" style="object-fit: cover;">
+                    </div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Kashmir Gold</h3>
+                        <p class="mb-2 small" style="color: #555555; line-height: 1.5;">
+                            Warm golden tones with dramatic veining.
+                        </p>
+                        <p class="mb-0 fw-bold" style="color: #3a5a78;">$16.50/sq. in.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Blue Pearl -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px;">
+                        <img src="images/Product-Blue Pearl.jpg" alt="Blue Pearl Granite" class="img-fluid h-100 w-100" style="object-fit: cover;">
+                    </div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Blue Pearl</h3>
+                        <p class="mb-2 small" style="color: #555555; line-height: 1.5;">
+                            Deep blue with shimmering silver flecks.
+                        </p>
+                        <p class="mb-0 fw-bold" style="color: #3a5a78;">$18.25/sq. in.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Emerald Pearl -->
+            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
+                <div class="color-card h-100 d-flex flex-column" 
+                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
+                    <div class="color-swatch" style="height: 120px;">
+                        <img src="images/Product-Emerald Pearl  2.jpg" alt="Emerald Pearl Granite" class="img-fluid h-100 w-100" style="object-fit: cover;">
+                    </div>
+                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
+                        <h3 class="h5 mb-2" style="color: #3a5a78;">Emerald Pearl</h3>
+                        <p class="mb-2 small" style="color: #555555; line-height: 1.5;">
+                            Greenish-gray with iridescent highlights.
+                        </p>
+                        <p class="mb-0 fw-bold" style="color: #3a5a78;">$15.75/sq. in.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Scale Monuments Section -->
+<section class="py-5 bg-light-gray">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="display-5 fw-bold mb-3" style="color: #3a5a78;">Scale Monuments</h2>
+            <p class="lead">Precision-crafted scale models of famous monuments and architectural wonders</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-img-container">
+                        <img src="images/TAJ MAHAL REPLICA.jpg" alt="Taj Mahal Scale Model" class="img-fluid">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Taj Mahal Replica</h3>
+                        <p class="card-text">Exact miniature replica of India's iconic marble mausoleum, crafted in premium white granite.</p>
+                        <div class="mt-auto">
+                           
+                    
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-img-container">
+                        <img src="images/EGYPTAIN PYRAMID.jpg" alt="Pyramid Scale Model" class="img-fluid">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Egyptian Pyramid</h3>
+                        <p class="card-text">Detailed granite pyramid models available in various sizes and granite colors.</p>
+                        <div class="mt-auto">
+                        
+                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-4">
+                <div class="product-card">
+                    <div class="card-img-container">
+                        <img src="images/Traditional Temple.jpg" alt="Temple Scale Model" class="img-fluid">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title">Traditional Temple</h3>
+                        <p class="card-text">Intricately carved South Indian temple models with authentic architectural details.</p>
+                        <div class="mt-auto">
+
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>f
+    <!-- Vases Section -->
+    <section class="py-5">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3" style="color: #3a5a78;">Granite Vases</h2>
+                <p class="lead">Elegant and durable granite vases for home and garden decor</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/Granites Vases-Modern Vases 1.jpg" alt="Modern Granite Vase" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Modern Vase</h3>
+                            <p class="card-text">Sleek contemporary designs with polished finish, perfect for indoor floral arrangements.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/Granites Vases-Carved Vases.jpg" alt="Carved Granite Vase" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Carved Vase</h3>
+                            <p class="card-text">Traditional hand-carved designs featuring intricate patterns and textures.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/Granites Vases-Outdoors Vases.jpg" alt="Outdoor Granite Vase" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Outdoor Vase</h3>
+                            <p class="card-text">Weather-resistant granite vases designed for gardens, patios and landscape decor.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Urns Section -->
+    <section class="py-5 bg-light-gray">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h2 class="display-5 fw-bold mb-3" style="color: #3a5a78;">Granite Urns</h2>
+                <p class="lead">Dignified and everlasting granite urns for memorial purposes</p>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/Granites Urns-Classical Memorial Urn.jpg" alt="Classic Memorial Urn" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Classic Memorial Urn</h3>
+                            <p class="card-text">Traditional designs with optional engraving for permanent memorialization.</p>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/Granite Urns-Modern Cremation Urn.jpg" alt="Modern Cremation Urn" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Modern Cremation Urn</h3>
+                            <p class="card-text">Contemporary designs with secure internal chambers for ashes.</p>
+                           
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-4">
+                    <div class="product-card">
+                        <div class="card-img-container">
+                            <img src="images/Granite Urns-Decorative Urns.jpg" alt="Decorative Urn" class="img-fluid">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Decorative Urn</h3>
+                            <p class="card-text">Ornamental urns featuring elaborate carvings and premium finishes.</p>
+                          
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--animation seacation -->
+    <!-- Granite Gallery Section -->
+<section class="py-5" style="background-color: #ffffff;">
+    <div class="container">
+        <div class="text-center mb-5" data-aos="fade-up">
+            <h2 class="display-5 fw-bold mb-3" style="color: #3a5a78;">Our Own Collection</h2>
+            <p class="lead" style="color: #555555; max-width: 700px; margin: 0 auto;">
+     
+            </p>
+        </div>
+        
+        <div class="gallery-container" style="overflow: hidden; padding: 20px 0; margin: 30px 0;">
+            <div class="gallery-track" style="display: inline-block; white-space: nowrap; animation: runGallery 40s linear infinite;">
+                <!-- Gallery Items -->
+                <div class="gallery-item" style="display: inline-block; margin: 0 15px; position: relative; width: 200px;">
+                    <img src="images/P-1.jpg" alt="Black Galaxy Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+                
+                <div class="gallery-item" style="display: inline-block; margin: 0 15px; position: relative; width: 200px;">
+                    <img src="images/P-2.jpg" alt="Imperial White Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+                
+                <div class="gallery-item" style="display: inline-block; margin: 0 15px; position: relative; width: 200px;">
+                    <img src="images/P-3.jpg" alt="Ruby Red Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+                
+                <div class="gallery-item" style="display: inline-block; margin: 0 15px; position: relative; width: 200px;">
+                    <img src="images/P-4.jpg" alt="Emerald Pearl Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+                
+                <div class="gallery-item" style="display: inline-block; margin: 0 15px; position: relative; width: 200px;">
+                    <img src="images/g-5.png" alt="Absolute Black Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+                
+                <div class="gallery-item" style="display: inline-block; margin: 0 15px; position: relative; width: 200px;">
+                    <img src="images/P-6.jpg" alt="Kashmir White Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+                
+                <div class="gallery-item" style="display: inline-block; margin: 0 15px; position: relative; width: 200px;">
+                    <img src="images/P-11.jpg" alt="Steel Grey Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+                
+                <!-- Duplicate items for seamless looping -->
+                <div class="gallery-item" style="display: inline-block; margin: 0 15px; position: relative; width: 200px;">
+                    <img src="images/P-6.jpg" alt="Black Galaxy Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+                
+                <div class="gallery-item" style="display: inline-block; margin: 0 15px; position: relative; width: 200px;">
+                    <img src="images/P-8.jpg" alt="Imperial White Granite" style="width: 100%; height: 150px; object-fit: cover; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1);">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    @keyframes runGallery {
+        0% { transform: translateX(0); }
+        100% { transform: translateX(-50%); }
+    }
+    
+    /* Pause animation on hover */
+    .gallery-container:hover .gallery-track {
+        animation-play-state: paused;
+    }
+    
+    /* Responsive adjustments */
+    @media (max-width: 768px) {
+        .gallery-item {
+            width: 160px !important;
+            margin: 0 10px !important;
+        }
+        
+        .gallery-item img {
+            height: 120px !important;
+        }
+    }
+    
+    @media (max-width: 576px) {
+        .gallery-item {
+            width: 140px !important;
+            margin: 0 8px !important;
+        }
+        
+        .gallery-item img {
+            height: 100px !important;
+        }
+        
+        .gallery-track {
+            animation-duration: 50s !important;
+        }
+    }
+</style>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const galleryContainer = document.querySelector('.gallery-container');
+        const galleryTrack = document.querySelector('.gallery-track');
+        
+        // Touch support for mobile devices
+        galleryContainer.addEventListener('touchstart', () => {
+            galleryTrack.style.animationPlayState = 'paused';
+        });
+        
+        galleryContainer.addEventListener('touchend', () => {
+            galleryTrack.style.animationPlayState = 'running';
+        });
+    });
+</script>
+<!-- Testimonials -->
+   <section class="py-5" style="background-color: #ccd7e0; color: #3a5a78;">
     <div class="container">
         <div class="text-center mb-5" data-aos="fade-up">
             <h2 class="display-5 fw-bold mb-3">What Our Clients Say</h2>
@@ -562,105 +950,6 @@
         </div>
     </div>
 </section>
-
-    <!-- Color Variety -->
-    <section class="py-5">
-    <div class="container">
-        <div class="text-center mb-5" data-aos="fade-up">
-            <h2 class="display-5 fw-bold mb-3" style="color: #3a5a78;">Granite Color Varieties</h2>
-            <p class="lead" style="color: #555555; max-width: 700px; margin: 0 auto;">
-                Explore our extensive selection of granite colors to match your design vision
-            </p>
-        </div>
-        
-        <div class="row g-4 justify-content-center">
-            <!-- Absolute Black -->
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="100">
-                <div class="color-card h-100 d-flex flex-column" 
-                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #2c3e50, #4ca1af);"></div>
-                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
-                        <h3 class="h5 mb-2" style="color: #3a5a78;">Absolute Black</h3>
-                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
-                            Deep black granite with minimal grain pattern.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Imperial Red -->
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="150">
-                <div class="color-card h-100 d-flex flex-column" 
-                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #8e0e00, #1f1c18);"></div>
-                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
-                        <h3 class="h5 mb-2" style="color: #3a5a78;">Imperial Red</h3>
-                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
-                            Rich red with black and gray mineral deposits.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Steel Grey -->
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="200">
-                <div class="color-card h-100 d-flex flex-column" 
-                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #bdc3c7, #2c3e50);"></div>
-                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
-                        <h3 class="h5 mb-2" style="color: #3a5a78;">Steel Grey</h3>
-                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
-                            Sophisticated gray with subtle variations.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Kashmir Gold -->
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="250">
-                <div class="color-card h-100 d-flex flex-column" 
-                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);"></div>
-                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
-                        <h3 class="h5 mb-2" style="color: #3a5a78;">Kashmir Gold</h3>
-                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
-                            Warm golden tones with dramatic veining.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Blue Pearl -->
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="300">
-                <div class="color-card h-100 d-flex flex-column" 
-                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #0f2027, #203a43, #2c5364);"></div>
-                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
-                        <h3 class="h5 mb-2" style="color: #3a5a78;">Blue Pearl</h3>
-                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
-                            Deep blue with shimmering silver flecks.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Emerald Pearl -->
-            <div class="col-xl-2 col-lg-3 col-md-4 col-sm-6" data-aos="fade-up" data-aos-delay="350">
-                <div class="color-card h-100 d-flex flex-column" 
-                     style="background: white; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(0,0,0,0.05);">
-                    <div class="color-swatch" style="height: 120px; background: linear-gradient(to right, #556270, #4ecdc4);"></div>
-                    <div class="card-body p-3 text-center d-flex flex-column" style="flex: 1;">
-                        <h3 class="h5 mb-2" style="color: #3a5a78;">Emerald Pearl</h3>
-                        <p class="mb-0 small" style="color: #555555; line-height: 1.5;">
-                            Greenish-gray with iridescent highlights.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
     <!-- CTA Section -->
     <section style="background: linear-gradient(rgba(58, 90, 120, 0.9), rgba(58, 90, 120, 0.9)), 
                 url('https://img.freepik.com/free-photo/stone-texture_1194-5373.jpg'); 
@@ -678,6 +967,7 @@
             </div>
         </div>
     </section>
+    
      <?php include "footer.php"; ?>
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>

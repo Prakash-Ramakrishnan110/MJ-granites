@@ -16,11 +16,12 @@
         :root {
             --primary-color: #3a5a78;
             --secondary-color: #d4af37;
+            --gold-glow: rgba(212, 175, 55, 0.7);
             --dark-color: #333;
             --light-color: #f8f9fa;
             --accent-color: #8b5a2b;
-            --header-height-desktop: 80px;
-            --header-height-mobile: 70px;
+            --header-height-desktop: 90px;
+            --header-height-mobile: 80px;
             --transition-speed: 0.4s;
         }
         
@@ -57,7 +58,7 @@
             padding: 0 5%;
         }
         
-        /* ===== LOGO & BRANDING ===== */
+        /* ===== ENHANCED BRIGHT LOGO ===== */
         .logo {
             display: flex;
             align-items: center;
@@ -74,10 +75,18 @@
         }
         
         .logo img {
-            height: 45px;
+            height: 70px;
             width: auto;
-            filter: drop-shadow(0 0 5px rgba(212, 175, 55, 0.5));
+            max-width: 100%;
+            filter: 
+                drop-shadow(0 0 8px var(--gold-glow))
+                brightness(1.3)
+                contrast(1.2);
             transition: all 0.3s ease;
+            object-fit: contain;
+            padding: 2px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 4px;
         }
         
         .brand-name {
@@ -88,7 +97,7 @@
             margin-left: 12px;
             background: linear-gradient(to right, 
                 var(--secondary-color) 0%, 
-                #f5f7fa 50%, 
+                #f5f7fa 80%, 
                 var(--secondary-color) 100%);
             -webkit-background-clip: text;
             background-clip: text;
@@ -96,6 +105,7 @@
             background-size: 200% auto;
             white-space: nowrap;
             transition: all 0.3s ease;
+            text-shadow: 0 0 10px rgba(212, 175, 55, 0.3);
         }
         
         /* Logo hover effects */
@@ -104,18 +114,25 @@
         }
         
         .logo:hover img {
-            filter: drop-shadow(0 0 10px rgba(212, 175, 55, 0.7));
+            filter: 
+                drop-shadow(0 0 15px var(--gold-glow))
+                brightness(1.5)
+                contrast(1.3);
+            background: rgba(255, 255, 255, 0.25);
         }
         
         .logo:hover .brand-name {
             animation: textShine 1s linear infinite;
+            text-shadow: 0 0 15px rgba(212, 175, 55, 0.5);
         }
         
         @keyframes textShine {
             0% { background-position: 0% center; }
             100% { background-position: 200% center; }
         }
-        
+
+        /* ===== REST OF YOUR CSS ===== */
+        /* [Keep all your existing navigation, mobile menu, and other styles here] */
         /* ===== NAVIGATION MENU ===== */
         nav ul {
             display: flex;
@@ -217,7 +234,20 @@
             background: var(--secondary-color);
         }
         
-        /* ===== MOBILE MENU STYLES ===== */
+        /* ===== RESPONSIVE ADJUSTMENTS ===== */
+        @media (max-width: 1200px) {
+            .logo img {
+                height: 65px;
+                filter: 
+                    drop-shadow(0 0 7px var(--gold-glow))
+                    brightness(1.25)
+                    contrast(1.15);
+            }
+            .brand-name {
+                font-size: 1.4rem;
+            }
+        }
+        
         @media (max-width: 992px) {
             body {
                 padding-top: var(--header-height-mobile);
@@ -228,21 +258,25 @@
             }
             
             .logo img {
-                height: 38px;
+                height: 60px;
+                filter: 
+                    drop-shadow(0 0 6px var(--gold-glow))
+                    brightness(1.2)
+                    contrast(1.1);
             }
             
             .brand-name {
                 font-size: 1.3rem;
                 margin-left: 10px;
             }
-            
-            nav ul {
-                gap: 15px;
+        }
+        
+        @media (max-width: 850px) {
+            .logo img {
+                height: 55px;
             }
-            
-            nav ul li a {
-                font-size: 0.95rem;
-                padding: 6px 10px;
+            .brand-name {
+                font-size: 1.2rem;
             }
         }
         
@@ -309,8 +343,25 @@
                 width: 100%;
             }
             
+            .logo img {
+                height: 50px;
+                filter: 
+                    drop-shadow(0 0 5px var(--gold-glow))
+                    brightness(1.15)
+                    contrast(1.1);
+            }
+            
             .brand-name {
                 font-size: 1.2rem;
+            }
+        }
+        
+        @media (max-width: 650px) {
+            .logo img {
+                height: 45px;
+            }
+            .brand-name {
+                font-size: 1.1rem;
             }
         }
         
@@ -320,7 +371,7 @@
             }
             
             .logo img {
-                height: 35px;
+                height: 42px;
             }
             
             .brand-name {
@@ -329,24 +380,44 @@
             }
         }
         
-        @media (max-width: 400px) {
+        @media (max-width: 480px) {
+            .logo img {
+                height: 40px;
+            }
             .brand-name {
                 font-size: 1rem;
             }
-            
-            nav ul li a {
-                font-size: 1.1rem;
+        }
+        
+        @media (max-width: 400px) {
+            .brand-name {
+                font-size: 0.95rem;
+            }
+        }
+        
+        /* Small devices - compact logo */
+        @media (max-width: 360px) {
+            .brand-name {
+                font-size: 0.9rem;
+                margin-left: 6px;
+            }
+            .logo img {
+                height: 38px;
             }
         }
         
         /* Very small devices - logo only */
-        @media (max-width: 350px) {
+        @media (max-width: 320px) {
             .brand-name {
                 display: none;
             }
             
             .logo img {
-                height: 40px;
+                height: 42px;
+                filter: 
+                    drop-shadow(0 0 4px var(--gold-glow))
+                    brightness(1.1)
+                    contrast(1.05);
             }
         }
         
@@ -356,6 +427,25 @@
             box-shadow: 0 5px 30px rgba(0, 0, 0, 0.2);
             height: var(--header-height-mobile);
         }
+        
+        .scrolled .logo img {
+            height: 55px !important;
+            filter: 
+                drop-shadow(0 0 6px var(--gold-glow))
+                brightness(1.25)
+                contrast(1.15);
+            transition: all 0.3s ease;
+        }
+        
+        @media (max-width: 768px) {
+            .scrolled .logo img {
+                height: 45px !important;
+                filter: 
+                    drop-shadow(0 0 5px var(--gold-glow))
+                    brightness(1.2)
+                    contrast(1.1);
+            }
+        }
     </style>
 </head>
 <body>
@@ -363,8 +453,8 @@
         <div class="header-container">
             <div class="logo">
                 <div class="logo-inner">
-                    <img src="images/mj-granites-logo.png" alt="MJ Granites Logo" style="height:60px !important;">
-                    <span class="brand-name">MJ Granites Exporter</span>
+                    <img src="images/logo_4-removebg-preview-removebg-preview (1).png" alt="MJ Granites Logo">
+                    <span class="brand-name">MJ Granite Exporters</span>
                 </div>
             </div>
             

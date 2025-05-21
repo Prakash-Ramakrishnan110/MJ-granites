@@ -12,26 +12,26 @@
     <!-- Animate.css -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Lora:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         :root {
             --primary-color: #3a5a78;
             --secondary-color: #d4af37;
-            --dark-color: #e8e8e8;
-            --light-color: #f8f9fa;
+            --dark-color: #8cabd4;
+            --light-color: #0e0f0f;
             --accent-color: #8b5a2b;
         }
         
         body {
-            font-family: 'Poppins', sans-serif;
+            font-family: 'Montserrat', sans-serif;
             overflow-x: hidden;
             scroll-behavior: smooth;
             line-height: 1.6;
-            color: #444;
+            color: #181616;
         }
         
         h1, h2, h3, h4, h5, .display-font {
-            font-family: 'Playfair Display', serif;
+            font-family: 'Montserrat', sans-serif;
             line-height: 1.3;
             color: var(--dark-color);
         }
@@ -531,7 +531,7 @@
         <div class="pattern-dots"></div>
         <div class="container">
             <div class="hero-content animate__animated animate__fadeIn">
-                <h1 class="hero-title slide-up">Contact Our Export Team</h1>
+                <h1 class="hero-title slide-up"><b>Contact Our Export Team</b></h1>
                 <p class="lead slide-up delay-1">We're here to assist with your granite export inquiries, product questions, and shipping requirements.</p>
                 <div class="mt-4 slide-up delay-2">
                     <a href="#quote" class="btn btn-primary btn-lg me-2">Get Export Quote</a>
@@ -550,7 +550,7 @@
                         <div class="contact-icon">
                             <i class="fas fa-map-marker-alt"></i>
                         </div>
-                        <h3>Our Location</h3>
+                        <h3><b>Our Location</b></h3>
                         <p>Sankari<br>Salem – Tamil Nadu, India 637301</p>
                         <a href="#map" class="btn btn-sm btn-primary mt-3">View on Map</a>
                     </div>
@@ -560,7 +560,7 @@
                         <div class="contact-icon">
                             <i class="fas fa-phone-alt"></i>
                         </div>
-                        <h3>Phone & WhatsApp</h3>
+                        <h3><b>Phone & WhatsApp</b></h3>
                         <p>+91-88070-89774</p>
                         <a href="tel:+918807089774" class="btn btn-sm btn-primary mt-3">Call Now</a>
                     </div>
@@ -570,7 +570,7 @@
                         <div class="contact-icon">
                             <i class="fas fa-envelope"></i>
                         </div>
-                        <h3>Email Us</h3>
+                        <h3><b>Email Us</b></h3>
                         <p>mjgranitesexporters@gmail.com</p>
                         <a href="mailto:mjgranitesexporters@gmail.com" class="btn btn-sm btn-primary mt-3">Send Email</a>
                     </div>
@@ -585,7 +585,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0">
                     <div class="pe-lg-4 slide-left">
-                        <h2 class="section-title">Get an Export Quote</h2>
+                        <h2 class="section-title"><b>Get an Export Quote</b></h2>
                         <p class="mb-4">Fill out the form to request a customized quote for your granite export requirements. Our team will respond within 24 hours with pricing, shipping options, and any additional information you need.</p>
                         
                         <div class="bg-white p-4 rounded shadow-sm rotate-in">
@@ -679,7 +679,7 @@
     <section class="py-5 bg-light" id="map">
         <div class="container">
             <div class="text-center mb-5 fade-in">
-                <h2 class="section-title center">Our Factory Location</h2>
+                <h2 class="section-title center"><b>Our Factory Location</b></h2>
                 <p class="lead">Visit our manufacturing facility in Madurai, India or connect with our export team remotely.</p>
             </div>
             
@@ -713,7 +713,7 @@
     <section class="py-5">
         <div class="container">
             <div class="text-center mb-5 fade-in">
-                <h2 class="section-title center">Export FAQ</h2>
+                <h2 class="section-title center"><b>Export FAQ</b></h2>
                 <p class="lead">Common questions about our granite export process.</p>
             </div>
             
