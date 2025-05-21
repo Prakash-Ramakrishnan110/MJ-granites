@@ -363,7 +363,7 @@
         <div class="header-container">
             <div class="logo">
                 <div class="logo-inner">
-                    <img src="images/logo 4.png" alt="MJ Granites Logo" style="height:60px !important;">
+                    <img src="images/mj-granites-logo.png" alt="MJ Granites Logo" style="height:60px !important;">
                     <span class="brand-name">MJ Granites Exporter</span>
                 </div>
             </div>

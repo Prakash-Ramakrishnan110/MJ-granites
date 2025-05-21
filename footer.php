@@ -584,7 +584,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-4 col-md-6 footer-col animate-in">
-                    <img src="images/logo 4.png" alt="MJ Granites Export Logo" class="footer-logo"> <span class="brand-name">MJ Granites Exporter</span>
+                    <img src="images/mj-granites-logo.png" alt="MJ Granites Export Logo" class="footer-logo"> <span class="brand-name">MJ Granites Exporter</span>
                     <p>Premier manufacturer and global exporter of premium granite products, serving clients worldwide with quality craftsmanship and reliable shipping.</p>
                     <div class="social-icons">
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>

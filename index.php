@@ -955,7 +955,7 @@
                 
                 <!-- Image - Order changes on mobile -->
                 <div class="col-lg-6 order-1 order-lg-2 mb-4 mb-lg-0 img-hover-zoom tilt-effect animate-section" data-animation="slideInFromRight">
-                    <img src="images/logo 4.png" 
+                    <img src="images/mj-granites-logo.png" 
                          alt="Granite Factory" 
                          class="img-fluid rounded shadow-lg w-100">
                 </div>
