@@ -129,7 +129,7 @@
         /* Hero Section */
         .export-hero {
             background: linear-gradient(rgba(26, 42, 58, 0.8), rgba(26, 42, 58, 0.8)), 
-                        url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover;
+                        url('images/contact-hero.jpg') no-repeat center center/cover;
             height: 80vh;
             min-height: 600px;
             display: flex;
