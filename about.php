@@ -98,7 +98,7 @@
 </head>
 <body style="font-family: 'Poppins', sans-serif; line-height: 1.6; color: #333; overflow-x: hidden; margin: 0; padding: 0;">
      <?php include "header.php"; ?>
-    <section style="background: linear-gradient(rgba(26, 42, 58, 0.8), rgba(26, 42, 58, 0.8)), url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; height: 80vh; min-height: 600px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 20px; animation: fadeIn 1.5s ease;">
+    <section style="background: linear-gradient(rgba(26, 42, 58, 0.8), rgba(26, 42, 58, 0.8)), url('images/about hero2.png') no-repeat center center/cover; height: 80vh; min-height: 600px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 20px; animation: fadeIn 1.5s ease;">
         <div style="max-width: 800px; padding: 0 20px; transform: translateY(20px); opacity: 0; animation: slideUp 1s ease forwards 0.3s;">
             <h1 class="hero-title" style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; margin-bottom: 25px; color: #d4af37; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">About MJ Granites</h1>
             <div style="width: 85px; height: 3px; background-color: #d4af37; margin: 30px auto; transform: scaleX(0); transform-origin: center; animation: scaleIn 0.8s ease forwards 0.5s;"></div>
@@ -200,7 +200,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 40px; margin-bottom: 60px;">
             <!-- Manufacturing image -->
             <div style="position: relative; border-radius: 12px; overflow: hidden; box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08); height: 400px;">
-                <img src="https://images.unsplash.com/photo-1581093450021-4a7360e9a9e1?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80" 
+                <img src="images/about section 2.jpeg" 
                      alt="Granite manufacturing facility"
                      style="width: 100%; height: 100%; object-fit: cover; filter: brightness(0.98) contrast(1.05);">
                 <div style="position: absolute; bottom: 0; left: 0; right: 0; padding: 30px; background: linear-gradient(to top, rgba(26, 42, 58, 0.9), transparent);">
@@ -452,7 +452,6 @@
                 Explore our premium selection of granite varieties from around the world, each with unique patterns and characteristics.
             </p>
         </div>
-
         <!-- Scrolling image gallery with hover pause -->
         <div style="position: relative; overflow: hidden; padding: 20px 0;">
             <div class="scrolling-gallery" style="display: flex; animation: scroll 60s linear infinite; width: calc(250px * 30);"
