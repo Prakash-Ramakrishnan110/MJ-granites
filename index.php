@@ -500,7 +500,7 @@
                         <div class="card-content">
                             <h4>Ruby Red Granite</h4>
                             <p>Premium Ruby Red granite with fine grain structure</p>
-                            <button class="view-details-btn">View Details</button>
+
                         </div>
                     </div>
                 </div>
@@ -513,7 +513,7 @@
                         <div class="card-content">
                             <h4>Ocean Blue Granite</h4>
                             <p>Elegant blue granite with subtle grey veins</p>
-                            <button class="view-details-btn">View Details</button>
+
                         </div>
                     </div>
                 </div>
@@ -526,7 +526,7 @@
                         <div class="card-content">
                             <h4>Emerled Green Granite</h4>
                             <p>Striking Green granite with dark mineral deposits</p>
-                            <button class="view-details-btn">View Details</button>
+
                         </div>
                     </div>
                 </div>
@@ -542,7 +542,7 @@
                         <div class="card-content">
                             <h4>Emeraled Pearl Granite</h4>
                             <p>Dark background with golden speckles like stars</p>
-                            <button class="view-details-btn">View Details</button>
+
                         </div>
                     </div>
                 </div>
@@ -555,7 +555,7 @@
                         <div class="card-content">
                             <h4>Cosmic Black Granite</h4>
                             <p>Pure cosmic black granite with icy blue undertones</p>
-                            <button class="view-details-btn">View Details</button>
+
                         </div>
                     </div>
                 </div>
@@ -568,7 +568,6 @@
                         <div class="card-content">
                             <h4>Golden oak</h4>
                             <p>Modern golden Oak granite with metallic shimmer</p>
-                            <button class="view-details-btn">View Details</button>
                         </div>
                     </div>
                 </div>
