@@ -665,7 +665,7 @@
       <div style="flex: 1; padding: 20px;">
         <h3 style="font-size: 1.8rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #3a5a78; margin-bottom: 15px;">Artistic Sculptures</h3>
         <p style="font-weight: 300; color: #666; line-height: 1.6; margin-bottom: 20px;">Hand-carved granite sculptures that transform spaces with their elegance and craftsmanship.</p>
-        <a href="#" style="font-weight: 500; color: #d4af37; text-decoration: none; display: inline-flex; align-items: center;">
+        <a href="gallery.php" style="font-weight: 500; color: #d4af37; text-decoration: none; display: inline-flex; align-items: center;">
           View Gallery <span style="margin-left: 8px;">→</span>
         </a>
       </div>
@@ -677,7 +677,7 @@
       <div style="flex: 1; padding: 20px;">
         <h3 style="font-size: 1.8rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #3a5a78; margin-bottom: 15px;">Premium Granite Slabs</h3>
         <p style="font-weight: 300; color: #666; line-height: 1.6; margin-bottom: 20px;">High-quality slabs perfect for countertops, flooring, and architectural applications.</p>
-        <a href="#" style="font-weight: 500; color: #d4af37; text-decoration: none; display: inline-flex; align-items: center;">
+        <a href="gallery.php" style="font-weight: 500; color: #d4af37; text-decoration: none; display: inline-flex; align-items: center;">
           Explore Inventory <span style="margin-left: 8px;">→</span>
         </a>
       </div>
