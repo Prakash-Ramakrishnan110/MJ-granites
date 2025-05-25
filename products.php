@@ -530,21 +530,17 @@
     <div style="display: flex; justify-content: center; gap: 30px; margin-bottom: 30px; flex-wrap: wrap;">
       <!-- Card 1 -->
       <div style="width: 360px; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25); background: linear-gradient(145deg, #2c3e50 0%, #1a1a2e 100%); position: relative; border: 1px solid #4a4a4a;">
-        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://www.transparenttextures.com/patterns/black-mamba.png'); opacity: 0.05; pointer-events: none;"></div>
+        <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url(''); opacity: 0.05; pointer-events: none;"></div>
         <div style="height: 240px; position: relative; border-bottom: 8px solid #3a3a3a;">
-          <div style="height: 100%; background-image: url('https://img.freepik.com/free-photo/luxury-pool-villa-spectacular-contemporary-design-digital-art-real-estate-home-house-property-generative-ai-illustration_1258-151616.jpg'); background-size: cover; background-position: center;"></div>
-          <div style="position: absolute; top: 20px; right: 20px; background: rgba(0,0,0,0.7); color: #d4af37; padding: 8px 15px; border-radius: 4px; font-size: 14px; font-weight: bold; letter-spacing: 1px;">
-            GRANITE VILLA
-          </div>
+          <div style="height: 100%; background-image: url('images/P-8.jpg'); background-size: cover; background-position: center;"></div>
+         
         </div>
         <div style="padding: 25px; position: relative;">
-          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;">Black Galaxy Villa</h2>
+          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;">Classic Border Frame</h2>
           <p style="margin: 15px 0; font-size: 15px; color: #cccccc; line-height: 1.6; font-family: 'Poppins', sans-serif;">
-            Featuring stunning Black Galaxy granite accents throughout, this villa offers luxury living with spectacular views.
+            A smooth arching border frames the center, ideal for personalized inscriptions or dedications.
           </p>
-          <button style="background: linear-gradient(145deg, #3a3a3a 0%, #2a2a2a 100%); color: #d4af37; border: 1px solid #4a4a4a; border-radius: 6px; padding: 12px 25px; font-weight: 600; cursor: pointer; font-family: 'Playfair Display', serif; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 100%;">
-            View Details
-          </button>
+          
         </div>
       </div>
 
@@ -552,19 +548,15 @@
       <div style="width: 360px; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25); background: linear-gradient(145deg, #2c3e50 0%, #1a1a2e 100%); position: relative; border: 1px solid #4a4a4a;">
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://www.transparenttextures.com/patterns/black-mamba.png'); opacity: 0.05; pointer-events: none;"></div>
         <div style="height: 240px; position: relative; border-bottom: 8px solid #3a3a3a;">
-          <div style="height: 100%; background-image: url('https://img.freepik.com/free-photo/luxury-classic-modern-kitchen-design_53876-140803.jpg'); background-size: cover; background-position: center;"></div>
-          <div style="position: absolute; top: 20px; right: 20px; background: rgba(0,0,0,0.7); color: #d4af37; padding: 8px 15px; border-radius: 4px; font-size: 14px; font-weight: bold; letter-spacing: 1px;">
-            GRANITE KITCHEN
-          </div>
+          <div style="height: 100%; background-image: url('images/P-3.jpg'); background-size: cover; background-position: center;"></div>
+         
         </div>
         <div style="padding: 25px; position: relative;">
-          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;">Absolute Black Kitchen</h2>
+          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;">Leaf & Petal Harmony</h2>
           <p style="margin: 15px 0; font-size: 15px; color: #cccccc; line-height: 1.6; font-family: 'Poppins', sans-serif;">
-            Premium Absolute Black granite countertops and backsplash in this chef's dream kitchen.
+          Balanced design featuring leaf and petal forms, showcasing high-quality sandblasting craftsmanship.
           </p>
-          <button style="background: linear-gradient(145deg, #3a3a3a 0%, #2a2a2a 100%); color: #d4af37; border: 1px solid #4a4a4a; border-radius: 6px; padding: 12px 25px; font-weight: 600; cursor: pointer; font-family: 'Playfair Display', serif; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 100%;">
-            View Details
-          </button>
+          
         </div>
       </div>
 
@@ -572,19 +564,15 @@
       <div style="width: 360px; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25); background: linear-gradient(145deg, #2c3e50 0%, #1a1a2e 100%); position: relative; border: 1px solid #4a4a4a;">
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://www.transparenttextures.com/patterns/black-mamba.png'); opacity: 0.05; pointer-events: none;"></div>
         <div style="height: 240px; position: relative; border-bottom: 8px solid #3a3a3a;">
-          <div style="height: 100%; background-image: url('https://img.freepik.com/free-photo/luxury-bathroom-with-marble-countertop_23-2148895006.jpg'); background-size: cover; background-position: center;"></div>
-          <div style="position: absolute; top: 20px; right: 20px; background: rgba(0,0,0,0.7); color: #d4af37; padding: 8px 15px; border-radius: 4px; font-size: 14px; font-weight: bold; letter-spacing: 1px;">
-            GRANITE BATH
-          </div>
+          <div style="height: 100%; background-image: url('images/P-7.jpg'); background-size: cover; background-position: center;"></div>
+          
         </div>
         <div style="padding: 25px; position: relative;">
-          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;">Granite Spa Bathroom</h2>
+          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;"> Delicate Bloom Motif</h2>
           <p style="margin: 15px 0; font-size: 15px; color: #cccccc; line-height: 1.6; font-family: 'Poppins', sans-serif;">
-            Luxurious bathroom featuring polished granite surfaces and premium fixtures for ultimate relaxation.
+           A detailed blossom etched with precision sits prominently in the corner—subtle and artistic.
           </p>
-          <button style="background: linear-gradient(145deg, #3a3a3a 0%, #2a2a2a 100%); color: #d4af37; border: 1px solid #4a4a4a; border-radius: 6px; padding: 12px 25px; font-weight: 600; cursor: pointer; font-family: 'Playfair Display', serif; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 100%;">
-            View Details
-          </button>
+          
         </div>
       </div>
     </div>
@@ -595,19 +583,17 @@
       <div style="width: 360px; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25); background: linear-gradient(145deg, #2c3e50 0%, #1a1a2e 100%); position: relative; border: 1px solid #4a4a4a;">
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://www.transparenttextures.com/patterns/black-mamba.png'); opacity: 0.05; pointer-events: none;"></div>
         <div style="height: 240px; position: relative; border-bottom: 8px solid #3a3a3a;">
-          <div style="height: 100%; background-image: url('https://img.freepik.com/free-photo/luxury-living-room-with-chandelier_23-2148895015.jpg'); background-size: cover; background-position: center;"></div>
-          <div style="position: absolute; top: 20px; right: 20px; background: rgba(0,0,0,0.7); color: #d4af37; padding: 8px 15px; border-radius: 4px; font-size: 14px; font-weight: bold; letter-spacing: 1px;">
-            GRANITE LIVING
-          </div>
+          <div style="height: 100%; background-image: url('images/P-1.jpg'); background-size: cover; background-position: center;"></div>
+         
         </div>
         <div style="padding: 25px; position: relative;">
-          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;">Granite Accent Living</h2>
+          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;">Modern Scroll Accent</h2>
           <p style="margin: 15px 0; font-size: 15px; color: #cccccc; line-height: 1.6; font-family: 'Poppins', sans-serif;">
-            Elegant living space featuring granite fireplace surround and custom stone details.
+           Crisp scrollwork adds a dynamic touch to the granite surface, blending tradition with modern flair.
+
+
           </p>
-          <button style="background: linear-gradient(145deg, #3a3a3a 0%, #2a2a2a 100%); color: #d4af37; border: 1px solid #4a4a4a; border-radius: 6px; padding: 12px 25px; font-weight: 600; cursor: pointer; font-family: 'Playfair Display', serif; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 100%;">
-            View Details
-          </button>
+          
         </div>
       </div>
 
@@ -615,19 +601,17 @@
       <div style="width: 360px; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25); background: linear-gradient(145deg, #2c3e50 0%, #1a1a2e 100%); position: relative; border: 1px solid #4a4a4a;">
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://www.transparenttextures.com/patterns/black-mamba.png'); opacity: 0.05; pointer-events: none;"></div>
         <div style="height: 240px; position: relative; border-bottom: 8px solid #3a3a3a;">
-          <div style="height: 100%; background-image: url('https://img.freepik.com/free-photo/luxury-dining-room-with-chandelier_23-2148895013.jpg'); background-size: cover; background-position: center;"></div>
-          <div style="position: absolute; top: 20px; right: 20px; background: rgba(0,0,0,0.7); color: #d4af37; padding: 8px 15px; border-radius: 4px; font-size: 14px; font-weight: bold; letter-spacing: 1px;">
-            GRANITE DINING
-          </div>
+          <div style="height: 100%; background-image: url('images/P-6.jpg'); background-size: cover; background-position: center;"></div>
+          
         </div>
         <div style="padding: 25px; position: relative;">
-          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;">Granite Top Dining</h2>
+          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;">Corner Vine Design</h2>
           <p style="margin: 15px 0; font-size: 15px; color: #cccccc; line-height: 1.6; font-family: 'Poppins', sans-serif;">
-            Formal dining area with custom granite table and matching stone accents.
+            Stylized leaves curve along the edge, giving a natural feel to this refined granite plaque.
+
+
           </p>
-          <button style="background: linear-gradient(145deg, #3a3a3a 0%, #2a2a2a 100%); color: #d4af37; border: 1px solid #4a4a4a; border-radius: 6px; padding: 12px 25px; font-weight: 600; cursor: pointer; font-family: 'Playfair Display', serif; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 100%;">
-            View Details
-          </button>
+          
         </div>
       </div>
 
@@ -635,19 +619,15 @@
       <div style="width: 360px; border-radius: 12px; overflow: hidden; box-shadow: 0 15px 40px rgba(0,0,0,0.25); background: linear-gradient(145deg, #2c3e50 0%, #1a1a2e 100%); position: relative; border: 1px solid #4a4a4a;">
         <div style="position: absolute; top: 0; left: 0; right: 0; bottom: 0; background: url('https://www.transparenttextures.com/patterns/black-mamba.png'); opacity: 0.05; pointer-events: none;"></div>
         <div style="height: 240px; position: relative; border-bottom: 8px solid #3a3a3a;">
-          <div style="height: 100%; background-image: url('https://img.freepik.com/free-photo/luxury-outdoor-pool-area_23-2148895008.jpg'); background-size: cover; background-position: center;"></div>
-          <div style="position: absolute; top: 20px; right: 20px; background: rgba(0,0,0,0.7); color: #d4af37; padding: 8px 15px; border-radius: 4px; font-size: 14px; font-weight: bold; letter-spacing: 1px;">
-            GRANITE PATIO
-          </div>
+          <div style="height: 100%; background-image: url('images/P-3.jpg'); background-size: cover; background-position: center;"></div>
+          
         </div>
         <div style="padding: 25px; position: relative;">
-          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;">Granite Pool Deck</h2>
+          <h2 style="margin: 0 0 5px; font-size: 24px; font-weight: 700; color: #d4af37; letter-spacing: 0.5px;"> Elegant Floral Panel</h2>
           <p style="margin: 15px 0; font-size: 15px; color: #cccccc; line-height: 1.6; font-family: 'Poppins', sans-serif;">
-            Stunning outdoor space with granite pool coping and patio surfaces.
+            A graceful flower etched with fine sandblasting on polished granite—perfect for memorial or decorative use.
           </p>
-          <button style="background: linear-gradient(145deg, #3a3a3a 0%, #2a2a2a 100%); color: #d4af37; border: 1px solid #4a4a4a; border-radius: 6px; padding: 12px 25px; font-weight: 600; cursor: pointer; font-family: 'Playfair Display', serif; letter-spacing: 1px; text-transform: uppercase; box-shadow: 0 4px 8px rgba(0,0,0,0.2); width: 100%;">
-            View Details
-          </button>
+         
         </div>
       </div>
     </div>
@@ -672,7 +652,7 @@
 
     <!-- Product 1 - Memorial Monuments -->
     <div style="margin-bottom: 60px; position: relative;">
-      <div style="height: 500px; background: url('https://img.freepik.com/free-photo/beautiful-granite-monument_23-2149530049.jpg') center/cover; border-radius: 8px;"></div>
+      <div style="height: 500px; background: url('images/home-monuments.jpg') center/cover; border-radius: 8px;"></div>
       <div style="position: absolute; bottom: 40px; left: 40px; max-width: 500px;">
         <h3 style="font-size: 2rem; font-family: 'Playfair Display', serif; font-weight: 600; color: white; margin-bottom: 10px; text-shadow: 1px 1px 3px rgba(0,0,0,0.5);">Memorial Monuments</h3>
         <p style="font-weight: 300; color: white; text-shadow: 1px 1px 2px rgba(0,0,0,0.5);">Timeless granite memorials crafted with precision and care</p>
@@ -681,7 +661,7 @@
 
     <!-- Product 2 - Artistic Sculptures -->
     <div style="display: flex; margin-bottom: 60px; gap: 30px; align-items: center;">
-      <div style="flex: 1; height: 400px; background: url('https://img.freepik.com/free-photo/stone-carving-art_23-2149530053.jpg') center/cover; border-radius: 8px;"></div>
+      <div style="flex: 1; height: 400px; background: url('images/home-artistic sculptures.jpg') center/cover; border-radius: 8px;"></div>
       <div style="flex: 1; padding: 20px;">
         <h3 style="font-size: 1.8rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #3a5a78; margin-bottom: 15px;">Artistic Sculptures</h3>
         <p style="font-weight: 300; color: #666; line-height: 1.6; margin-bottom: 20px;">Hand-carved granite sculptures that transform spaces with their elegance and craftsmanship.</p>
@@ -693,7 +673,7 @@
 
     <!-- Product 3 - Granite Slabs -->
     <div style="display: flex; margin-bottom: 60px; gap: 30px; align-items: center; flex-direction: row-reverse;">
-      <div style="flex: 1; height: 400px; background: url('https://img.freepik.com/free-photo/beautiful-granite-countertop_23-2149530051.jpg') center/cover; border-radius: 8px;"></div>
+      <div style="flex: 1; height: 400px; background: url('images/product-img3.jpg') center/cover; border-radius: 8px;"></div>
       <div style="flex: 1; padding: 20px;">
         <h3 style="font-size: 1.8rem; font-family: 'Playfair Display', serif; font-weight: 600; color: #3a5a78; margin-bottom: 15px;">Premium Granite Slabs</h3>
         <p style="font-weight: 300; color: #666; line-height: 1.6; margin-bottom: 20px;">High-quality slabs perfect for countertops, flooring, and architectural applications.</p>
@@ -705,7 +685,7 @@
 
     <!-- Product 4 - Architectural Elements -->
     <div style="margin-bottom: 60px; position: relative;">
-      <div style="height: 500px; background: url('https://img.freepik.com/free-photo/granite-columns-building_23-2149530055.jpg') center/cover; border-radius: 8px;"></div>
+      <div style="height: 500px; background: url('images/product-img5.jpg') center/cover; border-radius: 8px;"></div>
       <div style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); text-align: center; width: 100%; max-width: 800px; padding: 20px;">
         <h3 style="font-size: 2.5rem; font-family: 'Playfair Display', serif; font-weight: 700; color: white; margin-bottom: 15px; text-shadow: 1px 1px 3px rgba(0,0,0,0.8);">Architectural Elements</h3>
         <p style="font-weight: 300; color: white; font-size: 1.2rem; text-shadow: 1px 1px 2px rgba(0,0,0,0.8);">Custom granite features that elevate buildings with structural excellence</p>

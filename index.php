@@ -372,20 +372,20 @@
                     <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/about-absolute black.jpg')"></div>
                     <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Absolute Black Granite</h4>
                 </div>
-                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Kashmir White Granite', 'https://img.freepik.com/free-photo/stone-texture-background_53876-93142.jpg', 'Elegant white granite with subtle gray veining. Ideal for kitchen countertops, bathroom vanities, and wall cladding. Resistant to stains and scratches.')">
-                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('https://img.freepik.com/free-photo/stone-texture-background_53876-93142.jpg')"></div>
+                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Kashmir White Granite', 'images/about-imperial white.jpg', 'Elegant white granite with subtle gray veining. Ideal for kitchen countertops, bathroom vanities, and wall cladding. Resistant to stains and scratches.')">
+                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/about-imperial white.jpg')"></div>
                     <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Kashmir White Granite</h4>
                 </div>
-                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Imperial Red Granite', 'https://img.freepik.com/free-photo/stone-texture-background_53876-93146.jpg', 'Striking red granite with dark mineral deposits. Perfect for statement pieces, fireplace surrounds, and commercial spaces. Highly durable and heat resistant.')">
-                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('https://img.freepik.com/free-photo/stone-texture-background_53876-93146.jpg')"></div>
+                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Imperial Red Granite', 'images/about-red.jpg', 'Striking red granite with dark mineral deposits. Perfect for statement pieces, fireplace surrounds, and commercial spaces. Highly durable and heat resistant.')">
+                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/about-red.jpg')"></div>
                     <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Imperial Red Granite</h4>
                 </div>
-                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Black Galaxy Granite', 'https://img.freepik.com/free-photo/beautiful-shot-granite-stones-texture_181624-21579.jpg', 'Luxurious black granite with golden speckles resembling a starry night. Excellent for high-end residential and commercial projects worldwide.')">
-                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('https://img.freepik.com/free-photo/beautiful-shot-granite-stones-texture_181624-21579.jpg')"></div>
-                    <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Black Galaxy Granite</h4>
+                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Black Galaxy Granite', 'images/gallery-autumn brown.jpg', 'Brown Autumn granite with golden speckles resembling a starry night. Excellent for high-end residential and commercial projects worldwide.')">
+                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/gallery-autumn brown.jpg')"></div>
+                    <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Brown Autumn Granite</h4>
                 </div>
-                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('White Ice Granite', 'https://img.freepik.com/free-photo/white-marble-texture-background_53876-95284.jpg', 'Pure white granite with crystalline structure. Creates a bright, clean aesthetic for modern spaces. Available in polished, honed, or brushed finishes.')">
-                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('https://img.freepik.com/free-photo/white-marble-texture-background_53876-95284.jpg')"></div>
+                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('White Ice Granite', '', 'Pure white granite with crystalline structure. Creates a bright, clean aesthetic for modern spaces. Available in polished, honed, or brushed finishes.')">
+                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/gallery- snow white.jpg')"></div>
                     <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">White Ice Granite</h4>
                 </div>
                 <!-- Cloned Items for seamless looping -->
@@ -393,20 +393,20 @@
                     <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/about-absolute black.jpg')"></div>
                     <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Absolute Black Granite</h4>
                 </div>
-                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Kashmir White Granite', 'https://img.freepik.com/free-photo/stone-texture-background_53876-93142.jpg', 'Elegant white granite with subtle gray veining. Ideal for kitchen countertops, bathroom vanities, and wall cladding. Resistant to stains and scratches.')">
-                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('https://img.freepik.com/free-photo/stone-texture-background_53876-93142.jpg')"></div>
+                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Kashmir White Granite', 'images/about-imperial white.jpg', 'Elegant white granite with subtle gray veining. Ideal for kitchen countertops, bathroom vanities, and wall cladding. Resistant to stains and scratches.')">
+                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/about-imperial white.jpg')"></div>
                     <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Kashmir White Granite</h4>
                 </div>
-                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Imperial Red Granite', 'https://img.freepik.com/free-photo/stone-texture-background_53876-93146.jpg', 'Striking red granite with dark mineral deposits. Perfect for statement pieces, fireplace surrounds, and commercial spaces. Highly durable and heat resistant.')">
-                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('https://img.freepik.com/free-photo/stone-texture-background_53876-93146.jpg')"></div>
+                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Imperial Red Granite', 'images/about-red.jpg', 'Striking red granite with dark mineral deposits. Perfect for statement pieces, fireplace surrounds, and commercial spaces. Highly durable and heat resistant.')">
+                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/about-red.jpg')"></div>
                     <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Imperial Red Granite</h4>
                 </div>
-                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Black Galaxy Granite', 'https://img.freepik.com/free-photo/beautiful-shot-granite-stones-texture_181624-21579.jpg', 'Luxurious black granite with golden speckles resembling a starry night. Excellent for high-end residential and commercial projects worldwide.')">
-                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('https://img.freepik.com/free-photo/beautiful-shot-granite-stones-texture_181624-21579.jpg')"></div>
-                    <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Black Galaxy Granite</h4>
+                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Black Galaxy Granite', 'images/gallery-autumn brown.jpg', 'Brown Autumn  with golden speckles resembling a starry night. Excellent for high-end residential and commercial projects worldwide.')">
+                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/gallery-autumn brown.jpg')"></div>
+                    <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Brown Autumn Granite</h4>
                 </div>
-                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('White Ice Granite', 'https://img.freepik.com/free-photo/white-marble-texture-background_53876-95284.jpg', 'Pure white granite with crystalline structure. Creates a bright, clean aesthetic for modern spaces. Available in polished, honed, or brushed finishes.')">
-                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('https://img.freepik.com/free-photo/white-marble-texture-background_53876-95284.jpg')"></div>
+                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('White Ice Granite', 'images/gallery- snow white.jpg', 'Pure white granite with crystalline structure. Creates a bright, clean aesthetic for modern spaces. Available in polished, honed, or brushed finishes.')">
+                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/gallery- snow white.jpg')"></div>
                     <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">White Ice Granite</h4>
                 </div>
             </div>
@@ -487,7 +487,7 @@
 <section style="padding: 100px 0; background: linear-gradient(135deg, #f5f5f5 0%, #e8e8e8 50%, #f5f5f5 100%);" id="products">
     <div style="max-width: 1200px; margin: 0 auto; padding: 0 20px;">
         <div style="text-align: center; margin-bottom: 60px;">
-            <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(4rem, 6vw, 5rem); color: #1a2a3a; margin-bottom: 15px;">Our Premium Products</h2>
+            <h2 style="font-family: 'Playfair Display', serif; font-size: clamp(4rem, 6vw, 5rem); color: #1a2a3a; margin-bottom: 15px;">Our New Collection</h2>
             <p style="font-size: 1.1rem; color: #666; max-width: 700px; margin: 0 auto;">Discover our exquisite range of granite products crafted with precision and care</p>
         </div>
         
@@ -495,11 +495,11 @@
         <div style="display: flex; flex-wrap: wrap; gap: 20px; margin-bottom: 20px; justify-content: center;">
             <!-- Card 1 -->
             <div class="product-card" style="width: calc(33.333% - 20px); min-width: 300px; position: relative;">
-                <div class="card-image" style="background-image: url('https://img.freepik.com/free-photo/black-granite-texture-background_53876-92833.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
+                <div class="card-image" style="background-image: url('images/gallery-ruby red .jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
                     <div class="card-overlay">
                         <div class="card-content">
-                            <h4>Absolute Black Granite</h4>
-                            <p>Premium black granite with fine grain structure</p>
+                            <h4>Ruby Red Granite</h4>
+                            <p>Premium Ruby Red granite with fine grain structure</p>
                             <button class="view-details-btn">View Details</button>
                         </div>
                     </div>
@@ -508,11 +508,11 @@
 
             <!-- Card 2 -->
             <div class="product-card" style="width: calc(33.333% - 20px); min-width: 300px; position: relative;">
-                <div class="card-image" style="background-image: url('https://img.freepik.com/free-photo/stone-texture-background_53876-93142.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
+                <div class="card-image" style="background-image: url('images/gallery-ocean blue.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
                     <div class="card-overlay">
                         <div class="card-content">
-                            <h4>Kashmir White Granite</h4>
-                            <p>Elegant white granite with subtle grey veins</p>
+                            <h4>Ocean Blue Granite</h4>
+                            <p>Elegant blue granite with subtle grey veins</p>
                             <button class="view-details-btn">View Details</button>
                         </div>
                     </div>
@@ -521,11 +521,11 @@
             
             <!-- Card 3 -->
             <div class="product-card" style="width: calc(33.333% - 20px); min-width: 300px; position: relative;">
-                <div class="card-image" style="background-image: url('https://img.freepik.com/free-photo/stone-texture-background_53876-93146.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
+                <div class="card-image" style="background-image: url('images/gallery-emerled green.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
                     <div class="card-overlay">
                         <div class="card-content">
-                            <h4>Imperial Red Granite</h4>
-                            <p>Striking red granite with dark mineral deposits</p>
+                            <h4>Emerled Green Granite</h4>
+                            <p>Striking Green granite with dark mineral deposits</p>
                             <button class="view-details-btn">View Details</button>
                         </div>
                     </div>
@@ -537,10 +537,10 @@
         <div style="display: flex; flex-wrap: wrap; gap: 20px; justify-content: center;">
             <!-- Card 4 -->
             <div class="product-card" style="width: calc(33.333% - 20px); min-width: 300px; position: relative;">
-                <div class="card-image" style="background-image: url('https://img.freepik.com/free-photo/beautiful-shot-granite-stones-texture_181624-21579.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
+                <div class="card-image" style="background-image: url('images/about- emerald pearl.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
                     <div class="card-overlay">
                         <div class="card-content">
-                            <h4>Black Galaxy Granite</h4>
+                            <h4>Emeraled Pearl Granite</h4>
                             <p>Dark background with golden speckles like stars</p>
                             <button class="view-details-btn">View Details</button>
                         </div>
@@ -550,11 +550,11 @@
             
             <!-- Card 5 -->
             <div class="product-card" style="width: calc(33.333% - 20px); min-width: 300px; position: relative;">
-                <div class="card-image" style="background-image: url('https://img.freepik.com/free-photo/white-marble-texture-background_53876-95284.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
+                <div class="card-image" style="background-image: url('images/cosmic black.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
                     <div class="card-overlay">
                         <div class="card-content">
-                            <h4>White Ice Granite</h4>
-                            <p>Pure white granite with icy blue undertones</p>
+                            <h4>Cosmic Black Granite</h4>
+                            <p>Pure cosmic black granite with icy blue undertones</p>
                             <button class="view-details-btn">View Details</button>
                         </div>
                     </div>
@@ -563,11 +563,11 @@
             
             <!-- Card 6 -->
             <div class="product-card" style="width: calc(33.333% - 20px); min-width: 300px; position: relative;">
-                <div class="card-image" style="background-image: url('https://img.freepik.com/free-photo/grey-marble-texture-background_53876-94701.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
+                <div class="card-image" style="background-image: url('images/gallery-golden oak.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
                     <div class="card-overlay">
                         <div class="card-content">
-                            <h4>Titanium Grey Granite</h4>
-                            <p>Modern grey granite with metallic shimmer</p>
+                            <h4>Golden oak</h4>
+                            <p>Modern golden Oak granite with metallic shimmer</p>
                             <button class="view-details-btn">View Details</button>
                         </div>
                     </div>
@@ -801,49 +801,49 @@ document.addEventListener('DOMContentLoaded', function() {
     // Product data
     const products = [
         {
-            title: "Absolute Black Granite",
-            description: "Premium quality black granite with fine grain structure and consistent coloring throughout. This granite is quarried in India and known for its deep, rich black color that adds sophistication to any space.",
-            image: "https://img.freepik.com/free-photo/black-granite-texture-background_53876-92833.jpg",
+            title: "Ruby Red Granite",
+            description: "Premium quality ruby red granite with fine grain structure and consistent coloring throughout. This granite is quarried in India and known for its deep, rich black color that adds sophistication to any space.",
+            image: "images/gallery-ruby red .jpg",
             origin: "India",
             finish: "Polished, Honed",
             usage: "Countertops, Flooring, Wall Cladding"
         },
         {
-            title: "Kashmir White Granite",
-            description: "Elegant white granite with subtle grey veins running throughout the stone. The soft pattern makes it versatile for both modern and traditional designs.",
-            image: "https://img.freepik.com/free-photo/stone-texture-background_53876-93142.jpg",
+            title: "Ocean Blue Granite",
+            description: "Elegant blue granite with subtle grey veins running throughout the stone. The soft pattern makes it versatile for both modern and traditional designs.",
+            image: "images/gallery-ocean blue.jpg",
             origin: "Brazil",
             finish: "Polished, Leathered",
             usage: "Kitchen Islands, Bathroom Vanities"
         },
         {
-            title: "Imperial Red Granite",
-            description: "Striking red granite with dark mineral deposits that create dramatic contrast. The rich red tones make a bold statement in any application.",
-            image: "https://img.freepik.com/free-photo/stone-texture-background_53876-93146.jpg",
+            title: "Emerled Green Granite",
+            description: "Striking green granite with dark mineral deposits that create dramatic contrast. The rich red tones make a bold statement in any application.",
+            image: "images/gallery-emerled green.jpg",
             origin: "India",
             finish: "Polished, Flamed",
             usage: "Accent Walls, Fireplace Surrounds"
         },
         {
-            title: "Black Galaxy Granite",
+            title: "Emerald Pearl Granite",
             description: "Dark black background with golden speckles that resemble stars in a night sky. The metallic flecks catch the light beautifully.",
-            image: "https://img.freepik.com/free-photo/beautiful-shot-granite-stones-texture_181624-21579.jpg",
+            image: "images/about- emerald pearl.jpg",
             origin: "India",
             finish: "Polished",
             usage: "Countertops, Bar Tops"
         },
         {
-            title: "White Ice Granite",
-            description: "Pure white granite with icy blue undertones and minimal veining. Creates a clean, bright look that makes spaces appear larger.",
-            image: "https://img.freepik.com/free-photo/white-marble-texture-background_53876-95284.jpg",
+            title: "Cosmic Black Granite",
+            description: "Pure black granite with icy blue undertones and minimal veining. Creates a clean, bright look that makes spaces appear larger.",
+            image: "images/cosmic black.jpg",
             origin: "Norway",
             finish: "Polished, Honed",
             usage: "Bathrooms, Kitchen Countertops"
         },
         {
-            title: "Titanium Grey Granite",
-            description: "Modern grey granite with metallic shimmer and medium variation. The sophisticated grey tones work well with both warm and cool color palettes.",
-            image: "https://img.freepik.com/free-photo/grey-marble-texture-background_53876-94701.jpg",
+            title: "Golden Oak Granite",
+            description: "Modern golden oak granite with metallic shimmer and medium variation. The sophisticated grey tones work well with both warm and cool color palettes.",
+            image: "images/gallery-golden oak.jpg",
             origin: "China",
             finish: "Polished, Brushed",
             usage: "Commercial Spaces, Modern Kitchens"
