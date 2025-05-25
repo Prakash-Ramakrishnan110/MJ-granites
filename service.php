@@ -45,7 +45,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 30px;">
             <!-- Service 1 - Granite Quarrying -->
             <div style="background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%); border-radius: 8px; padding: 50px 40px; color: white; transition: all 0.4s ease; box-shadow: 0 25px 50px rgba(26, 42, 58, 0.15); position: relative; overflow: hidden; z-index: 1; border-left: 6px solid #d4af37;">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?q=80&w=500&auto=format&fit=crop'); opacity: 0.15; z-index: -1;"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(''); opacity: 0.15; z-index: -1;"></div>
                 <div style="width: 70px; height: 70px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
                     <i class="fas fa-mountain" style="font-size: 2rem; color: #d4af37;"></i>
                 </div>
@@ -63,7 +63,7 @@
             
             <!-- Service 2 - Precision Cutting -->
             <div style="background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%); border-radius: 8px; padding: 50px 40px; color: white; transition: all 0.4s ease; box-shadow: 0 25px 50px rgba(26, 42, 58, 0.15); position: relative; overflow: hidden; z-index: 1; border-left: 6px solid #d4af37;">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1581093450021-4a7360e9a7e3?q=80&w=500&auto=format&fit=crop'); opacity: 0.15; z-index: -1;"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(''); opacity: 0.15; z-index: -1;"></div>
                 <div style="width: 70px; height: 70px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
                     <i class="fas fa-cut" style="font-size: 2rem; color: #d4af37;"></i>
                 </div>
@@ -81,7 +81,7 @@
             
             <!-- Service 3 - Surface Finishing -->
             <div style="background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%); border-radius: 8px; padding: 50px 40px; color: white; transition: all 0.4s ease; box-shadow: 0 25px 50px rgba(26, 42, 58, 0.15); position: relative; overflow: hidden; z-index: 1; border-left: 6px solid #d4af37;">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?q=80&w=500&auto=format&fit=crop'); opacity: 0.15; z-index: -1;"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(''); opacity: 0.15; z-index: -1;"></div>
                 <div style="width: 70px; height: 70px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
                     <i class="fas fa-gem" style="font-size: 2rem; color: #d4af37;"></i>
                 </div>
@@ -99,7 +99,7 @@
             
             <!-- Service 4 - Artisan Carving -->
             <div style="background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%); border-radius: 8px; padding: 50px 40px; color: white; transition: all 0.4s ease; box-shadow: 0 25px 50px rgba(26, 42, 58, 0.15); position: relative; overflow: hidden; z-index: 1; border-left: 6px solid #d4af37;">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1608889825205-eebdb9fc5806?q=80&w=500&auto=format&fit=crop'); opacity: 0.15; z-index: -1;"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(''); opacity: 0.15; z-index: -1;"></div>
                 <div style="width: 70px; height: 70px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
                     <i class="fas fa-hammer" style="font-size: 2rem; color: #d4af37;"></i>
                 </div>
@@ -117,7 +117,7 @@
             
             <!-- Service 5 - Secure Packaging -->
             <div style="background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%); border-radius: 8px; padding: 50px 40px; color: white; transition: all 0.4s ease; box-shadow: 0 25px 50px rgba(26, 42, 58, 0.15); position: relative; overflow: hidden; z-index: 1; border-left: 6px solid #d4af37;">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1605000797499-95a51c5269ae?q=80&w=500&auto=format&fit=crop'); opacity: 0.15; z-index: -1;"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(''); opacity: 0.15; z-index: -1;"></div>
                 <div style="width: 70px; height: 70px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
                     <i class="fas fa-box-open" style="font-size: 2rem; color: #d4af37;"></i>
                 </div>
@@ -135,7 +135,7 @@
             
             <!-- Service 6 - Global Logistics -->
             <div style="background: linear-gradient(135deg, #1a2a3a 0%, #2c3e50 100%); border-radius: 8px; padding: 50px 40px; color: white; transition: all 0.4s ease; box-shadow: 0 25px 50px rgba(26, 42, 58, 0.15); position: relative; overflow: hidden; z-index: 1; border-left: 6px solid #d4af37;">
-                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url('https://images.unsplash.com/photo-1441986300917-64674bd600d8?q=80&w=500&auto=format&fit=crop'); opacity: 0.15; z-index: -1;"></div>
+                <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background-image: url(''); opacity: 0.15; z-index: -1;"></div>
                 <div style="width: 70px; height: 70px; background-color: rgba(255,255,255,0.1); border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 30px;">
                     <i class="fas fa-shipping-fast" style="font-size: 2rem; color: #d4af37;"></i>
                 </div>
@@ -240,7 +240,7 @@
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px;">
             <!-- Service 1 -->
             <div style="background-color: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <div style="height: 200px; background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; position: relative;">
+                <div style="height: 200px; background-image: url('images/service1.jpeg'); background-size: cover; background-position: center; position: relative;">
                     <div style="position: absolute; top: 15px; right: 15px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-family: 'Montserrat', sans-serif;">
                         Precision Work
                     </div>
@@ -266,7 +266,7 @@
             
             <!-- Service 2 -->
             <div style="background-color: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <div style="height: 200px; background-image: url('https://images.unsplash.com/photo-1581094794326-a3677a223c43?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; position: relative;">
+                <div style="height: 200px; background-image: url('images/service2.jpeg'); background-size: cover; background-position: center; position: relative;">
                     <div style="position: absolute; top: 15px; right: 15px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-family: 'Montserrat', sans-serif;">
                         Textured Finish
                     </div>
@@ -295,7 +295,7 @@
             
             <!-- Service 3 -->
             <div style="background-color: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <div style="height: 200px; background-image: url('https://images.unsplash.com/photo-1581094794324-a60d5466a4e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; position: relative;">
+                <div style="height: 200px; background-image: url('images/service3.jpeg'); background-size: cover; background-position: center; position: relative;">
                     <div style="position: absolute; top: 15px; right: 15px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-family: 'Montserrat', sans-serif;">
                         Surface Treatment
                     </div>
@@ -324,7 +324,7 @@
             
             <!-- Service 4 -->
             <div style="background-color: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <div style="height: 200px; background-image: url('https://images.unsplash.com/photo-1581094794321-8410e6a7163a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; position: relative;">
+                <div style="height: 200px; background-image: url('images/service4.jpeg'); background-size: cover; background-position: center; position: relative;">
                     <div style="position: absolute; top: 15px; right: 15px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-family: 'Montserrat', sans-serif;">
                         Artisan Craft
                     </div>
@@ -352,7 +352,7 @@
             
             <!-- Service 5 -->
             <div style="background-color: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <div style="height: 200px; background-image: url('https://images.unsplash.com/photo-1581094794322-a60d5466a4e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; position: relative;">
+                <div style="height: 200px; background-image: url('images/service5.jpeg'); background-size: cover; background-position: center; position: relative;">
                     <div style="position: absolute; top: 15px; right: 15px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-family: 'Montserrat', sans-serif;">
                         Architectural
                     </div>
@@ -380,7 +380,7 @@
             
             <!-- Service 6 -->
             <div style="background-color: #fff; border-radius: 12px; overflow: hidden; box-shadow: 0 10px 30px rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;">
-                <div style="height: 200px; background-image: url('https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center; position: relative;">
+                <div style="height: 200px; background-image: url('images/service6.jpeg'); background-size: cover; background-position: center; position: relative;">
                     <div style="position: absolute; top: 15px; right: 15px; background-color: rgba(0,0,0,0.7); color: white; padding: 5px 15px; border-radius: 20px; font-size: 0.8rem; font-family: 'Montserrat', sans-serif;">
                         Global Shipping
                     </div>
@@ -442,7 +442,7 @@
     <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 25px;">
       <!-- Card 1 - Kitchen Countertops -->
       <div style="background-color: #1a1a2e; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="height: 180px; background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div style="height: 180px; background-image: url('images/service7.jpeg'); background-size: cover; background-position: center;"></div>
         <div style="padding: 25px; text-align: center;">
           <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #d4af37; margin-bottom: 15px;">Kitchen Countertops</h3>
           <p style="color: #ffffff; margin-bottom: 20px; line-height: 1.6; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; opacity: 0.9;">
@@ -454,7 +454,7 @@
 
       <!-- Card 2 - Bathroom Vanities -->
       <div style="background-color: #1a1a2e; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="height: 180px; background-image: url('https://images.unsplash.com/photo-1600121848594-d8644e57abab?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div style="height: 180px; background-image: url('images/service8.jpeg'); background-size: cover; background-position: center;"></div>
         <div style="padding: 25px; text-align: center;">
           <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #d4af37; margin-bottom: 15px;">Bathroom Vanities</h3>
           <p style="color: #ffffff; margin-bottom: 20px; line-height: 1.6; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; opacity: 0.9;">
@@ -466,7 +466,7 @@
 
       <!-- Card 3 - Flooring Tiles -->
       <div style="background-color: #1a1a2e; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="height: 180px; background-image: url('https://images.unsplash.com/photo-1600585152220-90363fe7e115?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div style="height: 180px; background-image: url('images/service9.jpeg'); background-size: cover; background-position: center;"></div>
         <div style="padding: 25px; text-align: center;">
           <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #d4af37; margin-bottom: 15px;">Flooring Tiles</h3>
           <p style="color: #ffffff; margin-bottom: 20px; line-height: 1.6; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; opacity: 0.9;">
@@ -478,7 +478,7 @@
 
       <!-- Card 4 - Monumental Works -->
       <div style="background-color: #1a1a2e; border-radius: 10px; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.1); transition: transform 0.3s ease;">
-        <div style="height: 180px; background-image: url('https://images.unsplash.com/photo-1581094794321-8410e6a7163a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=600&q=80'); background-size: cover; background-position: center;"></div>
+        <div style="height: 180px; background-image: url('images/service10.jpeg'); background-size: cover; background-position: center;"></div>
         <div style="padding: 25px; text-align: center;">
           <h3 style="font-family: 'Playfair Display', serif; font-size: 1.4rem; color: #d4af37; margin-bottom: 15px;">Monumental Works</h3>
           <p style="color: #ffffff; margin-bottom: 20px; line-height: 1.6; font-family: 'Montserrat', sans-serif; font-size: 0.95rem; opacity: 0.9;">
