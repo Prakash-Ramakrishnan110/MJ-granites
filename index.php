@@ -368,8 +368,8 @@
         <div class="scroller-container" style="width: 100%; overflow: hidden; position: relative;">
             <div class="scroller" style="display: flex; width: max-content;">
                 <!-- Original Items -->
-                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Absolute Black Granite', 'https://img.freepik.com/free-photo/black-granite-texture-background_53876-92833.jpg', 'Premium black granite with a smooth, polished finish. Perfect for countertops, flooring, and luxury interiors. Available in various thicknesses and finishes.')">
-                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('https://img.freepik.com/free-photo/black-granite-texture-background_53876-92833.jpg')"></div>
+                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Absolute Black Granite', 'images/about-absolute black.jpg', 'Premium black granite with a smooth, polished finish. Perfect for countertops, flooring, and luxury interiors. Available in various thicknesses and finishes.')">
+                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/about-absolute black.jpg')"></div>
                     <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Absolute Black Granite</h4>
                 </div>
                 <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Kashmir White Granite', 'https://img.freepik.com/free-photo/stone-texture-background_53876-93142.jpg', 'Elegant white granite with subtle gray veining. Ideal for kitchen countertops, bathroom vanities, and wall cladding. Resistant to stains and scratches.')">
@@ -389,8 +389,8 @@
                     <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">White Ice Granite</h4>
                 </div>
                 <!-- Cloned Items for seamless looping -->
-                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Absolute Black Granite', 'https://img.freepik.com/free-photo/black-granite-texture-background_53876-92833.jpg', 'Premium black granite with a smooth, polished finish. Perfect for countertops, flooring, and luxury interiors. Available in various thicknesses and finishes.')">
-                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('https://img.freepik.com/free-photo/black-granite-texture-background_53876-92833.jpg')"></div>
+                <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Absolute Black Granite', 'images/about-absolute black.jpg', 'Premium black granite with a smooth, polished finish. Perfect for countertops, flooring, and luxury interiors. Available in various thicknesses and finishes.')">
+                    <div class="hover-glow" style="height: 300px; background-size: cover; background-position: center; border-radius: 8px; box-shadow: 0 5px 15px rgba(0,0,0,0.1); background-image: url('images/about-absolute black.jpg')"></div>
                     <h4 style="font-family: 'Poppins', sans-serif; color: #1a2a3a; margin-top: 15px;">Absolute Black Granite</h4>
                 </div>
                 <div class="scroller-item" style="min-width: 300px; text-align: center; margin-right: 20px; cursor: pointer;" onclick="openProductModal('Kashmir White Granite', 'https://img.freepik.com/free-photo/stone-texture-background_53876-93142.jpg', 'Elegant white granite with subtle gray veining. Ideal for kitchen countertops, bathroom vanities, and wall cladding. Resistant to stains and scratches.')">
@@ -505,7 +505,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <!-- Card 2 -->
             <div class="product-card" style="width: calc(33.333% - 20px); min-width: 300px; position: relative;">
                 <div class="card-image" style="background-image: url('https://img.freepik.com/free-photo/stone-texture-background_53876-93142.jpg'); height: 350px; background-size: cover; background-position: center; border-radius: 8px;">
