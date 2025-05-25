@@ -13,7 +13,7 @@
 <body style="font-family: 'Poppins', sans-serif; margin: 0; padding: 0; background-color: #f9f9f9; color: #333; line-height: 1.6;">
     <!-- Hero Section - Same as About Us -->
      <?php include "header.php"; ?>
-    <section style="background: linear-gradient(rgba(26, 42, 58, 0.8), rgba(26, 42, 58, 0.8)), url('https://images.unsplash.com/photo-1605100804763-247f67b3557e?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80') no-repeat center center/cover; height: 80vh; min-height: 600px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 20px;">
+    <section style="background: linear-gradient(rgba(26, 42, 58, 0.8), rgba(26, 42, 58, 0.8)), url('images/service hero.png') no-repeat center center/cover; height: 80vh; min-height: 600px; display: flex; align-items: center; justify-content: center; color: white; text-align: center; padding: 20px;">
         <div style="max-width: 800px; padding: 0 20px; transform: translateY(20px); opacity: 0; animation: fadeInUp 1s ease forwards 0.3s;">
             <h1 style="font-family: 'Playfair Display', serif; font-size: 3.5rem; font-weight: 700; margin-bottom: 25px; color: #d4af37; line-height: 1.2; text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);">Precision Crafting + Global Delivery</h1>
             <div style="width: 85px; height: 3px; background-color: #d4af37; margin: 30px auto; transform: scaleX(0); transform-origin: center; animation: scaleIn 0.8s ease forwards 0.5s;"></div>
